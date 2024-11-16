@@ -1,0 +1,17 @@
+/* inicioScreen.module.css */
+.container {
+    height: 200vh;
+    /* Altura suficiente para hacer scroll */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10em;
+    overflow-x: hidden;
+
+    /* Firefox */
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari y Edge */
+}
