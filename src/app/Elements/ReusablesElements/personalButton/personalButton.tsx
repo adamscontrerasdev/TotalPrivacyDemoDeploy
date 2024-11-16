@@ -16,15 +16,12 @@ export const PersonalButton: React.FC<PersonalButtonProps> = ({
     const updateButton = () => {
       if (buttonRef.current) {
         const scale = Math.max(1, 1 + (scrollProgress * 0.5) / 100);
-        const opacity = Math.min(1, scrollProgress / 100);
 
         // Ajusta el valor de translate para que parta de -50% y se modifique dinámicamente
         const translateX = 50 + Math.max(0, (scrollProgress * 100) / 100);
         const translateY = 50 + Math.max(0, (scrollProgress * 300) / 100);
 
-
         buttonRef.current.style.transform = `translate(-${translateX}%, -${translateY}%) scale(${scale})`;
-        // buttonRef.current.style.opacity = `${opacity}`;
         console.log(scrollProgress);
       }
     };

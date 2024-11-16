@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
   SiApple,
-  SiMacos,
   SiWindows10,
   SiAndroid,
   SiBitcoinsv,
