@@ -9,8 +9,8 @@
   --provicional-color: #203adf;
   --secondary-color: #9750dd;
   --text-color: #aaa;
-  --textShadow-glow: 0 0 20px #ffffff, 0 0 100px #fffc,
-    0 0 300px var(--provicional-color), 0 0 300px var(--provicional-color);
+  --textShadow-glow: 0 0 15px #ffffff,
+    0 0 100px var(--provicional-color);
 }
 
 * {
