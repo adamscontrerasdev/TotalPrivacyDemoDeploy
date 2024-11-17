@@ -1,4 +1,11 @@
-.title{
-    font-weight: 400;
-    text-shadow: var(--textShadow-glow);
+.title {
+  text-shadow: var(--textShadow-glow);
+}
+
+.bgShadowBlur {
+  /* background: radial-gradient(circle at center, #dc262680 10%, black 70%);
+    opacity: 1; */
+
+  background: radial-gradient(circle at center, #203adf40 10%, black 70%);
+  opacity: 1;
 }

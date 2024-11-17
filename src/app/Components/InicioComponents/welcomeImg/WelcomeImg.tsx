@@ -9,19 +9,22 @@ export const WelcomeImg = () => {
   const isMobile = useIsMobile();
   return (
     <div className="flex flex-col items-center justify-center w-screen h-[calc(100vh-3rem)] bg-black relative z-0 top-12">
-      <Image
+      {/* <Image
         src={"/img/gestion-de-parches-ciberseguridad.png"}
         alt={"logo"}
         layout="fill"
         objectFit="cover"
         quality={100}
-      />
+      /> */}
       <div className="flex flex-col items-center justify-center w-screen h-screen relative">
         {/* Fondo con blur */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black backdrop-blur-sm z-0"></div>
+        <div
+          className={`absolute top-0 left-0 w-full h-full bg-black backdrop-blur-sm z-0 ${styles.bgShadowBlur}`}
+        ></div>
 
         {/* Destellos que se cruzan hacia el centro */}
-        <div
+
+        {/* <div
           className="absolute top-0 left-0 w-full h-full backdrop-blur-sm z-0"
           style={{
             background:
@@ -37,15 +40,14 @@ export const WelcomeImg = () => {
               "radial-gradient(circle at bottom right, rgba(0, 123, 255, 0.6) 10%, transparent 70%)",
             opacity: 0.3,
           }}
-        ></div>
+        ></div> */}
 
         {/* Texto encima */}
         {!isMobile && (
           <h1
-            className={`font-bold text-9xl text-foreground relative z-10 ${styles.title}`}
+            className={`font-bold md:text-8xl lg:text-[12rem] text-foreground  z-10  ${styles.title}`}
           >
-            Bienvenido a <br />
-            Total Privacy
+            TOTAL PRIVACY
           </h1>
         )}
         {!isMobile && (
