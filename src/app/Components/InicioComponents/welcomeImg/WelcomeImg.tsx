@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import styles from "./welcomeImg.module.css";
 import { RiArrowDownWideLine } from "react-icons/ri";
 import { useIsMobile } from "@/app/Elements/hooks";
