@@ -21,7 +21,7 @@ export const WelcomeImg: React.FC = () => {
     const progress = Math.min(scrollPosition / viewportHeight, 1) * 100;
 
     updateTitleStyles(progress);
-    updateContainerSubtitle2Styles(progress);
+    updateContainerSubtitle2Styles();
     updateSubtitle2Styles(progress);
     updateSubtitle(progress);
     updateButtonRefCursos(progress);
@@ -44,7 +44,7 @@ export const WelcomeImg: React.FC = () => {
     }
   };
 
-  const updateContainerSubtitle2Styles = (scrollProgress: number) => {
+  const updateContainerSubtitle2Styles = () => {
     if (containerSubtitle2Ref.current) {
       const scrollProgressNormalized = Math.min(
         window.scrollY / window.innerHeight,
