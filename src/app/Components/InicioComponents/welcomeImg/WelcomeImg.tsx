@@ -13,14 +13,12 @@ export const WelcomeImg: React.FC = () => {
   const buttonRefEBooks = useRef<HTMLButtonElement>(null);
   const welcomeTextoRef = useRef<HTMLParagraphElement>(null);
 
-  const [scrollProgress, setScrollProgress] = useState(0);
   const [subtitle2IsFullWidth, setSubtitle2IsFullWidth] = useState(false);
 
   const handleScroll = useCallback(() => {
     const scrollPosition = window.scrollY;
     const viewportHeight = window.innerHeight;
     const progress = Math.min(scrollPosition / viewportHeight, 1) * 100;
-    setScrollProgress(progress);
 
     updateTitleStyles(progress);
     updateContainerSubtitle2Styles(progress);
@@ -48,7 +46,10 @@ export const WelcomeImg: React.FC = () => {
 
   const updateContainerSubtitle2Styles = (scrollProgress: number) => {
     if (containerSubtitle2Ref.current) {
-      const scrollProgressNormalized = Math.min(window.scrollY / window.innerHeight, 1);
+      const scrollProgressNormalized = Math.min(
+        window.scrollY / window.innerHeight,
+        1
+      );
       const width = 100 * scrollProgressNormalized;
       const padding = 10 * scrollProgressNormalized;
 
@@ -158,7 +159,14 @@ export const WelcomeImg: React.FC = () => {
           <p
             className={`text-white text-center text-2xl w-[55vw] opacity-1 ${styles.title}`}
           >
-            ¡Descubre cómo navegar de manera segura y proteger tu privacidad en línea! En Total Privacy, te ofrecemos recursos y cursos diseñados para enseñarte las mejores prácticas en la web. Aprende a proteger tu información personal, navegar de forma anónima y manejar tus redes sociales con total seguridad. Tu privacidad es lo más importante, y queremos ayudarte a mantenerla intacta. ¡Explora nuestros cursos y E-books y toma el control de tu seguridad en línea!
+            ¡Descubre cómo navegar de manera segura y proteger tu privacidad en
+            línea! En Total Privacy, te ofrecemos recursos y cursos diseñados
+            para enseñarte las mejores prácticas en la web. Aprende a proteger
+            tu información personal, navegar de forma anónima y manejar tus
+            redes sociales con total seguridad. Tu privacidad es lo más
+            importante, y queremos ayudarte a mantenerla intacta. ¡Explora
+            nuestros cursos y E-books y toma el control de tu seguridad en
+            línea!
           </p>
         </div>
 
