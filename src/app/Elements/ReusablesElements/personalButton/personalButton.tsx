@@ -1,5 +1,4 @@
 import React from "react";
-import style from "./personalButton.module.css";
 
 interface PersonalButtonProps {
   value?: string;
@@ -16,7 +15,7 @@ export const PersonalButton: React.FC<PersonalButtonProps> = ({
 }) => {
   return (
     <button
-      className={`relative text-white p-5 bg-transparent ${className}`}
+      className={`relative text-${color} p-5 bg-transparent ${className}`}
       ref={ref}
     >
       {value}

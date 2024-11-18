@@ -2,12 +2,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./welcomeImg.module.css";
 import { RiArrowDownWideLine } from "react-icons/ri";
-import { useIsMobile } from "@/app/Elements/hooks";
-import { IoLockOpenSharp } from "react-icons/io5";
 import { PersonalButton } from "@/app/Elements";
 
 export const WelcomeImg: React.FC = () => {
-  const isMobile = useIsMobile();
   const titleRef = useRef<HTMLHeadingElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const subtitleRef = useRef<HTMLHeadingElement>(null);
@@ -210,13 +207,13 @@ export const WelcomeImg: React.FC = () => {
         >
           <PersonalButton
             value="Ver cursos"
-            color="primary"
+            color="white"
             ref={buttonRefCursos}
             className="opacity-0"
           />
           <PersonalButton
             value="Ver E-Books"
-            color="primary"
+            color="white"
             ref={buttonRefEBooks}
             className="opacity-0"
           />
