@@ -2,10 +2,45 @@
   text-shadow: var(--textShadow-glow);
 }
 
+.titleSlide1 {
+  background-color: aqua;
+}
+
+.titleSlide2 {
+  background-color: blueviolet;
+}
+
 .bgShadowBlur {
   /* background: radial-gradient(circle at center, #dc262680 10%, black 70%);
     opacity: 1; */
 
   background: radial-gradient(circle at center, #203adf30 10%, black 70%);
   opacity: 1;
+}
+
+.arrowDownWideLineIcon {
+  animation: bounceArrow 2s infinite ease-in-out;
+}
+
+@keyframes bounceArrow {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(10px);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.UnlockIcon {
+  background: radial-gradient(circle at center, var(--primary-color) 20%, rgba(255, 255, 255, 0) 80%);
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.3), 0 0 100px rgba(255, 255, 255, 0.1);
 }

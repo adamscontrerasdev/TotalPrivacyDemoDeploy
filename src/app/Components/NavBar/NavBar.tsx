@@ -83,7 +83,7 @@ export const NavBar = () => {
 
   return (
     <div
-      className={`bg-black opacity-80 backdrop-blur-xl backdrop-brightness-50 ${
+      className={`bg-black bg-opacity-60 backdrop-blur-3xl backdrop-brightness-75 ${
         isHover ? (isMobile ? "h-[100%]" : "h-36") : "h-12"
       } w-full text-text flex flex-col items-center justify-between overflow-hidden fixed top-0 left-0 z-[9999] transition-all duration-500`}
     >
@@ -94,7 +94,7 @@ export const NavBar = () => {
         }`}
       >
         {!isMobile && (
-          <h1 className={`${styles.title} text-xs`}>Privacidad-Total</h1>
+          <h1 className={`${styles.title} text-xs`}>TOTAL PRIVACY</h1>
         )}
         <FaMagnifyingGlass className="cursor-pointer" />
       </div>
