@@ -31,7 +31,6 @@ export const InicioScreen = () => {
       className={`w-screen flex flex-col items-center justify-center ${style.container}`}
     >
       {/* Aquí pasamos el progreso del scroll como una prop para controlarlo */}
-      <PersonalButton scrollProgress={scrollProgress} />
     </div>
   );
 };
