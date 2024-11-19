@@ -39,8 +39,16 @@ export const WelcomeImg: React.FC = () => {
   const updateTitleStyles = (scrollProgress: number) => {
     if (titleRef.current) {
       const scale = Math.min(1.3, 1 + scrollProgress / 300);
-      const translateY = scrollProgress * 1.5;
+
+      // Verificar el ancho de la pantalla y ajustar el valor de translateY
+      const translateY =
+        window.innerWidth <= 1535 ? scrollProgress * 2.5 : scrollProgress * 1.5;
+
+      // Calcular opacidad con un límite mínimo de 0.5
+      const opacity = Math.max(0.5, 1 - scrollProgress / 100);
+
       titleRef.current.style.transform = `translateY(${translateY}%) scale(${scale})`;
+      titleRef.current.style.opacity = `${opacity}`;
     }
   };
 
@@ -80,7 +88,7 @@ export const WelcomeImg: React.FC = () => {
   const updateSubtitle = (scrollProgress: number) => {
     if (subtitleRef.current) {
       const scale = Math.min(1.3, 1 + scrollProgress / 300);
-      const opacity = 1 - scrollProgress / 100;
+      const opacity = 1 - scrollProgress / 50;
       subtitleRef.current.style.opacity = `${opacity}`;
       subtitleRef.current.style.transform = `scale(${scale})`;
     }
@@ -124,13 +132,13 @@ export const WelcomeImg: React.FC = () => {
 
         <h1
           ref={titleRef}
-          className={`font-bold text-5xl md:text-8xl lg:text-[12rem] text-foreground z-10 ${styles.title}`}
+          className={`font-bold text-xl sm:text-8xl md:text-8xl 2xl:text-[12rem] text-foreground z-10 ${styles.titleTotalPrivacy}`}
         >
           TOTAL PRIVACY
         </h1>
 
         <h2 className="text-foreground relative z-10 text-lg" ref={subtitleRef}>
-          Privacidad al alcance de todo el mundo
+          Si vis pacem para bellum{" "}
         </h2>
 
         <div
@@ -157,7 +165,7 @@ export const WelcomeImg: React.FC = () => {
           ref={welcomeTextoRef}
         >
           <p
-            className={`text-white text-center text-2xl w-[55vw] opacity-1 ${styles.title}`}
+            className={`text-white text-center text-xl lg:text-2xl w-[55vw] opacity-1 ${styles.title}`}
           >
             ¡Descubre cómo navegar de manera segura y proteger tu privacidad en
             línea! En Total Privacy, te ofrecemos recursos y cursos diseñados

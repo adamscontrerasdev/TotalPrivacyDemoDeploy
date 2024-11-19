@@ -1,4 +1,4 @@
-.title {
+.titleTotalPrivacy {
   text-shadow: var(--textShadow-glow);
 }
 
@@ -40,7 +40,36 @@
 }
 
 .UnlockIcon {
-  background: radial-gradient(circle at center, var(--primary-color) 20%, rgba(255, 255, 255, 0) 80%);
+  background: radial-gradient(
+    circle at center,
+    var(--primary-color) 20%,
+    rgba(255, 255, 255, 0) 80%
+  );
   border-radius: 50%;
-  box-shadow: 0 0 50px rgba(255, 255, 255, 0.3), 0 0 100px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.3),
+    0 0 100px rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (min-width: 1920px) {
+  .titleTotalPrivacy {
+    font-size: 12rem;
+  }
+}
+
+@media screen and (max-width: 1536px) {
+  .titleTotalPrivacy {
+    font-size: 8rem;
+  }
+}
+
+@media screen and (max-width: 1728px) {
+  .titleTotalPrivacy {
+    font-size: 8.5rem;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .titleTotalPrivacy {
+    font-size: 5.5rem;
+  }
 }
