@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 import styles from "./welcomeImg.module.css";
 import { RiArrowDownWideLine } from "react-icons/ri";
 import { PersonalButton } from "@/app/Elements";
+import { FirstMosaicoComponents } from "@/app/Components";
 
 export const WelcomeImg: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -12,8 +13,9 @@ export const WelcomeImg: React.FC = () => {
   const buttonRefCursos = useRef<HTMLButtonElement>(null);
   const buttonRefEBooks = useRef<HTMLButtonElement>(null);
   const welcomeTextoRef = useRef<HTMLParagraphElement>(null);
-
+  const containerBestSellingTemplateRef = useRef<HTMLDivElement>(null);
   const [subtitle2IsFullWidth, setSubtitle2IsFullWidth] = useState(false);
+  const fatherContainerRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = useCallback(() => {
     const scrollPosition = window.scrollY;
@@ -27,6 +29,8 @@ export const WelcomeImg: React.FC = () => {
     updateButtonRefCursos(progress);
     updateButtonRefEBooks(progress);
     updateWelcomeTextoRef(progress);
+    updateContainerBestSellingTemplateRef(progress);
+    // updateFatherContainer(progress);
   }, []);
 
   useEffect(() => {
@@ -36,21 +40,89 @@ export const WelcomeImg: React.FC = () => {
     };
   }, [handleScroll]);
 
+  // const updateTitleStyles = (scrollProgress: number) => {
+  //   if (titleRef.current) {
+  //     const scale = Math.min(1.3, 1 + scrollProgress / 300);
+
+  //     const translateY =
+  //       window.innerWidth <= 1535 ? scrollProgress * 2.5 : scrollProgress * 1.5;
+
+  //     const opacity = Math.max(0, 1 - scrollProgress / 100);
+
+  //     titleRef.current.style.transform = `translateY(${translateY}%) scale(${scale})`;
+  //     titleRef.current.style.opacity = `${opacity}`;
+  //   }
+  // };
+  //-------------------------------------------------------------------------------
+  let multiplier = 1;
+  let lastScrollProgress = 0;
+
   const updateTitleStyles = (scrollProgress: number) => {
     if (titleRef.current) {
-      const scale = Math.min(1.3, 1 + scrollProgress / 300);
-
-      // Verificar el ancho de la pantalla y ajustar el valor de translateY
-      const translateY =
-        window.innerWidth <= 1535 ? scrollProgress * 2.5 : scrollProgress * 1.5;
-
-      // Calcular opacidad con un límite mínimo de 0.5
-      const opacity = Math.max(0.5, 1 - scrollProgress / 100);
-
-      titleRef.current.style.transform = `translateY(${translateY}%) scale(${scale})`;
-      titleRef.current.style.opacity = `${opacity}`;
+      const screenWidth = window.innerWidth; // Detectar el ancho de la pantalla
+      const isNotebookSize = screenWidth >= 720 && screenWidth <= 1536; // Rango para tamaño notebook
+  
+      const scale = Math.max(0.3, 1 - scrollProgress / 20);
+  
+      multiplier += 0.3;
+  
+      // Ajustar el translateX y translateY basado en el tamaño de pantalla
+      const translateX = isNotebookSize
+        ? Math.min(350, scrollProgress * 5) // Menos desplazamiento en notebooks
+        : Math.min(700, scrollProgress * 50); // Desplazamiento estándar
+  
+      const translateY = isNotebookSize
+        ? Math.min(425, scrollProgress * 5) // Menos desplazamiento vertical en notebooks
+        : Math.min(450, scrollProgress * 5); // Desplazamiento vertical estándar
+  
+      // Limitar la animación cuando se alcanzan los valores máximos
+      if (
+        (isNotebookSize && translateX >= 500 && translateY >= 1000) ||
+        (!isNotebookSize && translateX >= 700 && translateY >= 450)
+      ) {
+        return;
+      }
+  
+      titleRef.current.style.transform = `translate(-${translateX}px, ${translateY}px) scale(${scale})`;
+  
+      const newText = scrollProgress > 50 ? "BEST SELLERS" : "TOTAL PRIVACY";
+  
+      if (
+        titleRef.current.innerText !== newText &&
+        scrollProgress !== lastScrollProgress
+      ) {
+        // Agregar las clases para el efecto glitch y clip-path
+        titleRef.current.classList.add(
+          styles.titleTotalPrivacyFoanimation,
+          styles.titleWithClipEffect
+        );
+  
+        setTimeout(() => {
+          // Cambiar el texto después de un breve glitch
+          if (titleRef.current) {
+            titleRef.current.innerText = newText;
+  
+            // Remover las clases de glitch y clip-path
+            setTimeout(() => {
+              if (titleRef.current) {
+                titleRef.current.classList.remove(
+                  styles.titleTotalPrivacyFoanimation,
+                  styles.titleWithClipEffect
+                );
+              }
+            }, 300); // Duración del efecto antes de retornar al estilo normal
+          }
+        }, 200); // Tiempo de espera para aplicar el cambio de texto
+      }
+  
+      lastScrollProgress = scrollProgress;
+  
+      if (scrollProgress === 0) {
+        multiplier = 1;
+      }
     }
   };
+  
 
   const updateContainerSubtitle2Styles = () => {
     if (containerSubtitle2Ref.current) {
@@ -93,46 +165,94 @@ export const WelcomeImg: React.FC = () => {
       subtitleRef.current.style.transform = `scale(${scale})`;
     }
   };
-
   const updateButtonRefCursos = (scrollProgress: number) => {
     if (buttonRefCursos.current) {
       const opacity = Math.min(scrollProgress / 100, 1);
-      buttonRefCursos.current.style.opacity = `${opacity}`;
-      if (scrollProgress <= 0) {
-        buttonRefCursos.current.style.opacity = "0";
-      }
+      const fullOpacity = scrollProgress >= 100;
+      const topValue = Math.max(100 - scrollProgress, 0);
+
+      // Ajustar opacidad dependiendo del scroll
+      buttonRefCursos.current.style.opacity = fullOpacity
+        ? `${1}`
+        : `${opacity}`;
+
+      // Actualizar posición vertical
+      buttonRefCursos.current.style.top = `${topValue}%`;
+
+      // Estilo de transición para suavidad
+      buttonRefCursos.current.style.transition = fullOpacity
+        ? "opacity 1s ease, top 0.5s ease"
+        : "opacity 0.3s ease, top 0.3s ease";
     }
   };
 
   const updateButtonRefEBooks = (scrollProgress: number) => {
     if (buttonRefEBooks.current) {
       const opacity = Math.min(scrollProgress / 100, 1);
-      buttonRefEBooks.current.style.opacity = `${opacity}`;
-      if (scrollProgress <= 0) {
-        buttonRefEBooks.current.style.opacity = "0";
-      }
+      const fullOpacity = scrollProgress >= 100;
+      const topValue = Math.max(100 - scrollProgress, 0);
+
+      // Ajustar opacidad dependiendo del scroll
+      buttonRefEBooks.current.style.opacity = fullOpacity
+        ? `${1}`
+        : `${opacity}`;
+
+      // Actualizar posición vertical
+      buttonRefEBooks.current.style.top = `${topValue}%`;
+
+      // Estilo de transición para suavidad
+      buttonRefEBooks.current.style.transition = fullOpacity
+        ? "opacity 1s ease, top .8s ease"
+        : "opacity 0.3s ease, top 0.3s ease";
     }
   };
 
   const updateWelcomeTextoRef = (scrollProgress: number) => {
     if (welcomeTextoRef.current) {
       const opacity = Math.min(scrollProgress / 100, 1);
+      const fullOpacity = opacity === 100 ? true : false;
       const topValue = Math.max(100 - scrollProgress, 0);
-      welcomeTextoRef.current.style.opacity = `${opacity}`;
+      if (fullOpacity) {
+        welcomeTextoRef.current.style.opacity = `${1}`;
+      }
       welcomeTextoRef.current.style.top = `${topValue}%`;
     }
   };
 
+  const updateContainerBestSellingTemplateRef = (scrollProgress: number) => {
+    if (containerBestSellingTemplateRef.current) {
+      const height = Math.min(15, 0.5 * scrollProgress, 25);
+
+      containerBestSellingTemplateRef.current.style.height = `${height}%`;
+    }
+  };
+
+  // const updateFatherContainer = (progress: number) => {
+  //   if (fatherContainerRef.current) {
+  //     const container = fatherContainerRef.current;
+  //     if (progress >= 100) {
+  //       setTimeout(() => {
+  //         container.style.position = "absolute";
+  //         container.style.top = "calc(0-3rem)";
+  //         container.style.left = "0";
+  //       }, 1000);
+  //     }
+  //   }
+  // };
+
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-[calc(100vh-3rem)] bg-black z-0 top-12 fixed">
-      <div className="flex flex-col items-center justify-center w-screen h-screen relative">
+    <div
+      className={`flex flex-col items-center justify-center w-screen  z-0  absolute top-[calc(0-3rem)] h-[600vh]`}
+      ref={fatherContainerRef}
+    >
+      <div className="flex flex-col items-center justify-center w-screen h-screen sticky bottom-0 left-0  ">
         <div
           className={`absolute top-0 left-0 w-full h-full bg-black backdrop-blur-sm z-0 ${styles.bgShadowBlur}`}
         ></div>
 
         <h1
           ref={titleRef}
-          className={`font-bold text-xl sm:text-8xl md:text-8xl 2xl:text-[12rem] text-foreground z-10 ${styles.titleTotalPrivacy}`}
+          className={`font-bold text-xl sm:text-8xl md:text-8xl 2xl:text-[12rem] text-foreground z-10 relative ${styles.titleTotalPrivacy} w-screen text-center`}
         >
           TOTAL PRIVACY
         </h1>
@@ -202,6 +322,16 @@ export const WelcomeImg: React.FC = () => {
             className={`text-foreground w-12 h-12 animate-bounce ${styles.arrowDownWideLine}`}
           />
         </div>
+      </div>
+      {/* <div
+        className="w-full h-0 bg-black flex justify-center items-center"
+        ref={containerBestSellingTemplateRef}
+      >
+        <div className="w-1/2 h-full bg-red-600 z-0"></div>
+        <div className="w-1/2 h-full bg-green-600 z-0"></div>
+      </div> */}
+      <div className="">
+        <FirstMosaicoComponents></FirstMosaicoComponents>
       </div>
     </div>
   );
