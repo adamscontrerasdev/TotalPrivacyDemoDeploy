@@ -17,92 +17,46 @@ export const WelcomeImg: React.FC = () => {
   const [subtitle2IsFullWidth, setSubtitle2IsFullWidth] = useState(false);
   const fatherContainerRef = useRef<HTMLDivElement>(null);
 
-  const handleScroll = useCallback(() => {
-    const scrollPosition = window.scrollY;
-    const viewportHeight = window.innerHeight;
-    const progress = Math.min(scrollPosition / viewportHeight, 1) * 100;
-
-    updateTitleStyles(progress);
-    updateContainerSubtitle2Styles();
-    updateSubtitle2Styles(progress);
-    updateSubtitle(progress);
-    updateButtonRefCursos(progress);
-    updateButtonRefEBooks(progress);
-    updateWelcomeTextoRef(progress);
-    updateContainerBestSellingTemplateRef(progress);
-    // updateFatherContainer(progress);
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
-
-  // const updateTitleStyles = (scrollProgress: number) => {
-  //   if (titleRef.current) {
-  //     const scale = Math.min(1.3, 1 + scrollProgress / 300);
-
-  //     const translateY =
-  //       window.innerWidth <= 1535 ? scrollProgress * 2.5 : scrollProgress * 1.5;
-
-  //     const opacity = Math.max(0, 1 - scrollProgress / 100);
-
-  //     titleRef.current.style.transform = `translateY(${translateY}%) scale(${scale})`;
-  //     titleRef.current.style.opacity = `${opacity}`;
-  //   }
-  // };
-  //-------------------------------------------------------------------------------
-  let multiplier = 1;
   let lastScrollProgress = 0;
 
-  const updateTitleStyles = (scrollProgress: number) => {
+  const updateTitleStyles = useCallback((scrollProgress: number) => {
     if (titleRef.current) {
-      const screenWidth = window.innerWidth; // Detectar el ancho de la pantalla
-      const isNotebookSize = screenWidth >= 720 && screenWidth <= 1536; // Rango para tamaño notebook
-  
+      const screenWidth = window.innerWidth;
+      const isNotebookSize = screenWidth >= 720 && screenWidth <= 1536;
+
       const scale = Math.max(0.3, 1 - scrollProgress / 20);
-  
-      multiplier += 0.3;
-  
-      // Ajustar el translateX y translateY basado en el tamaño de pantalla
+
       const translateX = isNotebookSize
-        ? Math.min(350, scrollProgress * 5) // Menos desplazamiento en notebooks
-        : Math.min(700, scrollProgress * 50); // Desplazamiento estándar
-  
+        ? Math.min(350, scrollProgress * 5)
+        : Math.min(700, scrollProgress * 50);
+
       const translateY = isNotebookSize
-        ? Math.min(425, scrollProgress * 5) // Menos desplazamiento vertical en notebooks
-        : Math.min(450, scrollProgress * 5); // Desplazamiento vertical estándar
-  
-      // Limitar la animación cuando se alcanzan los valores máximos
+        ? Math.min(425, scrollProgress * 5)
+        : Math.min(450, scrollProgress * 5);
       if (
         (isNotebookSize && translateX >= 500 && translateY >= 1000) ||
         (!isNotebookSize && translateX >= 700 && translateY >= 450)
       ) {
         return;
       }
-  
+
       titleRef.current.style.transform = `translate(-${translateX}px, ${translateY}px) scale(${scale})`;
-  
+
       const newText = scrollProgress > 50 ? "BEST SELLERS" : "TOTAL PRIVACY";
-  
+
       if (
         titleRef.current.innerText !== newText &&
         scrollProgress !== lastScrollProgress
       ) {
-        // Agregar las clases para el efecto glitch y clip-path
         titleRef.current.classList.add(
           styles.titleTotalPrivacyFoanimation,
           styles.titleWithClipEffect
         );
-  
+
         setTimeout(() => {
-          // Cambiar el texto después de un breve glitch
           if (titleRef.current) {
             titleRef.current.innerText = newText;
-  
-            // Remover las clases de glitch y clip-path
+
             setTimeout(() => {
               if (titleRef.current) {
                 titleRef.current.classList.remove(
@@ -110,21 +64,16 @@ export const WelcomeImg: React.FC = () => {
                   styles.titleWithClipEffect
                 );
               }
-            }, 300); // Duración del efecto antes de retornar al estilo normal
+            }, 300);
           }
-        }, 200); // Tiempo de espera para aplicar el cambio de texto
+        }, 200);
       }
-  
-      lastScrollProgress = scrollProgress;
-  
-      if (scrollProgress === 0) {
-        multiplier = 1;
-      }
-    }
-  };
-  
 
-  const updateContainerSubtitle2Styles = () => {
+      lastScrollProgress = scrollProgress;
+    }
+  }, []);
+
+  const updateContainerSubtitle2Styles = useCallback(() => {
     if (containerSubtitle2Ref.current) {
       const scrollProgressNormalized = Math.min(
         window.scrollY / window.innerHeight,
@@ -147,7 +96,7 @@ export const WelcomeImg: React.FC = () => {
       containerSubtitle2Ref.current.style.width = `${width}%`;
       containerSubtitle2Ref.current.style.padding = `${padding}px`;
     }
-  };
+  }, [subtitle2IsFullWidth]);
 
   const updateSubtitle2Styles = (scrollProgress: number) => {
     if (subtitle2Ref.current) {
@@ -171,15 +120,12 @@ export const WelcomeImg: React.FC = () => {
       const fullOpacity = scrollProgress >= 100;
       const topValue = Math.max(100 - scrollProgress, 0);
 
-      // Ajustar opacidad dependiendo del scroll
       buttonRefCursos.current.style.opacity = fullOpacity
         ? `${1}`
         : `${opacity}`;
 
-      // Actualizar posición vertical
       buttonRefCursos.current.style.top = `${topValue}%`;
 
-      // Estilo de transición para suavidad
       buttonRefCursos.current.style.transition = fullOpacity
         ? "opacity 1s ease, top 0.5s ease"
         : "opacity 0.3s ease, top 0.3s ease";
@@ -192,15 +138,12 @@ export const WelcomeImg: React.FC = () => {
       const fullOpacity = scrollProgress >= 100;
       const topValue = Math.max(100 - scrollProgress, 0);
 
-      // Ajustar opacidad dependiendo del scroll
       buttonRefEBooks.current.style.opacity = fullOpacity
         ? `${1}`
         : `${opacity}`;
 
-      // Actualizar posición vertical
       buttonRefEBooks.current.style.top = `${topValue}%`;
 
-      // Estilo de transición para suavidad
       buttonRefEBooks.current.style.transition = fullOpacity
         ? "opacity 1s ease, top .8s ease"
         : "opacity 0.3s ease, top 0.3s ease";
@@ -227,18 +170,36 @@ export const WelcomeImg: React.FC = () => {
     }
   };
 
-  // const updateFatherContainer = (progress: number) => {
-  //   if (fatherContainerRef.current) {
-  //     const container = fatherContainerRef.current;
-  //     if (progress >= 100) {
-  //       setTimeout(() => {
-  //         container.style.position = "absolute";
-  //         container.style.top = "calc(0-3rem)";
-  //         container.style.left = "0";
-  //       }, 1000);
-  //     }
-  //   }
-  // };
+  const handleScroll = useCallback(() => {
+    const scrollPosition = window.scrollY;
+    const viewportHeight = window.innerHeight;
+    const progress = Math.min(scrollPosition / viewportHeight, 1) * 100;
+
+    updateTitleStyles(progress);
+    updateContainerSubtitle2Styles();
+    updateSubtitle2Styles(progress);
+    updateSubtitle(progress);
+    updateButtonRefCursos(progress);
+    updateButtonRefEBooks(progress);
+    updateWelcomeTextoRef(progress);
+    updateContainerBestSellingTemplateRef(progress);
+  }, [
+    updateTitleStyles,
+    updateContainerSubtitle2Styles,
+    updateSubtitle2Styles,
+    updateSubtitle,
+    updateButtonRefCursos,
+    updateButtonRefEBooks,
+    updateWelcomeTextoRef,
+    updateContainerBestSellingTemplateRef,
+  ]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
 
   return (
     <div
@@ -323,13 +284,6 @@ export const WelcomeImg: React.FC = () => {
           />
         </div>
       </div>
-      {/* <div
-        className="w-full h-0 bg-black flex justify-center items-center"
-        ref={containerBestSellingTemplateRef}
-      >
-        <div className="w-1/2 h-full bg-red-600 z-0"></div>
-        <div className="w-1/2 h-full bg-green-600 z-0"></div>
-      </div> */}
       <div className="">
         <FirstMosaicoComponents></FirstMosaicoComponents>
       </div>
