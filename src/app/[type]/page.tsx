@@ -16,10 +16,18 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
   useEffect(() => {
     const sections = document.querySelectorAll(".section");
 
+    const normalizeDeltaY = (deltaY: number) => {
+      // Normaliza valores para trackpads
+      const absDelta = Math.abs(deltaY);
+      return deltaY / (absDelta < 10 ? 10 : absDelta); // Divide para hacer scroll más uniforme
+    };
+
     const handleWheel = (e: WheelEvent) => {
       if (isScrolling) return; // Previene ejecución si ya está en proceso
 
-      const direction = e.deltaY > 0 ? 1 : -1; // Detecta scroll hacia abajo o arriba
+      const normalizedDeltaY = normalizeDeltaY(e.deltaY); // Normaliza el scroll
+      const direction = normalizedDeltaY > 0 ? 1 : -1; // Detecta scroll hacia abajo o arriba
+
       const currentSectionIndex = Math.round(
         window.scrollY / window.innerHeight,
       );
@@ -35,10 +43,10 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
         behavior: "smooth",
       });
 
-      setTimeout(() => setIsScrolling(false), 1100); // Libera el debounce después de 800ms
+      setTimeout(() => setIsScrolling(false), 700); // Libera el debounce después de 700ms
     };
 
-    window.addEventListener("wheel", handleWheel);
+    window.addEventListener("wheel", handleWheel, { passive: false });
 
     return () => window.removeEventListener("wheel", handleWheel);
   }, []);
