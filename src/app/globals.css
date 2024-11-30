@@ -9,8 +9,7 @@
   --provicional-color: #203adf;
   --secondary-color: #9750dd;
   --text-color: #aaa;
-  --textShadow-glow: 0 0 15px #ffffff,
-    0 0 50px var(--provicional-color);
+  --textShadow-glow: 0 0 15px #ffffff, 0 0 50px var(--provicional-color);
 }
 
 * {
@@ -21,6 +20,7 @@
     "Helvetica Neue", Arial, sans-serif;
   color: var(--text-color);
   user-select: none;
+  scroll-behavior: smooth;
 }
 
 /* @media (prefers-color-scheme: dark) {

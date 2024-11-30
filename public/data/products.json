@@ -1,0 +1,121 @@
+{
+  "ebooks": [
+    {
+      "id": 1,
+      "key": "iphone",
+      "title": "Privacidad Express iPhone",
+      "price": 37,
+      "currency": "€",
+      "Bg": "/img/apple.png",
+      "description": "Descubre cómo proteger tu iPhone de manera efectiva y garantizar tu privacidad en cada aspecto de su uso."
+    },
+    {
+      "id": 2,
+      "key": "android",
+      "title": "Privacidad Express Android",
+      "price": 37,
+      "currency": "€",
+      "Bg": "/img/android.png",
+      "description": "Guía práctica para asegurar la privacidad y seguridad de tu dispositivo Android frente a amenazas digitales."
+    },
+    {
+      "id": 3,
+      "key": "windows",
+      "title": "Privacidad Express Windows",
+      "price": 47,
+      "currency": "€",
+      "Bg": "/img/windows.png",
+      "description": "Mejora la privacidad de tu equipo Windows con estrategias y herramientas esenciales para proteger tu información."
+    },
+    {
+      "id": 4,
+      "key": "macos",
+      "title": "Privacidad Express MacOS",
+      "price": 47,
+      "currency": "€",
+      "Bg": "/img/mac.png",
+      "description": "Optimiza la seguridad de tu Mac y aprende a proteger tus datos personales en el ecosistema de macOS."
+    },
+    {
+      "id": 5,
+      "key": "offshore",
+      "title": "Economía off-shore, banca y empresa anónima",
+      "price": 97,
+      "currency": "€",
+      "Bg": "/img/banner.png",
+      "description": "Explora el mundo de la economía offshore, aprende sobre banca internacional y la creación de empresas anónimas."
+    }
+  ],
+  "ebooks_release_date": "2024-11-20",
+  "cursos": [
+    {
+      "id": 6,
+      "key": "bunkeriza-iphone",
+      "title": "Bunkeriza tu iPhone",
+      "price": 97,
+      "currency": "€",
+      "Bg": "/img/iphone-bunker.png",
+      "description": "Aprende a blindar tu iPhone y maximizar la seguridad de tu información personal."
+    },
+    {
+      "id": 7,
+      "key": "bunkeriza-android",
+      "title": "Bunkeriza tu Android",
+      "price": 97,
+      "currency": "€",
+      "Bg": "/img/android-bunker.png",
+      "description": "Descubre cómo proteger tu Android y mantener tus datos a salvo de amenazas digitales."
+    },
+    {
+      "id": 8,
+      "key": "grapheneos",
+      "title": "Móvil 007 - GrapheneOS",
+      "price": 97,
+      "currency": "€",
+      "note": "*",
+      "Bg": "/img/graphene.png",
+      "description": "Conoce el sistema operativo más seguro y aprende a configurar un móvil con GrapheneOS."
+    },
+    {
+      "id": 9,
+      "key": "bunkeriza-mac",
+      "title": "Bunkeriza tu Mac",
+      "price": 137,
+      "currency": "€",
+      "Bg": "/img/mac-bunker.png",
+      "description": "Fortalece la seguridad de tu Mac y protege tu información de manera integral."
+    },
+    {
+      "id": 10,
+      "key": "bunkeriza-windows",
+      "title": "Bunkeriza tu Windows",
+      "price": 137,
+      "currency": "€",
+      "Bg": "/img/windows-bunker.png",
+      "description": "Asegura tu computadora Windows con estrategias avanzadas de privacidad y seguridad."
+    },
+    {
+      "id": 11,
+      "key": "bitcoin",
+      "title": "Iniciación a Bitcoin",
+      "price": 210,
+      "currency": "€",
+      "Bg": "/img/bitcoin.png",
+      "description": "Introduce las bases del Bitcoin, su funcionamiento y cómo usarlo de manera segura."
+    }
+  ],
+  "courses_release_date": "2024-11-20",
+  "master": {
+    "id": 12,
+    "key": "master",
+    "title": "Máster Total Privacy",
+    "price_range": {
+      "min": 890,
+      "max": 1400,
+      "currency": "€"
+    },
+    "release_date": "2024-12-15",
+    "Bg": "/img/master-privacy.png",
+    "description": "Conviértete en un experto en privacidad digital con este máster completo que cubre todas las áreas críticas."
+  }
+}

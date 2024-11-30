@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import Link from "next/link";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import styles from "./NavBar.module.css";
@@ -94,7 +94,9 @@ export const NavBar = () => {
         }`}
       >
         {!isMobile && (
-          <h1 className={`${styles.title} text-xs`}>TOTAL PRIVACY</h1>
+          <Link href={"/"}>
+            <h1 className={`${styles.title} text-xs`}>TOTAL PRIVACY</h1>
+          </Link>
         )}
         <FaMagnifyingGlass className="cursor-pointer" />
       </div>
@@ -102,7 +104,7 @@ export const NavBar = () => {
       {/* Links */}
       <div className="flex flex-row items-center justify-around w-60 font-medium h-12">
         <Link
-          href={"#"}
+          href={"/cursos"}
           onMouseEnter={() => handleMouseEnter("Cursos")}
           onMouseLeave={handleMouseLeave}
           onClick={() => handleClick("Cursos")}
@@ -117,7 +119,7 @@ export const NavBar = () => {
         </Link>
 
         <Link
-          href={"#"}
+          href={"/ebooks"}
           onMouseEnter={() => handleMouseEnter("E-books")}
           onMouseLeave={handleMouseLeave}
           onClick={() => handleClick("E-books")}

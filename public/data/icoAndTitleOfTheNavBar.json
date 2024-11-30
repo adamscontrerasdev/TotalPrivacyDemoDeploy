@@ -1,47 +1,56 @@
 {
-    "curso": [
-      {
-        "Icon": "SiApple",
-        "title": "Privacidad iOS"
-      },
-      {
-        "Icon": "TbDeviceImac",
-        "title": "Privacidad MacOS"
-      },
-      {
-        "Icon": "SiWindows10",
-        "title": "Privacidad Windows"
-      },
-      {
-        "Icon": "SiAndroid",
-        "title": "Privacidad Android"
-      },
-      {
-        "Icon": "SiBitcoinsv",
-        "title": "Privacidad Bitcoin"
-      }
-    ],
-    "EBooks": [
-      {
-        "Icon": "SiApple",
-        "title": "Privacidad iOS"
-      },
-      {
-        "Icon": "TbDeviceImac",
-        "title": "Privacidad MacOS"
-      },
-      {
-        "Icon": "SiWindows10",
-        "title": "Privacidad Windows"
-      },
-      {
-        "Icon": "SiAndroid",
-        "title": "Privacidad Android"
-      },
-      {
-        "Icon": "RiBankFill",
-        "title": "Privacidad Bancaria"
-      }
-    ]
-  }
-  
+  "curso": [
+    {
+      "Icon": "SiApple",
+      "title": "Privacidad iOS",
+      "key": "bunkeriza-iphone"
+    },
+    {
+      "Icon": "TbDeviceImac",
+      "title": "Privacidad MacOS",
+      "key": "bunkeriza-mac"
+    },
+    {
+      "Icon": "SiWindows10",
+      "title": "Privacidad Windows",
+      "key": "bunkeriza-windows"
+    },
+    {
+      "Icon": "SiAndroid",
+      "title": "Privacidad Android",
+      "key": "bunkeriza-android"
+    },
+    {
+      "Icon": "SiBitcoinsv",
+      "title": "Privacidad Bitcoin",
+      "key": "bitcoin"
+    }
+  ],
+  "EBooks": [
+    {
+      "Icon": "SiApple",
+      "title": "Privacidad iOS",
+      "key": "iphone"
+    },
+    {
+      "Icon": "TbDeviceImac",
+      "title": "Privacidad MacOS",
+      "key": "macos"
+    },
+    {
+      "Icon": "SiWindows10",
+      "title": "Privacidad Windows",
+      "key": "windows"
+    },
+    {
+      "Icon": "SiAndroid",
+      "title": "Privacidad Android",
+      "key": "android"
+    },
+    {
+      "Icon": "RiBankFill",
+      "title": "Privacidad Bancaria",
+      "key": "offshore"
+    }
+  ]
+}

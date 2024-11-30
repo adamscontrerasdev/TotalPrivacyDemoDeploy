@@ -5,4 +5,4 @@ export * from "./ReusablesElements/bestSellingTemplate/BestSellingTemplate";
 
 //navBarElements
 export * from "./navBarElements/CursoOfTheNavBar";
-export * from "./navBarElements/EBooksOfTheNavBar"
+export * from "./navBarElements/EBooksOfTheNavBar";

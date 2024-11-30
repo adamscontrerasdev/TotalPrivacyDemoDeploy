@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'vignette-dark': 'radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,0.9) 100%)',
+        "vignette-dark":
+          "radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,0.9) 100%)",
       },
       colors: {
         background: "var(--background)",
@@ -20,11 +21,9 @@ const config: Config = {
         "background-secondary": "var(--background-secondary-color)",
         text: "var(--text-color)",
       },
-    
     },
   },
-  plugins: [
-  ],
+  plugins: [],
 };
 
 export default config;

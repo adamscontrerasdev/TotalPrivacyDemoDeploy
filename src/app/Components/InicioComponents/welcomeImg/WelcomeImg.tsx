@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 import styles from "./welcomeImg.module.css";
 import { RiArrowDownWideLine } from "react-icons/ri";
 import { PersonalButton } from "@/app/Elements";
-import { FirstMosaicoComponents } from "@/app/Components";
 
 export const WelcomeImg: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -22,19 +21,24 @@ export const WelcomeImg: React.FC = () => {
   const updateTitleStyles = useCallback((scrollProgress: number) => {
     if (titleRef.current) {
       const screenWidth = window.innerWidth;
-      const isNotebookSize = screenWidth >= 720 && screenWidth <= 1536;
+      const isNotebookSize = screenWidth >= 1440 && screenWidth <= 1536;
+      const isMidleSize = screenWidth >= 720 && screenWidth <= 1440;
 
       const scale = Math.max(0.3, 1 - scrollProgress / 20);
 
       const translateX = isNotebookSize
-        ? Math.min(350, scrollProgress * 5)
-        : Math.min(700, scrollProgress * 50);
+        ? Math.min(550, scrollProgress * 10)
+        : isMidleSize
+          ? Math.min(0, scrollProgress * 15)
+          : Math.min(700, scrollProgress * 50);
 
       const translateY = isNotebookSize
-        ? Math.min(425, scrollProgress * 5)
-        : Math.min(450, scrollProgress * 5);
+        ? Math.min(400, scrollProgress * 5)
+        : isMidleSize
+          ? Math.min(370, scrollProgress * 5)
+          : Math.min(450, scrollProgress * 5);
       if (
-        (isNotebookSize && translateX >= 500 && translateY >= 1000) ||
+        (isNotebookSize && translateX >= 1000 && translateY >= 1000) ||
         (!isNotebookSize && translateX >= 700 && translateY >= 450)
       ) {
         return;
@@ -50,7 +54,7 @@ export const WelcomeImg: React.FC = () => {
       ) {
         titleRef.current.classList.add(
           styles.titleTotalPrivacyFoanimation,
-          styles.titleWithClipEffect
+          styles.titleWithClipEffect,
         );
 
         setTimeout(() => {
@@ -61,7 +65,7 @@ export const WelcomeImg: React.FC = () => {
               if (titleRef.current) {
                 titleRef.current.classList.remove(
                   styles.titleTotalPrivacyFoanimation,
-                  styles.titleWithClipEffect
+                  styles.titleWithClipEffect,
                 );
               }
             }, 300);
@@ -77,7 +81,7 @@ export const WelcomeImg: React.FC = () => {
     if (containerSubtitle2Ref.current) {
       const scrollProgressNormalized = Math.min(
         window.scrollY / window.innerHeight,
-        1
+        1,
       );
       const width = 100 * scrollProgressNormalized;
       const padding = 10 * scrollProgressNormalized;
@@ -203,13 +207,16 @@ export const WelcomeImg: React.FC = () => {
 
   return (
     <div
-      className={`flex flex-col items-center justify-center w-screen  z-0  absolute top-[calc(0-3rem)] h-[600vh]`}
+      className={`relative w-screen h-[300vh] flex flex-col items-center justify-start z-0 bg-black`}
       ref={fatherContainerRef}
     >
-      <div className="flex flex-col items-center justify-center w-screen h-screen sticky bottom-0 left-0  ">
-        <div
-          className={`absolute top-0 left-0 w-full h-full bg-black backdrop-blur-sm z-0 ${styles.bgShadowBlur}`}
-        ></div>
+      <div
+        className={`flex flex-col items-center justify-center w-screen 
+          h-[100vh] sticky top-0 left-0 ${styles.bgShadowBlur} `}
+      >
+        {/* <div
+          className={`absolute top-0 left-0 w-full h-full backdrop-blur-sm z-0 ${styles.bgShadowBlur}`}
+        ></div> */}
 
         <h1
           ref={titleRef}
@@ -283,9 +290,6 @@ export const WelcomeImg: React.FC = () => {
             className={`text-foreground w-12 h-12 animate-bounce ${styles.arrowDownWideLine}`}
           />
         </div>
-      </div>
-      <div className="">
-        <FirstMosaicoComponents></FirstMosaicoComponents>
       </div>
     </div>
   );

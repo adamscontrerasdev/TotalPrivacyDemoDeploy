@@ -1,5 +1,6 @@
 // context/MobileContext.js
-"use client"
+"use client";
+import React from "react";
 import { createContext, useContext, useState, useEffect } from "react";
 
 // Crear el contexto

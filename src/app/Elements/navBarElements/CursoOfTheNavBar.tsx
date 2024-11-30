@@ -1,17 +1,13 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
-import {
-  SiApple,
-  SiWindows10,
-  SiAndroid,
-  SiBitcoinsv,
-} from "react-icons/si";
+import { SiApple, SiWindows10, SiAndroid, SiBitcoinsv } from "react-icons/si";
 import { TbDeviceImac } from "react-icons/tb";
 import styles from "./ElementsNavBar.module.css";
 import { GeneralCardOfNavbar } from "./../../Elements/index";
 import dataOfCurso from "./../../../../public/data/icoAndTitleOfTheNavBar.json";
 import { useIsMobile } from "../hooks";
 import { LuMenu } from "react-icons/lu";
+import Link from "next/link";
 
 // Mapping icon names to react-icons components
 const iconMap: Record<string, React.ElementType> = {
@@ -45,7 +41,7 @@ export const CursoOfTheNavBar: React.FC<CursoOfTheNavBarProps> = ({
       setIsAnimated(false);
       const timeout = setTimeout(
         () => setIsRendered(false),
-        iconCards.length * 50 + duration // tiempo reducido para fade-out completo
+        iconCards.length * 50 + duration, // tiempo reducido para fade-out completo
       );
       return () => clearTimeout(timeout);
     }
@@ -61,7 +57,7 @@ export const CursoOfTheNavBar: React.FC<CursoOfTheNavBarProps> = ({
           </div>
         )}
 
-        {iconCards.map(({ Icon, title }, index) => {
+        {iconCards.map(({ Icon, title, key }, index) => {
           const IconComponent = iconMap[Icon];
           if (!IconComponent) return null;
 
@@ -71,8 +67,8 @@ export const CursoOfTheNavBar: React.FC<CursoOfTheNavBarProps> = ({
               ? index * 20 // Aparece de izquierda a derecha con menor delay
               : (iconCards.length - 1 - index) * 20
             : isAnimated
-            ? index * 50 // Aparece de izquierda a derecha con menor delay
-            : (iconCards.length - 1 - index) * 50; // Desaparece de derecha a izquierda
+              ? index * 50 // Aparece de izquierda a derecha con menor delay
+              : (iconCards.length - 1 - index) * 50; // Desaparece de derecha a izquierda
           return (
             <div
               key={index}
@@ -82,7 +78,9 @@ export const CursoOfTheNavBar: React.FC<CursoOfTheNavBarProps> = ({
                 transitionDelay: `${delay}ms`,
               }}
             >
-              <GeneralCardOfNavbar ico={IconComponent} title={title} />
+              <Link href={`/cursos#${key}`}>
+                <GeneralCardOfNavbar ico={IconComponent} title={title} />
+              </Link>
             </div>
           );
         })}

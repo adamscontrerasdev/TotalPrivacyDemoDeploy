@@ -1,3 +1,27 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended" // Esto integra Prettier con ESLint
+  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "rules": {
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }], // Permite que las variables con "_" sean ignoradas
+    "@typescript-eslint/no-unused-vars": ["error"], // Para TypeScript, elimina las variables no usadas
+    "prettier/prettier": "error" // Asegura que Prettier se ejecute con ESLint
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // Detecta la versión de React automáticamente
+    }
+  }
 }

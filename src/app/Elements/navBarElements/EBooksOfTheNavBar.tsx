@@ -8,6 +8,7 @@ import dataOfEbooks from "./../../../../public/data/icoAndTitleOfTheNavBar.json"
 import { TbDeviceImac } from "react-icons/tb";
 import { useIsMobile } from "../hooks";
 import { LuMenu } from "react-icons/lu";
+import Link from "next/link";
 
 // Mapeo de nombres a componentes de react-icons
 const iconMap: Record<string, React.ElementType> = {
@@ -43,7 +44,7 @@ export const EBooksOfTheNavBar: React.FC<EBooksOfTheNavBarProps> = ({
       setIsAnimated(false);
       const timeout = setTimeout(
         () => setIsRendered(false),
-        iconCards.length * 100 + duration
+        iconCards.length * 100 + duration,
       );
       return () => clearTimeout(timeout);
     }
@@ -58,7 +59,7 @@ export const EBooksOfTheNavBar: React.FC<EBooksOfTheNavBarProps> = ({
             <h3>Todos los E-Books</h3>
           </div>
         )}
-        {iconCards.map(({ Icon, title }, index) => {
+        {iconCards.map(({ Icon, title, key }, index) => {
           const IconComponent = iconMap[Icon];
           if (!IconComponent) return null;
 
@@ -67,8 +68,8 @@ export const EBooksOfTheNavBar: React.FC<EBooksOfTheNavBarProps> = ({
               ? index * 20
               : (iconCards.length - 1 - index) * 20
             : isAnimated
-            ? (iconCards.length - 1 - index) * 50
-            : index * 50;
+              ? (iconCards.length - 1 - index) * 50
+              : index * 50;
 
           return (
             <div
@@ -79,7 +80,9 @@ export const EBooksOfTheNavBar: React.FC<EBooksOfTheNavBarProps> = ({
                 transitionDelay: `${delay}ms`,
               }}
             >
-              <GeneralCardOfNavbar ico={IconComponent} title={title} />
+              <Link href={`/ebooks#${key}`}>
+                <GeneralCardOfNavbar ico={IconComponent} title={title} />
+              </Link>
             </div>
           );
         })}

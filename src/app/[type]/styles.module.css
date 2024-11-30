@@ -1,0 +1,124 @@
+.bubble {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -300px;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(50, 50, 50, 0.8)
+  );
+  /* Gradiente con un contraste más sutil */
+  box-shadow:
+    inset -4px -4px 8px rgba(255, 255, 255, 0.2),
+    /* Sombra interna clara */ 6px 6px 12px rgba(0, 0, 0, 0.4);
+  /* Sombra externa más pronunciada */
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  backdrop-filter: blur(12px);
+  /* Aumenta el desenfoque */
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.showBubble {
+  animation: showBubble 0.5s ease-in-out forwards;
+}
+
+@keyframes showBubble {
+  0% {
+    bottom: -300px;
+    opacity: 0;
+    /* Totalmente invisible al principio */
+    transform: translateX(-50%) scale(0.8);
+    /* Pequeño y translúcido */
+  }
+
+  30% {
+    opacity: 0.3;
+    /* Empezamos a hacerla visible */
+    transform: translateX(-50%) scale(0.9);
+    /* Sube un poco */
+  }
+
+  60% {
+    bottom: 70px;
+    /* Subida rápida inicial */
+    opacity: 0.7;
+    /* Opacidad en aumento */
+    transform: translateX(-50%) scale(1.05);
+    /* Expandir ligeramente */
+  }
+
+  75% {
+    bottom: 40px;
+    /* Rebote hacia abajo */
+    opacity: 0.9;
+    /* Más opacidad */
+    transform: translateX(-50%) scale(1);
+    /* Contraer ligeramente */
+  }
+
+  90% {
+    bottom: 55px;
+    /* Rebote hacia arriba */
+    opacity: 1;
+    /* Totalmente visible */
+    transform: translateX(-50%) scale(1);
+    /* Expandir ligeramente */
+  }
+
+  100% {
+    bottom: 25px;
+    /* Posición final */
+    opacity: 1;
+    /* Totalmente visible al final */
+    transform: translateX(-50%) scale(1);
+    /* Estado normal */
+  }
+}
+
+.dontShowBubble {
+  animation: hideBubble 1s ease-in-out forwards;
+}
+
+@keyframes hideBubble {
+  0% {
+    bottom: 25px;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    /* Estado inicial, posición visible */
+  }
+
+  25% {
+    bottom: 55px;
+    /* Rebote ligero hacia arriba */
+    transform: translateX(-50%) scale(1.02);
+  }
+
+  50% {
+    bottom: 40px;
+    opacity: 0.8;
+    /* Rebote hacia abajo */
+    transform: translateX(-50%) scale(0.97);
+  }
+
+  75% {
+    bottom: 70px;
+    opacity: 0.5;
+    /* Rebote alto, más translúcido */
+    transform: translateX(-50%) scale(1.05);
+  }
+
+  100% {
+    bottom: -300px;
+    opacity: 0;
+    transform: translateX(-50%) scale(0.8);
+    /* Estado final, fuera de pantalla */
+  }
+}
