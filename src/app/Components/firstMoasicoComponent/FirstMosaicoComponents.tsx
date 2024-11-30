@@ -24,7 +24,6 @@ export const FirstMosaicoComponents: React.FC = () => {
         .map((product: Ebook, index: number) => (
           <BestSellingTemplate
             key={product.title || index}
-            bgColor={product.price > 100 ? "#fff" : "#000"}
             bgImage={product.Bg}
             description={product.description}
             title={product.title}
