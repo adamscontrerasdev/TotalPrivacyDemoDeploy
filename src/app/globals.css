@@ -23,6 +23,11 @@
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --background: #171717;
@@ -41,5 +46,6 @@ body {
 
 body::-webkit-scrollbar {
   display: none;
+  scrollbar-width: none;
   /* Chrome, Safari, Edge */
 }
