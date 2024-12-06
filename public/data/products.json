@@ -7,7 +7,9 @@
       "price": 37,
       "currency": "€",
       "Bg": "/img/apple.png",
-      "description": "Descubre cómo proteger tu iPhone de manera efectiva y garantizar tu privacidad en cada aspecto de su uso."
+      "description": "Descubre cómo proteger tu iPhone de manera efectiva y garantizar tu privacidad en cada aspecto de su uso.",
+      "before": 46,
+      "order": 0
     },
     {
       "id": 2,
@@ -16,7 +18,9 @@
       "price": 37,
       "currency": "€",
       "Bg": "/img/android.png",
-      "description": "Guía práctica para asegurar la privacidad y seguridad de tu dispositivo Android frente a amenazas digitales."
+      "description": "Guía práctica para asegurar la privacidad y seguridad de tu dispositivo Android frente a amenazas digitales.",
+      "before": 46,
+      "order": 1
     },
     {
       "id": 3,
@@ -25,7 +29,9 @@
       "price": 47,
       "currency": "€",
       "Bg": "/img/windows.png",
-      "description": "Mejora la privacidad de tu equipo Windows con estrategias y herramientas esenciales para proteger tu información."
+      "description": "Mejora la privacidad de tu equipo Windows con estrategias y herramientas esenciales para proteger tu información.",
+      "before": 58,
+      "order": 0
     },
     {
       "id": 4,
@@ -34,7 +40,9 @@
       "price": 47,
       "currency": "€",
       "Bg": "/img/mac.png",
-      "description": "Optimiza la seguridad de tu Mac y aprende a proteger tus datos personales en el ecosistema de macOS."
+      "description": "Optimiza la seguridad de tu Mac y aprende a proteger tus datos personales en el ecosistema de macOS.",
+      "before": 58,
+      "order": 1
     },
     {
       "id": 5,
@@ -43,7 +51,9 @@
       "price": 97,
       "currency": "€",
       "Bg": "/img/banner.png",
-      "description": "Explora el mundo de la economía offshore, aprende sobre banca internacional y la creación de empresas anónimas."
+      "description": "Explora el mundo de la economía offshore, aprende sobre banca internacional y la creación de empresas anónimas.",
+      "before": 121,
+      "order": 0
     }
   ],
   "ebooks_release_date": "2024-11-20",
@@ -55,7 +65,9 @@
       "price": 97,
       "currency": "€",
       "Bg": "/img/iphone-bunker.png",
-      "description": "Aprende a blindar tu iPhone y maximizar la seguridad de tu información personal."
+      "description": "Aprende a blindar tu iPhone y maximizar la seguridad de tu información personal.",
+      "before": 121,
+      "order": 0
     },
     {
       "id": 7,
@@ -64,7 +76,9 @@
       "price": 97,
       "currency": "€",
       "Bg": "/img/android-bunker.png",
-      "description": "Descubre cómo proteger tu Android y mantener tus datos a salvo de amenazas digitales."
+      "description": "Descubre cómo proteger tu Android y mantener tus datos a salvo de amenazas digitales.",
+      "before": 121,
+      "order": 1
     },
     {
       "id": 8,
@@ -74,7 +88,9 @@
       "currency": "€",
       "note": "*",
       "Bg": "/img/graphene.png",
-      "description": "Conoce el sistema operativo más seguro y aprende a configurar un móvil con GrapheneOS."
+      "description": "Conoce el sistema operativo más seguro y aprende a configurar un móvil con GrapheneOS.",
+      "before": 121,
+      "order": 0
     },
     {
       "id": 9,
@@ -83,7 +99,9 @@
       "price": 137,
       "currency": "€",
       "Bg": "/img/mac-bunker.png",
-      "description": "Fortalece la seguridad de tu Mac y protege tu información de manera integral."
+      "description": "Fortalece la seguridad de tu Mac y protege tu información de manera integral.",
+      "before": 171,
+      "order": 1
     },
     {
       "id": 10,
@@ -92,7 +110,9 @@
       "price": 137,
       "currency": "€",
       "Bg": "/img/windows-bunker.png",
-      "description": "Asegura tu computadora Windows con estrategias avanzadas de privacidad y seguridad."
+      "description": "Asegura tu computadora Windows con estrategias avanzadas de privacidad y seguridad.",
+      "before": 171,
+      "order": 0
     },
     {
       "id": 11,
@@ -101,7 +121,9 @@
       "price": 210,
       "currency": "€",
       "Bg": "/img/bitcoin.png",
-      "description": "Introduce las bases del Bitcoin, su funcionamiento y cómo usarlo de manera segura."
+      "description": "Introduce las bases del Bitcoin, su funcionamiento y cómo usarlo de manera segura.",
+      "before": 262,
+      "order": 1
     }
   ],
   "courses_release_date": "2024-11-20",
