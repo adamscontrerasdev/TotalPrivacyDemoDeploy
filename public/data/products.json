@@ -6,7 +6,7 @@
       "title": "Bunkeriza tu iPhone",
       "price": 37,
       "currency": "€",
-      "Bg": "/img/Finales/Ebooks/IphoneNOBG.PNG",
+      "Bg": "/img/Finales/Ebooks/IphoneNOBG.png",
       "description": "Descubre cómo proteger tu iPhone de manera efectiva y garantizar tu privacidad en cada aspecto de su uso.",
       "before": 46,
       "order": 0
@@ -17,7 +17,7 @@
       "title": "Bunkeriza tu Android",
       "price": 37,
       "currency": "€",
-      "Bg": "/img/Finales/Ebooks/AndroidNOBG.PNG",
+      "Bg": "/img/Finales/Ebooks/AndroidNOBG.png",
       "description": "Guía práctica para asegurar la privacidad y seguridad de tu dispositivo Android frente a amenazas digitales.",
       "before": 46,
       "order": 1
