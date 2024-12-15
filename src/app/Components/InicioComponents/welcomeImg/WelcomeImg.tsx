@@ -5,7 +5,6 @@ import { RiArrowDownWideLine } from "react-icons/ri";
 import { PersonalButton } from "@/app/Elements";
 import { useIsMobile } from "@/app/Elements/hooks";
 import CelComponent from "./CelComponent";
-import Link from "next/link";
 
 export const WelcomeImg: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -58,7 +57,7 @@ export const WelcomeImg: React.FC = () => {
       ) {
         titleRef.current.classList.add(
           styles.titleTotalPrivacyFoanimation,
-          styles.titleWithClipEffect
+          styles.titleWithClipEffect,
         );
 
         setTimeout(() => {
@@ -69,7 +68,7 @@ export const WelcomeImg: React.FC = () => {
               if (titleRef.current) {
                 titleRef.current.classList.remove(
                   styles.titleTotalPrivacyFoanimation,
-                  styles.titleWithClipEffect
+                  styles.titleWithClipEffect,
                 );
               }
             }, 300);
@@ -85,7 +84,7 @@ export const WelcomeImg: React.FC = () => {
     if (containerSubtitle2Ref.current) {
       const scrollProgressNormalized = Math.min(
         window.scrollY / window.innerHeight,
-        1
+        1,
       );
       const width = 100 * scrollProgressNormalized;
       const padding = 10 * scrollProgressNormalized;

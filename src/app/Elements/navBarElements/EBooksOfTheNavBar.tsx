@@ -46,7 +46,7 @@ export const EBooksOfTheNavBar: React.FC<EBooksOfTheNavBarProps> = ({
       setIsAnimated(false);
       const timeout = setTimeout(
         () => setIsRendered(false),
-        iconCards.length * 100 + duration
+        iconCards.length * 100 + duration,
       );
       return () => clearTimeout(timeout);
     }

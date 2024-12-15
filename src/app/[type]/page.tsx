@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef, use } from "react";
 import { notFound } from "next/navigation";
 import data from "./../../../public/data/products.json";
 import styles from "./styles.module.css";
-import Link from "next/link";
 import { CardOFProduct } from "../Components";
 
 const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {

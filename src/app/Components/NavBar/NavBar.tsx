@@ -190,7 +190,10 @@ export const NavBar = () => {
               isHover ? "h-full opacity-100" : "h-0"
             }`}
           >
-            <EBooksOfTheNavBar isVisible={isHover} duration={500}               closeMenu={() => handleMobileClick("E-books")}
+            <EBooksOfTheNavBar
+              isVisible={isHover}
+              duration={500}
+              closeMenu={() => handleMobileClick("E-books")}
             />
           </div>
         )}

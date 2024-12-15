@@ -43,7 +43,7 @@ export const CursoOfTheNavBar: React.FC<CursoOfTheNavBarProps> = ({
       setIsAnimated(false);
       const timeout = setTimeout(
         () => setIsRendered(false),
-        iconCards.length * 50 + duration // tiempo reducido para fade-out completo
+        iconCards.length * 50 + duration, // tiempo reducido para fade-out completo
       );
       return () => clearTimeout(timeout);
     }
