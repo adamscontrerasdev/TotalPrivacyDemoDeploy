@@ -21,10 +21,11 @@ export const CardOFProduct: React.FC<CardOFProdectProps> = ({
 }) => {
   return (
     <div
-      className={`w-full h-full flex flex-col ${order === 1 ? "md:flex-row" : "md:flex-row-reverse"}`}
+      className={`w-full h-full flex flex-col ${order === 1 ? "md:flex-row" : "md:flex-row-reverse"} `}
+      style={{ background: `radial-gradient(at top, #000, #203adf30 )` }}
     >
       {/* Imagen */}
-      <div className="w-full md:w-1/2 h-[50%] md:h-full bg-black relative">
+      <div className="w-full md:w-1/2 h-[50%] md:h-full  relative">
         <img src={Bg} alt={title} className="w-full h-full object-cover" />
         <div
           className="w-full h-full absolute top-0 left-0"
@@ -44,9 +45,10 @@ export const CardOFProduct: React.FC<CardOFProdectProps> = ({
         </h2>
         <h2 className="text-5xl font-bold text-green-500">
           <s className="text-gray-500 text-4xl">
-            {before && before + currency}
+            {before && currency + before}
           </s>{" "}
-          {price} {currency}
+          {currency}
+          {price}
         </h2>
         <button
           className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-4 px-10 rounded-xl mt-6 text-xl transition-all duration-300 ease-in-out shadow-[0_0_10px_5px_rgb(202_138_4)] 

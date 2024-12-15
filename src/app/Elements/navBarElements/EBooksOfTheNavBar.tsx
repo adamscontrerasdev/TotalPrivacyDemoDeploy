@@ -22,11 +22,13 @@ const iconMap: Record<string, React.ElementType> = {
 interface EBooksOfTheNavBarProps {
   isVisible?: boolean;
   duration?: number;
+  closeMenu: () => void; // Nueva prop para cerrar el menú
 }
 
 export const EBooksOfTheNavBar: React.FC<EBooksOfTheNavBarProps> = ({
   isVisible,
   duration = 500,
+  closeMenu,
 }) => {
   const [isRendered, setIsRendered] = useState(false);
   const [isAnimated, setIsAnimated] = useState(false);
@@ -44,7 +46,7 @@ export const EBooksOfTheNavBar: React.FC<EBooksOfTheNavBarProps> = ({
       setIsAnimated(false);
       const timeout = setTimeout(
         () => setIsRendered(false),
-        iconCards.length * 100 + duration,
+        iconCards.length * 100 + duration
       );
       return () => clearTimeout(timeout);
     }
@@ -54,10 +56,12 @@ export const EBooksOfTheNavBar: React.FC<EBooksOfTheNavBarProps> = ({
     isRendered && (
       <div className="flex flex-col md:flex-row items-center justify-evenly w-3/4 absolute top-0 h-[95%] md:h-full text-text">
         {isMobile && (
-          <div className="flex flex-col items-center justify-center">
-            <LuMenu />
-            <h3>Todos los E-Books</h3>
-          </div>
+          <Link href={"/ebooks"} onClick={closeMenu}>
+            <div className="flex flex-col items-center justify-center">
+              <LuMenu />
+              <h3>Todos los E-Books</h3>
+            </div>
+          </Link>
         )}
         {iconCards.map(({ Icon, title, key }, index) => {
           const IconComponent = iconMap[Icon];
@@ -80,7 +84,7 @@ export const EBooksOfTheNavBar: React.FC<EBooksOfTheNavBarProps> = ({
                 transitionDelay: `${delay}ms`,
               }}
             >
-              <Link href={`/ebooks#${key}`}>
+              <Link href={`/ebooks#${key}`} onClick={closeMenu}>
                 <GeneralCardOfNavbar ico={IconComponent} title={title} />
               </Link>
             </div>

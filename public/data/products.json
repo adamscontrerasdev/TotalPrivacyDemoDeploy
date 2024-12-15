@@ -3,10 +3,10 @@
     {
       "id": 1,
       "key": "iphone",
-      "title": "Privacidad Express iPhone",
+      "title": "Bunkeriza tu iPhone",
       "price": 37,
       "currency": "€",
-      "Bg": "/img/apple.png",
+      "Bg": "/img/Finales/Ebooks/IphoneNOBG.PNG",
       "description": "Descubre cómo proteger tu iPhone de manera efectiva y garantizar tu privacidad en cada aspecto de su uso.",
       "before": 46,
       "order": 0
@@ -14,46 +14,13 @@
     {
       "id": 2,
       "key": "android",
-      "title": "Privacidad Express Android",
+      "title": "Bunkeriza tu Android",
       "price": 37,
       "currency": "€",
-      "Bg": "/img/android.png",
+      "Bg": "/img/Finales/Ebooks/AndroidNOBG.PNG",
       "description": "Guía práctica para asegurar la privacidad y seguridad de tu dispositivo Android frente a amenazas digitales.",
       "before": 46,
       "order": 1
-    },
-    {
-      "id": 3,
-      "key": "windows",
-      "title": "Privacidad Express Windows",
-      "price": 47,
-      "currency": "€",
-      "Bg": "/img/windows.png",
-      "description": "Mejora la privacidad de tu equipo Windows con estrategias y herramientas esenciales para proteger tu información.",
-      "before": 58,
-      "order": 0
-    },
-    {
-      "id": 4,
-      "key": "macos",
-      "title": "Privacidad Express MacOS",
-      "price": 47,
-      "currency": "€",
-      "Bg": "/img/mac.png",
-      "description": "Optimiza la seguridad de tu Mac y aprende a proteger tus datos personales en el ecosistema de macOS.",
-      "before": 58,
-      "order": 1
-    },
-    {
-      "id": 5,
-      "key": "offshore",
-      "title": "Economía off-shore, banca y empresa anónima",
-      "price": 97,
-      "currency": "€",
-      "Bg": "/img/banner.png",
-      "description": "Explora el mundo de la economía offshore, aprende sobre banca internacional y la creación de empresas anónimas.",
-      "before": 121,
-      "order": 0
     }
   ],
   "ebooks_release_date": "2024-11-20",

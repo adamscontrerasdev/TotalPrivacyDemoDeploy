@@ -3,7 +3,7 @@ import React from "react";
 interface PersonalButtonProps {
   value?: string;
   color?: string;
-  ref: React.Ref<HTMLButtonElement>;
+  ref?: React.Ref<HTMLButtonElement>;
   className?: string;
 }
 

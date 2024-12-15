@@ -2,7 +2,7 @@ import React from "react";
 import { ebooks } from "../../../../../public/data/products.json";
 
 export const BtcComponente = () => {
-  const dataOfEbooksBancario = ebooks[4];
+  const dataOfEbooksBancario = ebooks[1];
 
   return (
     <div className="flex flex-col items-center justify-center w-screen h-[50vh] bg-black">

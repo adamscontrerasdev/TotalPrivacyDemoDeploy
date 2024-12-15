@@ -3,6 +3,9 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 import styles from "./welcomeImg.module.css";
 import { RiArrowDownWideLine } from "react-icons/ri";
 import { PersonalButton } from "@/app/Elements";
+import { useIsMobile } from "@/app/Elements/hooks";
+import CelComponent from "./CelComponent";
+import Link from "next/link";
 
 export const WelcomeImg: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -15,6 +18,7 @@ export const WelcomeImg: React.FC = () => {
   const containerBestSellingTemplateRef = useRef<HTMLDivElement>(null);
   const [subtitle2IsFullWidth, setSubtitle2IsFullWidth] = useState(false);
   const fatherContainerRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
 
   let lastScrollProgress = 0;
 
@@ -39,7 +43,7 @@ export const WelcomeImg: React.FC = () => {
           : Math.min(450, scrollProgress * 5);
       if (
         (isNotebookSize && translateX >= 1000 && translateY >= 1000) ||
-        (!isNotebookSize && translateX >= 700 && translateY >= 450)
+        (!isNotebookSize && translateX >= 700 && translateY >= 400)
       ) {
         return;
       }
@@ -54,7 +58,7 @@ export const WelcomeImg: React.FC = () => {
       ) {
         titleRef.current.classList.add(
           styles.titleTotalPrivacyFoanimation,
-          styles.titleWithClipEffect,
+          styles.titleWithClipEffect
         );
 
         setTimeout(() => {
@@ -65,7 +69,7 @@ export const WelcomeImg: React.FC = () => {
               if (titleRef.current) {
                 titleRef.current.classList.remove(
                   styles.titleTotalPrivacyFoanimation,
-                  styles.titleWithClipEffect,
+                  styles.titleWithClipEffect
                 );
               }
             }, 300);
@@ -81,7 +85,7 @@ export const WelcomeImg: React.FC = () => {
     if (containerSubtitle2Ref.current) {
       const scrollProgressNormalized = Math.min(
         window.scrollY / window.innerHeight,
-        1,
+        1
       );
       const width = 100 * scrollProgressNormalized;
       const padding = 10 * scrollProgressNormalized;
@@ -104,8 +108,15 @@ export const WelcomeImg: React.FC = () => {
 
   const updateSubtitle2Styles = (scrollProgress: number) => {
     if (subtitle2Ref.current) {
+      // Consulta el ancho de la pantalla
+      const screenWidth = window.innerWidth;
+
+      // Ajusta el factor multiplicador según el ancho de la pantalla
+      const multiplier = screenWidth < 1080 ? 10 : 8;
+
       const scale = Math.min(1.3, 1 + scrollProgress / 300);
-      const translateY = scrollProgress * 10;
+      const translateY = scrollProgress * multiplier;
+
       subtitle2Ref.current.style.transform = `translateY(-${translateY}%) scale(${scale})`;
     }
   };
@@ -205,92 +216,111 @@ export const WelcomeImg: React.FC = () => {
     };
   }, [handleScroll]);
 
+  const handleClickToScrollCenter = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    const targetElement = document.getElementById("BEST_SELLERS");
+    if (targetElement) {
+      const offset = window.innerHeight / 2; // Calcular el 50% del viewport
+      const elementTop =
+        targetElement.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementTop - offset, // Ajustar para que quede centrado
+        behavior: "smooth", // Desplazamiento suave
+      });
+    }
+  }, []);
+
   return (
-    <div
-      className={`relative w-screen h-[300vh] flex flex-col items-center justify-start z-0 bg-black`}
-      ref={fatherContainerRef}
-    >
-      <div
-        className={`flex flex-col items-center justify-center w-screen 
-          h-[100vh] sticky top-0 left-0 ${styles.bgShadowBlur} `}
-      >
-        {/* <div
-          className={`absolute top-0 left-0 w-full h-full backdrop-blur-sm z-0 ${styles.bgShadowBlur}`}
-        ></div> */}
-
-        <h1
-          ref={titleRef}
-          className={`font-bold text-xl sm:text-8xl md:text-8xl 2xl:text-[12rem] text-foreground z-10 relative ${styles.titleTotalPrivacy} w-screen text-center`}
-        >
-          TOTAL PRIVACY
-        </h1>
-
-        <h2 className="text-foreground relative z-10 text-lg" ref={subtitleRef}>
-          Si vis pacem para bellum{" "}
-        </h2>
-
+    <div>
+      {isMobile ? (
+        <CelComponent />
+      ) : (
         <div
-          className={`w-0 p-0 absolute h-full top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-10 flex flex-col items-center justify-center overflow-hidden `}
-          ref={containerSubtitle2Ref}
+          className={`relative w-screen h-[250vh] flex flex-col items-center justify-start z-0 bg-black`}
+          ref={fatherContainerRef}
         >
-          <h2
-            className={`text-3xl text-white ${styles.title}`}
-            style={{
-              position: "relative",
-              width: "1920px",
-              whiteSpace: "nowrap",
-              textAlign: "center",
-              overflow: "hidden",
-            }}
-            ref={subtitle2Ref}
+          <div
+            className={`flex flex-col items-center justify-center w-screen 
+            h-[100vh] sticky top-0 left-0 ${styles.bgShadowBlur}`}
           >
-            ¿Es momento de cambiar tu vida?
-          </h2>
-        </div>
+            <h1
+              ref={titleRef}
+              className={`font-bold text-xl sm:text-8xl md:text-8xl 2xl:text-[12rem] text-foreground z-[9999] relative ${styles.titleTotalPrivacy} w-screen text-center`}
+            >
+              TOTAL PRIVACY
+            </h1>
 
-        <div
-          className={`${styles.welcomeTexto} w-full h-[65vh] absolute top-[100%] left-0 z-10 flex justify-center items-center `}
-          ref={welcomeTextoRef}
-        >
-          <p
-            className={`text-white text-center text-xl lg:text-2xl w-[55vw] opacity-1 ${styles.title}`}
-          >
-            ¡Descubre cómo navegar de manera segura y proteger tu privacidad en
-            línea! En Total Privacy, te ofrecemos recursos y cursos diseñados
-            para enseñarte las mejores prácticas en la web. Aprende a proteger
-            tu información personal, navegar de forma anónima y manejar tus
-            redes sociales con total seguridad. Tu privacidad es lo más
-            importante, y queremos ayudarte a mantenerla intacta. ¡Explora
-            nuestros cursos y E-books y toma el control de tu seguridad en
-            línea!
-          </p>
-        </div>
+            <h2
+              className="text-foreground relative z-10 text-lg"
+              ref={subtitleRef}
+            >
+              Si vis pacem para bellum
+            </h2>
 
-        <div
-          className={`${styles.buttons} p-5 flex gap-10 items-end justify-center w-full h-[60vh] absolute top-0 left-0 z-10`}
-        >
-          <PersonalButton
-            value="Ver cursos"
-            color="white"
-            ref={buttonRefCursos}
-            className="opacity-0"
-          />
-          <PersonalButton
-            value="Ver E-Books"
-            color="white"
-            ref={buttonRefEBooks}
-            className="opacity-0"
-          />
-        </div>
+            <div
+              className={`w-0 p-0 absolute h-full top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-10 flex flex-col items-center justify-center overflow-hidden`}
+              ref={containerSubtitle2Ref}
+            >
+              <h2
+                className={`text-3xl text-white ${styles.title}`}
+                style={{
+                  position: "relative",
+                  width: "1920px",
+                  whiteSpace: "nowrap",
+                  textAlign: "center",
+                  overflow: "hidden",
+                }}
+                ref={subtitle2Ref}
+              >
+                ¿Es momento de cambiar tu vida?
+              </h2>
+            </div>
 
-        <div
-          className={`absolute bottom-64 md:bottom-10 left-0 w-full flex flex-col items-center justify-center z-10 ${styles.arrowDownWideLineContainer}`}
-        >
-          <RiArrowDownWideLine
-            className={`text-foreground w-12 h-12 animate-bounce ${styles.arrowDownWideLine}`}
-          />
+            <div
+              className={`${styles.welcomeTexto} w-full h-[65vh] absolute top-[100%] left-0 z-10 flex justify-center items-center`}
+              ref={welcomeTextoRef}
+            >
+              <p
+                className={`text-white text-center text-xl lg:text-2xl w-[55vw] opacity-1 ${styles.title}`}
+              >
+                ¡Descubre cómo navegar de manera segura y proteger tu privacidad
+                en línea! En Total Privacy, te ofrecemos recursos y cursos
+                diseñados para enseñarte las mejores prácticas en la web.
+                Aprende a proteger tu información personal, navegar de forma
+                anónima y manejar tus redes sociales con total seguridad. Tu
+                privacidad es lo más importante, y queremos ayudarte a
+                mantenerla intacta. ¡Explora nuestros cursos y E-books y toma el
+                control de tu seguridad en línea!
+              </p>
+            </div>
+
+            <div
+              className={`${styles.buttons} p-5 flex gap-10 items-end justify-center w-full h-[60vh] absolute top-0 left-0 z-10`}
+            >
+              <PersonalButton
+                value="Ver cursos"
+                color="white"
+                ref={buttonRefCursos}
+                className="opacity-0"
+              />
+              <PersonalButton
+                value="Ver E-Books"
+                color="white"
+                ref={buttonRefEBooks}
+                className="opacity-0"
+              />
+            </div>
+            <div
+              className={`absolute bottom-64 md:bottom-10 left-0 w-full flex flex-col items-center justify-center z-50 ${styles.arrowDownWideLineContainer} cursor-pointer `}
+              onClick={handleClickToScrollCenter}
+            >
+              <RiArrowDownWideLine
+                className={`text-foreground w-12 h-12 animate-bounce ${styles.arrowDownWideLine}`}
+              />
+            </div>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

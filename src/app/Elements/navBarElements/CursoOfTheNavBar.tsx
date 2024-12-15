@@ -21,11 +21,13 @@ const iconMap: Record<string, React.ElementType> = {
 interface CursoOfTheNavBarProps {
   isVisible?: boolean;
   duration?: number;
+  closeMenu: () => void; // Nueva prop para cerrar el menú
 }
 
 export const CursoOfTheNavBar: React.FC<CursoOfTheNavBarProps> = ({
   isVisible,
   duration = 200, // reduce duración
+  closeMenu,
 }) => {
   const [isRendered, setIsRendered] = useState(false);
   const [isAnimated, setIsAnimated] = useState(false);
@@ -41,7 +43,7 @@ export const CursoOfTheNavBar: React.FC<CursoOfTheNavBarProps> = ({
       setIsAnimated(false);
       const timeout = setTimeout(
         () => setIsRendered(false),
-        iconCards.length * 50 + duration, // tiempo reducido para fade-out completo
+        iconCards.length * 50 + duration // tiempo reducido para fade-out completo
       );
       return () => clearTimeout(timeout);
     }
@@ -51,10 +53,12 @@ export const CursoOfTheNavBar: React.FC<CursoOfTheNavBarProps> = ({
     isRendered && (
       <div className="flex flex-col md:flex-row items-center justify-evenly w-3/4  text-text  absolute top-0 h-[95%] md:h-full ">
         {isMobile && (
-          <div className="flex flex-col items-center justify-center">
-            <LuMenu />
-            <h3>Todos los cursos</h3>
-          </div>
+          <Link href={"/cursos"} onClick={closeMenu}>
+            <div className="flex flex-col items-center justify-center">
+              <LuMenu />
+              <h3>Todos los cursos</h3>
+            </div>
+          </Link>
         )}
 
         {iconCards.map(({ Icon, title, key }, index) => {
@@ -78,7 +82,7 @@ export const CursoOfTheNavBar: React.FC<CursoOfTheNavBarProps> = ({
                 transitionDelay: `${delay}ms`,
               }}
             >
-              <Link href={`/cursos#${key}`}>
+              <Link href={`/cursos#${key}`} onClick={closeMenu}>
                 <GeneralCardOfNavbar ico={IconComponent} title={title} />
               </Link>
             </div>

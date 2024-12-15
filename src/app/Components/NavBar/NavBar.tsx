@@ -1,9 +1,8 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import styles from "./NavBar.module.css";
-import { useEffect, useState, useRef } from "react";
 import { CursoOfTheNavBar, EBooksOfTheNavBar } from "./../../Elements/index";
 import { useIsMobile } from "@/app/Elements/hooks";
 
@@ -16,19 +15,39 @@ export const NavBar = () => {
   const isMobile = useIsMobile();
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const handleMouseEnter = (who: string) => {
-    if (isMobile) return;
-    setIsLinkHover(true);
+  // Lógica para dispositivos móviles
+
+  const handleMobileClick = (who: string) => {
+    if (whoIsHover === who) {
+      setIsHover(false);
+      setIsVisible(true);
+      setIsLinkHover(false);
+      setTimeout(() => {
+        setWhoIsHover("");
+      }, 500);
+    } else {
+      setIsLinkHover(true);
+      if (timeoutRef.current !== null) {
+        clearTimeout(timeoutRef.current);
+      }
+      setIsHover(true);
+      setWhoIsHover(who);
+      setIsVisible(true);
+    }
+  };
+
+  // Lógica para dispositivos de escritorio
+  const handleDesktopMouseEnter = (who: string) => {
     if (timeoutRef.current !== null) {
       clearTimeout(timeoutRef.current);
     }
+    setIsLinkHover(true);
     setIsHover(true);
     setWhoIsHover(who);
     setIsVisible(true);
   };
 
-  const handleMouseLeave = () => {
-    if (isMobile) return;
+  const handleDesktopMouseLeave = () => {
     setIsLinkHover(false);
     if (!isContentHover && !isLinkHover) {
       timeoutRef.current = setTimeout(() => {
@@ -53,26 +72,6 @@ export const NavBar = () => {
     setWhoIsHover("");
   };
 
-  const handleClick = (who: string) => {
-    if (!isMobile) return;
-    if (whoIsHover === who) {
-      setIsHover(false);
-      setIsVisible(true);
-      setIsLinkHover(false);
-      setTimeout(() => {
-        setWhoIsHover("");
-      }, 500);
-    } else {
-      setIsLinkHover(true);
-      if (timeoutRef.current !== null) {
-        clearTimeout(timeoutRef.current);
-      }
-      setIsHover(true);
-      setWhoIsHover(who);
-      setIsVisible(true);
-    }
-  };
-
   useEffect(() => {
     return () => {
       if (timeoutRef.current !== null) {
@@ -89,7 +88,7 @@ export const NavBar = () => {
     >
       {/* Top bar */}
       <div
-        className={`w-full h-12 absolute top-0 left-0 flex items-center px-10 ${
+        className={`w-full h-12 absolute top-0 left-0 flex items-center px-10  ${
           isMobile ? "justify-end" : "justify-between"
         }`}
       >
@@ -102,36 +101,64 @@ export const NavBar = () => {
       </div>
 
       {/* Links */}
-      <div className="flex flex-row items-center justify-around w-60 font-medium h-12">
-        <Link
-          href={"/cursos"}
-          onMouseEnter={() => handleMouseEnter("Cursos")}
-          onMouseLeave={handleMouseLeave}
-          onClick={() => handleClick("Cursos")}
-          className="text-md relative px-2"
-        >
-          Cursos
-          <div
-            className={`${
-              whoIsHover === "Cursos" ? "w-full" : "w-0"
-            } h-[1px] bg-foreground bottom-0 left-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)] `}
-          ></div>
-        </Link>
+      <div className="flex  items-center justify-around w-60 font-medium h-12 bg-black z-20">
+        {isMobile ? (
+          <>
+            <div
+              onClick={() => handleMobileClick("Cursos")}
+              className="relative"
+            >
+              Cursos
+              <div
+                className={`${
+                  whoIsHover === "Cursos" ? "w-full" : "w-0"
+                } h-[1px] bg-foreground bottom-0 left-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)] `}
+              ></div>
+            </div>
 
-        <Link
-          href={"/ebooks"}
-          onMouseEnter={() => handleMouseEnter("E-books")}
-          onMouseLeave={handleMouseLeave}
-          onClick={() => handleClick("E-books")}
-          className="text-md relative px-2"
-        >
-          E-Books
-          <div
-            className={`${
-              whoIsHover === "E-books" ? "w-full" : "w-0"
-            } h-[1px] bg-foreground bottom-0 right-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)]`}
-          ></div>
-        </Link>
+            <div
+              onClick={() => handleMobileClick("E-books")}
+              className="relative"
+            >
+              E-Books
+              <div
+                className={`${
+                  whoIsHover === "E-books" ? "w-full" : "w-0"
+                } h-[1px] bg-foreground bottom-0 right-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)]`}
+              ></div>
+            </div>
+          </>
+        ) : (
+          <>
+            <Link
+              href={"/cursos"}
+              onMouseEnter={() => handleDesktopMouseEnter("Cursos")}
+              onMouseLeave={handleDesktopMouseLeave}
+              className="text-md relative px-2"
+            >
+              Cursos
+              <div
+                className={`${
+                  whoIsHover === "Cursos" ? "w-full" : "w-0"
+                } h-[1px] bg-foreground bottom-0 left-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)] `}
+              ></div>
+            </Link>
+
+            <Link
+              href={"/ebooks"}
+              onMouseEnter={() => handleDesktopMouseEnter("E-books")}
+              onMouseLeave={handleDesktopMouseLeave}
+              className="text-md relative px-2"
+            >
+              E-Books
+              <div
+                className={`${
+                  whoIsHover === "E-books" ? "w-full" : "w-0"
+                } h-[1px] bg-foreground bottom-0 right-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)]`}
+              ></div>
+            </Link>
+          </>
+        )}
       </div>
 
       {/* Hover content */}
@@ -144,26 +171,27 @@ export const NavBar = () => {
           <div
             onMouseEnter={handleContentMouseEnter}
             onMouseLeave={handleContentMouseLeave}
-            className={`w-full transition-all duration-500 ${
-              isHover ? "duration-500" : "duration-500"
-            } ease-in-out absolute top-0 flex justify-center items-center bg-transparent ${
+            className={`w-full transition-all duration-500 ease-in-out absolute top-0 flex justify-center items-center bg-transparent ${
               isHover ? "h-full opacity-100" : "h-0"
             }`}
           >
-            <CursoOfTheNavBar isVisible={isHover} duration={500} />
+            <CursoOfTheNavBar
+              isVisible={isHover}
+              duration={500}
+              closeMenu={() => handleMobileClick("Cursos")}
+            />
           </div>
         )}
         {isVisible && whoIsHover === "E-books" && (
           <div
             onMouseEnter={handleContentMouseEnter}
             onMouseLeave={handleContentMouseLeave}
-            className={`w-full transition-all duration-500 ${
-              isHover ? "duration-500" : "duration-500"
-            } ease-in-out absolute top-0 flex justify-center items-center bg-transparent ${
+            className={`w-full transition-all duration-500 ease-in-out absolute top-0 flex justify-center items-center bg-transparent ${
               isHover ? "h-full opacity-100" : "h-0"
             }`}
           >
-            <EBooksOfTheNavBar isVisible={isHover} duration={500} />
+            <EBooksOfTheNavBar isVisible={isHover} duration={500}               closeMenu={() => handleMobileClick("E-books")}
+            />
           </div>
         )}
       </div>

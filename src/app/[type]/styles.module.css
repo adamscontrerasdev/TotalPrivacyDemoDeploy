@@ -136,7 +136,7 @@
   width: 0;
   height: 0;
   border-left: 2.1rem solid transparent;
-  border-top: 25px solid #e3ddcf; /* Triángulo rectángulo hacia abajo */
+  border-top: 25px solid #000; /* Triángulo rectángulo hacia abajo */
   bottom: -23px;
   right: 0;
 }
@@ -145,7 +145,7 @@
   width: 0;
   height: 0;
   border-left: 2.1rem solid transparent;
-  border-bottom: 25px solid #e3ddcf; /* Triángulo rectángulo hacia arriba */
+  border-bottom: 25px solid #000; /* Triángulo rectángulo hacia arriba */
   top: -23px;
   right: 0;
 }

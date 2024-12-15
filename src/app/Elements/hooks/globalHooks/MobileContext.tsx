@@ -1,7 +1,6 @@
-// context/MobileContext.js
+// hooks/useDevice.tsx
 "use client";
-import React from "react";
-import { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 // Crear el contexto
 const MobileContext = createContext(false);
@@ -13,16 +12,19 @@ export const useIsMobile = () => {
 
 interface MobileProviderProps {
   children: React.ReactNode;
+  initialMobileState: boolean; // Pasar el estado inicial desde el servidor
 }
+
 // Proveedor del contexto
-export const MobileProvider: React.FC<MobileProviderProps> = ({ children }) => {
-  const [isMobile, setIsMobile] = useState(false);
+export const MobileProvider: React.FC<MobileProviderProps> = ({
+  children,
+  initialMobileState,
+}) => {
+  const [isMobile, setIsMobile] = useState(initialMobileState);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
-    handleResize(); // Verificar al cargar la app
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 

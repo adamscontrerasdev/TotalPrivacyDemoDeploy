@@ -29,28 +29,13 @@
   "EBooks": [
     {
       "Icon": "SiApple",
-      "title": "Privacidad iOS",
+      "title": "Bunkeriza tu iPhone",
       "key": "iphone"
     },
     {
-      "Icon": "TbDeviceImac",
-      "title": "Privacidad MacOS",
-      "key": "macos"
-    },
-    {
-      "Icon": "SiWindows10",
-      "title": "Privacidad Windows",
-      "key": "windows"
-    },
-    {
       "Icon": "SiAndroid",
-      "title": "Privacidad Android",
+      "title": "Bunkeriza tu Android",
       "key": "android"
-    },
-    {
-      "Icon": "RiBankFill",
-      "title": "Privacidad Bancaria",
-      "key": "offshore"
     }
   ]
 }
