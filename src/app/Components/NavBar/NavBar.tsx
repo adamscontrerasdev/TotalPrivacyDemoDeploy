@@ -101,7 +101,7 @@ export const NavBar = () => {
       </div>
 
       {/* Links */}
-      <div className="flex  items-center justify-around w-60 font-medium h-12 bg-black z-20">
+      <div className="flex  items-center justify-around w-60 font-medium h-12 z-20">
         {isMobile ? (
           <>
             <div

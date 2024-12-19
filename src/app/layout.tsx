@@ -5,6 +5,7 @@ import { NavBar } from "./Components";
 import { MobileProvider } from "./Elements/hooks";
 import React from "react";
 import { headers } from "next/headers";
+import { VideoStatusProvider } from "./Elements/hooks/globalHooks/VideoStatusContext ";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,12 +36,14 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <MobileProvider initialMobileState={isMobile}>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          <NavBar />
-          {children}
-        </body>
+        <VideoStatusProvider>
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          >
+            <NavBar />
+            {children}
+          </body>
+        </VideoStatusProvider>
       </MobileProvider>
     </html>
   );

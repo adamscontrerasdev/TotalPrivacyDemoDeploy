@@ -2,8 +2,7 @@
 import React, { useState, useEffect, useRef, use } from "react";
 import { notFound } from "next/navigation";
 import data from "./../../../public/data/products.json";
-import styles from "./styles.module.css";
-import { CardOFProduct } from "../Components";
+import { CardOFProduct, StaticIsland } from "../Components";
 
 const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
   const { type } = use(params);
@@ -22,6 +21,8 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
   };
 
   const handleScroll = (direction?: "up" | "down") => {
+    if (scrolling) return;
+
     const currentScroll = window.scrollY;
     const closestSectionIndex = Math.round(currentScroll / window.innerHeight);
 
@@ -40,24 +41,34 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
       setScrolling(true);
       window.scrollTo({
         top: targetSection.offsetTop,
-        behavior: "smooth", // Desplazamiento suave
+        behavior: "smooth",
       });
       setActiveCircle(targetKey || "");
-      window.history.replaceState(null, "", `#${targetKey}`); // Actualizar el hash
-      setTimeout(() => setScrolling(false), 500); // Desbloquear tras animación
+      window.history.replaceState(null, "", `#${targetKey}`);
+      setTimeout(() => setScrolling(false), 800); // Aumenta el tiempo si el trackpad sigue siendo problemático
     }
   };
 
+  let lastScrollDirection: "up" | "down" | null = null;
+
   const handleWheel = (event: WheelEvent) => {
     if (scrolling) {
-      event.preventDefault(); // Bloquear el scroll nativo si está bloqueado
+      event.preventDefault();
       return;
     }
 
+    const SCROLL_THRESHOLD = 50;
     const direction = event.deltaY > 0 ? "down" : "up";
-    handleScroll(direction);
 
-    event.preventDefault(); // Prevenir comportamiento nativo
+    if (
+      Math.abs(event.deltaY) > SCROLL_THRESHOLD &&
+      direction !== lastScrollDirection
+    ) {
+      lastScrollDirection = direction;
+      handleScroll(direction);
+    }
+
+    event.preventDefault();
   };
 
   const handleTouchStart = (event: TouchEvent) => {
@@ -66,7 +77,7 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
 
   const handleTouchMove = (event: TouchEvent) => {
     if (scrolling || lastTouchY.current === null) {
-      event.preventDefault(); // Bloquear el scroll nativo si está bloqueado
+      event.preventDefault();
       return;
     }
 
@@ -79,10 +90,7 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
   };
 
   useEffect(() => {
-    // Listener para rueda del mouse
     window.addEventListener("wheel", handleWheel, { passive: false });
-
-    // Listeners para pantallas táctiles
     window.addEventListener("touchstart", handleTouchStart, { passive: true });
     window.addEventListener("touchmove", handleTouchMove, { passive: false });
 
@@ -95,7 +103,7 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
 
   useEffect(() => {
     const updateActiveCircleWithHash = () => {
-      const currentHash = window.location.hash.slice(1); // Remover el "#"
+      const currentHash = window.location.hash.slice(1);
       if (currentHash && currentHash !== activeCircle) {
         setActiveCircle(currentHash);
         const targetSection = sectionRefs.current[currentHash];
@@ -139,27 +147,12 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
               description={item.description}
               before={item.before}
               order={item.order}
+              video={"video" in item ? item.video : undefined}
             />
           </div>
         ))}
       </div>
-      <div
-        className={`w-11 h-60 bg-[#000] rounded-full fixed top-1/2 right-0 -translate-y-1/2 flex flex-col justify-evenly items-center ${styles.padreCircles}`}
-        style={{ borderRadius: "20px 0 0 20px", boxShadow: "0 0 10px #fff3" }}
-      >
-        {items.map((item) => (
-          <a href={`#${item.key}`} key={item.key}>
-            <div
-              key={item.key}
-              className={`rounded-full transition-all duration-500 ${
-                activeCircle === item.key
-                  ? "bg-yellow-500  w-[1em] h-[1em]"
-                  : "bg-[#707073] w-[.5em] h-[.5em]"
-              }`}
-            ></div>
-          </a>
-        ))}
-      </div>
+      <StaticIsland items={items} activeCircle={activeCircle}></StaticIsland>
     </div>
   );
 };

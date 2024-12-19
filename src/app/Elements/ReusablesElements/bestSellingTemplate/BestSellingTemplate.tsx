@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { useIsMobile } from "../../hooks";
 
@@ -38,24 +39,24 @@ export const BestSellingTemplate: React.FC<BestSellingTemplateProps> = ({
           justifyContent: "center",
           aspectRatio: "1", // Relación 1:1 para la imagen
           position: "absolute",
-          top: isMobile ? "0" : "15%",
+          top: isMobile ? "0" : "20%",
           left: "0",
           width: "100%",
           height: "100%",
           zIndex: 10,
         }}
       ></div>
-      <h1 className="w-[100vw] md:w-auto text-2xl md:text-4xl text-white font-normal text-center z-50">
+      <h1 className="w-[100vw] md:w-auto text-2xl 2xl:text-3xl text-white font-normal text-center z-50">
         {title}
       </h1>
       <p className="text-center text-xs md:w-1/2 z-50 w-3/4 ">{description}</p>
       {!isMobile ? (
         <div className="flex gap-5 justify-center">
           {" "}
-          <button className="bg-primary text-white text-sm py-2 px-4 rounded-full shadow-lg shadow-[#203adf80] z-50">
+          <button className="bg-primary text-white text-xs py-2 px-4 rounded-full shadow-lg shadow-[#203adf80] z-50">
             <a href={""}>Adquirir</a>
           </button>
-          <button className=" text-white text-sm py-2 px-4 rounded-full shadow-sm border-2 border-white shadow-[#fff] z-50">
+          <button className=" text-white text-xs py-2 px-4 rounded-full shadow-sm border-2 border-white shadow-[#fff] z-50">
             <a href={`/ebooks#${rootUrl}`}>Detalles</a>
           </button>
         </div>

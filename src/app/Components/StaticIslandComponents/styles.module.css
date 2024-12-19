@@ -1,0 +1,26 @@
+.padreCircles::after,
+.padreCircles::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.padreCircles::after {
+  width: 0;
+  height: 0;
+  border-left: 2.1rem solid transparent;
+  border-top: 25px solid #000; /* Triángulo rectángulo hacia abajo */
+  bottom: -23px;
+  right: 0;
+}
+
+.padreCircles::before {
+  width: 0;
+  height: 0;
+  border-left: 2.1rem solid transparent;
+  border-bottom: 25px solid #000; /* Triángulo rectángulo hacia arriba */
+  top: -23px;
+  right: 0;
+}

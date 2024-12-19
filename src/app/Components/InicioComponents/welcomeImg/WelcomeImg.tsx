@@ -36,7 +36,7 @@ export const WelcomeImg: React.FC = () => {
           : Math.min(700, scrollProgress * 50);
 
       const translateY = isNotebookSize
-        ? Math.min(400, scrollProgress * 5)
+        ? Math.min(300, scrollProgress * 5)
         : isMidleSize
           ? Math.min(370, scrollProgress * 5)
           : Math.min(450, scrollProgress * 5);

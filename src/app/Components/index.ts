@@ -6,3 +6,7 @@ export * from "./InicioComponents/btcComponent/BtcComponente";
 export * from "./InicioComponents/finalComponent/FinalComponent";
 //ProductComponents
 export * from "./CardOfProductComponent/CardOFProduct";
+// renderVideoComponent
+export * from "./renderVideoComponent/RenderVideo";
+//staticIsland
+export * from "./StaticIslandComponents/StaticIsland";
