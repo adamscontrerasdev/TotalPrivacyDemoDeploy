@@ -2,7 +2,7 @@ import React from "react";
 
 interface ProgressBarElementProps {
   progress: number;
-  handleProgressChange: () => void;
+  handleProgressChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const ProgressBarElement: React.FC<ProgressBarElementProps> = ({

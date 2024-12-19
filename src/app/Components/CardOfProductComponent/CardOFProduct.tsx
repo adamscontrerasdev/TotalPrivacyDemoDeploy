@@ -50,7 +50,6 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
             video={video}
             firstPlay={firstPlay}
             setFirstPlay={setFirstPlay}
-            playOrpause={playOrpause}
             setPlayOrpause={setPlayOrpause}
           />
         ) : (
