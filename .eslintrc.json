@@ -15,7 +15,7 @@
   ],
   "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
   "rules": {
-    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }], // Permite que las variables con "_" sean ignoradas
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }], // Permite que las variables con "_" sean ignoradas
     "@typescript-eslint/no-unused-vars": ["error"], // Para TypeScript, elimina las variables no usadas
     "prettier/prettier": "error" // Asegura que Prettier se ejecute con ESLint
   },
