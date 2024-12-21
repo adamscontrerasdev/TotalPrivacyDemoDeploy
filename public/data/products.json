@@ -9,7 +9,8 @@
       "Bg": "/img/Finales/Ebooks/IphoneNOBG.png",
       "description": "Descubre cómo proteger tu iPhone de manera efectiva y garantizar tu privacidad en cada aspecto de su uso.",
       "before": 46,
-      "order": 0
+      "order": 0,
+      "Destacado": true
     },
     {
       "id": 2,
@@ -20,7 +21,8 @@
       "Bg": "/img/Finales/Ebooks/AndroidNOBG.png",
       "description": "Guía práctica para asegurar la privacidad y seguridad de tu dispositivo Android frente a amenazas digitales.",
       "before": 46,
-      "order": 1
+      "order": 1,
+      "Destacado": false
     }
   ],
   "ebooks_release_date": "2024-11-20",
@@ -35,7 +37,8 @@
       "description": "Aprende a blindar tu iPhone y maximizar la seguridad de tu información personal.",
       "before": 121,
       "video": "/Videos/Finales/Cursos/Prueba.mp4",
-      "order": 0
+      "order": 0,
+      "Destacado": false
     },
     {
       "id": 7,
@@ -46,7 +49,8 @@
       "Bg": "/img/android-bunker.png",
       "description": "Descubre cómo proteger tu Android y mantener tus datos a salvo de amenazas digitales.",
       "before": 121,
-      "order": 1
+      "order": 1,
+      "Destacado": false
     },
     {
       "id": 8,
@@ -58,7 +62,8 @@
       "Bg": "/img/graphene.png",
       "description": "Conoce el sistema operativo más seguro y aprende a configurar un móvil con GrapheneOS.",
       "before": 121,
-      "order": 0
+      "order": 0,
+      "Destacado": false
     },
     {
       "id": 9,
@@ -69,7 +74,8 @@
       "Bg": "/img/mac-bunker.png",
       "description": "Fortalece la seguridad de tu Mac y protege tu información de manera integral.",
       "before": 171,
-      "order": 1
+      "order": 1,
+      "Destacado": false
     },
     {
       "id": 10,
@@ -80,7 +86,8 @@
       "Bg": "/img/windows-bunker.png",
       "description": "Asegura tu computadora Windows con estrategias avanzadas de privacidad y seguridad.",
       "before": 171,
-      "order": 0
+      "order": 0,
+      "Destacado": true
     },
     {
       "id": 11,
@@ -91,7 +98,8 @@
       "Bg": "/img/bitcoin.png",
       "description": "Introduce las bases del Bitcoin, su funcionamiento y cómo usarlo de manera segura.",
       "before": 262,
-      "order": 1
+      "order": 1,
+      "Destacado": true
     }
   ],
   "courses_release_date": "2024-11-20",
@@ -106,6 +114,7 @@
     },
     "release_date": "2024-12-15",
     "Bg": "/img/master-privacy.png",
-    "description": "Conviértete en un experto en privacidad digital con este máster completo que cubre todas las áreas críticas."
+    "description": "Conviértete en un experto en privacidad digital con este máster completo que cubre todas las áreas críticas.",
+    "Destacado": true
   }
 }

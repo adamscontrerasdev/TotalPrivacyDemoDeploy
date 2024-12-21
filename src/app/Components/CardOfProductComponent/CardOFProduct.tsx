@@ -44,7 +44,7 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
       style={{ background: `radial-gradient(at top, #000, #203adf30 )` }}
     >
       {/* Imagen o Video */}
-      <div className="w-full md:w-1/2 h-[50%] md:h-full">
+      <div className="w-full md:w-1/2 h-[40%] md:h-full relative">
         {video ? (
           <RenderVideo
             video={video}
@@ -54,7 +54,11 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
           />
         ) : (
           <>
-            <img src={Bg} alt={title} className="w-full h-full object-cover" />
+            <img
+              src={Bg}
+              alt={title}
+              className="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-[40%]"
+            />
             <div
               className="w-full h-full absolute top-0 left-0"
               style={{
@@ -64,12 +68,11 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
           </>
         )}
       </div>
-
       {/* Contenido */}
       <div
         className={`${
           video ? "absolute" : ""
-        } ${video ? "left-0" : ""} w-full md:w-1/2 h-[50%] md:h-full flex flex-col items-start justify-center p-12 gap-8 z-50 bg-black transition-all linear duration-700`}
+        } ${video ? "left-0" : ""} w-full md:w-1/2 h-[60%] md:h-full flex flex-col items-start justify-start p-12 gap-3 md:gap-8 z-50 bg-black transition-all linear duration-700`}
         style={{
           background: video
             ? "linear-gradient(to right, #000 90%, transparent 100%)"
@@ -78,14 +81,14 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
           pointerEvents: video ? "none" : "auto",
         }}
       >
-        <h1 className="text-6xl font-extrabold text-white leading-tight">
+        <h1 className="text-2xl md:text-6xl font-extrabold text-white leading-tight">
           {title}
         </h1>
-        <h2 className="text-3xl text-gray-300 leading-relaxed">
+        <h2 className="text-xl md:text-3xl text-gray-300 leading-relaxed">
           {description}
         </h2>
-        <h2 className="text-5xl font-bold text-green-500">
-          <s className="text-gray-500 text-4xl">
+        <h2 className="text-xl md:text-5xl font-bold text-green-500">
+          <s className="text-gray-500 text-lg md:text-4xl">
             {before && currency + before}
           </s>{" "}
           {currency}
@@ -98,7 +101,7 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
           </div>
         ) : (
           <button
-            className={`bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-4 px-10 rounded-xl mt-6 text-xl transition-all duration-300 ease-in-out shadow-[0_0_10px_5px_rgb(202_138_4)] 
+            className={`bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-2 md:py-4 px-5 md:px-10 rounded-xl mt-6 text-lg md:text-xl transition-all duration-300 ease-in-out shadow-[0_0_10px_5px_rgb(202_138_4)] 
                 hover:shadow-[0_0_20px_10px_rgb(250_204_21)]`}
           >
             Adquirir

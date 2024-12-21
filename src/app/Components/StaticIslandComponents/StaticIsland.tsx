@@ -2,6 +2,7 @@
 import React from "react";
 import styles from "./styles.module.css";
 import { useVideoStatus } from "@/app/Elements/hooks/globalHooks/VideoStatusContext ";
+import { useIsMobile } from "@/app/Elements/hooks";
 
 interface StaticIslandProps {
   items: { key: string }[];
@@ -12,6 +13,7 @@ export const StaticIsland: React.FC<StaticIslandProps> = ({
   items,
   activeCircle,
 }) => {
+  const isMobile = useIsMobile();
   const { isPlaying, volume, setVolume } = useVideoStatus(); // Obtener volumen y setVolume del contexto
 
   const handleVolumeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,7 +22,7 @@ export const StaticIsland: React.FC<StaticIslandProps> = ({
 
   return (
     <div
-      className={`w-11 h-60 bg-[#000] rounded-full fixed top-1/2 right-0 -translate-y-1/2 flex flex-col justify-evenly items-center ${styles.padreCircles}`}
+      className={`w-5 md:w-11 h-32 md:h-60 bg-[#000] rounded-full fixed top-1/2 right-0 -translate-y-1/2 flex flex-col justify-evenly items-center ${!isMobile ? styles.padreCircles : ""}`}
       style={{
         borderRadius: "20px 0 0 20px",
         boxShadow: "0 0 10px #fff3",
@@ -71,8 +73,8 @@ export const StaticIsland: React.FC<StaticIslandProps> = ({
             <div
               className={`rounded-full transition-all duration-500 ${
                 activeCircle === item.key
-                  ? "bg-yellow-500 w-[.8em] h-[.8em]"
-                  : "bg-[#707073] w-[.3em] h-[.3em]"
+                  ? "bg-yellow-500 w-[.4em] h-[.4em] md:w-[.8em] md:h-[.8em]"
+                  : "bg-[#707073] w-[.2em] h-[.2em] md:w-[.3em] md:h-[.3em]"
               }`}
             ></div>
           </a>
