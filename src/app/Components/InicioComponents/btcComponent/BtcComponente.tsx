@@ -32,7 +32,7 @@ export const BtcComponente = () => {
               <p className="text-white">{data.description}</p>{" "}
               {/* Usa el campo `description` del objeto actual */}
             </div>
-          ) : null // Retorna null si no es Destacado
+          ) : null, // Retorna null si no es Destacado
       )}
     </div>
   );
