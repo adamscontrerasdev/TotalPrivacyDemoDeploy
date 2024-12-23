@@ -1,15 +1,8 @@
 "use client";
-import React, { useState, useEffect, useRef, use } from "react";
-import Image from "next/image";
+import React, { useState, useEffect, useRef } from "react";
 import { master } from "./../../../../../public/data/products.json";
-import { PersonalButton } from "@/app/Elements";
 import Link from "next/link";
 import { useIsMobile } from "@/app/Elements/hooks";
-
-interface Product {
-  id: string;
-  imagenPromocional: string;
-}
 
 export const FinalComponent = () => {
   const [encender, setEncender] = useState(false);
@@ -60,7 +53,7 @@ export const FinalComponent = () => {
       >
         <div
           className="flex flex-col items-center justify-start pt-20 bg-black w-full h-full transition-all duration-300 ease-in-out"
-          style={{ gap: encender ? isMobile ? "2.5rem" : "1rem" : "0" }}
+          style={{ gap: encender ? (isMobile ? "2.5rem" : "1rem") : "0" }}
         >
           <h1
             style={{
