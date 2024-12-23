@@ -7,7 +7,7 @@ export const BtcComponente = () => {
   return (
     <div className="flex flex-col items-center gap-5 justify-center w-screen min:h-[50vh] ">
       <h1
-        className="font-bold text-[4rem] text-white text-left  w-full px-10"
+        className="font-bold text-4xl md:text-[4rem] text-white md:text-left w-full py-3 md:p-10  text-center"
         style={{
           textShadow: "var(--textShadow-glow)",
         }}
@@ -32,7 +32,7 @@ export const BtcComponente = () => {
               <p className="text-white">{data.description}</p>{" "}
               {/* Usa el campo `description` del objeto actual */}
             </div>
-          ) : null, // Retorna null si no es Destacado
+          ) : null // Retorna null si no es Destacado
       )}
     </div>
   );
