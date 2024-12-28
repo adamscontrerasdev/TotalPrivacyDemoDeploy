@@ -15,7 +15,7 @@ export const PersonalButton: React.FC<PersonalButtonProps> = ({
 }) => {
   return (
     <button
-      className={`relative text-${color} p-5 bg-transparent ${className}`}
+      className={`relative text-${color} p-5 bg-transparent text-xl ${className}`}
       ref={ref}
     >
       {value}

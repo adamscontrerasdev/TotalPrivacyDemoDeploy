@@ -66,7 +66,7 @@ export const FinalComponent = () => {
             MASTER TOTAL PRIVACY
           </h1>
           <h2
-            className="text-center text-sm md:text-md w-[80%] md:w-[50%] transition-all duration-500 ease-in-out "
+            className="text-center text-sm md:text-xl w-[80%] md:w-[50%] transition-all duration-500 ease-in-out "
             style={{
               opacity: encender ? 1 : 0,
               height: encender ? "10%" : "0",
@@ -102,7 +102,7 @@ export const FinalComponent = () => {
                 Adquirir
               </button>
             </Link>
-            <Link href="/cursos">
+            <Link href="/Master-Total-Privacy">
               <button className="text-white text-lg xl:text-xl py-2 px-4 rounded-full shadow-sm border-2 border-white shadow-[#fff] z-50">
                 Detalles
               </button>

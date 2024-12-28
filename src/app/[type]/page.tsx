@@ -8,7 +8,9 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
   const { type } = use(params);
   const items = data[type as "ebooks" | "cursos"];
   const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
-  const [activeCircle, setActiveCircle] = useState<string>(items[0]?.key || "");
+  const [activeCircle, setActiveCircle] = useState<string>(
+    items ? items[0]?.key || "" : "",
+  );
   const [scrolling, setScrolling] = useState(false); // Bloquear scroll continuo
   const lastTouchY = useRef<number | null>(null); // Guardar la posición del touch
 

@@ -84,7 +84,7 @@ export const NavBar = () => {
     <div
       className={`bg-black bg-opacity-60 backdrop-blur-3xl backdrop-brightness-75 ${
         isHover ? (isMobile ? "h-[100%]" : "h-36") : "h-12"
-      } w-full text-text flex flex-col items-center justify-between overflow-hidden fixed top-0 left-0 z-[9999] transition-all duration-500`}
+      } w-full text-text flex flex-col items-center justify-between overflow-hidden fixed top-0 left-0 z-[999999] transition-all duration-500`}
     >
       {/* Top bar */}
       <div

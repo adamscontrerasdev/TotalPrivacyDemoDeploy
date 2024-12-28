@@ -219,7 +219,7 @@ export const WelcomeImg: React.FC = () => {
     e.preventDefault();
     const targetElement = document.getElementById("BEST_SELLERS");
     if (targetElement) {
-      const offset = window.innerHeight / 2; // Calcular el 50% del viewport
+      const offset = window.innerHeight * 0.3; // Calcular el 70% del viewport
       const elementTop =
         targetElement.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({

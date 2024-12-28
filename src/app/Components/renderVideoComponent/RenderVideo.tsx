@@ -108,7 +108,7 @@ export const RenderVideo: React.FC<RenderVideoProps> = ({
   }, [progress]);
 
   return (
-    <div className="absolute top-0 left-0 w-full h-full z-50">
+    <div className="absolute top-0 left-0 w-full h-screen z-50">
       {/* Video */}
       <video
         ref={videoRef}

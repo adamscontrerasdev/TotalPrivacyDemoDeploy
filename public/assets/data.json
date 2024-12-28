@@ -1,0 +1,107 @@
+[
+  {
+    "fase": 1,
+    "titulo": "Privacidad de 0 a 100",
+    "descripcion": [
+      "Aprenderás los fundamentos de privacidad que pocos conocen, teoría de la compartimentación y herramientas de privacidad y anonimato como:",
+      "• Correos cifrados y alias anónimos",
+      "• Herramienta de navegación anónima: VPN, TOR etc...",
+      "• Nº teléfono anónimos",
+      "• Configuración de herramientas privadas paso a paso",
+      "Y mucho más..."
+    ],
+    "imagen": "/imagesFAnimation/1. Privacidad de 0 a 100.png",
+    "button": true
+  },
+  {
+    "fase": 2,
+    "titulo": "Reset Digital Total",
+    "descripcion": [
+      "En este módulo te enseñaremos a borrar tu rastro digital de internet. Mitigarás tus errores pasados y sentarás las bases de tu nuevo comienzo en internet y la vida. Aprenderás a:",
+      "• Eliminar tus datos de datacenters empresariales",
+      "• Eliminar tu rastro en redes sociales",
+      "• Proteger tu Nº de teléfono y matrícula de coche de rastreos",
+      "• Minimizar tus datos en la red a 0.",
+      "",
+      "Y mucho más..."
+    ],
+    "imagen": "imagesFAnimation/3.png",
+    "button": false
+  },
+  {
+    "fase": 3,
+    "titulo": "Privacidad Móvil",
+    "descripcion": [
+      "Da igual que móvil uses, ya sea Android o iOS. Aprenderás a blindarlos y convertirlos en bunkers móviles, privados y seguros.",
+      "Aprenderás a instalar y usar el sistema operativo móvil más privado del mundo: GrapheneOS",
+      "• Cifrado de conexión móvil",
+      "• Números anónimos y desvío de llamadas",
+      "• Configuración de privacidad y seguridad total",
+      "• Apps de privacidad y configuración",
+      "",
+      "Y mucho más..."
+    ],
+    "imagen": "imagesFAnimation/3. Privacidad Móvil.png",
+    "button": true
+  },
+  {
+    "fase": 4,
+    "titulo": "Privacidad Ordenador (PC)",
+    "descripcion": [
+      "Convertiremos tu Windows y tu Mac en un bunker de privacidad y seguridad. Blindarás tu información y protegerás todo tu sistema de forma sencilla con técnicas sencillas que eliminarán todo el espionaje sobre tu PC. Aprenderás a:",
+      "• Cifrar tu disco e información",
+      "• Anonimizar tu conexión a internet",
+      "• Eliminar toda la telemetría espía",
+      "• Usar cortafuegos",
+      "",
+      "Y mucho más..."
+    ],
+    "imagen": "imagesFAnimation/4. Privacidad Ordenador.png",
+    "button": false
+  },
+  {
+    "fase": 5,
+    "titulo": "Privacidad Bancaria y Empresarial",
+    "descripcion": [
+      "Aprenderás a mantener tus finanzas y tu dinero fuera de las garras de terceros, protegiendo tu futuro y el de todas tus generaciones. Aprenderás a:",
+      "• Comprar y usar Bitcoin anónimo",
+      "• Comprar de forma privada en internet",
+      "• Estructuras de banca privada",
+      "• Sociedades e identidades jurídicas anónimas",
+      "",
+      "Y mucho más..."
+    ],
+    "imagen": "imagesFAnimation/6.png",
+    "button": true
+  },
+  {
+    "fase": 6,
+    "titulo": "Ciber-inteligencia",
+    "descripcion": [
+      "Aprenderás a localizar datos en internet, ya sean de personas o los tuyos propios. Localizarás números de teléfono y te introducirás al mundo del análisis de inteligencia cibernética. Sabrás:",
+      "• Localizar Nº de teléfono, mails, redes sociales, etc...",
+      "• Rastrear información de forma precisa en internet",
+      "• Encontrar información de terceros",
+      "• Actuar como un analista de inteligencia en la red",
+      "• Acceso a más de 40 herramientas de inteligencia exclusivas",
+      "",
+      "Y mucho más..."
+    ],
+    "imagen": "imagesFAnimation/6. Ciber-inteligencia.png",
+    "button": false
+  },
+  {
+    "fase": 7,
+    "titulo": "Privacidad como profesión",
+    "descripcion": "Transforma tus conocimientos en una carrera profesional. De la mano de un asesor experto en privacidad digital, aprenderás a ofrecer asesoramiento a personas de alto valor.\n\nConviértete en un profesional de la privacidad digital y genera ingresos con tu nueva habilidad, guiado por Rave, fundador y profesor de Tokin Privacy.",
+    "imagen": "imagesFAnimation/7. Privacidad como profesión.png",
+    "button": true
+  },
+  {
+    "fase": 8,
+    "titulo": "Protege tu legado",
+    "descripcion": "La privacidad de los más pequeños es algo que está siendo atacado a diario hoy en día. Accediendo al curso Privacidad Total recibiras una masterclass extra con consejos y estrategias que te ayudarán a proteger la privacidad de tu familia.",
+    "imagen": "/imagesFAnimation/13.png",
+    "button": false
+  }
+]

@@ -19,7 +19,7 @@ export const BestSellingTemplate: React.FC<BestSellingTemplateProps> = ({
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div
-      className={`w-[100vw] h-[70vh] sm:w-[49%] sm:h-[50vh] flex flex-col items-center justify-start pt-10 gap-2 relative overflow-hidden`}
+      className={`w-[100vw] h-[70vh] sm:w-[49%] md:h-[70vh] flex flex-col items-center justify-start pt-10 gap-2 md:gap-5 relative overflow-hidden `}
       style={{ background: "linear-gradient(to bottom, #000, #203adf30)" }}
       onMouseEnter={() => !isMobile && setIsHovered(true)}
       onMouseLeave={() => !isMobile && setIsHovered(false)}
@@ -46,17 +46,19 @@ export const BestSellingTemplate: React.FC<BestSellingTemplateProps> = ({
           zIndex: 10,
         }}
       ></div>
-      <h1 className="w-[100vw] md:w-auto text-2xl 2xl:text-3xl text-white font-normal text-center z-50">
+      <h1 className="w-[100vw] md:w-auto text-3xl md:text-4xl text-white font-normal text-center z-50">
         {title}
       </h1>
-      <p className="text-center text-xs md:w-1/2 z-50 w-3/4 ">{description}</p>
+      <p className="text-center text-xs md:text-[.98em] md:w-1/2 z-50 w-3/4 leading-relaxed">
+        {description}
+      </p>
       {!isMobile ? (
         <div className="flex gap-5 justify-center">
           {" "}
-          <button className="bg-primary text-white text-xs py-2 px-4 rounded-full shadow-lg shadow-[#203adf80] z-50">
+          <button className="bg-primary text-white text-lg py-2 px-4 rounded-full shadow-lg shadow-[#203adf80] z-50">
             <a href={""}>Adquirir</a>
           </button>
-          <button className=" text-white text-xs py-2 px-4 rounded-full shadow-sm border-2 border-white shadow-[#fff] z-50">
+          <button className=" text-white text-lg py-2 px-4 rounded-full shadow-sm border-2 border-white shadow-[#fff] z-50">
             <a href={`/ebooks#${rootUrl}`}>Detalles</a>
           </button>
         </div>

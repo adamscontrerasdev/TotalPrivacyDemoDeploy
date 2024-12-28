@@ -44,7 +44,9 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
       style={{ background: `radial-gradient(at top, #000, #203adf30 )` }}
     >
       {/* Imagen o Video */}
-      <div className="w-full md:w-1/2 h-[40%] md:h-full relative">
+      <div
+        className={`w-full md:w-1/2 h-[40%] md:h-full ${video ? "" : "relative"}`}
+      >
         {video ? (
           <RenderVideo
             video={video}
@@ -72,7 +74,7 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
       <div
         className={`${
           video ? "absolute" : ""
-        } ${video ? "left-0" : ""} w-full md:w-1/2 h-[60%] md:h-full flex flex-col items-start justify-start p-12 gap-3 md:gap-8 z-50 bg-black transition-all linear duration-700`}
+        } ${video ? "left-0" : ""} w-full md:w-1/2 h-[60%] md:h-full flex flex-col items-start justify-start py-40 px-12 gap-3 md:gap-8 z-50 bg-black transition-all linear duration-700 `}
         style={{
           background: video
             ? "linear-gradient(to right, #000 90%, transparent 100%)"
