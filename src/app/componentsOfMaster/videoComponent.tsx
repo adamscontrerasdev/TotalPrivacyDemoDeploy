@@ -6,7 +6,7 @@ import PairButtons from "./BDCompra/PairButtons";
 const VideoComponent = () => {
   return (
     <div
-      className={`w-screen h-screen `}
+      className={`w-screen h-auto `}
       style={{
         background:
           "radial-gradient(circle at center, #203adf30 10%, black 70%)",
