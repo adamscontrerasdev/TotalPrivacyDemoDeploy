@@ -54,7 +54,7 @@ const AboutUs = () => {
           src="https://static.vecteezy.com/system/resources/previews/008/551/632/original/abstract-technology-cyber-security-privacy-information-network-concept-shield-protection-digital-network-internet-link-on-hi-tech-blue-future-background-vector.jpg"
           alt="imagen"
         />
-        <p className={`lg:w-[40vw] w-3/4 text-center `}>
+        <p className={`lg:w-[40vw] w-[80vw] text-center `}>
           Privacidad Total es la única formación integral en privacidad digital,
           creada por profesionales de la privacidad en sistemas e inteligencia
           cibernética.

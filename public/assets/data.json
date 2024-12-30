@@ -10,8 +10,9 @@
       "• Configuración de herramientas privadas paso a paso",
       "Y mucho más..."
     ],
-    "imagen": "/imagesFAnimation/1. Privacidad de 0 a 100.png",
-    "button": true
+    "imagen": "https://tse2.mm.bing.net/th?id=OIP.LONztn0JMJT_3qpbyyTDZgHaEK&pid=Api&P=0&h=180",
+    "button": true,
+    "bg": "#f0f"
   },
   {
     "fase": 2,
@@ -25,8 +26,9 @@
       "",
       "Y mucho más..."
     ],
-    "imagen": "imagesFAnimation/3.png",
-    "button": false
+    "imagen": "https://tse2.mm.bing.net/th?id=OIP.LONztn0JMJT_3qpbyyTDZgHaEK&pid=Api&P=0&h=180",
+    "button": false,
+    "bg": "#0f0"
   },
   {
     "fase": 3,
@@ -41,8 +43,9 @@
       "",
       "Y mucho más..."
     ],
-    "imagen": "imagesFAnimation/3. Privacidad Móvil.png",
-    "button": true
+    "imagen": "https://tse2.mm.bing.net/th?id=OIP.LONztn0JMJT_3qpbyyTDZgHaEK&pid=Api&P=0&h=180",
+    "button": true,
+    "bg": "#00f"
   },
   {
     "fase": 4,
@@ -56,8 +59,9 @@
       "",
       "Y mucho más..."
     ],
-    "imagen": "imagesFAnimation/4. Privacidad Ordenador.png",
-    "button": false
+    "imagen": "https://tse2.mm.bing.net/th?id=OIP.LONztn0JMJT_3qpbyyTDZgHaEK&pid=Api&P=0&h=180",
+    "button": false,
+    "bg": "#ff0"
   },
   {
     "fase": 5,
@@ -71,8 +75,9 @@
       "",
       "Y mucho más..."
     ],
-    "imagen": "imagesFAnimation/6.png",
-    "button": true
+    "imagen": "https://tse2.mm.bing.net/th?id=OIP.LONztn0JMJT_3qpbyyTDZgHaEK&pid=Api&P=0&h=180",
+    "button": true,
+    "bg": "#fff"
   },
   {
     "fase": 6,
@@ -87,21 +92,24 @@
       "",
       "Y mucho más..."
     ],
-    "imagen": "imagesFAnimation/6. Ciber-inteligencia.png",
-    "button": false
+    "imagen": "https://tse2.mm.bing.net/th?id=OIP.LONztn0JMJT_3qpbyyTDZgHaEK&pid=Api&P=0&h=180",
+    "button": false,
+    "bg": "#f0f"
   },
   {
     "fase": 7,
     "titulo": "Privacidad como profesión",
     "descripcion": "Transforma tus conocimientos en una carrera profesional. De la mano de un asesor experto en privacidad digital, aprenderás a ofrecer asesoramiento a personas de alto valor.\n\nConviértete en un profesional de la privacidad digital y genera ingresos con tu nueva habilidad, guiado por Rave, fundador y profesor de Tokin Privacy.",
-    "imagen": "imagesFAnimation/7. Privacidad como profesión.png",
-    "button": true
+    "imagen": "https://tse2.mm.bing.net/th?id=OIP.LONztn0JMJT_3qpbyyTDZgHaEK&pid=Api&P=0&h=180",
+    "button": true,
+    "bg": "#0f0"
   },
   {
     "fase": 8,
     "titulo": "Protege tu legado",
     "descripcion": "La privacidad de los más pequeños es algo que está siendo atacado a diario hoy en día. Accediendo al curso Privacidad Total recibiras una masterclass extra con consejos y estrategias que te ayudarán a proteger la privacidad de tu familia.",
-    "imagen": "/imagesFAnimation/13.png",
-    "button": false
+    "imagen": "https://tse2.mm.bing.net/th?id=OIP.LONztn0JMJT_3qpbyyTDZgHaEK&pid=Api&P=0&h=180",
+    "button": false,
+    "bg": "#00f"
   }
 ]

@@ -5,12 +5,10 @@ import React from "react";
 import ReusableButton from "../elements/reusablesElements/ReusableButton";
 import styles from "./FinancingButton.module.css";
 import { IoIosArrowDown } from "react-icons/io";
-import { useGlobalContext } from "../context/avtiveContext";
 
 const FinancingButton = () => {
   const buttonRef = React.useRef<HTMLButtonElement>(null);
   const [buttonH, setButtonH] = React.useState(false);
-  const isActive = useGlobalContext().isActive;
 
   React.useEffect(() => {
     if (buttonH) {
@@ -36,7 +34,7 @@ const FinancingButton = () => {
 
   return (
     <div className={styles.content} id="FinancingButton">
-      {isActive && (
+      {true && (
         <>
           <h2 style={{ fontWeight: "300" }}>Nuevo</h2>
           <IoIosArrowDown />

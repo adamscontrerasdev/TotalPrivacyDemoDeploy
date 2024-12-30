@@ -38,7 +38,11 @@ export default function products() {
                 </div>
               </div>
 
-              <img className={style.p13} src="" alt="imagen" />
+              <img
+                className={style.p13}
+                src="\imagesFAnimation\10.png"
+                alt="imagen"
+              />
             </div>
           </div>
         </div>

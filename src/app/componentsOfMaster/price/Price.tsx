@@ -2,11 +2,10 @@
 import React, { useState } from "react";
 import style from "./Price.module.css";
 import Button from "../BDCompra/Button";
-import { useGlobalContext } from "../context/avtiveContext";
 
 export default function Price() {
-  const isActive = useGlobalContext().isActive;
   const [activeButtonId, setActiveButtonId] = useState<string | null>(null);
+  const isActive = true;
 
   return (
     <div className={style.fatherOfFather}>

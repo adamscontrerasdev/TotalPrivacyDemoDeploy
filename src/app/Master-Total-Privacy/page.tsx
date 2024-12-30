@@ -9,32 +9,26 @@ import Price from "./../componentsOfMaster/price/Price";
 import COfArrow from "./../componentsOfMaster/COfArrow/cOfArrow";
 import Faq from "./../componentsOfMaster/FAQ/faq";
 import Footer from "./../componentsOfMaster/footer/footer";
-import { ScrollProvider } from "./../componentsOfMaster/context/scrollContext";
-import { ActiveContextProvider } from "../componentsOfMaster/context/avtiveContext";
 
 const Home: React.FC = () => {
   return (
-    <ActiveContextProvider>
-      <ScrollProvider>
-        <div className={styles.body}>
-          <VideoComponent></VideoComponent>
+    <div className="w-screen flex flex-col items-center justify-center relative">
+      <VideoComponent></VideoComponent>
 
-          <div className={styles.space}></div>
-          <PriceInTheMidle></PriceInTheMidle>
-          <div className={styles.space}></div>
-          <AboutUs></AboutUs>
-          <PC></PC>
-          <COfArrow></COfArrow>
-          <Products></Products>
-          <Price></Price>
+      <div className={styles.space}></div>
+      <PriceInTheMidle></PriceInTheMidle>
+      <div className={styles.space}></div>
+      <AboutUs></AboutUs>
+      <PC></PC>
+      <COfArrow></COfArrow>
+      <Products></Products>
+      <Price></Price>
 
-          <br />
-          <div className={styles.space}></div>
-          <Faq></Faq>
-          <Footer></Footer>
-        </div>
-      </ScrollProvider>
-    </ActiveContextProvider>
+      <br />
+      <div className={styles.space}></div>
+      <Faq></Faq>
+      <Footer></Footer>
+    </div>
   );
 };
 

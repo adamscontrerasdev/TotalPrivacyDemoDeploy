@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import styles from "./PairButtons.module.css";
 import { FaTelegram } from "react-icons/fa6";
 import Link from "next/link";
-import { useGlobalContext } from "../context/avtiveContext";
+
 import { IoWalletOutline, IoLogoBitcoin } from "react-icons/io5";
 
 const PairButtons = () => {
@@ -12,7 +12,6 @@ const PairButtons = () => {
   const visaRef = useRef<HTMLDivElement>(null);
   const paypalRef = useRef<HTMLDivElement>(null);
   const btcRef = useRef<HTMLDivElement>(null);
-  const isActive = useGlobalContext().isActive;
 
   useEffect(() => {
     if (tarjetasIsHover) {
@@ -34,7 +33,7 @@ const PairButtons = () => {
 
   return (
     <div className={` py-5  flex flex-col items-center justify-center gap-5 `}>
-      {isActive ? (
+      {bitcoinIsHover ? (
         <>
           <div className={` flex flex-col items-center justify-center `}>
             <h2 className={styles.title}>Adquirir</h2>

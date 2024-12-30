@@ -23,7 +23,7 @@
     flex-direction: column;
     display: flex;
     background-image: linear-gradient(
-      rgba(255, 69, 58, 0.15),
+      rgba(61, 58, 255, 0.15),
       rgba(0, 0, 0, 0) 50%
     );
     align-items: center;
@@ -47,7 +47,7 @@
       Instrument Sans,
       sans-serif;
     line-height: 10vh;
-    color: #fb0606;
+    color: #00f;
     text-transform: uppercase;
     -webkit-text-fill-color: inherit;
     font-size: 16px;
@@ -135,7 +135,7 @@
     flex-direction: column;
     display: flex;
     background-image: linear-gradient(
-      rgba(255, 58, 58, 0.15),
+      rgba(61, 58, 255, 0.15),
       rgba(0, 0, 0, 0) 50%
     );
     align-items: center;
@@ -159,7 +159,7 @@
       Instrument Sans,
       sans-serif;
     line-height: 10vh;
-    color: #fb0606;
+    color: #00f;
     text-transform: uppercase;
     -webkit-text-fill-color: inherit;
     font-size: 12px;

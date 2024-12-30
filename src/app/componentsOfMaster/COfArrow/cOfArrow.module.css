@@ -1,56 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 
-.timelineComponent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 1120px;
-  margin: 0 auto;
-  position: relative;
-  width: 100vw;
-  clip-path: inset(0);
-}
-
-.timelineProgress {
-  color: #fff;
-  font-size: 1rem;
-  line-height: 20px;
-  font-family:
-    Instrument Sans,
-    sans-serif;
-  box-sizing: border-box;
-  z-index: -2;
-  background-color: #3f1414;
-  width: 3px;
-  height: 100%;
-  position: absolute;
-}
-
-.timelineProgress_bar {
-  -webkit-text-size-adjust: 100%;
-
-  font-size: 1rem;
-  line-height: 20px;
-  font-family:
-    Instrument Sans,
-    sans-serif;
-  box-sizing: border-box;
-  z-index: -1;
-  background-color: #fff;
-  background-image: linear-gradient(#811313 61%, #ff0000);
-  width: 3px;
-  height: 50vh;
-  position: sticky;
-  top: 0;
-  bottom: 50vh;
-  left: auto;
-  right: auto;
-  overflow: visible;
-  margin-top: -50vh;
-  box-shadow: 0px 50px 50px #f00;
-}
-
 .elementsWrapper {
   display: flex;
   flex-direction: column;
@@ -73,6 +22,7 @@
 .bigElement {
   height: 100vh !important;
 }
+
 .timeline_left {
   width: 45%;
   position: relative;
@@ -108,7 +58,7 @@
   text-align: right;
   box-sizing: border-box;
 
-  color: #aa0303 !important;
+  color: #00f !important;
   overflow-wrap: normal;
   font-family: Oswald, sans-serif;
   font-size: 250px;
@@ -122,6 +72,9 @@
   display: flex;
   justify-content: center;
   height: 82%;
+
+  z-index: 0;
+
   /* Aumentar la altura para demostrar el efecto de sticky */
 }
 
@@ -140,7 +93,7 @@
 }
 
 .maskWrapper.sticky .mask {
-  color: #ff0000;
+  color: #00f;
   filter: drop-shadow(0px 0px 5px rgba(255, 0, 0, 0.5));
   opacity: 1;
 }
@@ -261,53 +214,6 @@
 
 /*---------------------------------------------------------------------*/
 @media (max-width: 720px) {
-  .timelineComponent {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: start;
-    justify-content: none !important;
-    margin: 0 auto;
-    position: relative;
-    width: 100vw;
-    height: auto;
-    clip-path: inset(0);
-    padding: 0 2em 0 2em;
-  }
-
-  .timelineProgress {
-    font-size: 1rem;
-    line-height: 20px;
-    font-family:
-      Instrument Sans,
-      sans-serif;
-    box-sizing: border-box;
-    z-index: -2;
-    width: 3px;
-    height: 100%;
-    position: absolute;
-  }
-
-  .timelineProgress_bar {
-    /* font-size: 1rem; */
-    /* line-height: 20px; */
-    font-family:
-      Instrument Sans,
-      sans-serif;
-    box-sizing: border-box;
-    background-image: linear-gradient(#811313 61%, #f00);
-    width: 3px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    bottom: 50vh;
-    /* left: 0 !important; */
-    margin-top: -50vh;
-    box-shadow: 0px 50px 50px #f00;
-
-    z-index: 9999999;
-  }
-
   .elementsWrapper {
     position: relative;
     top: 0;
@@ -334,6 +240,7 @@
     padding-left: 1em;
 
     position: relative;
+    background: #0f0;
   }
 
   .bigElement {
