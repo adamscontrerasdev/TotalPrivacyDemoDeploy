@@ -35,16 +35,19 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <MobileProvider initialMobileState={isMobile}>
-        <VideoStatusProvider>
-          <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-          >
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <MobileProvider initialMobileState={isMobile}>
+          <VideoStatusProvider>
             <NavBar />
             {children}
-          </body>
-        </VideoStatusProvider>
-      </MobileProvider>
+          </VideoStatusProvider>
+        </MobileProvider>
+      </body>
     </html>
   );
 }

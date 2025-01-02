@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import style from "./Price.module.css";
 import Button from "../BDCompra/Button";
+import { HiMiniCheckBadge } from "react-icons/hi2";
 
 export default function Price() {
   const [activeButtonId, setActiveButtonId] = useState<string | null>(null);
@@ -14,7 +15,7 @@ export default function Price() {
           <div className={style.priceTitle}>
             <h2 className={style.title}>
               <span className={style.spanTitle}>
-                ACCEDE&nbsp;AL&nbsp;CURSO&nbsp;PRIVACIDAD&nbsp;TOTAL
+                ACCEDE&nbsp;AL&nbsp;MASTER&nbsp;PRIVACIDAD&nbsp;TOTAL
               </span>
             </h2>
           </div>
@@ -38,7 +39,7 @@ export default function Price() {
                 <div className={style.cont1}>
                   <div className={style.contPrice}>
                     {/* <div className={style.price1}> &nbsp;€360 &nbsp;</div> */}
-                    <div className={style.price2}>€390</div>
+                    <div className={style.price2}>€1490</div>
                   </div>
                 </div>
 
@@ -54,14 +55,14 @@ export default function Price() {
                                   <img
                                     alt=""
                                     className={style.maskIcon}
-                                    src="\White_Icon.svg"
+                                    src="/img/IconNoBg.png"
                                   />
                                 </div>
                               </div>
                               <div className={style.contTitle}>
                                 <div className={style.contTitleInt}>
                                   <h3 className={style.titleDif}>
-                                    Curso Privacidad Total
+                                    Master Privacidad Total
                                   </h3>
                                 </div>
                               </div>
@@ -81,11 +82,9 @@ export default function Price() {
 
                           <div className={style.contenidoCont2}>
                             <div className={style.imgCont1}>
-                              <img
-                                alt=""
-                                src="https://www.spacetest.com/wp-content/uploads/2021/07/checkmark-icon-orange.png"
+                              <HiMiniCheckBadge
                                 className={style.miniImg1}
-                              />
+                              ></HiMiniCheckBadge>
                               <div className={style.charCont1}>
                                 <div className={style.charTitle}>
                                   Privacidad: de novato a profesional
@@ -95,11 +94,10 @@ export default function Price() {
                             </div>
 
                             <div className={style.imgCont2}>
-                              <img
-                                alt=""
-                                src="https://www.spacetest.com/wp-content/uploads/2021/07/checkmark-icon-orange.png"
+                              <HiMiniCheckBadge
                                 className={style.miniImg1}
-                              />
+                              ></HiMiniCheckBadge>
+
                               <div className={style.charCont2}>
                                 <div className={style.charTitle2}>
                                   Estrategias únicas
@@ -108,11 +106,10 @@ export default function Price() {
                             </div>
 
                             <div className={style.imgCont3}>
-                              <img
-                                alt=""
-                                src="https://www.spacetest.com/wp-content/uploads/2021/07/checkmark-icon-orange.png"
+                              <HiMiniCheckBadge
                                 className={style.miniImg1}
-                              />
+                              ></HiMiniCheckBadge>
+
                               <div className={style.charCont3}>
                                 <div className={style.charTitle3}>
                                   Sin conocimiento previo requerido
@@ -122,11 +119,10 @@ export default function Price() {
                             </div>
 
                             <div className={style.imgCont4}>
-                              <img
-                                alt=""
-                                src="https://www.spacetest.com/wp-content/uploads/2021/07/checkmark-icon-orange.png"
+                              <HiMiniCheckBadge
                                 className={style.miniImg1}
-                              />
+                              ></HiMiniCheckBadge>
+
                               <div className={style.charCont4}>
                                 <div className={style.charTitle4}>
                                   Clases en directo
@@ -135,11 +131,10 @@ export default function Price() {
                             </div>
 
                             <div className={style.imgCont5}>
-                              <img
-                                alt=""
-                                src="https://www.spacetest.com/wp-content/uploads/2021/07/checkmark-icon-orange.png"
+                              <HiMiniCheckBadge
                                 className={style.miniImg1}
-                              />
+                              ></HiMiniCheckBadge>
+
                               <div className={style.charCont5}>
                                 <div className={style.charTitle5}>
                                   Clases prácticas paso a paso
@@ -149,11 +144,10 @@ export default function Price() {
                             </div>
 
                             <div className={style.imgCont6}>
-                              <img
-                                alt=""
-                                src="https://www.spacetest.com/wp-content/uploads/2021/07/checkmark-icon-orange.png"
+                              <HiMiniCheckBadge
                                 className={style.miniImg1}
-                              />
+                              ></HiMiniCheckBadge>
+
                               <div className={style.charCont6}>
                                 <div className={style.charTitle6}>
                                   Para todas las edades
@@ -162,11 +156,10 @@ export default function Price() {
                             </div>
 
                             <div className={style.imgCont7}>
-                              <img
-                                alt=""
-                                src="https://www.spacetest.com/wp-content/uploads/2021/07/checkmark-icon-orange.png"
+                              <HiMiniCheckBadge
                                 className={style.miniImg1}
-                              />
+                              ></HiMiniCheckBadge>
+
                               <div className={style.charCont7}>
                                 <div className={style.charTitle7}>
                                   Recursos y herramientas exclusivas
@@ -175,11 +168,10 @@ export default function Price() {
                             </div>
 
                             <div className={style.imgCont8}>
-                              <img
-                                alt=""
-                                src="https://www.spacetest.com/wp-content/uploads/2021/07/checkmark-icon-orange.png"
+                              <HiMiniCheckBadge
                                 className={style.miniImg1}
-                              />
+                              ></HiMiniCheckBadge>
+
                               <div className={style.charCont8}>
                                 <div className={style.charTitle8}>
                                   Formación guiada y especializada{" "}

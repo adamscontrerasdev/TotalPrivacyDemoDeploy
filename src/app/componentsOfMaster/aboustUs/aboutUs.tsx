@@ -90,7 +90,7 @@ const AboutUs = () => {
             La decisión es tuya: sé privado, sé libre, sé ingobernable.
           </span>
         </p>
-        <div className={style.buttonContainer}>
+        <div className="w-full flex justify-center">
           <Button
             buttonId="1"
             activeButtonId={activeButtonId}

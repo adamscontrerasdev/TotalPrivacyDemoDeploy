@@ -7,7 +7,7 @@ export default function products() {
     <div className={style.productsCont}>
       <h4 className={style.title}>ESTO ES LO QUE OBTENDRÁS</h4>
       <h2 className={style.subTitle}>
-        Únete al Curso Privacidad total y consigue el acceso a:
+        Únete al Master Privacidad Total y consigue el acceso a:
       </h2>
 
       <div className={style.pCont}>
@@ -40,7 +40,7 @@ export default function products() {
 
               <img
                 className={style.p13}
-                src="\imagesFAnimation\10.png"
+                src="/img/clases grabadas.webp"
                 alt="imagen"
               />
             </div>
@@ -73,7 +73,7 @@ export default function products() {
               </div>
               <img
                 className={style.p13}
-                src="\imagesFAnimation\10.png"
+                src="img/clases en vivo.webp"
                 alt="imagen"
               />
             </div>
@@ -105,7 +105,7 @@ export default function products() {
 
               <img
                 className={style.p13}
-                src="\imagesFAnimation\11.png"
+                src="img/resolucion de dudas.webp"
                 alt="imagen"
               />
             </div>
@@ -134,11 +134,7 @@ export default function products() {
                 </div>
               </div>
 
-              <img
-                className={style.p13}
-                src="\imagesFAnimation\12.png"
-                alt="imagen"
-              />
+              <img className={style.p13} src="img/esquemas.webp" alt="imagen" />
             </div>
           </div>
         </div>

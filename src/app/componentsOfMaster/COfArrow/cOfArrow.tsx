@@ -69,7 +69,7 @@ const COfArrow = () => {
           <div
             key={item.fase}
             className={`w-full flex justify-between flex-col h-auto opacity-30 transition-all duration-200 pl-4 md:pl-0 relative md:flex-row ${
-              item.button ? "md:h-[100vh]" : "md:h-[50vh]"
+              item.button ? "md:h-[110vh]" : "md:h-[50vh]"
             }`}
             ref={handleElementRef(index)}
           >
@@ -98,8 +98,8 @@ const COfArrow = () => {
                 <div className={style.timeline_title_right_text}>
                   {item.titulo}
                 </div>
-                <div className={style.imagen}>
-                  <img src={item.imagen} alt="" />
+                <div className="w-full lg:w-3/4  min-h-10">
+                  <img src={item.imagen} alt="" className="w-full rounded-lg" />
                 </div>
                 <div
                   className={style.text_block_right}
@@ -115,7 +115,7 @@ const COfArrow = () => {
                 </div>
               </div>
               {item.button && (
-                <div className={style.containerOFbuttom}>
+                <div className="flex justify-left items-left w-full py-10">
                   <Button
                     buttonId={item.titulo}
                     activeButtonId={activeButtonId}

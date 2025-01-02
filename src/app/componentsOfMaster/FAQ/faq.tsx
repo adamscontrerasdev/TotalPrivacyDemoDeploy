@@ -46,7 +46,9 @@ const Faq: React.FC = () => {
       </div>
       <div className={style.contentMarcaAndBox}>
         <div className={style.prueba}>
-          <div className={style.marca}></div>
+          <div className={style.marca}>
+            <img src="/img/IconNoBg.png" alt="" className="h-full" />
+          </div>
         </div>
         <div className={style.contentLuz}>
           <div className={style.boxOFQuetions}>

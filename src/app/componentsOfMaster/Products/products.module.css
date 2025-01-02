@@ -22,7 +22,7 @@
     Instrument Sans,
     sans-serif;
   line-height: 10vh;
-  color: #fd0101;
+  color: #00f;
   text-transform: uppercase;
   -webkit-text-fill-color: inherit;
   font-size: 16px;
@@ -91,11 +91,11 @@
     Instrument Sans,
     sans-serif;
   box-sizing: border-box;
-  background-image: linear-gradient(342deg, #fd0101, #250000 53%, #fd0101);
+  background-image: linear-gradient(342deg, #00f, #250000 53%, #013cfd);
   border-radius: 20px;
   margin-top: 60px;
   padding: 2px;
-  box-shadow: 0 0 40px -2px #fd000042;
+  box-shadow: 0 0 40px -2px #00f;
 }
 
 .p3 {
@@ -111,7 +111,7 @@
   display: grid;
   grid-column-gap: 0px;
   box-shadow: none;
-  background-color: #240000;
+  background-color: #000424;
   /* BG recuadro */
   border: 1px rgba(90, 90, 90, 0.21);
   border-radius: 20px;
@@ -267,14 +267,12 @@
   border: 0;
   vertical-align: middle;
   display: inline-block;
-  max-width: 140%;
+  max-width: 100%;
   margin-right: -50px;
   margin-left: 60px;
   grid-area: span 2 / span 1 / span 2 / span 1;
   opacity: 1;
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  transform-style: preserve-3d;
+  border-radius: 20px;
 }
 
 .p132 {
@@ -380,7 +378,7 @@
 
 @media (max-width: 900px) {
   .p13 {
-    max-width: 40%;
+    max-width: 70%;
     transform: translateY(-160px);
   }
 
@@ -414,7 +412,7 @@
   }
 
   .p13 {
-    max-width: 70%;
+    max-width: 60%;
     margin: 0 auto;
     order: -1;
     position: absolute;
@@ -428,7 +426,7 @@
   }
 
   .p13 {
-    max-width: 40%;
+    max-width: 70%;
     margin: 0 auto;
     order: -1;
     position: absolute;

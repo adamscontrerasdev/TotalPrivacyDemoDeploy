@@ -40,18 +40,16 @@ const ReusableButton = forwardRef<HTMLButtonElement, ButtonProps>(
           background: bg ? bg : "#0003",
           position: "relative",
           color: color, // Cambia a color pasado por props
-          padding: ".5em",
           borderRadius: "10px",
+          padding: "10px 20px",
           backdropFilter: "blur(5px)",
-          border: `solid .5px #fff1`,
           cursor: "pointer",
           textShadow: shadow ? `0px 0px 10px #fff` : "none",
           boxShadow: shadow ? `0px 0px 50px ${bg}` : "none",
-          width: "100%",
-          height: "100%",
           zIndex: 999,
           fontSize: "1.2em",
           transition: "all .5s",
+          width: "auto",
         }}
         className={className}
         onMouseEnter={onMouseEnter}

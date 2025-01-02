@@ -17,7 +17,7 @@
   padding: 5rem 4rem;
   display: flex;
   position: relative;
-  background-color: #240000;
+
   padding-bottom: 0;
   padding-top: 2rem;
 }
@@ -60,7 +60,7 @@
   margin: 0.67em 0;
   margin-top: 20px;
   line-height: 10vh;
-  color: #fb0606;
+  color: #00f;
   letter-spacing: 4px;
   text-transform: uppercase;
   -webkit-text-fill-color: inherit;
@@ -76,7 +76,7 @@
     Instrument Sans,
     sans-serif;
   line-height: 10vh;
-  color: #fb0606;
+  color: #00f;
   text-transform: uppercase;
   -webkit-text-fill-color: inherit;
   font-size: 16px;
@@ -139,7 +139,6 @@
   border-bottom: 1px #e4ebf3;
   padding: 10px 30px 80px;
   position: relative;
-  background-color: #240000;
   flex-direction: column;
   align-items: center;
   padding-top: 40px;
@@ -212,7 +211,7 @@
     Instrument Sans,
     sans-serif;
   box-sizing: border-box;
-  background-image: linear-gradient(#ef0808, #150303);
+  background-image: linear-gradient(#00f, #070315);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding-top: 2px;
@@ -229,7 +228,7 @@
     sans-serif;
   box-sizing: border-box;
   z-index: 0;
-  background-color: #240000;
+  background-color: #0b0024;
   border-radius: 20px 20px 0 0;
   flex-direction: column;
   justify-content: center;
@@ -335,13 +334,13 @@
     Instrument Sans,
     sans-serif;
   box-sizing: border-box;
-  background-image: linear-gradient(326deg, #f40707, #030915 49%, #f50808);
+  background-image: linear-gradient(326deg, #00f, #030915 49%, #4708f5);
   border-radius: 24px;
   padding: 2px;
   transition: all 0.2s;
   position: relative;
   transform: none;
-  box-shadow: 0 0 70px rgba(251, 9, 9, 0.24);
+  box-shadow: 0 0 70px rgba(33, 9, 251, 0.24);
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
@@ -365,7 +364,7 @@
   box-shadow: 0 2px 7px rgba(20, 20, 43, 0.06);
   width: 100%;
   height: 100%;
-  background-color: #240000;
+  background-color: #080024;
   border-style: none;
   max-width: 100%;
 }
@@ -457,7 +456,7 @@
   display: flex;
   outline-offset: -2px;
   background-color: rgba(255, 0, 0, 0);
-  background-image: linear-gradient(175deg, #150303 3%, #450202 33%, #ff0000);
+  background-image: linear-gradient(175deg, #150303 3%, #060245 33%, #00f);
   border-style: none;
   border-color: rgba(255, 255, 255, 0.13);
   border-radius: 12px;
@@ -593,7 +592,8 @@
 }
 
 .miniImg1 {
-  color: #fff;
+  color: #00f;
+  fill: rgb(0, 153, 255);
   font-size: 1rem;
   line-height: 20px;
   font-family:
@@ -605,8 +605,6 @@
   display: inline-block;
   max-width: 22px;
   margin-right: 16px;
-  filter: sepia(99%) saturate(1000%) hue-rotate(336deg) brightness(92%)
-    contrast(200%);
 }
 
 .charCont1 {
@@ -1009,7 +1007,7 @@
     Instrument Sans,
     sans-serif;
   box-sizing: border-box;
-  background-image: linear-gradient(#ef0808, #ef0808);
+  background-image: linear-gradient(#2b08ef, #3208ef);
   border-radius: 40px;
   padding: 2px;
   position: absolute;
@@ -1091,10 +1089,6 @@
     font-size: 1rem;
     line-height: 1.25rem;
     width: 90%;
-  }
-
-  .cont2Cont {
-    /* margin: 0 10%; */
   }
 
   .contPrice {
