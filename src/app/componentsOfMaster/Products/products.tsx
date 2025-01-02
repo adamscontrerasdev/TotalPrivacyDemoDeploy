@@ -40,7 +40,7 @@ export default function products() {
 
               <img
                 className={style.p13}
-                src="/img/clases grabadas.webp"
+                src="/img/Clases grabadas.webp"
                 alt="imagen"
               />
             </div>
