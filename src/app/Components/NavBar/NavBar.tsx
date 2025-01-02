@@ -94,7 +94,6 @@ export const NavBar = () => {
         className={`w-full h-12 absolute top-0 left-0 flex items-center px-10 justify-between
         }`}
       >
-        |
         <Link
           href={"/"}
           className={`trasition-all duration-1000 opacity-0 md:opacity-100 ${path !== "/" ? "opacity-100" : ""}`}
