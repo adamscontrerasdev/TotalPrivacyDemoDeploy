@@ -29,7 +29,7 @@ export const StaticIsland: React.FC<StaticIslandProps> = ({
         zIndex: 999,
       }}
     >
-      {isPlaying ? (
+      {isPlaying && !isMobile ? (
         <div className="flex flex-col items-center">
           {/* Input de rango para controlar el volumen */}
           <input

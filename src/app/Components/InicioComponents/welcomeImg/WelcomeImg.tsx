@@ -5,6 +5,7 @@ import { RiArrowDownWideLine } from "react-icons/ri";
 import { PersonalButton } from "@/app/Elements";
 import { useIsMobile } from "@/app/Elements/hooks";
 import CelComponent from "./CelComponent";
+import Link from "next/link";
 
 export const WelcomeImg: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -296,18 +297,23 @@ export const WelcomeImg: React.FC = () => {
             <div
               className={`${styles.buttons} p-5 flex gap-10 items-end justify-center w-full h-[60vh] absolute top-0 left-0 z-10`}
             >
-              <PersonalButton
-                value="Ver cursos"
-                color="white"
-                ref={buttonRefCursos}
-                className="opacity-0"
-              />
-              <PersonalButton
-                value="Ver E-Books"
-                color="white"
-                ref={buttonRefEBooks}
-                className="opacity-0"
-              />
+              <Link href="/cursos">
+                <PersonalButton
+                  value="Ver cursos"
+                  color="white"
+                  ref={buttonRefCursos}
+                  className="opacity-0"
+                />
+              </Link>
+
+              <Link href="/ebooks">
+                <PersonalButton
+                  value="Ver E-Books"
+                  color="white"
+                  ref={buttonRefEBooks}
+                  className="opacity-0"
+                />
+              </Link>
             </div>
             <div
               className={`absolute bottom-64 md:bottom-10 left-0 w-full flex flex-col items-center justify-center z-50 ${styles.arrowDownWideLineContainer} cursor-pointer `}

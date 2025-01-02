@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { RenderVideo } from "../../Components";
+import { useIsMobile } from "@/app/Elements/hooks";
 
 interface CardOFProductProps {
   title: string;
@@ -11,6 +12,7 @@ interface CardOFProductProps {
   description: string;
   before: number;
   order: number;
+  poster?: string;
 }
 
 export const CardOFProduct: React.FC<CardOFProductProps> = ({
@@ -22,10 +24,12 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
   description,
   before,
   order,
+  poster,
 }) => {
   const [firstPlay, setFirstPlay] = useState(false); // Estado elevado
   const [opacityFoContent, setOpacityFoContent] = useState(false);
   const [playOrpause, setPlayOrpause] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     // Controlar la opacidad del contenido basado en playOrpause
@@ -47,9 +51,10 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
       <div
         className={`w-full md:w-1/2 h-[40%] md:h-full ${video ? "" : "relative"}`}
       >
-        {video ? (
+        {video && poster ? (
           <RenderVideo
             video={video}
+            poster={poster}
             firstPlay={firstPlay}
             setFirstPlay={setFirstPlay}
             setPlayOrpause={setPlayOrpause}
@@ -59,7 +64,7 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
             <img
               src={Bg}
               alt={title}
-              className="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-[40%]"
+              className="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-[40%] md:-translate-y-[50%] "
             />
             <div
               className="w-full h-full absolute top-0 left-0"
@@ -74,12 +79,11 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
       <div
         className={`${
           video ? "absolute" : ""
-        } ${video ? "left-0" : ""} w-full md:w-1/2 h-[60%] md:h-full flex flex-col items-start justify-start py-40 px-12 gap-3 md:gap-8 z-50 bg-black transition-all linear duration-700 `}
+        } ${video ? "left-0" : ""} ${video ? "md:bg-transparent" : ""} w-full md:w-1/2 h-[60%] md:h-full flex flex-col items-start justify-start md:py-40 p-12 gap-3 md:gap-8 z-50 bg-black transition-all linear duration-700  bottom-0 md:bottom-auto md:top-0 md:right-0 ${
+          video ? "md:bg-custom-gradient-left" : ""
+        }`}
         style={{
-          background: video
-            ? "linear-gradient(to right, #000 90%, transparent 100%)"
-            : "",
-          opacity: opacityFoContent ? 0 : 1,
+          opacity: !isMobile ? (opacityFoContent ? 0 : 1) : 1,
           pointerEvents: video ? "none" : "auto",
         }}
       >
@@ -103,7 +107,7 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
           </div>
         ) : (
           <button
-            className={`bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-2 md:py-4 px-5 md:px-10 rounded-xl mt-6 text-lg md:text-xl transition-all duration-300 ease-in-out shadow-[0_0_10px_5px_rgb(202_138_4)] 
+            className={`bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-4 px-10 md:py-4  md:px-10 rounded-xl mt-6 md:text-xl transition-all duration-300 ease-in-out shadow-[0_0_10px_5px_rgb(202_138_4)] 
                 hover:shadow-[0_0_20px_10px_rgb(250_204_21)]`}
           >
             Adquirir
@@ -114,13 +118,10 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
       {/* Botón absolutamente posicionado */}
       {video && (
         <button
-          className={`bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-4 px-10 rounded-xl text-xl transition-all duration-[1s] ease-in-out shadow-[0_0_10px_5px_rgb(202_138_4)] 
-                hover:shadow-[0_0_20px_10px_rgb(250_204_21)]`}
+          className={`bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-4 px-10 rounded-xl md:text-xl transition-all duration-[1s] ease-in-out shadow-[0_0_10px_5px_rgb(202_138_4)] 
+                hover:shadow-[0_0_20px_10px_rgb(250_204_21)]
+                absolute bottom-32  left-12`}
           style={{
-            position: "absolute",
-            bottom: "10%",
-            left: "7%",
-            transform: "translateX(-50%)",
             zIndex: 99,
           }}
         >

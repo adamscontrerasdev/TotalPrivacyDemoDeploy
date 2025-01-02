@@ -1,11 +1,12 @@
-// RenderVideo.tsx
 "use client";
 import { ProgressBarElement } from "@/app/Elements";
+import { useIsMobile } from "@/app/Elements/hooks";
 import { useVideoStatus } from "@/app/Elements/hooks/globalHooks/VideoStatusContext ";
 import React, { useRef, useState, useEffect } from "react";
 import { FaPlay, FaPause } from "react-icons/fa";
 
 interface RenderVideoProps {
+  poster: string;
   video: string;
   firstPlay: boolean;
   setFirstPlay: React.Dispatch<React.SetStateAction<boolean>>;
@@ -14,6 +15,7 @@ interface RenderVideoProps {
 
 export const RenderVideo: React.FC<RenderVideoProps> = ({
   video,
+  poster,
   firstPlay,
   setFirstPlay,
   setPlayOrpause,
@@ -22,6 +24,7 @@ export const RenderVideo: React.FC<RenderVideoProps> = ({
   const { isPlaying, setIsPlaying, volume } = useVideoStatus(); // Obtener volumen del contexto
   const [progress, setProgress] = useState(0);
   const stelaRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
 
   // Aplicar volumen global al video
   useEffect(() => {
@@ -107,38 +110,66 @@ export const RenderVideo: React.FC<RenderVideoProps> = ({
     }
   }, [progress]);
 
+  // Detectar cambios en el hash de la URL y pausar el video
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (videoRef.current) {
+        videoRef.current.pause(); // Pausar el video
+        setIsPlaying(false); // Actualizar el estado de reproducción
+      }
+    };
+
+    const checkHash = () => {
+      if (window.location.hash) {
+        handleHashChange(); // Pausar el video cuando cambia el hash
+      }
+    };
+
+    // Revisar el hash cuando se monta el componente
+    checkHash();
+
+    window.addEventListener("scroll", checkHash); // Revisar el hash cuando se desplaza la página
+    // Revisar cambios de hash manualmente
+  }, []);
+
   return (
-    <div className="absolute top-0 left-0 w-full h-screen z-50">
+    <div className="absolute top-0 left-0 w-screen md:h-screen h-[40%] z-50 ">
       {/* Video */}
       <video
         ref={videoRef}
         src={video}
-        className="absolute transition-all duration-[0.8s] linear"
+        controls={isMobile}
+        playsInline={isMobile}
+        controlsList="nodownload"
+        className="absolute transition-all duration-[0.8s] linear w-full h-full"
         style={{
           objectFit: "cover",
-          left: firstPlay ? "0" : "30%",
+          left: !isMobile ? (firstPlay ? "0" : "30%") : "0",
           top: 0,
-          width: "100vw",
-          height: "100vh",
         }}
+        poster={isMobile ? poster : ""}
         onPlay={handlePlay}
         onPause={handlePause}
       />
 
       {/* Botón de overlay para Play/Pause */}
-      <div
-        className="absolute top-0 w-full h-full flex items-center justify-center cursor-pointer z-40 transition-all duration-[.8s] ease-in-out"
-        onClick={handleOverlayClick}
-        style={{
-          left: firstPlay ? "0" : "30%",
-        }}
-      >
-        {!isPlaying && <FaPlay className="text-white text-4xl" />}
-        {isPlaying && firstPlay && <FaPause className="text-white text-4xl" />}
-      </div>
+      {!isMobile && (
+        <div
+          className="absolute top-0 w-full h-full flex items-center justify-center cursor-pointer z-40 transition-all duration-[.8s] ease-in-out"
+          onClick={handleOverlayClick}
+          style={{
+            left: firstPlay ? "0" : "30%",
+          }}
+        >
+          {!isPlaying && <FaPlay className="text-white text-4xl" />}
+          {isPlaying && firstPlay && (
+            <FaPause className="text-white text-4xl" />
+          )}
+        </div>
+      )}
 
       {/* Barra de progreso personalizada */}
-      {firstPlay && (
+      {firstPlay && !isMobile && (
         <ProgressBarElement
           progress={progress}
           handleProgressChange={handleProgressChange}

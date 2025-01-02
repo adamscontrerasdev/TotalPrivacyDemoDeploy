@@ -11,6 +11,10 @@ const config: Config = {
       backgroundImage: {
         "vignette-dark":
           "radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,0.9) 100%)",
+        "custom-gradient-left":
+          "linear-gradient(to right, #000 90%, transparent 100%)",
+        "custom-gradient-right":
+          "linear-gradient(to left, #000 90%, transparent 100%)",
       },
       colors: {
         background: "var(--background)",

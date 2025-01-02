@@ -5,6 +5,8 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 import styles from "./NavBar.module.css";
 import { CursoOfTheNavBar, EBooksOfTheNavBar } from "./../../Elements/index";
 import { useIsMobile } from "@/app/Elements/hooks";
+import { GoHomeFill } from "react-icons/go";
+import { usePathname } from "next/navigation";
 
 export const NavBar = () => {
   const [isHover, setIsHover] = useState(false);
@@ -14,6 +16,7 @@ export const NavBar = () => {
   const [isLinkHover, setIsLinkHover] = useState(false);
   const isMobile = useIsMobile();
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const path = usePathname();
 
   // Lógica para dispositivos móviles
 
@@ -88,15 +91,20 @@ export const NavBar = () => {
     >
       {/* Top bar */}
       <div
-        className={`w-full h-12 absolute top-0 left-0 flex items-center px-10  ${
-          isMobile ? "justify-end" : "justify-between"
+        className={`w-full h-12 absolute top-0 left-0 flex items-center px-10 justify-between
         }`}
       >
-        {!isMobile && (
-          <Link href={"/"}>
+        |
+        <Link
+          href={"/"}
+          className={`trasition-all duration-1000 opacity-0 md:opacity-100 ${path !== "/" ? "opacity-100" : ""}`}
+        >
+          {isMobile ? (
+            <GoHomeFill className="fill-white text-2xl" />
+          ) : (
             <h1 className={`${styles.title} text-xs`}>TOTAL PRIVACY</h1>
-          </Link>
-        )}
+          )}
+        </Link>
         <FaMagnifyingGlass className="cursor-pointer" />
       </div>
 

@@ -59,7 +59,7 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
       return;
     }
 
-    const SCROLL_THRESHOLD = 50;
+    const SCROLL_THRESHOLD = 30;
     const direction = event.deltaY > 0 ? "down" : "up";
 
     if (
@@ -137,7 +137,7 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
         {items.map((item) => (
           <div
             key={item.id}
-            className="section w-screen h-screen flex flex-col items-center justify-center"
+            className="section w-screen h-screen flex flex-col items-center justify-center  relative"
             id={item.key}
             ref={setRef(item.key)}
           >
@@ -150,6 +150,7 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
               before={item.before}
               order={item.order}
               video={"video" in item ? item.video : undefined}
+              poster={"poster" in item ? item.poster : undefined}
             />
           </div>
         ))}
