@@ -19,12 +19,13 @@ const Footer: React.FC = () => {
         </p>
         <p className={style.p2}>
           <br />
-          ©2024 all rights reserved by Tokin Privacy.
+          ©2024 all rights reserved by Total Privacy.
         </p>
         <p className={style.empContent} style={{ color: "#666" }}>
-          Blue Ocean 1984 LLC
+          {/* Blue Ocean 1984 LLC */}
           <br />
-          30 N GOULD ST STE R Sheridan, WY 82801 Estados Unidos (307) 219-0316
+          30 N GOULD ST STE R Sheridan, WY 82801 Estados Unidos
+          {/* (307) 219-0316 */}
         </p>
       </div>
     </div>

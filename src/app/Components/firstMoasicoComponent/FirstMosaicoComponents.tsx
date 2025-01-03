@@ -27,7 +27,7 @@ export const FirstMosaicoComponents: React.FC = () => {
     >
       {Products.ebooks
         .sort((a: Ebook, b: Ebook) => a.price - b.price)
-        .slice(0, 4)
+        .filter((_, index: number) => index === 0 || index === 2) // Filtrar solo los índices 0 y 3
         .map((product: Ebook, index: number) => (
           <BestSellingTemplate
             key={product.title || index}
