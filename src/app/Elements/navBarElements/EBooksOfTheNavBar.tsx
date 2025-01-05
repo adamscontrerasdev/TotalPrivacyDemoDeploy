@@ -8,6 +8,8 @@ import dataOfEbooks from "./../../../../public/data/icoAndTitleOfTheNavBar.json"
 import { TbDeviceImac } from "react-icons/tb";
 import { useIsMobile } from "../hooks";
 import { LuMenu } from "react-icons/lu";
+import { BsBank } from "react-icons/bs";
+
 import Link from "next/link";
 
 // Mapeo de nombres a componentes de react-icons
@@ -17,6 +19,7 @@ const iconMap: Record<string, React.ElementType> = {
   SiWindows10,
   SiAndroid,
   RiBankFill,
+  BsBank,
 };
 
 interface EBooksOfTheNavBarProps {

@@ -17,8 +17,7 @@ export const NavBar = () => {
   const isMobile = useIsMobile();
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const path = usePathname();
-
-  // Lógica para dispositivos móviles
+  const isNotDashboard: boolean = path !== "/Dashboard";
 
   const handleMobileClick = (who: string) => {
     if (whoIsHover === who) {
@@ -39,7 +38,6 @@ export const NavBar = () => {
     }
   };
 
-  // Lógica para dispositivos de escritorio
   const handleDesktopMouseEnter = (who: string) => {
     if (timeoutRef.current !== null) {
       clearTimeout(timeoutRef.current);
@@ -83,20 +81,20 @@ export const NavBar = () => {
     };
   }, []);
 
-  return (
+  return isNotDashboard ? (
     <div
       className={`bg-black bg-opacity-60 backdrop-blur-3xl backdrop-brightness-75 ${
         isHover ? (isMobile ? "h-[100%]" : "h-36") : "h-12"
       } w-full text-text flex flex-col items-center justify-between overflow-hidden fixed top-0 left-0 z-[999999] transition-all duration-500`}
     >
-      {/* Top bar */}
       <div
-        className={`w-full h-12 absolute top-0 left-0 flex items-center px-10 justify-between
-        }`}
+        className={`w-full h-12 absolute top-0 left-0 flex items-center px-10 justify-between`}
       >
         <Link
           href={"/"}
-          className={`trasition-all duration-1000 opacity-0 md:opacity-100 ${path !== "/" ? "opacity-100" : ""}`}
+          className={`transition-all duration-1000 opacity-0 md:opacity-100 ${
+            path !== "/" ? "opacity-100" : ""
+          }`}
         >
           {isMobile ? (
             <GoHomeFill className="fill-white text-2xl" />
@@ -107,8 +105,7 @@ export const NavBar = () => {
         <FaMagnifyingGlass className="cursor-pointer" />
       </div>
 
-      {/* Links */}
-      <div className="flex  items-center justify-around w-60 font-medium h-12 z-20">
+      <div className="flex items-center justify-around w-60 font-medium h-12 z-20">
         {isMobile ? (
           <>
             <div
@@ -119,10 +116,9 @@ export const NavBar = () => {
               <div
                 className={`${
                   whoIsHover === "Cursos" ? "w-full" : "w-0"
-                } h-[1px] bg-foreground bottom-0 left-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)] `}
+                } h-[1px] bg-foreground bottom-0 left-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)]`}
               ></div>
             </div>
-
             <div
               onClick={() => handleMobileClick("E-books")}
               className="relative"
@@ -147,10 +143,9 @@ export const NavBar = () => {
               <div
                 className={`${
                   whoIsHover === "Cursos" ? "w-full" : "w-0"
-                } h-[1px] bg-foreground bottom-0 left-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)] `}
+                } h-[1px] bg-foreground bottom-0 left-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)]`}
               ></div>
             </Link>
-
             <Link
               href={"/ebooks"}
               onMouseEnter={() => handleDesktopMouseEnter("E-books")}
@@ -168,7 +163,6 @@ export const NavBar = () => {
         )}
       </div>
 
-      {/* Hover content */}
       <div
         className={`flex flex-row items-center justify-around w-full ${
           isMobile ? "h-full" : "h-24"
@@ -206,5 +200,5 @@ export const NavBar = () => {
         )}
       </div>
     </div>
-  );
+  ) : null;
 };

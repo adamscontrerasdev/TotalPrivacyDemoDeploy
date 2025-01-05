@@ -10,6 +10,12 @@
   --secondary-color: #9750dd;
   --text-color: #aaa;
   --textShadow-glow: 0 0 15px #ffffff, 0 0 50px var(--provicional-color);
+  --backToDashboard: #fff;
+  --shadowToDashboard: 0 0 50px rgba(0, 0, 0, 0.1);
+  --textToDashboard: #000;
+  --foregrundToDashboard: #ccc;
+  --contrastSmooth: #fff;
+  --placeholderColor: #333;
 }
 
 * {
@@ -28,12 +34,17 @@
   height: 0;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --background: #171717;
+    --backToDashboard: #000;
+    --shadowToDashboard: 0 0 50px rgba(255, 255, 255, 0.1);
+    --textToDashboard: #fff;
+    --foregrundToDashboard: #1f1f1f;
+    --contrastSmooth: #333;
     --foreground: #ededed;
+    --placeholderColor: #aaa;
   }
-} */
+}
 
 body {
   color: var(--text-color);

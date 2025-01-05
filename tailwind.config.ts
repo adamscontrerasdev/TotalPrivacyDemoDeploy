@@ -16,6 +16,12 @@ const config: Config = {
         "custom-gradient-right":
           "linear-gradient(to left, #000 90%, transparent 100%)",
       },
+      backgroundColor: {
+        backToDashboard: "var(--backToDashboard)",
+        foregrundToDashboard: "var(--foregrundToDashboard)",
+        contrastSmooth: "var(--contrastSmooth)",
+      },
+
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -24,6 +30,11 @@ const config: Config = {
         "background-main": "var(--background-color)",
         "background-secondary": "var(--background-secondary-color)",
         text: "var(--text-color)",
+        textToDashboard: "var(--textToDashboard)",
+        placeholderColor: "var(--placeholderColor)",
+      },
+      boxShadow: {
+        shadowToDashboard: "var(--shadowToDashboard)",
       },
     },
   },
