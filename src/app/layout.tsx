@@ -24,23 +24,23 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" href="/IconTotalPrivacy.png" />
+        <link rel="icon" type="image/png" href="./IconTotalPrivacy.png" />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/IconTotalPrivacy.png"
+          href="./IconTotalPrivacy.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/IconTotalPrivacy.png"
+          href="./IconTotalPrivacy.png"
         />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/IconTotalPrivacy.png"
+          href="./IconTotalPrivacy.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
