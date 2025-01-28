@@ -1,19 +1,29 @@
 {
   "curso": [
     {
-      "Icon": "SiGrapheneos",
-      "title": "Móvil 007 - GrapheneOS",
-      "key": "grapheneos"
+      "Icon": "SiApple",
+      "title": "Privacidad iOS",
+      "key": "bunkeriza-iphone"
     },
     {
       "Icon": "TbDeviceImac",
       "title": "Privacidad MacOS",
-      "key": "Blinda-mac"
+      "key": "bunkeriza-mac"
     },
     {
       "Icon": "SiWindows10",
       "title": "Privacidad Windows",
-      "key": "Blinda-windows"
+      "key": "bunkeriza-windows"
+    },
+    {
+      "Icon": "SiAndroid",
+      "title": "Privacidad Android",
+      "key": "bunkeriza-android"
+    },
+    {
+      "Icon": "SiBitcoinsv",
+      "title": "Privacidad Bitcoin",
+      "key": "bitcoin"
     }
   ],
   "EBooks": [

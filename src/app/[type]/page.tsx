@@ -3,9 +3,11 @@ import React, { useState, useEffect, useRef, use } from "react";
 import { notFound } from "next/navigation";
 import data from "./../../../public/data/products.json";
 import { CardOFProduct, StaticIsland } from "../Components";
+import { useScrollBlock } from "../Elements/hooks/globalHooks/ScrollBlockContext";
 
 const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
   const { type } = use(params);
+  const { scrollBlock } = useScrollBlock();
   const items = data[type as "ebooks" | "cursos"];
   const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const [activeCircle, setActiveCircle] = useState<string>(
@@ -50,6 +52,14 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
       setTimeout(() => setScrolling(false), 800); // Aumenta el tiempo si el trackpad sigue siendo problemático
     }
   };
+
+  useEffect(() => {
+    if (scrollBlock) {
+      setScrolling(true);
+    } else {
+      setScrolling(false);
+    }
+  }, [scrollBlock]);
 
   let lastScrollDirection: "up" | "down" | null = null;
 
@@ -149,8 +159,9 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
               description={item.description}
               before={item.before}
               order={item.order}
-              video={"video" in item ? item.video : undefined}
-              poster={"poster" in item ? item.poster : undefined}
+              // video={"video" in item ? item.video : undefined}
+              // poster={"poster" in item ? item.poster : undefined}
+              cardPay={item.cardPay}
             />
           </div>
         ))}

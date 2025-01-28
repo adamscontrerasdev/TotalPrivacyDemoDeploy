@@ -5,6 +5,7 @@ import { MobileProvider } from "./Elements/hooks";
 import React from "react";
 import { headers } from "next/headers";
 import { VideoStatusProvider } from "./Elements/hooks/globalHooks/VideoStatusContext ";
+import { ScrollBlockProvider } from "./Elements/hooks/globalHooks/ScrollBlockContext";
 
 export const metadata: Metadata = {
   title: "Total Privacy",
@@ -45,12 +46,14 @@ export default async function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={""}>
-        <MobileProvider initialMobileState={isMobile}>
-          <VideoStatusProvider>
-            <NavBar />
-            {children}
-          </VideoStatusProvider>
-        </MobileProvider>
+        <ScrollBlockProvider>
+          <MobileProvider initialMobileState={isMobile}>
+            <VideoStatusProvider>
+              <NavBar />
+              {children}
+            </VideoStatusProvider>
+          </MobileProvider>
+        </ScrollBlockProvider>
       </body>
     </html>
   );
