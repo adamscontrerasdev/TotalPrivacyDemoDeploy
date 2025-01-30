@@ -18,6 +18,7 @@ interface CardOFProductProps {
   order: number;
   poster?: string;
   cardPay: string;
+  proximamente?: boolean;
 }
 
 export const CardOFProduct: React.FC<CardOFProductProps> = ({
@@ -31,6 +32,7 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
   order,
   poster,
   cardPay,
+  proximamente,
 }) => {
   const [firstPlay, setFirstPlay] = useState(false); // Estado elevado
   const [opacityFoContent, setOpacityFoContent] = useState(false);
@@ -134,16 +136,18 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
         <h1 className="text-2xl md:text-6xl font-extrabold text-white leading-tight">
           {title}
         </h1>
-        <h2 className="text-xl md:text-3xl text-gray-300 leading-relaxed">
+        <h2 className="text-lg md:text-3xl text-gray-300 leading-relaxed">
           {description}
         </h2>
-        <h2 className="text-xl md:text-5xl font-bold text-green-500">
-          <s className="text-gray-500 text-lg md:text-4xl">
-            {before && currency + before}
-          </s>{" "}
-          {currency}
-          {price}
-        </h2>
+        {!proximamente && (
+          <h2 className="text-xl md:text-5xl font-bold text-green-500">
+            <s className="text-gray-500 text-lg md:text-4xl">
+              {before && currency + before}
+            </s>{" "}
+            {currency}
+            {price}
+          </h2>
+        )}
 
         {video ? (
           <div className="w-full">
@@ -154,7 +158,9 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
             className={`bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-4 px-10 md:py-4  md:px-10 rounded-xl mt-6 md:text-xl transition-all duration-300 ease-in-out shadow-[0_0_10px_5px_rgb(202_138_4)] hover:shadow-[0_0_20px_10px_rgb(250_204_21)]`}
             onClick={handleAdquirirButton}
           >
-            Adquirir
+            {proximamente
+              ? "Este producto estara disponible pronto"
+              : "Adquirir"}
           </button>
         )}
       </div>
@@ -166,7 +172,7 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
           style={{ zIndex: 99 }}
           onClick={handleAdquirirButton}
         >
-          Adquirir
+          {proximamente ? "Este producto estara disponible pronto" : "Adquirir"}
         </button>
       )}
 
@@ -181,7 +187,7 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
         onClick={handleAdquirirButton}
       >
         <div
-          className="h-20 max-w-[28rem]  md:h-1/4 bg-[#000] absolute top-1/2 rounded-xl left-1/2 flex justify-center items-center overflow-hidden transition-all duration-300 ease-in-out"
+          className="h-20 max-w-[28rem]  md:h-1/5 bg-[#000] absolute top-1/2 rounded-xl left-1/2 flex justify-center items-center overflow-hidden transition-all duration-300 ease-in-out"
           style={{
             boxShadow: "0 0 10px #fff2",
             width: isMobile
@@ -201,7 +207,7 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
         >
           <Link
             href={cardPay}
-            className="flex flex-col items-center justify-center w-1/2 h-full text-sm md:text-2xl font-bold text-white"
+            className="flex flex-col items-center justify-center w-1/2 h-full text-sm md:text-xl font-bold text-white"
             style={{
               opacity: opacityFoArquirirKey ? 1 : 0,
               transform: opacityFoArquirirKey ? "scale(1)" : "scale(0)",
@@ -244,7 +250,7 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
 
           <Link
             href={"/"}
-            className="flex flex-col items-center justify-center w-1/2 h-full text-sm md:text-2xl font-bold text-white relative "
+            className="flex flex-col items-center justify-center w-1/2 h-full text-sm md:text-xl font-bold text-white relative "
             style={{
               opacity: opacityFoArquirirKey ? 1 : 0,
               transform: opacityFoArquirirKey ? "scale(1)" : "scale(0)",
@@ -257,6 +263,12 @@ export const CardOFProduct: React.FC<CardOFProductProps> = ({
           </Link>
         </div>
       </div>
+      {proximamente && (
+        <div
+          className="absolute top-0 left-0 w-full h-full z-[99]"
+          style={{ backdropFilter: " grayscale(100%)" }}
+        ></div>
+      )}
     </div>
   );
 };

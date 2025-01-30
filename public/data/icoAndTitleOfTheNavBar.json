@@ -2,18 +2,33 @@
   "curso": [
     {
       "Icon": "SiGrapheneos",
-      "title": "Móvil 007 - GrapheneOS",
+      "title": "Curso GrapheneOS",
       "key": "grapheneos"
     },
     {
+      "Icon": "SiApple",
+      "title": "Blinda tu iPhone",
+      "key": "Blinda-iphone"
+    },
+    {
       "Icon": "TbDeviceImac",
-      "title": "Privacidad MacOS",
+      "title": "Curso Privacidad MacOS",
       "key": "Blinda-mac"
     },
     {
       "Icon": "SiWindows10",
-      "title": "Privacidad Windows",
+      "title": "Curso Privacidad Windows",
       "key": "Blinda-windows"
+    },
+    {
+      "Icon": "SiAndroid",
+      "title": "Blinda tu Android",
+      "key": "Blinda-android"
+    },
+    {
+      "Icon": "SiBitcoinsv",
+      "title": "Iniciacion a Bitcoin",
+      "key": "bitcoin"
     }
   ],
   "EBooks": [
@@ -29,7 +44,7 @@
     },
     {
       "Icon": "BsBank",
-      "title": "Off-Shore Mastering",
+      "title": "Protección Off-Shore",
       "key": "OffShore"
     }
   ]

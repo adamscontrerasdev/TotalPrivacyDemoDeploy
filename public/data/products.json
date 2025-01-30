@@ -11,7 +11,8 @@
       "before": 46,
       "order": 0,
       "Destacado": false,
-      "cardPay": "https://pay.hotmart.com/I97404423L"
+      "cardPay": "https://pay.hotmart.com/I97404423L",
+      "proximamente": false
     },
     {
       "id": 2,
@@ -24,12 +25,13 @@
       "before": 46,
       "order": 1,
       "Destacado": false,
-      "cardPay": " https://pay.hotmart.com/T97405455U"
+      "cardPay": "https://pay.hotmart.com/T97405455U",
+      "proximamente": false
     },
     {
       "id": 3,
       "key": "OffShore",
-      "title": "Off-Shore Mastering",
+      "title": "Protección Off-Shore",
       "price": 97,
       "currency": "€",
       "Bg": "/img/Finales/Ebooks/OffShore.png",
@@ -37,7 +39,8 @@
       "before": 120,
       "order": 0,
       "Destacado": false,
-      "cardPay": " https://pay.hotmart.com/N97423369D"
+      "cardPay": "https://pay.hotmart.com/N97423369D",
+      "proximamente": false
     }
   ],
   "ebooks_release_date": "2024-11-20",
@@ -45,21 +48,38 @@
     {
       "id": 8,
       "key": "grapheneos",
-      "title": "Móvil 007 - GrapheneOS",
+      "title": "Curso GrapheneOS",
       "price": 97,
       "currency": "€",
       "note": "*",
       "Bg": "https://wonderfall.space/content/images/2021/05/photo-1568607689150-17e625c1586e.jpg",
       "description": "Conoce el sistema operativo más seguro y aprende a configurar un móvil con GrapheneOS.",
       "before": 120,
+      "order": 0,
+      "Destacado": false,
+      "cardPay": "https://pay.hotmart.com/P97455526B",
+      "proximamente": false
+    },
+    {
+      "id": 6,
+      "key": "Blinda-iphone",
+      "title": "Blinda tu iPhone",
+      "price": 97,
+      "currency": "€",
+      "Bg": "https://f.fcdn.app/imgs/77cd5e/www.mundomac.com/mmacuy/1225/original/wysiwyg/1/1280x0/iphone-16-pro.png",
+      "description": "Aprende a blindar tu iPhone y maximizar la seguridad de tu información personal.",
+      "before": 120,
+      "video": "/Videos/Finales/Cursos/Prueba.mp4",
+      "poster": "https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large.jpg",
       "order": 1,
       "Destacado": false,
-      "cardPay": "https://pay.hotmart.com/P97455526B"
+      "cardPay": "",
+      "proximamente": true
     },
     {
       "id": 9,
       "key": "Blinda-mac",
-      "title": "Blinda tu Mac",
+      "title": "Curso Privacidad MacOS",
       "price": 127,
       "currency": "€",
       "Bg": "https://www.apple.com/newsroom/images/2023/10/apple-unveils-new-macbook-pro-featuring-m3-chips/article/Apple-MacBook-Pro-2up-231030_Full-Bleed-Image.jpg.large_2x.jpg",
@@ -72,7 +92,7 @@
     {
       "id": 10,
       "key": "Blinda-windows",
-      "title": "Blinda tu Windows",
+      "title": "Curso Privacidad Windows",
       "price": 127,
       "currency": "€",
       "Bg": "https://cdn.neowin.com/news/images/galleries/4698/1660655314_windows_12_-_2.jpg",
@@ -81,6 +101,36 @@
       "order": 1,
       "Destacado": true,
       "cardPay": "https://pay.hotmart.com/Y97437543N"
+    },
+    {
+      "id": 7,
+      "key": "Blinda-android",
+      "title": "Blinda tu Android",
+      "price": 97,
+      "currency": "€",
+      "Bg": "https://i.blogs.es/63c3f7/guia-para-comprar-mejores-telefono-samsung/1366_2000.jpg",
+      "description": "Descubre cómo proteger tu Android y mantener tus datos a salvo de amenazas digitales.",
+      "before": 120,
+      "video": "https://firebasestorage.googleapis.com/v0/b/tokin-privacy-storage.appspot.com/o/anuncioTokinPrivacy-2.0.mp4?alt=media&token=b1e9b436-7687-41d0-acbf-884a12389319",
+      "order": 0,
+      "poster": "https://www.gizmochina.com/wp-content/uploads/2023/07/Android-new-logo.png",
+      "Destacado": false,
+      "cardPay": "",
+      "proximamente": true
+    },
+    {
+      "id": 11,
+      "key": "bitcoin",
+      "title": "Iniciacion a Bitcoin",
+      "price": 290,
+      "currency": "€",
+      "Bg": "https://www.cripto247.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTk4MTc5NDAyNjQxNTgxMTI4/el-curioso-mtodo-por-el-que-pronostican-un-crecimiento-de-bitcoin-hacia-los-74000-dlares.jpg",
+      "description": "Inicia tu cartera Bitcoin",
+      "before": 160,
+      "order": 1,
+      "Destacado": true,
+      "cardPay": "",
+      "proximamente": true
     }
   ],
   "courses_release_date": "2024-11-20",
@@ -97,6 +147,7 @@
     "Bg": "/img/master-privacy.png",
     "description": "Conviértete en un experto en privacidad digital con este máster completo que cubre todas las áreas críticas.",
     "Destacado": true,
-    "imagenPromocional": "https://www.bulletproof.co.uk/assets/header-backgrounds/blogs/how-hackers-hide-hero-52b3e92ac080797e72b8407403fcd6d898fe2314fda5d8924650a07567828835.png"
+    "imagenPromocional": "https://www.bulletproof.co.uk/assets/header-backgrounds/blogs/how-hackers-hide-hero-52b3e92ac080797e72b8407403fcd6d898fe2314fda5d8924650a07567828835.png",
+    "proximamente": true
   }
 }

@@ -11,7 +11,8 @@
       "before": 46,
       "order": 0,
       "Destacado": false,
-      "cardPay": "https://pay.hotmart.com/I97404423L"
+      "cardPay": "https://pay.hotmart.com/I97404423L",
+      "proximamente": true
     },
     {
       "id": 2,
@@ -24,7 +25,8 @@
       "before": 46,
       "order": 1,
       "Destacado": false,
-      "cardPay": " https://pay.hotmart.com/T97405455U"
+      "cardPay": "https://pay.hotmart.com/T97405455U",
+      "proximamente": true
     },
     {
       "id": 3,
@@ -37,7 +39,8 @@
       "before": 120,
       "order": 0,
       "Destacado": false,
-      "cardPay": " https://pay.hotmart.com/N97423369D"
+      "cardPay": "https://pay.hotmart.com/N97423369D",
+      "proximamente": true
     }
   ],
   "ebooks_release_date": "2024-11-20",
@@ -55,7 +58,8 @@
       "poster": "https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large.jpg",
       "order": 0,
       "Destacado": false,
-      "cardPay": " https://pay.hotmart.com/P97455526B"
+      "cardPay": "https://pay.hotmart.com/P97455526B",
+      "proximamente": true
     },
     {
       "id": 7,
@@ -70,7 +74,8 @@
       "order": 0,
       "poster": "https://www.gizmochina.com/wp-content/uploads/2023/07/Android-new-logo.png",
       "Destacado": false,
-      "cardPay": ""
+      "cardPay": "",
+      "proximamente": true
     },
     {
       "id": 8,
@@ -84,46 +89,8 @@
       "before": 120,
       "order": 1,
       "Destacado": false,
-      "cardPay": "https://pay.hotmart.com/P97455526B"
-    },
-    {
-      "id": 9,
-      "key": "Blinda-mac",
-      "title": "Blinda tu Mac",
-      "price": 127,
-      "currency": "€",
-      "Bg": "https://www.apple.com/newsroom/images/2023/10/apple-unveils-new-macbook-pro-featuring-m3-chips/article/Apple-MacBook-Pro-2up-231030_Full-Bleed-Image.jpg.large_2x.jpg",
-      "description": "Fortalece la seguridad de tu Mac y protege tu información de manera integral.",
-      "before": 160,
-      "order": 0,
-      "Destacado": false,
-      "cardPay": "https://pay.hotmart.com/I97433852A"
-    },
-    {
-      "id": 10,
-      "key": "Blinda-windows",
-      "title": "Blinda tu Windows",
-      "price": 127,
-      "currency": "€",
-      "Bg": "https://cdn.neowin.com/news/images/galleries/4698/1660655314_windows_12_-_2.jpg",
-      "description": "Asegura tu computadora Windows con estrategias avanzadas de privacidad y seguridad.",
-      "before": 160,
-      "order": 1,
-      "Destacado": true,
-      "cardPay": "https://pay.hotmart.com/Y97437543N"
-    },
-    {
-      "id": 11,
-      "key": "bitcoin",
-      "title": "Iniciación a Bitcoin",
-      "price": 290,
-      "currency": "€",
-      "Bg": "https://images.unsplash.com/photo-1543699539-33a389c5dcfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      "description": "Introduce las bases del Bitcoin, su funcionamiento y cómo usarlo de manera segura.",
-      "before": 360,
-      "order": 0,
-      "Destacado": true,
-      "cardPay": ""
+      "cardPay": "https://pay.hotmart.com/P97455526B",
+      "proximamente": true
     }
   ],
   "courses_release_date": "2024-11-20",
@@ -140,6 +107,7 @@
     "Bg": "/img/master-privacy.png",
     "description": "Conviértete en un experto en privacidad digital con este máster completo que cubre todas las áreas críticas.",
     "Destacado": true,
-    "imagenPromocional": "https://www.bulletproof.co.uk/assets/header-backgrounds/blogs/how-hackers-hide-hero-52b3e92ac080797e72b8407403fcd6d898fe2314fda5d8924650a07567828835.png"
+    "imagenPromocional": "https://www.bulletproof.co.uk/assets/header-backgrounds/blogs/how-hackers-hide-hero-52b3e92ac080797e72b8407403fcd6d898fe2314fda5d8924650a07567828835.png",
+    "proximamente": true
   }
 }
