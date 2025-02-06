@@ -1,6 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { SiApple, SiWindows10, SiAndroid, SiBitcoinsv } from "react-icons/si";
+import {
+  SiApple,
+  SiWindows10,
+  SiAndroid,
+  SiBitcoinsv,
+  SiGrapheneos,
+} from "react-icons/si";
 import { TbDeviceImac } from "react-icons/tb";
 import styles from "./ElementsNavBar.module.css";
 import { GeneralCardOfNavbar } from "./../../Elements/index";
@@ -16,6 +22,7 @@ const iconMap: Record<string, React.ElementType> = {
   SiWindows10,
   SiAndroid,
   SiBitcoinsv,
+  SiGrapheneos,
 };
 
 interface CursoOfTheNavBarProps {

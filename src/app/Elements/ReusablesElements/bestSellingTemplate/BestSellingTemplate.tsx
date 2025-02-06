@@ -1,77 +1,100 @@
 "use client";
-import React, { useState } from "react";
-import { useIsMobile } from "../../hooks";
+import React from "react";
+import { GoCheckCircleFill } from "react-icons/go";
+import Link from "next/link";
+import { useBuyMode } from "../../hooks/globalHooks/BuyModeContext";
 
 interface BestSellingTemplateProps {
   title?: string;
   bgImage?: string;
   description?: string;
   rootUrl: string;
+  points?: string[];
+  price: number;
+
+  cardPay?: string;
 }
 
 export const BestSellingTemplate: React.FC<BestSellingTemplateProps> = ({
   title,
   bgImage,
-  description,
   rootUrl,
+  points,
+  price,
+  cardPay,
 }) => {
-  const isMobile = useIsMobile();
-  const [isHovered, setIsHovered] = useState(false);
+  const { setUrlCard, setUrlBtc, setActive } = useBuyMode();
+
+  const handleBuyMode = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    setActive(true);
+    setUrlCard(cardPay || "");
+    setUrlBtc(`ebooks#${rootUrl}`);
+  };
+
   return (
     <div
-      className={`w-[100vw] h-[70vh] sm:w-[49%] md:h-[70vh] flex flex-col items-center justify-start pt-10 gap-2 md:gap-5 relative overflow-hidden `}
+      className={`w-full sm:w-[49%] h-[70vh] flex flex-col items-center justify-start pt-10 gap-2 md:gap-5 relative overflow-hidden`}
       style={{ background: "linear-gradient(to bottom, #000, #203adf30)" }}
-      onMouseEnter={() => !isMobile && setIsHovered(true)}
-      onMouseLeave={() => !isMobile && setIsHovered(false)}
     >
       <div
-        className={`transform transition-transform duration-300 ${
-          isHovered ? "scale-110" : "scale-100"
-        }`}
-        style={{
-          backgroundImage: `url(${bgImage})`,
-          backgroundSize: "contain", // Asegura que la imagen mantenga la proporción
-          backgroundPosition: "center", // Centrada horizontalmente y desplazada un 30% hacia abajo
-          backgroundRepeat: "no-repeat",
-
-          display: "flex", // Centrar la imagen si se usa un contenido adicional
-          alignItems: "center",
-          justifyContent: "center",
-          aspectRatio: "1", // Relación 1:1 para la imagen
-          position: "absolute",
-          top: isMobile ? "0" : "20%",
-          left: "0",
-          width: "100%",
-          height: "100%",
-          zIndex: 10,
-        }}
-      ></div>
-      <h1 className="w-[100vw] md:w-auto text-3xl md:text-4xl text-white font-normal text-center z-50">
-        {title}
-      </h1>
-      <p className="text-center text-xs md:text-[.98em] md:w-1/2 z-50 w-3/4 leading-relaxed">
-        {description}
-      </p>
-      {!isMobile ? (
-        <div className="flex gap-5 justify-center">
-          {" "}
-          <button className="bg-primary text-white text-lg py-2 px-4 rounded-full shadow-lg shadow-[#203adf80] z-50">
-            <a href={""}>Adquirir</a>
-          </button>
-          <button className=" text-white text-lg py-2 px-4 rounded-full shadow-sm border-2 border-white shadow-[#fff] z-50">
-            <a href={`/ebooks#${rootUrl}`}>Detalles</a>
-          </button>
+        id="title"
+        className=" h-[10%] w-full flex justify-star items-center text-4xl pl-1 md:text-5xl lg:pl-5 lg:text-7xl"
+      >
+        <h1 className="text-white font-bold">{title}</h1>
+      </div>
+      <div id="points&Img" className="h-[70%] w-full flex">
+        <div
+          id="points"
+          className="w-[50%] h-full text-white pt-4 pl-1 lg:pl-5"
+        >
+          <ul className="flex flex-col gap-2">
+            {points?.map((point, index) => (
+              <li
+                key={index}
+                className=" flex justify-start items-center gap-2 text-white md:text-xl lg:text-3xl"
+              >
+                <GoCheckCircleFill className="fill-primary" />
+                {point}
+              </li>
+            ))}
+          </ul>
         </div>
-      ) : (
-        <div className="flex gap-5 justify-center absolute bottom-10 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 z-30">
-          <button className="bg-primary text-white text-lg py-2 px-4 rounded-full shadow-lg shadow-[#203adf80] z-50">
-            <a href={""}>Adquirir</a>
-          </button>
-          <button className=" text-white text-lg py-2 px-4 rounded-full shadow-sm shadow-[#fff] z-50 border-2 border-white">
-            <a href={`/ebooks#${rootUrl}`}>Detalles</a>
-          </button>
+        <div id="image" className="w-[50%] h-full">
+          <img
+            src={bgImage}
+            alt={title}
+            className="h-full object-cover  scale-150 lg:scale-[2] "
+          />
         </div>
-      )}
+      </div>
+      <div id="buttons&Price" className="h-[20%] w-full flex">
+        <div
+          id="Adquirir&Detalles"
+          className="w-[50%] h-full flex justify-start gap-5 pl-1 lg:pl-5 items-center"
+        >
+          <button
+            className="text-white text-xl lg:text-2xl p-3 font-bold rounded-full bg-primary z-50"
+            onClick={handleBuyMode}
+          >
+            Adquirir
+          </button>
+          <h2 className="text-5xl text-green-400 font-bold md:text-5xl">
+            ${price}
+          </h2>
+        </div>
+        <div
+          id="Price"
+          className="w-[50%] h-full flex justify-center lg:justify-end items-center lg:pr-5"
+        >
+          <Link
+            href={`ebooks#${rootUrl}`}
+            className="text-white text-xl lg:text-2xl p-3 font-bold rounded-full border-white border-2 z-50"
+          >
+            Detalles
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

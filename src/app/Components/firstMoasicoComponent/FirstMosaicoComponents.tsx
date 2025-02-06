@@ -10,38 +10,44 @@ interface Ebook {
   Bg?: string;
   description?: string;
   key: string;
+  points: string[];
+  cardPay?: string;
 }
 
 export const FirstMosaicoComponents: React.FC = () => {
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    const ebooks: Array<Ebook> = Products.ebooks;
+    const ebooks: Ebook[] = Products.ebooks;
     console.log(ebooks);
   }, []);
 
   return (
     <div
-      className="flex w-[100vw] min-h-[50vh] bg-black gap-2 flex-wrap justify-center relative"
+      className="flex w-full min-h-[50vh] bg-black gap-2 flex-wrap justify-center relative"
       id="BEST_SELLERS"
     >
       {Products.ebooks
         .sort((a: Ebook, b: Ebook) => a.price - b.price)
-        .filter((_, index: number) => index === 0 || index === 2) // Filtrar solo los índices 0 y 3
-        .map((product: Ebook, index: number) => (
+        .filter((_, index) => index === 0 || index === 2)
+        .map((product: Ebook, index) => (
           <BestSellingTemplate
-            key={product.title || index}
+            key={product.key || index}
             bgImage={product.Bg}
             description={product.description}
             title={product.title}
             rootUrl={product.key}
+            points={product.points}
+            price={product.price}
+            cardPay={product.cardPay}
+            // Pasar los puntos al componente
           />
         ))}
       <div
-        className="w-full h-20  absolute -top-20 left-0 "
+        className="w-full h-20 absolute -top-20 left-0"
         style={{
           background: "linear-gradient(to top, #000, transparent)",
-          pointerEvents: "none", // Deshabilita clics e interacciones
+          pointerEvents: "none",
         }}
         tabIndex={-1}
       >

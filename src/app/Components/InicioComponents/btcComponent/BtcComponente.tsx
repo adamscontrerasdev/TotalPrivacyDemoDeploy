@@ -9,7 +9,7 @@ export const BtcComponente = () => {
   const isMobile = useIsMobile();
 
   return (
-    <div className="flex flex-col items-center gap-5 justify-center w-screen min:h-[50vh] ">
+    <div className="flex flex-col items-center gap-5 justify-center w-screen min:h-[50vh] p-5 ">
       <h1
         className="font-bold text-4xl md:text-[3.5rem] text-white md:text-left w-full py-3 md:p-10 md:px-16  text-center"
         style={{

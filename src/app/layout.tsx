@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { NavBar } from "./Components";
+import { BuyComponent, NavBar } from "./Components";
 import { MobileProvider } from "./Elements/hooks";
 import React from "react";
 import { headers } from "next/headers";
 import { VideoStatusProvider } from "./Elements/hooks/globalHooks/VideoStatusContext ";
+import { ScrollBlockProvider } from "./Elements/hooks/globalHooks/ScrollBlockContext";
+import { BuyModeProvider } from "./Elements/hooks/globalHooks/BuyModeContext";
 
 export const metadata: Metadata = {
   title: "Total Privacy",
@@ -45,12 +47,17 @@ export default async function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={""}>
-        <MobileProvider initialMobileState={isMobile}>
-          <VideoStatusProvider>
-            <NavBar />
-            {children}
-          </VideoStatusProvider>
-        </MobileProvider>
+        <BuyModeProvider>
+          <ScrollBlockProvider>
+            <MobileProvider initialMobileState={isMobile}>
+              <VideoStatusProvider>
+                <NavBar />
+                <BuyComponent />
+                {children}
+              </VideoStatusProvider>
+            </MobileProvider>
+          </ScrollBlockProvider>
+        </BuyModeProvider>
       </body>
     </html>
   );

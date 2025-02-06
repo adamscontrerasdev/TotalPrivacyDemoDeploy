@@ -27,7 +27,8 @@ export const VideoStatusProvider: React.FC<VideoStatusProviderProps> = ({
   children,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(100); // Estado global para el volumen
+  const [volume, setVolume] = useState(100);
+  // Estado global para el volumen
 
   return (
     <VideoStatusContext.Provider

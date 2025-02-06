@@ -19,7 +19,7 @@
 }
 
 .arrowDownWideLineIcon {
-  animation: bounceArrow 2s infinite ease-in-out;
+  animation: 2s infinite ease-in-out;
 }
 
 @keyframes bounceArrow {

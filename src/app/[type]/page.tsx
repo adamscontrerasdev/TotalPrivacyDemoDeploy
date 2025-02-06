@@ -3,18 +3,43 @@ import React, { useState, useEffect, useRef, use } from "react";
 import { notFound } from "next/navigation";
 import data from "./../../../public/data/products.json";
 import { CardOFProduct, StaticIsland } from "../Components";
+import { useScrollBlock } from "../Elements/hooks/globalHooks/ScrollBlockContext";
+import { Filters } from "@/app/Elements";
+import { useIsMobile } from "@/app/Elements/hooks";
+import {
+  ContentListProvider,
+  useContentList,
+} from "@/app/Elements/hooks/localHooks/ContentListContext";
 
 const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
+  return (
+    <ContentListProvider>
+      <ContentListInner params={params} />
+    </ContentListProvider>
+  );
+};
+
+const ContentListInner = ({
+  params,
+}: {
+  params: Promise<{ type: string }>;
+}) => {
   const { type } = use(params);
+  const { scrollBlock } = useScrollBlock();
   const items = data[type as "ebooks" | "cursos"];
   const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const [activeCircle, setActiveCircle] = useState<string>(
     items ? items[0]?.key || "" : "",
   );
-  const [scrolling, setScrolling] = useState(false); // Bloquear scroll continuo
-  const lastTouchY = useRef<number | null>(null); // Guardar la posición del touch
+  const [scrolling, setScrolling] = useState(false);
+  const lastTouchY = useRef<number | null>(null);
+  const isMobile = useIsMobile();
+  const { filter } = useContentList(); // Ahora useContentList se usa dentro del proveedor.
+  const filteredItems = filter
+    ? items.filter((item) => !item.proximamente)
+    : items;
 
-  if (!items) {
+  if (!filteredItems) {
     notFound();
   }
 
@@ -36,7 +61,7 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
           : closestSectionIndex - 1;
     }
 
-    const targetKey = items[targetIndex]?.key;
+    const targetKey = filteredItems[targetIndex]?.key;
     const targetSection = sectionRefs.current[targetKey];
 
     if (targetSection) {
@@ -47,9 +72,17 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
       });
       setActiveCircle(targetKey || "");
       window.history.replaceState(null, "", `#${targetKey}`);
-      setTimeout(() => setScrolling(false), 800); // Aumenta el tiempo si el trackpad sigue siendo problemático
+      setTimeout(() => setScrolling(false), 800);
     }
   };
+
+  useEffect(() => {
+    if (scrollBlock) {
+      setScrolling(true);
+    } else {
+      setScrolling(false);
+    }
+  }, [scrollBlock]);
 
   let lastScrollDirection: "up" | "down" | null = null;
 
@@ -101,7 +134,7 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchmove", handleTouchMove);
     };
-  }, [items, scrolling]);
+  }, [filteredItems, scrolling]);
 
   useEffect(() => {
     const updateActiveCircleWithHash = () => {
@@ -130,14 +163,15 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
       <div
         className="left-0 w-full min-h-[100vh] top-0 flex flex-col justify-center items-center"
         style={{
-          background:
-            "radial-gradient(circle at center, rgba(32, 58, 223, 0.2) 10%, rgba(0, 0, 0, 0.85) 50%, black 100%)",
+          background: "#000",
         }}
       >
-        {items.map((item) => (
+        {!isMobile && <Filters />}
+
+        {filteredItems.map((item) => (
           <div
             key={item.id}
-            className="section w-screen h-screen flex flex-col items-center justify-center  relative"
+            className="section w-screen h-screen flex flex-col items-center justify-center relative"
             id={item.key}
             ref={setRef(item.key)}
           >
@@ -149,13 +183,13 @@ const ContentList = ({ params }: { params: Promise<{ type: string }> }) => {
               description={item.description}
               before={item.before}
               order={item.order}
-              video={"video" in item ? item.video : undefined}
-              poster={"poster" in item ? item.poster : undefined}
+              cardPay={item.cardPay}
+              proximamente={item.proximamente}
             />
           </div>
         ))}
       </div>
-      <StaticIsland items={items} activeCircle={activeCircle}></StaticIsland>
+      <StaticIsland items={filteredItems} activeCircle={activeCircle} />{" "}
     </div>
   );
 };

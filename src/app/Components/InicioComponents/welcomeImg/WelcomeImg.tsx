@@ -19,6 +19,7 @@ export const WelcomeImg: React.FC = () => {
   const [subtitle2IsFullWidth, setSubtitle2IsFullWidth] = useState(false);
   const fatherContainerRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
+  const [notBounce, setNotBounce] = useState(false);
 
   let lastScrollProgress = 0;
 
@@ -190,6 +191,13 @@ export const WelcomeImg: React.FC = () => {
     const viewportHeight = window.innerHeight;
     const progress = Math.min(scrollPosition / viewportHeight, 1) * 100;
 
+    const target = 1500;
+    if (scrollPosition >= target) {
+      setNotBounce(true);
+    } else {
+      setNotBounce(false);
+    }
+
     updateTitleStyles(progress);
     updateContainerSubtitle2Styles();
     updateSubtitle2Styles(progress);
@@ -316,11 +324,11 @@ export const WelcomeImg: React.FC = () => {
               </Link>
             </div>
             <div
-              className={`absolute bottom-64 md:bottom-10 left-0 w-full flex flex-col items-center justify-center z-50 ${styles.arrowDownWideLineContainer} cursor-pointer `}
+              className={`absolute bottom-64 md:bottom-10 left-0 w-full flex flex-col items-center justify-center z-50  cursor-pointer `}
               onClick={handleClickToScrollCenter}
             >
               <RiArrowDownWideLine
-                className={`text-foreground w-12 h-12 animate-bounce ${styles.arrowDownWideLine}`}
+                className={`text-foreground w-12 h-12 ${notBounce ? "" : "animate-bounce"} `}
               />
             </div>
           </div>

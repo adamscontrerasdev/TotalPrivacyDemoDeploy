@@ -1,33 +1,28 @@
 {
   "curso": [
     {
-      "Icon": "SiGrapheneos",
-      "title": "Curso GrapheneOS",
-      "key": "grapheneos"
-    },
-    {
       "Icon": "SiApple",
-      "title": "Blinda tu iPhone",
-      "key": "Blinda-iphone"
+      "title": "Privacidad iOS",
+      "key": "bunkeriza-iphone"
     },
     {
       "Icon": "TbDeviceImac",
-      "title": "Curso Privacidad MacOS",
-      "key": "Blinda-mac"
+      "title": "Privacidad MacOS",
+      "key": "bunkeriza-mac"
     },
     {
       "Icon": "SiWindows10",
-      "title": "Curso Privacidad Windows",
-      "key": "Blinda-windows"
+      "title": "Privacidad Windows",
+      "key": "bunkeriza-windows"
     },
     {
       "Icon": "SiAndroid",
-      "title": "Blinda tu Android",
-      "key": "Blinda-android"
+      "title": "Privacidad Android",
+      "key": "bunkeriza-android"
     },
     {
       "Icon": "SiBitcoinsv",
-      "title": "Iniciacion a Bitcoin",
+      "title": "Privacidad Bitcoin",
       "key": "bitcoin"
     }
   ],
@@ -44,7 +39,7 @@
     },
     {
       "Icon": "BsBank",
-      "title": "Protección Off-Shore",
+      "title": "Off-Shore Mastering",
       "key": "OffShore"
     }
   ]
