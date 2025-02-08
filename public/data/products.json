@@ -13,7 +13,12 @@
       "Destacado": false,
       "cardPay": "https://pay.hotmart.com/I97404423L",
       "proximamente": false,
-      "points": ["us", "nose", "el mejor del mundo", "nunca viste algo igual"]
+      "points": [
+        "Desactivación de Telemetría Espía",
+        "Ajustes de Seguridad Total",
+        "Protección avanzada de cuenta",
+        "Explicaciones paso a paso"
+      ]
     },
     {
       "id": 2,
@@ -22,13 +27,16 @@
       "price": 37,
       "currency": "€",
       "Bg": "/img/Finales/Ebooks/AndroidNOBG.png",
-      "description": "Guía práctica para asegurar la privacidad y seguridad de tu dispositivo Android frente a amenazas digitales.",
+      "description": "Guía definitiva de privacidad guiada en Android. Explicaciones paso a paso de la privacidad en Android con proxy-stores, desactivación de telemetría y mucho más..",
       "before": 46,
       "order": 1,
       "Destacado": false,
       "cardPay": "https://pay.hotmart.com/T97405455U",
       "proximamente": false,
-      "points": ["us", "nose", "el mejor del mundo", "nunca viste algo igual"]
+      "points": [
+        "Apps y configuraciones únicas",
+        "Eliminación de programas espía"
+      ]
     },
     {
       "id": 3,
@@ -43,7 +51,12 @@
       "Destacado": false,
       "cardPay": "https://pay.hotmart.com/N97423369D",
       "proximamente": false,
-      "points": ["us", "nose", "el mejor del mundo", "nunca viste algo igual"]
+      "points": [
+        "Puertos Francos",
+        "Secretos de Banca Internacional",
+        "Trucos de protección patrimonial",
+        "Bitcoin, pasaportes y mucho más..."
+      ]
     }
   ],
   "ebooks_release_date": "2024-11-20",
@@ -56,12 +69,17 @@
       "currency": "€",
       "note": "*",
       "Bg": "https://wonderfall.space/content/images/2021/05/photo-1568607689150-17e625c1586e.jpg",
-      "description": "Conoce el sistema operativo más seguro y aprende a configurar un móvil con GrapheneOS.",
+      "description": "Aprende a instalar el sistema operativo móvil más privado del mundo",
       "before": 120,
       "order": 0,
       "Destacado": false,
       "cardPay": "https://pay.hotmart.com/P97455526B",
-      "proximamente": false
+      "proximamente": false,
+      "points": [
+        "Videos paso a paso",
+        "Recursos y configuraciones únicas",
+        "Compartimentación y perfilado de privacidad total"
+      ]
     },
     {
       "id": 6,
@@ -70,14 +88,20 @@
       "price": 97,
       "currency": "€",
       "Bg": "https://f.fcdn.app/imgs/77cd5e/www.mundomac.com/mmacuy/1225/original/wysiwyg/1/1280x0/iphone-16-pro.png",
-      "description": "Aprende a blindar tu iPhone y maximizar la seguridad de tu información personal.",
+      "description": "Aprende a configurar tu iPhone como nunca antes lo has experimentado. Máxima privacidad, máxima seguridad.",
       "before": 120,
       "video": "/Videos/Finales/Cursos/Prueba.mp4",
       "poster": "https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large.jpg",
       "order": 1,
       "Destacado": false,
       "cardPay": "",
-      "proximamente": true
+      "proximamente": true,
+      "points": [
+        "Explicaciones paso a paso",
+        "Cifrado de datos, DNS y más...",
+        "Recursos de privacidad únicos para iOS",
+        "Videos paso a paso"
+      ]
     },
     {
       "id": 9,
@@ -86,11 +110,18 @@
       "price": 127,
       "currency": "€",
       "Bg": "https://www.apple.com/newsroom/images/2023/10/apple-unveils-new-macbook-pro-featuring-m3-chips/article/Apple-MacBook-Pro-2up-231030_Full-Bleed-Image.jpg.large_2x.jpg",
-      "description": "Fortalece la seguridad de tu Mac y protege tu información de manera integral.",
+      "description": "Aprende a blindar tu Mac como nunca antes, protege tu vida digital como ningún otro usuario de Apple lo hará jamás...",
       "before": 160,
       "order": 0,
       "Destacado": false,
-      "cardPay": "https://pay.hotmart.com/I97433852A"
+      "cardPay": "https://pay.hotmart.com/I97433852A",
+      "proximamente": false,
+      "points": [
+        "Configuración avanzada de privacidad",
+        "Cifrado DNS, Firewall y ajustes avanzados",
+        "No necesitas conocimiento técnico",
+        "Explicaciones guiadas paso a paso para novatos"
+      ]
     },
     {
       "id": 10,
@@ -99,11 +130,18 @@
       "price": 127,
       "currency": "€",
       "Bg": "https://cdn.neowin.com/news/images/galleries/4698/1660655314_windows_12_-_2.jpg",
-      "description": "Asegura tu computadora Windows con estrategias avanzadas de privacidad y seguridad.",
+      "description": "Windows es el sistema más espía del mundo, pero eso se acaba con esta formación integral de privacidad dirigida...",
       "before": 160,
       "order": 1,
       "Destacado": true,
-      "cardPay": "https://pay.hotmart.com/Y97437543N"
+      "cardPay": "https://pay.hotmart.com/Y97437543N",
+      "proximamente": false,
+      "points": [
+        "Desactivación total de telemetría espía",
+        "Cifrado de disco y archivos avanzada",
+        "Optimización de sistema y apps únicas",
+        "No necesitas conocimientos técnicos"
+      ]
     },
     {
       "id": 7,
@@ -112,14 +150,20 @@
       "price": 97,
       "currency": "€",
       "Bg": "https://i.blogs.es/63c3f7/guia-para-comprar-mejores-telefono-samsung/1366_2000.jpg",
-      "description": "Descubre cómo proteger tu Android y mantener tus datos a salvo de amenazas digitales.",
+      "description": "Transforma tu android espía en un sistema seguro y privado como nunca antes has experimentado con esta formación",
       "before": 120,
       "video": "https://firebasestorage.googleapis.com/v0/b/tokin-privacy-storage.appspot.com/o/anuncioTokinPrivacy-2.0.mp4?alt=media&token=b1e9b436-7687-41d0-acbf-884a12389319",
       "order": 0,
       "poster": "https://www.gizmochina.com/wp-content/uploads/2023/07/Android-new-logo.png",
       "Destacado": false,
       "cardPay": "",
-      "proximamente": true
+      "proximamente": true,
+      "points": [
+        "Videos paso a paso",
+        "Ajustes de seguridad y privacidad total",
+        "Di adiós al oculto espionaje de Google",
+        "Sin necesidad de conocimiento previo"
+      ]
     },
     {
       "id": 11,
@@ -128,12 +172,19 @@
       "price": 290,
       "currency": "€",
       "Bg": "https://www.cripto247.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTk4MTc5NDAyNjQxNTgxMTI4/el-curioso-mtodo-por-el-que-pronostican-un-crecimiento-de-bitcoin-hacia-los-74000-dlares.jpg",
-      "description": "Inicia tu cartera Bitcoin",
+      "description": "La formación que a todo novato le habría gustado tener. Desde comprarlo de forma anónima y privada hasta atesorarlo como un PRO",
       "before": 160,
       "order": 1,
       "Destacado": true,
       "cardPay": "",
-      "proximamente": true
+      "proximamente": true,
+      "points": [
+        "Compra anónima y privada de Bitcoin",
+        "Uso soberano de la red principal y lightning network",
+        "Nodos y billeteras y privadas",
+        "Videos paso a paso",
+        "sin necesidad de conocimiento previo"
+      ]
     }
   ],
   "courses_release_date": "2024-11-20",
@@ -148,7 +199,7 @@
     },
     "release_date": "2024-12-15",
     "Bg": "/img/master-privacy.png",
-    "description": "Conviértete en un experto en privacidad digital con este máster completo que cubre todas las áreas críticas.",
+    "description": "Desde invisibilidad digital hasta soberanía total con multi-pasaportes y estrategias de protección avanzadas...\n\nSé privado, sé libre, sé ingobernable.\nProtege tu futuro, protege tu libertad",
     "Destacado": true,
     "imagenPromocional": "https://www.bulletproof.co.uk/assets/header-backgrounds/blogs/how-hackers-hide-hero-52b3e92ac080797e72b8407403fcd6d898fe2314fda5d8924650a07567828835.png",
     "proximamente": true

@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { master } from "./../../../../../public/data/products.json";
+import { useIsMobile } from "@/app/Elements/hooks";
 
 export const CtaMasterPrivacy = () => {
   const masterTotalPrivacy = master;
@@ -12,6 +13,7 @@ export const CtaMasterPrivacy = () => {
   const [upTitle, setUpTitle] = useState(false);
   const [upSubTitle, setUpSubTitle] = useState(false);
   const [opacityDesc, setOpacityDesc] = useState(0);
+  const isMobile = useIsMobile();
 
   const handleScroll = () => {
     if (fatherOFMaster.current && !hasPlayedOnce) {
@@ -58,19 +60,63 @@ export const CtaMasterPrivacy = () => {
     }
   }, [upTitle]);
 
+  useEffect(() => {
+    const videoElement = videoRef.current;
+
+    const handleTimeUpdate = () => {
+      if (videoElement && isMobile) {
+        const remainingTime = videoElement.duration - videoElement.currentTime;
+        if (remainingTime <= 2) {
+          videoElement.pause();
+          videoElement.removeEventListener("timeupdate", handleTimeUpdate); // Remueve el listener para evitar redundancia.
+        }
+      }
+    };
+
+    if (videoElement) {
+      videoElement.addEventListener("timeupdate", handleTimeUpdate);
+    }
+
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener("timeupdate", handleTimeUpdate);
+      }
+    };
+  }, []);
+
   return (
     <div
       className="w-screen min-h-screen bg-black relative flex items-start overflow-hidden transition-all duration-300 ease-in-out"
       ref={fatherOFMaster}
     >
-      <video
-        ref={videoRef}
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/Videos/Finales/Cursos/Master.mp4"
-        muted
-      ></video>
+      <div
+        className="w-screen h-screen absolute top-0 left-0 z-20 transition-all duration-1000 ease-in-out"
+        style={{
+          background:
+            "linear-gradient(to bottom right, #000 20%, transparent 60%)",
+          opacity: upTitle ? 1 : 0,
+        }}
+      ></div>
 
-      <div className="w-full lg:w-1/2 h-screen flex flex-col py-20 lg:py-32 px-10 lg:px-20 z-30 gap-5 relative ">
+      {isMobile ? (
+        <video
+          ref={videoRef}
+          className="absolute top-0 left-0 w-full h-full object-cover "
+          src="/Videos/Finales/Cursos/BgMasterTotalVertical.mp4"
+          muted
+          playsInline
+        ></video>
+      ) : (
+        <video
+          ref={videoRef}
+          className="absolute top-0 left-0 w-full h-full object-cover "
+          src="Videos/Finales/Cursos/BgMasterToalPrivacy.mp4"
+          muted
+          playsInline
+        ></video>
+      )}
+
+      <div className="w-full lg:w-1/2 h-screen flex flex-col py-16 lg:py-32 px-5 lg:px-20 z-30 gap-5 relative ">
         <h1
           className="text-white text-[4rem] md:text-[11rem] lg:text-[12rem] font-bold flex flex-col w-full leading-none transition-all duration-300 ease-in-out"
           style={{
@@ -88,21 +134,44 @@ export const CtaMasterPrivacy = () => {
           TOTAL PRIVACY
         </span>
         <p
-          className="uppercase w-[90%] text-white text-md lg:text-xl transition-all duration-500 ease-in-out"
+          className=" w-[90%] text-red-500 text-md lg:text-xl transition-all duration-500 ease-in-out"
           style={{ opacity: opacityDesc }}
         >
-          {masterTotalPrivacy.description}
+          {masterTotalPrivacy.description.split("\n").map((line, index) => (
+            <span key={index} className="text-white">
+              {line}
+              <br />
+            </span>
+          ))}
         </p>
+
         <div
-          className="flex gap-5 transition-all duration-1000 ease-in-out "
+          className="flex gap-5 transition-all ease-in-out "
           style={{
             transform: opacityDesc ? "translateY(0)" : "translateY(100vh)",
+            opacity: opacityDesc,
+            transition: "transform 1s ease-in-out, opacity 2s ease-in-out",
+            transitionDelay: opacityDesc ? "0s, 1s" : "0s, 1s",
           }}
         >
           {masterTotalPrivacy.proximamente ? (
-            <h2 className="text-white text-md lg:text-xl">
-              Este curso estará disponible próximamente...
-            </h2>
+            <div className="flex flex-col items-start gap-3">
+              <h2 className="text-white text-md lg:text-xl">
+                Este curso estará disponible proximamente...
+              </h2>
+              <div className=" flex flex-col items-start gap-1">
+                {" "}
+                <p className="">Apúntate a la lista de espera.</p>
+                <Link
+                  href={
+                    "https://tokinprivacy.myflodesk.com/total-privacy-master-lista-de-espera"
+                  }
+                  className="py-2 px-12 text-white font-bold rounded-full bg-primary hover:scale-95 self-start transition-all duration-300 ease-in-out"
+                >
+                  Apuntarme
+                </Link>
+              </div>
+            </div>
           ) : (
             <>
               <Link

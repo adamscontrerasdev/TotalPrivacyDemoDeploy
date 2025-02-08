@@ -15,6 +15,7 @@ export const WelcomeImg: React.FC = () => {
   const buttonRefCursos = useRef<HTMLButtonElement>(null);
   const buttonRefEBooks = useRef<HTMLButtonElement>(null);
   const welcomeTextoRef = useRef<HTMLParagraphElement>(null);
+  const imgFirmaRef = useRef<HTMLImageElement>(null);
   const containerBestSellingTemplateRef = useRef<HTMLDivElement>(null);
   const [subtitle2IsFullWidth, setSubtitle2IsFullWidth] = useState(false);
   const fatherContainerRef = useRef<HTMLDivElement>(null);
@@ -130,41 +131,41 @@ export const WelcomeImg: React.FC = () => {
       subtitleRef.current.style.transform = `scale(${scale})`;
     }
   };
-  const updateButtonRefCursos = (scrollProgress: number) => {
-    if (buttonRefCursos.current) {
-      const opacity = Math.min(scrollProgress / 100, 1);
-      const fullOpacity = scrollProgress >= 100;
-      const topValue = Math.max(100 - scrollProgress, 0);
+  // const updateButtonRefCursos = (scrollProgress: number) => {
+  //   if (buttonRefCursos.current) {
+  //     const opacity = Math.min(scrollProgress / 100, 1);
+  //     const fullOpacity = scrollProgress >= 100;
+  //     const topValue = Math.max(100 - scrollProgress, 0);
 
-      buttonRefCursos.current.style.opacity = fullOpacity
-        ? `${1}`
-        : `${opacity}`;
+  //     buttonRefCursos.current.style.opacity = fullOpacity
+  //       ? `${1}`
+  //       : `${opacity}`;
 
-      buttonRefCursos.current.style.top = `${topValue}%`;
+  //     buttonRefCursos.current.style.top = `${topValue}%`;
 
-      buttonRefCursos.current.style.transition = fullOpacity
-        ? "opacity 1s ease, top 0.5s ease"
-        : "opacity 0.3s ease, top 0.3s ease";
-    }
-  };
+  //     buttonRefCursos.current.style.transition = fullOpacity
+  //       ? "opacity 1s ease, top 0.5s ease"
+  //       : "opacity 0.3s ease, top 0.3s ease";
+  //   }
+  // };
 
-  const updateButtonRefEBooks = (scrollProgress: number) => {
-    if (buttonRefEBooks.current) {
-      const opacity = Math.min(scrollProgress / 100, 1);
-      const fullOpacity = scrollProgress >= 100;
-      const topValue = Math.max(100 - scrollProgress, 0);
+  // const updateButtonRefEBooks = (scrollProgress: number) => {
+  //   if (buttonRefEBooks.current) {
+  //     const opacity = Math.min(scrollProgress / 100, 1);
+  //     const fullOpacity = scrollProgress >= 100;
+  //     const topValue = Math.max(100 - scrollProgress, 0);
 
-      buttonRefEBooks.current.style.opacity = fullOpacity
-        ? `${1}`
-        : `${opacity}`;
+  //     buttonRefEBooks.current.style.opacity = fullOpacity
+  //       ? `${1}`
+  //       : `${opacity}`;
 
-      buttonRefEBooks.current.style.top = `${topValue}%`;
+  //     buttonRefEBooks.current.style.top = `${topValue}%`;
 
-      buttonRefEBooks.current.style.transition = fullOpacity
-        ? "opacity 1s ease, top .8s ease"
-        : "opacity 0.3s ease, top 0.3s ease";
-    }
-  };
+  //     buttonRefEBooks.current.style.transition = fullOpacity
+  //       ? "opacity 1s ease, top .8s ease"
+  //       : "opacity 0.3s ease, top 0.3s ease";
+  //   }
+  // };
 
   const updateWelcomeTextoRef = (scrollProgress: number) => {
     if (welcomeTextoRef.current) {
@@ -175,6 +176,7 @@ export const WelcomeImg: React.FC = () => {
         welcomeTextoRef.current.style.opacity = `${1}`;
       }
       welcomeTextoRef.current.style.top = `${topValue}%`;
+      welcomeTextoRef.current.style.opacity = `${opacity}`;
     }
   };
 
@@ -202,8 +204,8 @@ export const WelcomeImg: React.FC = () => {
     updateContainerSubtitle2Styles();
     updateSubtitle2Styles(progress);
     updateSubtitle(progress);
-    updateButtonRefCursos(progress);
-    updateButtonRefEBooks(progress);
+    // updateButtonRefCursos(progress);
+    // updateButtonRefEBooks(progress);
     updateWelcomeTextoRef(progress);
     updateContainerBestSellingTemplateRef(progress);
   }, [
@@ -211,8 +213,8 @@ export const WelcomeImg: React.FC = () => {
     updateContainerSubtitle2Styles,
     updateSubtitle2Styles,
     updateSubtitle,
-    updateButtonRefCursos,
-    updateButtonRefEBooks,
+    // updateButtonRefCursos,
+    // updateButtonRefEBooks,
     updateWelcomeTextoRef,
     updateContainerBestSellingTemplateRef,
   ]);
@@ -237,6 +239,48 @@ export const WelcomeImg: React.FC = () => {
       });
     }
   }, []);
+
+  useEffect(() => {
+    let timeoutId: NodeJS.Timeout | null = null;
+
+    if (
+      welcomeTextoRef.current &&
+      imgFirmaRef.current &&
+      buttonRefCursos.current &&
+      buttonRefEBooks.current
+    ) {
+      const opacity = welcomeTextoRef.current.style.opacity;
+
+      if (opacity === "1") {
+        imgFirmaRef.current.style.opacity = "1";
+
+        timeoutId = setTimeout(() => {
+          if (buttonRefCursos.current) {
+            buttonRefCursos.current.style.opacity = "1";
+          }
+          if (buttonRefEBooks.current) {
+            buttonRefEBooks.current.style.opacity = "1";
+          }
+        }, 300);
+      } else {
+        // Clear the timeout if it's in progress
+        if (timeoutId) {
+          clearTimeout(timeoutId);
+        }
+
+        imgFirmaRef.current.style.opacity = "0";
+        buttonRefCursos.current.style.opacity = "0";
+        buttonRefEBooks.current.style.opacity = "0";
+      }
+    }
+
+    return () => {
+      // Clean up timeout on effect cleanup
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, [welcomeTextoRef.current?.style.opacity]);
 
   return (
     <div>
@@ -280,26 +324,26 @@ export const WelcomeImg: React.FC = () => {
                 }}
                 ref={subtitle2Ref}
               >
-                ¿Es momento de cambiar tu vida?
+                Sé privado, sé libre, sé ingobernable...
               </h2>
             </div>
 
             <div
-              className={`${styles.welcomeTexto} w-full h-[65vh] absolute top-[100%] left-0 z-10 flex justify-center items-center`}
+              className={`${styles.welcomeTexto} w-full h-[65vh] absolute top-[100%] left-0 z-10 flex flex-col justify-center items-center `}
               ref={welcomeTextoRef}
             >
               <p
                 className={`text-white text-center text-xl lg:text-2xl w-[55vw] opacity-1 ${styles.title}`}
               >
-                ¡Descubre cómo navegar de manera segura y proteger tu privacidad
-                en línea! En Total Privacy, te ofrecemos recursos y cursos
-                diseñados para enseñarte las mejores prácticas en la web.
-                Aprende a proteger tu información personal, navegar de forma
-                anónima y manejar tus redes sociales con total seguridad. Tu
-                privacidad es lo más importante, y queremos ayudarte a
-                mantenerla intacta. ¡Explora nuestros cursos y E-books y toma el
-                control de tu seguridad en línea!
+                &#34;No se te puede quitar aquello que no se sabe que es tuyo y
+                no se puede cancelar aquel que no es público.&#34;
               </p>
+              <img
+                ref={imgFirmaRef}
+                src="/img/Finales/Rave PrivacyNoBg.png"
+                alt=""
+                className="absolute top-[65%] -translate-y-1/2 left-[50%] -translate-x-1/2 object-cover w-80 opacity-0 transition-all duration-300 ease-in-out"
+              />
             </div>
 
             <div
@@ -310,7 +354,7 @@ export const WelcomeImg: React.FC = () => {
                   value="Ver cursos"
                   color="white"
                   ref={buttonRefCursos}
-                  className="opacity-0"
+                  className="opacity-0 transition-all duration-300 ease-in-out"
                 />
               </Link>
 
@@ -319,7 +363,7 @@ export const WelcomeImg: React.FC = () => {
                   value="Ver E-Books"
                   color="white"
                   ref={buttonRefEBooks}
-                  className="opacity-0"
+                  className="opacity-0 transition-all duration-300 ease-in-out"
                 />
               </Link>
             </div>
