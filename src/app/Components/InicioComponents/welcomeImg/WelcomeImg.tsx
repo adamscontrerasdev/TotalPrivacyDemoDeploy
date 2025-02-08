@@ -6,8 +6,10 @@ import { PersonalButton } from "@/app/Elements";
 import { useIsMobile } from "@/app/Elements/hooks";
 import CelComponent from "./CelComponent";
 import Link from "next/link";
+import data from "./dataInicio.json";
 
 export const WelcomeImg: React.FC = () => {
+  const { eslogan, subtitle, parrafo } = data;
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLHeadingElement>(null);
   const containerSubtitle2Ref = useRef<HTMLDivElement>(null);
@@ -306,7 +308,7 @@ export const WelcomeImg: React.FC = () => {
               className="text-foreground relative z-10 text-lg"
               ref={subtitleRef}
             >
-              Si vis pacem para bellum
+              {eslogan}
             </h2>
 
             <div
@@ -324,7 +326,7 @@ export const WelcomeImg: React.FC = () => {
                 }}
                 ref={subtitle2Ref}
               >
-                Sé privado, sé libre, sé ingobernable...
+                {subtitle}
               </h2>
             </div>
 
@@ -335,8 +337,7 @@ export const WelcomeImg: React.FC = () => {
               <p
                 className={`text-white text-center text-xl lg:text-2xl w-[55vw] opacity-1 ${styles.title}`}
               >
-                &#34;No se te puede quitar aquello que no se sabe que es tuyo y
-                no se puede cancelar aquel que no es público.&#34;
+                &#34;{parrafo}&#34;
               </p>
               <img
                 ref={imgFirmaRef}

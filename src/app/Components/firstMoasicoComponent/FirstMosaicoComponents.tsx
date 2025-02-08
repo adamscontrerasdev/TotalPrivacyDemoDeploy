@@ -12,6 +12,7 @@ interface Ebook {
   key: string;
   points: string[];
   cardPay?: string;
+  currency: string;
 }
 
 export const FirstMosaicoComponents: React.FC = () => {
@@ -40,6 +41,7 @@ export const FirstMosaicoComponents: React.FC = () => {
             points={product.points}
             price={product.price}
             cardPay={product.cardPay}
+            currency={product.currency}
             // Pasar los puntos al componente
           />
         ))}

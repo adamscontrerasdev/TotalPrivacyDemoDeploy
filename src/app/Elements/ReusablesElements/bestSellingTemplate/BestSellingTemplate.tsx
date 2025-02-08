@@ -11,7 +11,7 @@ interface BestSellingTemplateProps {
   rootUrl: string;
   points?: string[];
   price: number;
-
+  currency: string;
   cardPay?: string;
 }
 
@@ -22,6 +22,7 @@ export const BestSellingTemplate: React.FC<BestSellingTemplateProps> = ({
   points,
   price,
   cardPay,
+  currency,
 }) => {
   const { setUrlCard, setUrlBtc, setActive } = useBuyMode();
 
@@ -34,12 +35,12 @@ export const BestSellingTemplate: React.FC<BestSellingTemplateProps> = ({
 
   return (
     <div
-      className={`w-full sm:w-[49%] h-[70vh] flex flex-col items-center justify-start pt-10 gap-2 md:gap-5 relative overflow-hidden`}
+      className={`w-full sm:w-[49%] h-[70vh] flex flex-col items-center justify-start p-3 pt-10 pb-3 md:px-10 gap-2 md:gap-5 relative overflow-hidden`}
       style={{ background: "linear-gradient(to bottom, #000, #203adf30)" }}
     >
       <div
         id="title"
-        className=" h-[10%] w-full flex justify-star items-center text-4xl pl-1 md:text-5xl lg:pl-5 lg:text-7xl"
+        className=" h-[10%] w-full flex justify-star items-center text-4xl pl-1 md:text-5xl lg:pl-5 lg:text-6xl"
       >
         <h1 className="text-white font-bold">{title}</h1>
       </div>
@@ -52,10 +53,12 @@ export const BestSellingTemplate: React.FC<BestSellingTemplateProps> = ({
             {points?.map((point, index) => (
               <li
                 key={index}
-                className=" flex justify-start items-center gap-2 text-white md:text-xl lg:text-3xl"
+                className=" flex justify-start items-center gap-2 text-white md:text-xl lg:text-2xl"
               >
                 <GoCheckCircleFill className="fill-primary" />
-                {point}
+                <p className="text-white text-xs md:text-xl lg:text-2xl">
+                  {point}
+                </p>
               </li>
             ))}
           </ul>
@@ -68,10 +71,10 @@ export const BestSellingTemplate: React.FC<BestSellingTemplateProps> = ({
           />
         </div>
       </div>
-      <div id="buttons&Price" className="h-[20%] w-full flex">
+      <div id="buttons&Price" className="h-[20%] w-full flex ">
         <div
           id="Adquirir&Detalles"
-          className="w-[50%] h-full flex justify-start gap-5 pl-1 lg:pl-5 items-center"
+          className="w-[50%] h-full flex justify-start gap-5 pl-1 lg:pl-5 items-center "
         >
           <button
             className="text-white text-xl lg:text-2xl p-3 font-bold rounded-full bg-primary z-50"
@@ -79,13 +82,13 @@ export const BestSellingTemplate: React.FC<BestSellingTemplateProps> = ({
           >
             Adquirir
           </button>
-          <h2 className="text-5xl text-green-400 font-bold md:text-5xl">
-            ${price}
+          <h2 className="text-4xl text-green-400 font-bold md:text-5xl">
+            {currency + price}
           </h2>
         </div>
         <div
           id="Price"
-          className="w-[50%] h-full flex justify-center lg:justify-end items-center lg:pr-5"
+          className="w-[50%] h-full flex justify-end lg:justify-end items-center lg:pr-5 "
         >
           <Link
             href={`ebooks#${rootUrl}`}

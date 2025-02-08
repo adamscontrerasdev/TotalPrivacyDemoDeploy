@@ -3,8 +3,10 @@ import Link from "next/link";
 import React, { useCallback } from "react";
 import { RiArrowDownWideLine } from "react-icons/ri";
 import styles from "./welcomeImg.module.css";
+import data from "./dataInicio.json";
 
 const CelComponent = () => {
+  const { eslogan, subtitle, parrafo } = data;
   const handleClickToScroll70vh = useCallback((e: React.MouseEvent) => {
     e.preventDefault();
     const targetElement = document.getElementById("BEST_SELLERS");
@@ -34,21 +36,16 @@ const CelComponent = () => {
         >
           TOTAL PRIVACY
         </h1>
-        <h2 className="text-foreground relative z-10 text-sm">
-          Si vis pacem para bellum
-        </h2>
+        <h2 className="text-foreground relative z-10 text-sm">{eslogan}</h2>
       </div>
-      <div className=" flex flex-col justify-center items-center gap-2 p-5">
-        <h2 className="text-xl text-white">¿Es momento de cambiar tu vida?</h2>
-        <p className={`text-center`}>
-          ¡Descubre cómo navegar de manera segura y proteger tu privacidad en
-          línea! En Total Privacy, te ofrecemos recursos y cursos diseñados para
-          enseñarte las mejores prácticas en la web. Aprende a proteger tu
-          información personal, navegar de forma anónima y manejar tus redes
-          sociales con total seguridad. Tu privacidad es lo más importante, y
-          queremos ayudarte a mantenerla intacta. ¡Explora nuestros cursos y
-          E-books y toma el control de tu seguridad en línea!
-        </p>
+      <div className=" flex flex-col justify-center relative items-center gap-2 p-5 ">
+        <h2 className="text-xl text-white">{subtitle}</h2>
+        <p className={`text-center`}>&#34;{parrafo}&#34;</p>
+        <img
+          src="/img/Finales/Rave PrivacyNoBg.png"
+          alt=""
+          className=" h-20  w-52 object-cover opacity-100 transition-all duration-300 ease-in-out"
+        />{" "}
       </div>
       <div className=" w-full flex justify-evenly">
         <Link href="/cursos">

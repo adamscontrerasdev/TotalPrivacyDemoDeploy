@@ -181,10 +181,11 @@ const ContentListInner = ({
               currency={item.currency}
               Bg={item.Bg}
               description={item.description}
-              before={item.before}
+              before={item.before && item.before}
               order={item.order}
               cardPay={item.cardPay}
               proximamente={item.proximamente}
+              points={item.points}
             />
           </div>
         ))}
