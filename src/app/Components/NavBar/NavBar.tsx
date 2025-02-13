@@ -7,6 +7,7 @@ import { CursoOfTheNavBar, EBooksOfTheNavBar } from "./../../Elements/index";
 import { useIsMobile } from "@/app/Elements/hooks";
 import { GoHomeFill } from "react-icons/go";
 import { usePathname } from "next/navigation";
+import { useBrowserMode } from "@/app/Elements/hooks/globalHooks/BrowserModeContext";
 
 export const NavBar = () => {
   const [isHover, setIsHover] = useState(false);
@@ -18,6 +19,12 @@ export const NavBar = () => {
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const path = usePathname();
   const isNotDashboard: boolean = path !== "/Dashboard";
+  const { setBrowserMode } = useBrowserMode();
+  const [os, setOS] = useState<string | null>(null); // Estado para almacenar el OS
+
+  const handleBrowserMode = () => {
+    setBrowserMode(true);
+  };
 
   const handleMobileClick = (who: string) => {
     if (whoIsHover === who) {
@@ -81,6 +88,19 @@ export const NavBar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const platform = navigator.userAgent.toLowerCase();
+      if (platform.includes("win")) {
+        setOS("Windows");
+      } else if (platform.includes("mac")) {
+        setOS("MacOS");
+      } else {
+        setOS("Otro");
+      }
+    }
+  }, []);
+
   return isNotDashboard ? (
     <div
       className={`bg-black bg-opacity-60 backdrop-blur-3xl backdrop-brightness-75 ${
@@ -102,7 +122,15 @@ export const NavBar = () => {
             <h1 className={`${styles.title} text-xs`}>TOTAL PRIVACY</h1>
           )}
         </Link>
-        <FaMagnifyingGlass className="cursor-pointer" />
+        <div
+          className={`flex items-center gap-2 cursor-pointer ${!isMobile ? "border-[1px] border-gray-500" : ""} p-2 rounded-full`}
+          onClick={handleBrowserMode}
+        >
+          <FaMagnifyingGlass />
+          {!isMobile && (
+            <p className="text-xs">{os === "Windows" ? "CTRL + B" : "⌘ + B"}</p>
+          )}
+        </div>
       </div>
 
       <div className="flex items-center justify-around w-60 font-medium h-12 z-20">

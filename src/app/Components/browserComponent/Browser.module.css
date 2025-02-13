@@ -1,0 +1,30 @@
+.customScrollbar {
+  scrollbar-width: thin;
+  /* Para Firefox */
+  scrollbar-color: #888 transparent;
+}
+
+.customScrollbar::-webkit-scrollbar {
+  width: 6px;
+  /* Ancho del scrollbar */
+}
+
+.customScrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+  position: relative;
+}
+
+.customScrollbar::-webkit-scrollbar-track-piece {
+  margin: 10px 0;
+  /* Agrega un espacio arriba y abajo */
+}
+
+.customScrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.customScrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

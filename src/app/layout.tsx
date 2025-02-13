@@ -7,6 +7,8 @@ import { headers } from "next/headers";
 import { VideoStatusProvider } from "./Elements/hooks/globalHooks/VideoStatusContext ";
 import { ScrollBlockProvider } from "./Elements/hooks/globalHooks/ScrollBlockContext";
 import { BuyModeProvider } from "./Elements/hooks/globalHooks/BuyModeContext";
+import { BrowserModeProvider } from "./Elements/hooks/globalHooks/BrowserModeContext";
+import { BrowserComponent } from "./Components/browserComponent/BrowserComponent";
 
 export const metadata: Metadata = {
   title: "Total Privacy - Protege tu privacidad en línea",
@@ -47,17 +49,20 @@ export default async function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={""}>
-        <BuyModeProvider>
-          <ScrollBlockProvider>
-            <MobileProvider initialMobileState={isMobile}>
-              <VideoStatusProvider>
-                <NavBar />
-                <BuyComponent />
-                {children}
-              </VideoStatusProvider>
-            </MobileProvider>
-          </ScrollBlockProvider>
-        </BuyModeProvider>
+        <BrowserModeProvider>
+          <BuyModeProvider>
+            <ScrollBlockProvider>
+              <MobileProvider initialMobileState={isMobile}>
+                <VideoStatusProvider>
+                  <NavBar />
+                  <BrowserComponent />
+                  <BuyComponent />
+                  {children}
+                </VideoStatusProvider>
+              </MobileProvider>
+            </ScrollBlockProvider>
+          </BuyModeProvider>
+        </BrowserModeProvider>
       </body>
     </html>
   );
