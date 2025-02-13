@@ -29,7 +29,7 @@ const ContentListInner = ({
   const items = data[type as "ebooks" | "cursos"];
   const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const [activeCircle, setActiveCircle] = useState<string>(
-    items ? items[0]?.key || "" : "",
+    items ? items[0]?.key || "" : ""
   );
   const [scrolling, setScrolling] = useState(false);
   const lastTouchY = useRef<number | null>(null);
@@ -92,7 +92,7 @@ const ContentListInner = ({
       return;
     }
 
-    const SCROLL_THRESHOLD = 30;
+    const SCROLL_THRESHOLD = 0;
     const direction = event.deltaY > 0 ? "down" : "up";
 
     if (
@@ -157,6 +157,24 @@ const ContentListInner = ({
       window.removeEventListener("hashchange", updateActiveCircleWithHash);
     };
   }, [activeCircle]);
+
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        handleScroll("down");
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        handleScroll("up");
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []); // Se ejecuta cuando cambia `scrolling`
 
   return (
     <div>
