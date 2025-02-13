@@ -29,7 +29,7 @@ const ContentListInner = ({
   const items = data[type as "ebooks" | "cursos"];
   const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const [activeCircle, setActiveCircle] = useState<string>(
-    items ? items[0]?.key || "" : ""
+    items ? items[0]?.key || "" : "",
   );
   const [scrolling, setScrolling] = useState(false);
   const lastTouchY = useRef<number | null>(null);
