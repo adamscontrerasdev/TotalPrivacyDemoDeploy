@@ -43,7 +43,7 @@ export const WelcomeImg: React.FC = () => {
       const translateY = isNotebookSize
         ? Math.min(300, scrollProgress * 5)
         : isMidleSize
-          ? Math.min(370, scrollProgress * 5)
+          ? Math.min(370, scrollProgress)
           : Math.min(450, scrollProgress * 5);
       if (
         (isNotebookSize && translateX >= 1000 && translateY >= 1000) ||
@@ -113,10 +113,10 @@ export const WelcomeImg: React.FC = () => {
   const updateSubtitle2Styles = (scrollProgress: number) => {
     if (subtitle2Ref.current) {
       // Consulta el ancho de la pantalla
-      const screenWidth = window.innerWidth;
+      const screenHeight = window.innerHeight;
 
       // Ajusta el factor multiplicador según el ancho de la pantalla
-      const multiplier = screenWidth < 1080 ? 10 : 8;
+      const multiplier = screenHeight < 700 ? 5 : 8;
 
       const scale = Math.min(1.3, 1 + scrollProgress / 300);
       const translateY = scrollProgress * multiplier;

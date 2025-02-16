@@ -5,6 +5,12 @@ import { master } from "./../../../../../public/data/products.json";
 import { useIsMobile } from "@/app/Elements/hooks";
 
 export const CtaMasterPrivacy = () => {
+  const normalizeText = " text-sm md:text-sm lg:text-md xl:text-lg 2xl:text-xl";
+  const normalizeTitles =
+    "text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl";
+  const normalizeSubTitles =
+    "text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl";
+
   const masterTotalPrivacy = master;
   const fatherOFMaster = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null); // Ref para el video
@@ -116,9 +122,9 @@ export const CtaMasterPrivacy = () => {
         ></video>
       )}
 
-      <div className="w-full lg:w-1/2 h-screen flex flex-col py-16 lg:py-32 px-5 lg:px-20 z-30 gap-5 relative ">
+      <div className="w-full  h-screen flex flex-col z-30 gap-5 relative py-20 px-10">
         <h1
-          className="text-white text-[4rem] md:text-[11rem] lg:text-[12rem] font-bold flex flex-col w-full leading-none transition-all duration-300 ease-in-out"
+          className={`text-white  font-bold flex flex-col w-full leading-none transition-all duration-300 ease-in-out ${normalizeTitles} `}
           style={{
             transform: !upTitle ? "translateY(100vh)" : "translateY(0)",
           }}
@@ -126,7 +132,7 @@ export const CtaMasterPrivacy = () => {
           MASTER{" "}
         </h1>
         <span
-          className=" font-bold text-white text-[2.1rem] md:text-[5.8rem] lg:text-[6.5rem] leading-none transition-all duration-300 ease-in-out w-full"
+          className={`font-bold text-white  leading-none transition-all duration-300 ease-in-out w-full ${normalizeSubTitles}  `}
           style={{
             transform: upSubTitle ? "translateY(0)" : "translateY(100vh)",
           }}
@@ -134,7 +140,7 @@ export const CtaMasterPrivacy = () => {
           TOTAL PRIVACY
         </span>
         <p
-          className=" w-[90%] text-red-500 text-md lg:text-xl transition-all duration-500 ease-in-out"
+          className={`w-[90%] text-red-500 transition-all duration-500 ease-in-out ${normalizeText}  `}
           style={{ opacity: opacityDesc }}
         >
           {masterTotalPrivacy.description.split("\n").map((line, index) => (
@@ -156,7 +162,7 @@ export const CtaMasterPrivacy = () => {
         >
           {masterTotalPrivacy.proximamente ? (
             <div className="flex flex-col items-start gap-3">
-              <h2 className="text-white text-md lg:text-xl">
+              <h2 className={`text-white ${normalizeText}`}>
                 Este curso estará disponible proximamente...
               </h2>
               <div className=" flex flex-col items-start gap-1">
@@ -166,7 +172,7 @@ export const CtaMasterPrivacy = () => {
                   href={
                     "https://tokinprivacy.myflodesk.com/total-privacy-master-lista-de-espera"
                   }
-                  className="py-2 px-12 text-white font-bold rounded-full bg-primary hover:scale-95 self-start transition-all duration-300 ease-in-out"
+                  className={`py-2 px-12 text-white font-bold rounded-full bg-primary hover:scale-95 self-start transition-all duration-300 ease-in-out ${normalizeText}`}
                 >
                   Apuntarme
                 </Link>
@@ -191,7 +197,7 @@ export const CtaMasterPrivacy = () => {
         </div>
         <div className="absolute bottom-0 left-0 w-full h-20 flex justify-start items-center px-10">
           <h2
-            className="flex flex-col text-2xl text-white font-bold"
+            className={`flex flex-col  text-white font-bold ${normalizeText}`}
             style={{
               textShadow: "var(--textShadow-glow)",
             }}

@@ -92,7 +92,7 @@ const ContentListInner = ({
       return;
     }
 
-    const SCROLL_THRESHOLD = 0;
+    const SCROLL_THRESHOLD = 30;
     const direction = event.deltaY > 0 ? "down" : "up";
 
     if (

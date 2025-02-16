@@ -8,6 +8,11 @@ export const BtcComponente = () => {
   const DataOfCursosDestacados = data.cursos;
   const isMobile = useIsMobile();
 
+  const normalizeText =
+    " text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl";
+  const normalizeTitles =
+    "text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl";
+
   return (
     <div className="flex flex-col items-center gap-5 justify-center w-screen min:h-[50vh] p-5 ">
       <h1
@@ -35,11 +40,13 @@ export const BtcComponente = () => {
                 className="w-full h-full top-0 left-0 absolute bg-black/70 flex flex-col items-center justify-center"
                 style={{ backdropFilter: "blur(10px)" }}
               >
-                <h1 className="md:text-6xl text-3xl text-white">
+                <h1 className={` text-white ${normalizeTitles}`}>
                   {data.title}
                 </h1>{" "}
                 {/* Usa el campo `title` del objeto actual */}
-                <p className="text-white md:text-base text-xs text-center md:w-auto w-3/4">
+                <p
+                  className={`text-white  text-center md:w-auto w-3/4 ${normalizeText}`}
+                >
                   {data.description}
                 </p>{" "}
               </div>

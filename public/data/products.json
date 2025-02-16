@@ -78,7 +78,8 @@
       "points": [
         "Videos paso a paso",
         "Recursos y configuraciones únicas",
-        "Compartimentación y perfilado de privacidad total"
+        "Compartimentación y perfilado de privacidad total",
+        "SE NECESITA DE MÓVIL GOOGLE PIXEL"
       ]
     },
     {
@@ -181,9 +182,9 @@
       "points": [
         "Compra anónima y privada de Bitcoin",
         "Uso soberano de la red principal y lightning network",
-        "Nodos y billeteras y privadas",
+        "Nodos y billeteras privadas",
         "Videos paso a paso",
-        "sin necesidad de conocimiento previo"
+        "Sin necesidad de conocimiento previo"
       ]
     }
   ],
@@ -199,7 +200,7 @@
     },
     "release_date": "2024-12-15",
     "Bg": "/img/master-privacy.png",
-    "description": "Desde invisibilidad digital hasta soberanía total con multi-pasaportes y estrategias de protección avanzadas...\n\nSé privado, sé libre, sé ingobernable.\nProtege tu futuro, protege tu libertad",
+    "description": "Desde invisibilidad digital hasta soberanía total con multi-pasaportes \n y estrategias de protección avanzadas...\n\nSé privado, sé libre, sé ingobernable.\nProtege tu futuro, protege tu libertad",
     "Destacado": true,
     "imagenPromocional": "https://www.bulletproof.co.uk/assets/header-backgrounds/blogs/how-hackers-hide-hero-52b3e92ac080797e72b8407403fcd6d898fe2314fda5d8924650a07567828835.png",
     "proximamente": true
