@@ -15,9 +15,9 @@ export const metadata: Metadata = {
   description:
     "Total Privacy es una empresa dedicada a garantizar tu anonimato y proteger tu información personal en internet. Ofrecemos herramientas y recursos para navegar de manera segura, evitar el rastreo en línea y mantener tus datos a salvo. Descubre cómo recuperar el control sobre tu privacidad digital con Total Privacy.",
   icons: {
-    icon: "/IconTotalPrivacy.png", // Favicon estándar
-    shortcut: "/IconTotalPrivacy.png", // Atajo en algunos navegadores
-    apple: "/IconTotalPrivacy.png", // Icono para iOS
+    icon: "/IconTotalPrivacyBigFocus.png", // Favicon estándar
+    shortcut: "/IconTotalPrivacyBigFocus.png", // Atajo en algunos navegadores
+    apple: "/IconTotalPrivacyBigFocus.png", // Icono para iOS
   },
 };
 
