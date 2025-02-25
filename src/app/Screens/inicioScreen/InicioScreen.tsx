@@ -2,6 +2,7 @@ import {
   BtcComponente,
   CtaMasterPrivacy,
   FirstMosaicoComponents,
+  Footer,
   WelcomeImg,
 } from "@/app/Components";
 import React from "react";
@@ -13,6 +14,7 @@ export const InicioScreen = () => {
       <FirstMosaicoComponents />
       <BtcComponente />
       <CtaMasterPrivacy />
+      <Footer />
     </div>
   );
 };

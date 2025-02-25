@@ -195,7 +195,7 @@ export const CtaMasterPrivacy = () => {
             </>
           )}
         </div>
-        <div className="absolute bottom-0 left-0 w-full h-20 flex justify-start items-center px-10">
+        {/* <div className="absolute bottom-0 left-0 w-full h-20 flex justify-start items-center px-10">
           <h2
             className={`flex flex-col  text-white font-bold ${normalizeText}`}
             style={{
@@ -204,7 +204,7 @@ export const CtaMasterPrivacy = () => {
           >
             TOTAL PRIVACY
           </h2>
-        </div>
+        </div> */}
       </div>
     </div>
   );

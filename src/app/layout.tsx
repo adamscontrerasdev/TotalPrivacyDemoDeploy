@@ -14,7 +14,13 @@ export const metadata: Metadata = {
   title: "Total Privacy - Protege tu privacidad en línea",
   description:
     "Total Privacy es una empresa dedicada a garantizar tu anonimato y proteger tu información personal en internet. Ofrecemos herramientas y recursos para navegar de manera segura, evitar el rastreo en línea y mantener tus datos a salvo. Descubre cómo recuperar el control sobre tu privacidad digital con Total Privacy.",
+  icons: {
+    icon: "/IconTotalPrivacy.png", // Favicon estándar
+    shortcut: "/IconTotalPrivacy.png", // Atajo en algunos navegadores
+    apple: "/IconTotalPrivacy.png", // Icono para iOS
+  },
 };
+
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -27,27 +33,6 @@ export default async function RootLayout({
 
   return (
     <html lang="es">
-      <head>
-        <link rel="icon" type="image/png" href="/IconTotalPrivacy.png" />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/IconTotalPrivacy.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/IconTotalPrivacy.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/IconTotalPrivacy.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-      </head>
       <body className={""}>
         <BrowserModeProvider>
           <BuyModeProvider>
