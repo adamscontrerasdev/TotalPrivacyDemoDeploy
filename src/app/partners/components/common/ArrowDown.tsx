@@ -9,7 +9,7 @@ interface ArrowDownProps {
 
 const ArrowDown: React.FC<ArrowDownProps> = ({ opacity = 1, redirect }) => {
   return (
-    <div className="w-full h-20 absolute bottom-0 left-0 text-amber-50 flex justify-center items-center text-3xl md:text-5xl">
+    <div className="w-full h-10 md:h-20  bottom-0 left-0 text-amber-50 flex justify-center items-center text-3xl md:text-5xl">
       <Link href={redirect ? redirect : ""}>
         <IoIosArrowDown
           className="animate-bounce cursor-pointer"

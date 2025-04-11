@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div
       className="flex flex-col items-center justify-start w-screen 
-   p-5 min-h-screen  bg-black"
+   p-5   bg-black"
     >
       <div
         className="absolute top-0 left-0 w-screen h-screen pointer-events-none"
