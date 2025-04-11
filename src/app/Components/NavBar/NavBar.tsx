@@ -187,6 +187,9 @@ export const NavBar = () => {
                 } h-[1px] bg-foreground bottom-0 right-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)]`}
               ></div>
             </Link>
+            <Link href={"/partners"} className="text-md relative px-2">
+              Partners
+            </Link>
           </>
         )}
       </div>
