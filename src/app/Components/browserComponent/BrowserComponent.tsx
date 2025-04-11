@@ -118,7 +118,7 @@ export const BrowserComponent = () => {
   const filteredResults = searchList.filter(
     (item) =>
       item.name.toLowerCase().includes(search.toLowerCase()) ||
-      item.category.toLowerCase().includes(search.toLowerCase())
+      item.category.toLowerCase().includes(search.toLowerCase()),
   );
 
   useEffect(() => {
