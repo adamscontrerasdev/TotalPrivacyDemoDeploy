@@ -10,6 +10,7 @@
     "format": "eslint --fix --ext .tsx . && prettier --write ."
   },
   "dependencies": {
+    "framer-motion": "^12.6.3",
     "next": "15.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

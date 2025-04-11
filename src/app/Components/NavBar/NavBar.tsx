@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import styles from "./NavBar.module.css";
-import { CursoOfTheNavBar, EBooksOfTheNavBar } from "./../../Elements/index";
+import { CursoOfTheNavBar } from "./../../Elements/index";
 import { useIsMobile } from "@/app/Elements/hooks";
 import { GoHomeFill } from "react-icons/go";
 import { usePathname } from "next/navigation";
@@ -20,7 +20,7 @@ export const NavBar = () => {
   const path = usePathname();
   const isNotDashboard: boolean = path !== "/Dashboard";
   const { setBrowserMode } = useBrowserMode();
-  const [os, setOS] = useState<string | null>(null); // Estado para almacenar el OS
+  const [os, setOS] = useState<string | null>(null);
 
   const handleBrowserMode = () => {
     setBrowserMode(true);
@@ -135,59 +135,28 @@ export const NavBar = () => {
 
       <div className="flex items-center justify-around w-60 font-medium h-12 z-20">
         {isMobile ? (
-          <>
+          <div onClick={() => handleMobileClick("Cursos")} className="relative">
+            Cursos
             <div
-              onClick={() => handleMobileClick("Cursos")}
-              className="relative"
-            >
-              Cursos
-              <div
-                className={`${
-                  whoIsHover === "Cursos" ? "w-full" : "w-0"
-                } h-[1px] bg-foreground bottom-0 left-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)]`}
-              ></div>
-            </div>
-            <div
-              onClick={() => handleMobileClick("E-books")}
-              className="relative"
-            >
-              E-Books
-              <div
-                className={`${
-                  whoIsHover === "E-books" ? "w-full" : "w-0"
-                } h-[1px] bg-foreground bottom-0 right-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)]`}
-              ></div>
-            </div>
-          </>
+              className={`${
+                whoIsHover === "Cursos" ? "w-full" : "w-0"
+              } h-[1px] bg-foreground bottom-0 left-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)]`}
+            ></div>
+          </div>
         ) : (
-          <>
-            <Link
-              href={"/cursos"}
-              onMouseEnter={() => handleDesktopMouseEnter("Cursos")}
-              onMouseLeave={handleDesktopMouseLeave}
-              className="text-md relative px-2"
-            >
-              Cursos
-              <div
-                className={`${
-                  whoIsHover === "Cursos" ? "w-full" : "w-0"
-                } h-[1px] bg-foreground bottom-0 left-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)]`}
-              ></div>
-            </Link>
-            <Link
-              href={"/ebooks"}
-              onMouseEnter={() => handleDesktopMouseEnter("E-books")}
-              onMouseLeave={handleDesktopMouseLeave}
-              className="text-md relative px-2"
-            >
-              E-Books
-              <div
-                className={`${
-                  whoIsHover === "E-books" ? "w-full" : "w-0"
-                } h-[1px] bg-foreground bottom-0 right-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)]`}
-              ></div>
-            </Link>
-          </>
+          <Link
+            href={"/cursos"}
+            onMouseEnter={() => handleDesktopMouseEnter("Cursos")}
+            onMouseLeave={handleDesktopMouseLeave}
+            className="text-md relative px-2"
+          >
+            Cursos
+            <div
+              className={`${
+                whoIsHover === "Cursos" ? "w-full" : "w-0"
+              } h-[1px] bg-foreground bottom-0 left-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)]`}
+            ></div>
+          </Link>
         )}
       </div>
 
@@ -208,21 +177,6 @@ export const NavBar = () => {
               isVisible={isHover}
               duration={500}
               closeMenu={() => handleMobileClick("Cursos")}
-            />
-          </div>
-        )}
-        {isVisible && whoIsHover === "E-books" && (
-          <div
-            onMouseEnter={handleContentMouseEnter}
-            onMouseLeave={handleContentMouseLeave}
-            className={`w-full transition-all duration-500 ease-in-out absolute top-0 flex justify-center items-center bg-transparent ${
-              isHover ? "h-full opacity-100" : "h-0"
-            }`}
-          >
-            <EBooksOfTheNavBar
-              isVisible={isHover}
-              duration={500}
-              closeMenu={() => handleMobileClick("E-books")}
             />
           </div>
         )}

@@ -1,65 +1,4 @@
 {
-  "ebooks": [
-    {
-      "id": 1,
-      "key": "iphone",
-      "title": "Bunkeriza tu iPhone",
-      "price": 37,
-      "currency": "€",
-      "Bg": "/img/Finales/Ebooks/IphoneNOBG.png",
-      "description": "Descubre cómo proteger tu iPhone de manera efectiva y garantizar tu privacidad en cada aspecto de su uso.",
-      "before": false,
-      "order": 0,
-      "Destacado": false,
-      "cardPay": "https://pay.hotmart.com/I97404423L",
-      "proximamente": false,
-      "points": [
-        "Desactivación de Telemetría Espía",
-        "Ajustes de Seguridad Total",
-        "Protección avanzada de cuenta",
-        "Explicaciones paso a paso"
-      ]
-    },
-    {
-      "id": 2,
-      "key": "android",
-      "title": "Bunkeriza tu Android",
-      "price": 37,
-      "currency": "€",
-      "Bg": "/img/Finales/Ebooks/AndroidNOBG.png",
-      "description": "Guía definitiva de privacidad guiada en Android. Explicaciones paso a paso de la privacidad en Android con proxy-stores, desactivación de telemetría y mucho más..",
-      "before": false,
-      "order": 1,
-      "Destacado": false,
-      "cardPay": "https://pay.hotmart.com/T97405455U",
-      "proximamente": false,
-      "points": [
-        "Apps y configuraciones únicas",
-        "Eliminación de programas espía"
-      ]
-    },
-    {
-      "id": 3,
-      "key": "OffShore",
-      "title": "Protección Off-Shore",
-      "price": 97,
-      "currency": "€",
-      "Bg": "/img/Finales/Ebooks/OffShore.png",
-      "description": "Descubre los secretos del mundo financiero offshore con esta guía completa. Aprende cómo proteger tus activos.",
-      "before": false,
-      "order": 0,
-      "Destacado": false,
-      "cardPay": "https://pay.hotmart.com/N97423369D",
-      "proximamente": false,
-      "points": [
-        "Puertos Francos",
-        "Secretos de Banca Internacional",
-        "Trucos de protección patrimonial",
-        "Bitcoin, pasaportes y mucho más..."
-      ]
-    }
-  ],
-  "ebooks_release_date": "2024-11-20",
   "cursos": [
     {
       "id": 8,
@@ -67,7 +6,6 @@
       "title": "Curso GrapheneOS",
       "price": 97,
       "currency": "€",
-      "note": "*",
       "Bg": "https://wonderfall.space/content/images/2021/05/photo-1568607689150-17e625c1586e.jpg",
       "description": "Instala y configura como un PRO el sistema móvil más privado del mundo",
       "before": false,
@@ -80,6 +18,72 @@
         "Recursos y configuraciones únicas",
         "Compartimentación y perfilado de privacidad total",
         "SE NECESITA DE MÓVIL GOOGLE PIXEL"
+      ],
+      "details": true,
+      "video": "",
+      "problem": {
+        "title": "¿Sabías que tu Mac no es tan privado como crees?",
+        "content": "Muchos usuarios de Mac confían en la seguridad de Apple sin saber que su privacidad sigue expuesta. Desde conexiones inseguras hasta servicios que rastrean tu comportamiento, tu Mac puede estar filtrando más información de la que imaginas."
+      },
+      "solution": {
+        "title": "Convierte tu Mac en una fortaleza digital",
+        "content": "Este curso te guía para convertir tu Mac en una fortaleza digital. Aprenderás a aplicar configuraciones avanzadas de privacidad, activar firewalls, bloquear rastreadores y navegar de forma segura, todo explicado paso a paso, incluso si no tienes experiencia técnica."
+      },
+      "features": [
+        {
+          "title": "",
+          "content": "",
+          "order": 1,
+          "button": ""
+        }
+      ],
+      "personalNote": {
+        "img": "",
+        "note": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea."
+      },
+      "pricing": [
+        {
+          "title": "Curso Privacidad MacOS",
+          "price": 100,
+          "currency": "€",
+          "description": "Acceso al curso completo de Privacidad MacOS",
+          "points": [
+            "Aprende a bloquear rastreadores a nivel de sistema",
+            "Configuración avanzada de cortafuegos y cifrado DNS",
+            "Paso a paso con capturas reales y explicaciones fáciles",
+            "Evita que aplicaciones compartan datos sin tu permiso",
+            "Guía para anonimizar Safari, iCloud y Spotlight",
+            "Domina herramientas como Little Snitch y Lulu",
+            "Incluye checklist de blindaje lista para aplicar",
+            "Optimización de privacidad sin afectar rendimiento"
+          ],
+          "textButton": "Obtener",
+          "redirectTo": "",
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["gem"]
+        },
+        {
+          "title": "Pack Privacidad Total Apple",
+          "price": 100,
+          "currency": "€",
+          "description": "Acceso a los cursos completos de Privacidad Apple que serían Privacidad MacOS y Privacidad iOS",
+          "points": [
+            "Incluye curso completo de Privacidad MacOS",
+            "Incluye curso de Bunkerización de iPhone (Privacidad iOS)",
+            "Domina ajustes avanzados en iOS para máxima privacidad",
+            "Protección frente a Pegasus y otros spyware móviles",
+            "Aprende a usar Lockdown Mode y DNS personalizados",
+            "Evita filtraciones de datos en iCloud y Siri",
+            "Bunkerización sin jailbreak: todo con herramientas nativas",
+            "Guía de privacidad integrada para todo el ecosistema Apple",
+            "Recomendaciones de apps privadas compatibles con iOS y MacOS",
+            "Actualizaciones futuras incluidas sin coste adicional"
+          ],
+          "textButton": "Obtener",
+          "redirectTo": "",
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["apple", "gem"]
+        }
       ]
     },
     {
@@ -102,6 +106,71 @@
         "Cifrado de datos, DNS y más...",
         "Recursos de privacidad únicos para iOS",
         "Videos paso a paso"
+      ],
+      "details": false,
+      "problem": {
+        "title": "¿Sabías que tu Mac no es tan privado como crees?",
+        "content": "Muchos usuarios de Mac confían en la seguridad de Apple sin saber que su privacidad sigue expuesta. Desde conexiones inseguras hasta servicios que rastrean tu comportamiento, tu Mac puede estar filtrando más información de la que imaginas."
+      },
+      "solution": {
+        "title": "Convierte tu Mac en una fortaleza digital",
+        "content": "Este curso te guía para convertir tu Mac en una fortaleza digital. Aprenderás a aplicar configuraciones avanzadas de privacidad, activar firewalls, bloquear rastreadores y navegar de forma segura, todo explicado paso a paso, incluso si no tienes experiencia técnica."
+      },
+      "features": [
+        {
+          "title": "",
+          "content": "",
+          "order": 1,
+          "button": ""
+        }
+      ],
+      "personalNote": {
+        "img": "",
+        "note": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea."
+      },
+      "pricing": [
+        {
+          "title": "Curso Privacidad MacOS",
+          "price": 100,
+          "currency": "€",
+          "description": "Acceso al curso completo de Privacidad MacOS",
+          "points": [
+            "Aprende a bloquear rastreadores a nivel de sistema",
+            "Configuración avanzada de cortafuegos y cifrado DNS",
+            "Paso a paso con capturas reales y explicaciones fáciles",
+            "Evita que aplicaciones compartan datos sin tu permiso",
+            "Guía para anonimizar Safari, iCloud y Spotlight",
+            "Domina herramientas como Little Snitch y Lulu",
+            "Incluye checklist de blindaje lista para aplicar",
+            "Optimización de privacidad sin afectar rendimiento"
+          ],
+          "textButton": "Obtener",
+          "redirectTo": "",
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["gem"]
+        },
+        {
+          "title": "Pack Privacidad Total Apple",
+          "price": 100,
+          "currency": "€",
+          "description": "Acceso a los cursos completos de Privacidad Apple que serían Privacidad MacOS y Privacidad iOS",
+          "points": [
+            "Incluye curso completo de Privacidad MacOS",
+            "Incluye curso de Bunkerización de iPhone (Privacidad iOS)",
+            "Domina ajustes avanzados en iOS para máxima privacidad",
+            "Protección frente a Pegasus y otros spyware móviles",
+            "Aprende a usar Lockdown Mode y DNS personalizados",
+            "Evita filtraciones de datos en iCloud y Siri",
+            "Bunkerización sin jailbreak: todo con herramientas nativas",
+            "Guía de privacidad integrada para todo el ecosistema Apple",
+            "Recomendaciones de apps privadas compatibles con iOS y MacOS",
+            "Actualizaciones futuras incluidas sin coste adicional"
+          ],
+          "textButton": "Obtener",
+          "redirectTo": "",
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["apple", "gem"]
+        }
       ]
     },
     {
@@ -122,6 +191,84 @@
         "Cifrado DNS, Firewall y ajustes avanzados",
         "No necesitas conocimiento técnico",
         "Explicaciones guiadas paso a paso para novatos"
+      ],
+      "details": true,
+      "video": "",
+      "problem": {
+        "title": "¿Sabías que tu Mac no es tan privado como crees?",
+        "content": "Muchos usuarios de Mac confían en la seguridad de Apple sin saber que su privacidad sigue expuesta. Desde conexiones inseguras hasta servicios que rastrean tu comportamiento, tu Mac puede estar filtrando más información de la que imaginas."
+      },
+      "solution": {
+        "title": "Convierte tu Mac en una fortaleza digital",
+        "content": "Este curso te guía para convertir tu Mac en una fortaleza digital. Aprenderás a aplicar configuraciones avanzadas de privacidad, activar firewalls, bloquear rastreadores y navegar de forma segura, todo explicado paso a paso, incluso si no tienes experiencia técnica."
+      },
+      "features": [
+        {
+          "title": "No hace falta conocimiento previo",
+          "content": "Este curso te guía para convertir tu Mac en una fortaleza digital. Aprenderás a aplicar configuraciones avanzadas de privacidad, activar firewalls, bloquear rastreadores y navegar de forma segura, todo explicado paso a paso, incluso si no tienes experiencia técnica.",
+          "order": 1,
+          "button": "Obtener"
+        },
+        {
+          "title": "No hace falta conocimiento previo",
+          "content": "Este curso te guía para convertir tu Mac en una fortaleza digital. Aprenderás a aplicar configuraciones avanzadas de privacidad, activar firewalls, bloquear rastreadores y navegar de forma segura, todo explicado paso a paso, incluso si no tienes experiencia técnica.",
+          "order": 0,
+          "button": ""
+        },
+        {
+          "title": "No hace falta conocimiento previo",
+          "content": "Este curso te guía para convertir tu Mac en una fortaleza digital. Aprenderás a aplicar configuraciones avanzadas de privacidad, activar firewalls, bloquear rastreadores y navegar de forma segura, todo explicado paso a paso, incluso si no tienes experiencia técnica.",
+          "order": 1,
+          "button": ""
+        }
+      ],
+      "personalNote": {
+        "img": "",
+        "note": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea."
+      },
+      "pricing": [
+        {
+          "title": "Curso Privacidad MacOS",
+          "price": 100,
+          "currency": "€",
+          "description": "Acceso al curso completo de Privacidad MacOS",
+          "points": [
+            "Aprende a bloquear rastreadores a nivel de sistema",
+            "Configuración avanzada de cortafuegos y cifrado DNS",
+            "Paso a paso con capturas reales y explicaciones fáciles",
+            "Evita que aplicaciones compartan datos sin tu permiso",
+            "Guía para anonimizar Safari, iCloud y Spotlight",
+            "Domina herramientas como Little Snitch y Lulu",
+            "Incluye checklist de blindaje lista para aplicar",
+            "Optimización de privacidad sin afectar rendimiento"
+          ],
+          "textButton": "Obtener",
+          "redirectTo": "",
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["gem"]
+        },
+        {
+          "title": "Pack Privacidad Total Apple",
+          "price": 100,
+          "currency": "€",
+          "description": "Acceso a los cursos completos de Privacidad Apple que serían Privacidad MacOS y Privacidad iOS",
+          "points": [
+            "Incluye curso completo de Privacidad MacOS",
+            "Incluye curso de Bunkerización de iPhone (Privacidad iOS)",
+            "Domina ajustes avanzados en iOS para máxima privacidad",
+            "Protección frente a Pegasus y otros spyware móviles",
+            "Aprende a usar Lockdown Mode y DNS personalizados",
+            "Evita filtraciones de datos en iCloud y Siri",
+            "Bunkerización sin jailbreak: todo con herramientas nativas",
+            "Guía de privacidad integrada para todo el ecosistema Apple",
+            "Recomendaciones de apps privadas compatibles con iOS y MacOS",
+            "Actualizaciones futuras incluidas sin coste adicional"
+          ],
+          "textButton": "Obtener",
+          "redirectTo": "",
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["apple", "gem"]
+        }
       ]
     },
     {
@@ -142,6 +289,72 @@
         "Cifrado de disco y archivos avanzada",
         "Optimización de sistema y apps únicas",
         "No necesitas conocimientos técnicos"
+      ],
+      "details": false,
+      "video": "",
+      "problem": {
+        "title": "¿Sabías que tu Mac no es tan privado como crees?",
+        "content": "Muchos usuarios de Mac confían en la seguridad de Apple sin saber que su privacidad sigue expuesta. Desde conexiones inseguras hasta servicios que rastrean tu comportamiento, tu Mac puede estar filtrando más información de la que imaginas."
+      },
+      "solution": {
+        "title": "Convierte tu Mac en una fortaleza digital",
+        "content": "Este curso te guía para convertir tu Mac en una fortaleza digital. Aprenderás a aplicar configuraciones avanzadas de privacidad, activar firewalls, bloquear rastreadores y navegar de forma segura, todo explicado paso a paso, incluso si no tienes experiencia técnica."
+      },
+      "features": [
+        {
+          "title": "",
+          "content": "",
+          "order": 1,
+          "button": ""
+        }
+      ],
+      "personalNote": {
+        "img": "",
+        "note": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea."
+      },
+      "pricing": [
+        {
+          "title": "Curso Privacidad MacOS",
+          "price": 100,
+          "currency": "€",
+          "description": "Acceso al curso completo de Privacidad MacOS",
+          "points": [
+            "Aprende a bloquear rastreadores a nivel de sistema",
+            "Configuración avanzada de cortafuegos y cifrado DNS",
+            "Paso a paso con capturas reales y explicaciones fáciles",
+            "Evita que aplicaciones compartan datos sin tu permiso",
+            "Guía para anonimizar Safari, iCloud y Spotlight",
+            "Domina herramientas como Little Snitch y Lulu",
+            "Incluye checklist de blindaje lista para aplicar",
+            "Optimización de privacidad sin afectar rendimiento"
+          ],
+          "textButton": "Obtener",
+          "redirectTo": "",
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["gem"]
+        },
+        {
+          "title": "Pack Privacidad Total Apple",
+          "price": 100,
+          "currency": "€",
+          "description": "Acceso a los cursos completos de Privacidad Apple que serían Privacidad MacOS y Privacidad iOS",
+          "points": [
+            "Incluye curso completo de Privacidad MacOS",
+            "Incluye curso de Bunkerización de iPhone (Privacidad iOS)",
+            "Domina ajustes avanzados en iOS para máxima privacidad",
+            "Protección frente a Pegasus y otros spyware móviles",
+            "Aprende a usar Lockdown Mode y DNS personalizados",
+            "Evita filtraciones de datos en iCloud y Siri",
+            "Bunkerización sin jailbreak: todo con herramientas nativas",
+            "Guía de privacidad integrada para todo el ecosistema Apple",
+            "Recomendaciones de apps privadas compatibles con iOS y MacOS",
+            "Actualizaciones futuras incluidas sin coste adicional"
+          ],
+          "textButton": "Obtener",
+          "redirectTo": "",
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["apple", "gem"]
+        }
       ]
     },
     {
@@ -164,6 +377,71 @@
         "Ajustes de seguridad y privacidad total",
         "Di adiós al oculto espionaje de Google",
         "Sin necesidad de conocimiento previo"
+      ],
+      "details": false,
+      "problem": {
+        "title": "¿Sabías que tu Mac no es tan privado como crees?",
+        "content": "Muchos usuarios de Mac confían en la seguridad de Apple sin saber que su privacidad sigue expuesta. Desde conexiones inseguras hasta servicios que rastrean tu comportamiento, tu Mac puede estar filtrando más información de la que imaginas."
+      },
+      "solution": {
+        "title": "Convierte tu Mac en una fortaleza digital",
+        "content": "Este curso te guía para convertir tu Mac en una fortaleza digital. Aprenderás a aplicar configuraciones avanzadas de privacidad, activar firewalls, bloquear rastreadores y navegar de forma segura, todo explicado paso a paso, incluso si no tienes experiencia técnica."
+      },
+      "features": [
+        {
+          "title": "",
+          "content": "",
+          "order": 1,
+          "button": ""
+        }
+      ],
+      "personalNote": {
+        "img": "",
+        "note": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea."
+      },
+      "pricing": [
+        {
+          "title": "Curso Privacidad MacOS",
+          "price": 100,
+          "currency": "€",
+          "description": "Acceso al curso completo de Privacidad MacOS",
+          "points": [
+            "Aprende a bloquear rastreadores a nivel de sistema",
+            "Configuración avanzada de cortafuegos y cifrado DNS",
+            "Paso a paso con capturas reales y explicaciones fáciles",
+            "Evita que aplicaciones compartan datos sin tu permiso",
+            "Guía para anonimizar Safari, iCloud y Spotlight",
+            "Domina herramientas como Little Snitch y Lulu",
+            "Incluye checklist de blindaje lista para aplicar",
+            "Optimización de privacidad sin afectar rendimiento"
+          ],
+          "textButton": "Obtener",
+          "redirectTo": "",
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["gem"]
+        },
+        {
+          "title": "Pack Privacidad Total Apple",
+          "price": 100,
+          "currency": "€",
+          "description": "Acceso a los cursos completos de Privacidad Apple que serían Privacidad MacOS y Privacidad iOS",
+          "points": [
+            "Incluye curso completo de Privacidad MacOS",
+            "Incluye curso de Bunkerización de iPhone (Privacidad iOS)",
+            "Domina ajustes avanzados en iOS para máxima privacidad",
+            "Protección frente a Pegasus y otros spyware móviles",
+            "Aprende a usar Lockdown Mode y DNS personalizados",
+            "Evita filtraciones de datos en iCloud y Siri",
+            "Bunkerización sin jailbreak: todo con herramientas nativas",
+            "Guía de privacidad integrada para todo el ecosistema Apple",
+            "Recomendaciones de apps privadas compatibles con iOS y MacOS",
+            "Actualizaciones futuras incluidas sin coste adicional"
+          ],
+          "textButton": "Obtener",
+          "redirectTo": "",
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["apple", "gem"]
+        }
       ]
     },
     {
@@ -172,7 +450,7 @@
       "title": "Iniciacion a Bitcoin",
       "price": 290,
       "currency": "€",
-      "Bg": "https://www.cripto247.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTk4MTc5NDAyNjQxNTgxMTI4/el-curioso-mtodo-por-el-que-pronostican-un-crecimiento-de-bitcoin-hacia-los-74000-dlares.jpg",
+      "Bg": "https://www.cripto247.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTk4MTc5NDAyNjQxNTgxMTI4/el-curioso-mtodo-por-el-que-pronostican-un-crecimiento-de-bitcoin-hacia-los-74000-dolares.jpg",
       "description": "La formación que a todo novato le habría gustado tener. Desde comprarlo de forma anónima y privada hasta atesorarlo como un PRO",
       "before": false,
       "order": 1,
@@ -185,10 +463,75 @@
         "Nodos y billeteras privadas",
         "Videos paso a paso",
         "Sin necesidad de conocimiento previo"
+      ],
+      "details": false,
+      "video": "",
+      "problem": {
+        "title": "¿Sabías que tu Mac no es tan privado como crees?",
+        "content": "Muchos usuarios de Mac confían en la seguridad de Apple sin saber que su privacidad sigue expuesta. Desde conexiones inseguras hasta servicios que rastrean tu comportamiento, tu Mac puede estar filtrando más información de la que imaginas."
+      },
+      "solution": {
+        "title": "Convierte tu Mac en una fortaleza digital",
+        "content": "Este curso te guía para convertir tu Mac en una fortaleza digital. Aprenderás a aplicar configuraciones avanzadas de privacidad, activar firewalls, bloquear rastreadores y navegar de forma segura, todo explicado paso a paso, incluso si no tienes experiencia técnica."
+      },
+      "features": [
+        {
+          "title": "",
+          "content": "",
+          "order": 1,
+          "button": ""
+        }
+      ],
+      "personalNote": {
+        "img": "",
+        "note": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea."
+      },
+      "pricing": [
+        {
+          "title": "Curso Privacidad MacOS",
+          "price": 100,
+          "currency": "€",
+          "description": "Acceso al curso completo de Privacidad MacOS",
+          "points": [
+            "Aprende a bloquear rastreadores a nivel de sistema",
+            "Configuración avanzada de cortafuegos y cifrado DNS",
+            "Paso a paso con capturas reales y explicaciones fáciles",
+            "Evita que aplicaciones compartan datos sin tu permiso",
+            "Guía para anonimizar Safari, iCloud y Spotlight",
+            "Domina herramientas como Little Snitch y Lulu",
+            "Incluye checklist de blindaje lista para aplicar",
+            "Optimización de privacidad sin afectar rendimiento"
+          ],
+          "textButton": "Obtener",
+          "redirectTo": "",
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["gem"]
+        },
+        {
+          "title": "Pack Privacidad Total Apple",
+          "price": 100,
+          "currency": "€",
+          "description": "Acceso a los cursos completos de Privacidad Apple que serían Privacidad MacOS y Privacidad iOS",
+          "points": [
+            "Incluye curso completo de Privacidad MacOS",
+            "Incluye curso de Bunkerización de iPhone (Privacidad iOS)",
+            "Domina ajustes avanzados en iOS para máxima privacidad",
+            "Protección frente a Pegasus y otros spyware móviles",
+            "Aprende a usar Lockdown Mode y DNS personalizados",
+            "Evita filtraciones de datos en iCloud y Siri",
+            "Bunkerización sin jailbreak: todo con herramientas nativas",
+            "Guía de privacidad integrada para todo el ecosistema Apple",
+            "Recomendaciones de apps privadas compatibles con iOS y MacOS",
+            "Actualizaciones futuras incluidas sin coste adicional"
+          ],
+          "textButton": "Obtener",
+          "redirectTo": "",
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["apple", "gem"]
+        }
       ]
     }
   ],
-  "courses_release_date": "2024-11-20",
   "master": {
     "id": 12,
     "key": "master",
