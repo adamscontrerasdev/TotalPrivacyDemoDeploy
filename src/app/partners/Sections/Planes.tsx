@@ -57,6 +57,9 @@ const Plan: React.FC<PlanProps> = ({ plan }) => {
       className={`sm:w-96  p-1 rounded-xl shadow-lg flex flex-col items-center justify-center ${
         plan.destacado ? "bg-[#fff] w-full" : "bg-neutral-900"
       }`}
+      style={{
+        boxShadow: plan.destacado ? "0px 0px 20px #fff" : "",
+      }}
     >
       <h2
         className={`font-medium text-black text-base md:text-xl lg:text-2xl flex items-center gap-1 ${
