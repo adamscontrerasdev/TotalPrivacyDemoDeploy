@@ -3,7 +3,6 @@ import React from "react";
 import PersonalH1 from "./../components/common/PersonalH1";
 import RenderVideo from "../components/RenderVideo";
 import Buttons from "./../components/common/Buttons";
-import Title from "./../components/common/title";
 import ArrowDown from "./../components/common/ArrowDown";
 import { useEffect, useState } from "react";
 
