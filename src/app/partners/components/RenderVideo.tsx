@@ -1,8 +1,10 @@
-import React, { useRef, useEffect } from "react";
+"use client";
+import React, { useRef, useEffect, useState } from "react";
 
 const RenderVideo: React.FC = () => {
   const mainVideoRef = useRef<HTMLVideoElement>(null);
   const backgroundVideoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     const mainVideo = mainVideoRef.current;
@@ -21,6 +23,7 @@ const RenderVideo: React.FC = () => {
     const handlePlay = async () => {
       try {
         await backgroundVideo.play();
+        setIsPlaying(true);
       } catch (error) {
         console.error("Error al reproducir video de fondo:", error);
       }
@@ -28,6 +31,7 @@ const RenderVideo: React.FC = () => {
 
     const handlePause = () => {
       backgroundVideo.pause();
+      setIsPlaying(false);
     };
 
     // Sincronizar el estado de carga
@@ -68,14 +72,18 @@ const RenderVideo: React.FC = () => {
       {/* Video principal */}
       <video
         ref={mainVideoRef}
-        className="w-[90%] rounded-2xl z-20 relative aspect-video"
+        className={`w-[90%] rounded-2xl z-20 relative aspect-video ${isPlaying ? "" : "p-[1px] bg-gradient-to-br from-neutral-300 via-transparent to-neutral-300"}`}
+        style={{
+          boxShadow: isPlaying ? "" : "0px 0px 10px #fff9",
+          transition: "all .2s",
+        }}
         controls
         autoPlay={false}
         loop={false}
         muted={false}
         controlsList="nodownload"
         playsInline
-        poster="./assets/PortadaVideoTokin.jpg"
+        poster="/img/Partners/Portada.png"
       >
         <source
           src="https://cgom8p4d6wbs6axv.public.blob.vercel-storage.com/Anuncio%20Partners%20Editado-q0AC8uqjYBwT0omXVdiPvMnXaKATJu.mp4"
