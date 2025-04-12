@@ -2,6 +2,7 @@ import { Product } from "@/app/Elements";
 import React from "react";
 import { ButtonVSL, ContainerSections, Title } from "../components";
 import { iconsMap } from "@/app/Elements/types/MapIcons";
+import { Line } from "../components/common/Line";
 
 interface Props {
   product?: Product;

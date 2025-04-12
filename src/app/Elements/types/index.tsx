@@ -43,4 +43,8 @@ export interface Product {
     payType: string[];
     icon: string[];
   }[];
+  faq: {
+    question: string;
+    answer: string;
+  }[];
 }

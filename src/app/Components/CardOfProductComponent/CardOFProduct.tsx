@@ -54,7 +54,7 @@ export const CardOFProduct: React.FC<Props> = ({ product }) => {
       <div
         className={` w-full md:w-1/2 h-[60%] md:h-full flex flex-col items-start justify-start md:py-40 px-4 md:px-10 gap-2 md:gap-8 z-50 bg-black transition-all duration-700  bottom-0 md:bottom-auto md:top-0 md:right-0`}
         style={{
-          opacity: !isMobile ? 1 : 0,
+          opacity: 1,
           pointerEvents: "auto",
         }}
       >

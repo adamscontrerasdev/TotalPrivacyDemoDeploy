@@ -59,8 +59,15 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "gem"
+          ]
         },
         {
           "title": "Pack Privacidad Total Apple",
@@ -81,8 +88,22 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["apple", "gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "apple",
+            "gem"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "",
+          "answer": ""
         }
       ]
     },
@@ -146,8 +167,15 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "gem"
+          ]
         },
         {
           "title": "Pack Privacidad Total Apple",
@@ -168,8 +196,22 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["apple", "gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "apple",
+            "gem"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "",
+          "answer": ""
         }
       ]
     },
@@ -244,8 +286,15 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "gem"
+          ]
         },
         {
           "title": "Pack Privacidad Total Apple",
@@ -266,8 +315,26 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["apple", "gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "apple",
+            "gem"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Cual es la diferencia entre la privacidad de la red y la privacidad de los datos?",
+          "answer": "La diferencia entre la privacidad de la red y la privacidad de los datos es que la privacidad de la red se refiere a la privacidad de la información que se transmite a través de la red, mientras que la privacidad de los datos se refiere a la privacidad de los datos que se almacenan en los dispositivos y sistemas de la red."
+        },
+        {
+          "question": "Cual es la diferencia entre la privacidad de la red y la privacidad de los datos?",
+          "answer": "La diferencia entre la privacidad de la red y la privacidad de los datos es que la privacidad de la red se refiere a la privacidad de la información que se transmite a través de la red, mientras que la privacidad de los datos se refiere a la privacidad de los datos que se almacenan en los dispositivos y sistemas de la red."
         }
       ]
     },
@@ -330,8 +397,15 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "gem"
+          ]
         },
         {
           "title": "Pack Privacidad Total Apple",
@@ -352,8 +426,22 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["apple", "gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "apple",
+            "gem"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "",
+          "answer": ""
         }
       ]
     },
@@ -417,8 +505,15 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "gem"
+          ]
         },
         {
           "title": "Pack Privacidad Total Apple",
@@ -439,8 +534,22 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["apple", "gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "apple",
+            "gem"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "",
+          "answer": ""
         }
       ]
     },
@@ -504,8 +613,15 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "gem"
+          ]
         },
         {
           "title": "Pack Privacidad Total Apple",
@@ -526,8 +642,22 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["apple", "gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "apple",
+            "gem"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "",
+          "answer": ""
         }
       ]
     }
