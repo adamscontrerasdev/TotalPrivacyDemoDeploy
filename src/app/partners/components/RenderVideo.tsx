@@ -58,7 +58,7 @@ const RenderVideo: React.FC = () => {
       <video
         ref={backgroundVideoRef}
         className="absolute top-0 left-0 z-10 w-full h-full object-cover"
-        src="https://cgom8p4d6wbs6axv.public.blob.vercel-storage.com/Anuncio%20Partners%20Editado-q0AC8uqjYBwT0omXVdiPvMnXaKATJu.mp4"
+        src="https://cgom8p4d6wbs6axv.public.blob.vercel-storage.com/Anuncio%20Partners%20Editado%20%281%29-wy3eXsP0OrTfqNHDIZ33FxYIXEDC9Z.mp4"
         style={{
           filter: "blur(70px)",
           opacity: 0.7,
@@ -86,7 +86,7 @@ const RenderVideo: React.FC = () => {
         poster="/img/Partners/Portada.png"
       >
         <source
-          src="https://cgom8p4d6wbs6axv.public.blob.vercel-storage.com/Anuncio%20Partners%20Editado-q0AC8uqjYBwT0omXVdiPvMnXaKATJu.mp4"
+          src="https://cgom8p4d6wbs6axv.public.blob.vercel-storage.com/Anuncio%20Partners%20Editado%20%281%29-wy3eXsP0OrTfqNHDIZ33FxYIXEDC9Z.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
