@@ -7,6 +7,7 @@ import {
   FeaturesSection,
   PersonalNote,
   PricingSection,
+  FAQSection,
 } from "../Sections";
 
 interface Props {
@@ -30,6 +31,7 @@ export default function ProductClient({ product }: Props) {
       <FeaturesSection product={product} />
       <PersonalNote product={product} />
       <PricingSection product={product} />
+      <FAQSection />
     </div>
   );
 }
