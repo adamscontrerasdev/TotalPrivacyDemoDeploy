@@ -151,8 +151,11 @@ export const NavBar = () => {
                 } h-[1px] bg-foreground bottom-0 left-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)]`}
               ></div>
             </div>
-            <Link href={"/partners"} className="text-md relative px-2">
+            <Link href={"/partners"} className="text-md relative px-2 text-white">
               Partners
+              <div className="absolute -top-2 -right-2 bg-red-600 text-[.5rem] text-white px-1 py-0.5 rounded-full animate-pulse">
+                Nuevo
+              </div>
             </Link>
             <div
               onClick={() => handleMobileClick("E-books")}
