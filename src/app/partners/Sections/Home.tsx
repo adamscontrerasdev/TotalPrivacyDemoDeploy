@@ -44,7 +44,7 @@ const Home = () => {
     `,
         }}
       />
-      <Title value="Total Privacy Partners" w Logo={false} icon={true} />
+      {/* <Title value="Total Privacy Partners" w Logo={false} icon={true} /> */}
 
       <div className="w-full max-w-2xl lg:max-w-4xl  h-full  flex flex-col items-center justify-center gap-5 text-white ">
         <div className="flex flex-col items-center justify-center">

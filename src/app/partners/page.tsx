@@ -9,7 +9,7 @@ import Footer from "./Sections/footer/footer";
 
 const page = () => {
   return (
-    <div className="pt-5 md:pt-10">
+    <div className="pt-14 md:pt-20">
       <BgOfBg />
       <Home />
       <BulletsPoints />
