@@ -112,7 +112,7 @@ export const NavBar = () => {
       }}
     >
       <div
-        className={`w-full h-12 absolute top-1/2 -translate-y-1/2 left-0 flex items-center px-10 justify-between`}
+        className={`w-full h-20 md:h-12 absolute top-0 md:top-1/2 md:-translate-y-1/2 left-0 flex items-center px-10 justify-between`}
       >
         <Link
           href={"/"}
