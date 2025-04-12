@@ -48,7 +48,7 @@ const Home = () => {
       <div className="w-full max-w-2xl lg:max-w-4xl  h-full  flex flex-col items-center justify-center gap-5 text-white ">
         <div className="flex flex-col items-center justify-center">
           <PersonalH1 value="Programa de Partners " bold center />
-          <PersonalH1 value="Cambia Tu Vida con la Privacidad" bold center />
+          <PersonalH1 value="Cambia tu Vida con la Privacidad" bold center />
           <p className="text-sm md:text-base xl:text-xl text-gray-300 max-w-3xl text-center mt-4">
             Fórmate como representante de Rave Privacy, impacta al mundo, lleva
             la privacidad a cada rincón del globo y sal de la Matrix. Sé
