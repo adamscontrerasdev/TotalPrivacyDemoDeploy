@@ -6,3 +6,5 @@ export * from "./PersonalNoteSection";
 export * from "./PricingSection";
 export * from "./FAQSection";
 export * from "./SuccessCasesSection";
+export * from "./FinalCTASection";
+export * from "./FooterSection";

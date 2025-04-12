@@ -47,4 +47,15 @@ export interface Product {
     question: string;
     answer: string;
   }[];
+  SuccessCasesSection: {
+    title: string;
+    img: string;
+    description: string;
+  }[];
+  finalCTA: {
+    title: string;
+    description: string;
+    buttonText: string;
+    startRate: string;
+  };
 }

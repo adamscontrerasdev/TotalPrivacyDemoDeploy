@@ -45,7 +45,7 @@ export const FAQSection: React.FC<Props> = ({ product }) => {
   return (
     <ContainerSections>
       <div className="w-full max-w-7xl flex items-center justify-center flex-col gap-5">
-        <div className="">
+        <div className="flex flex-col items-center gap-2">
           <Title text="Preguntas Frecuentes" />
           <Subtitle text="No te quedes con dudas, consulta las preguntas más recurrentes" />
         </div>
