@@ -29,14 +29,16 @@ export default function ProductClient({ product }: Props) {
   return (
     <div className="mt-10">
       <HeroSection product={product} socialText={socialText} />
-      <SocialProofSection />
-      <ProblemSolutionSection product={product} />
-      <FeaturesSection product={product} />
-      <PersonalNote product={product} />
-      <PricingSection product={product} />
-      <FAQSection product={product} />
-      <SuccessCasesSection product={product} />
-      <FinalCTASection product={product} />
+      {product.testimonios && <SocialProofSection product={product} />}
+      {product.problem && product.solution && (
+        <ProblemSolutionSection product={product} />
+      )}
+      {product.features && <FeaturesSection product={product} />}
+      {product.personalNote && <PersonalNote product={product} />}
+      {product.pricing && <PricingSection product={product} />}
+      {product.faq && <FAQSection product={product} />}
+      {product.SuccessCasesSection && <SuccessCasesSection product={product} />}
+      {product.finalCTA && <FinalCTASection product={product} />}
       <FooterSection />
     </div>
   );

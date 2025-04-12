@@ -10,7 +10,7 @@ import {
 import { TbDeviceImac } from "react-icons/tb";
 import styles from "./ElementsNavBar.module.css";
 import { GeneralCardOfNavbar } from "./../../Elements/index";
-import dataOfCurso from "./../../../../public/data/icoAndTitleOfTheNavBar.json";
+import dataOfCurso from "./../../../../public/data/products.json";
 import { useIsMobile } from "../hooks";
 import { LuMenu } from "react-icons/lu";
 import Link from "next/link";
@@ -40,7 +40,7 @@ export const CursoOfTheNavBar: React.FC<CursoOfTheNavBarProps> = ({
   const [isAnimated, setIsAnimated] = useState(false);
   const isMobile = useIsMobile();
 
-  const iconCards = Array.isArray(dataOfCurso.curso) ? dataOfCurso.curso : [];
+  const iconCards = Array.isArray(dataOfCurso.cursos) ? dataOfCurso.cursos : [];
 
   useEffect(() => {
     if (isVisible) {
@@ -50,7 +50,7 @@ export const CursoOfTheNavBar: React.FC<CursoOfTheNavBarProps> = ({
       setIsAnimated(false);
       const timeout = setTimeout(
         () => setIsRendered(false),
-        iconCards.length * 50 + duration, // tiempo reducido para fade-out completo
+        iconCards.length * 50 + duration // tiempo reducido para fade-out completo
       );
       return () => clearTimeout(timeout);
     }
@@ -68,8 +68,8 @@ export const CursoOfTheNavBar: React.FC<CursoOfTheNavBarProps> = ({
           </Link>
         )}
 
-        {iconCards.map(({ Icon, title, key }, index) => {
-          const IconComponent = iconMap[Icon];
+        {iconCards.map(({ icon, title, key }, index) => {
+          const IconComponent = iconMap[icon];
           if (!IconComponent) return null;
 
           // Reduce el delay para una desaparición más rápida

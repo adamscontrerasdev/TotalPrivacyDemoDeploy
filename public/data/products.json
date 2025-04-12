@@ -1,169 +1,11 @@
 {
   "cursos": [
     {
-      "id": 8,
-      "key": "grapheneos",
-      "title": "Curso GrapheneOS",
-      "price": 97,
-      "currency": "€",
-      "Bg": "https://wonderfall.space/content/images/2021/05/photo-1568607689150-17e625c1586e.jpg",
-      "description": "Instala y configura como un PRO el sistema móvil más privado del mundo",
-      "before": false,
-      "order": 0,
-      "Destacado": false,
-      "cardPay": "https://pay.hotmart.com/P97455526B",
-      "proximamente": false,
-      "points": [
-        "Videos paso a paso",
-        "Recursos y configuraciones únicas",
-        "Compartimentación y perfilado de privacidad total",
-        "SE NECESITA DE MÓVIL GOOGLE PIXEL"
-      ],
-      "details": true,
-      "video": "",
-      "problem": {
-        "title": "¿Sabías que tu Mac no es tan privado como crees?",
-        "content": "Muchos usuarios de Mac confían en la seguridad de Apple sin saber que su privacidad sigue expuesta. Desde conexiones inseguras hasta servicios que rastrean tu comportamiento, tu Mac puede estar filtrando más información de la que imaginas."
-      },
-      "solution": {
-        "title": "Convierte tu Mac en una fortaleza digital",
-        "content": "Este curso te guía para convertir tu Mac en una fortaleza digital. Aprenderás a aplicar configuraciones avanzadas de privacidad, activar firewalls, bloquear rastreadores y navegar de forma segura, todo explicado paso a paso, incluso si no tienes experiencia técnica."
-      },
-      "features": [
-        {
-          "title": "",
-          "content": "",
-          "order": 1,
-          "button": ""
-        }
-      ],
-      "personalNote": {
-        "img": "",
-        "note": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea."
-      },
-      "pricing": [
-        {
-          "title": "Curso Privacidad MacOS",
-          "price": 100,
-          "currency": "€",
-          "description": "Acceso al curso completo de Privacidad MacOS",
-          "points": [
-            "Aprende a bloquear rastreadores a nivel de sistema",
-            "Configuración avanzada de cortafuegos y cifrado DNS",
-            "Paso a paso con capturas reales y explicaciones fáciles",
-            "Evita que aplicaciones compartan datos sin tu permiso",
-            "Guía para anonimizar Safari, iCloud y Spotlight",
-            "Domina herramientas como Little Snitch y Lulu",
-            "Incluye checklist de blindaje lista para aplicar",
-            "Optimización de privacidad sin afectar rendimiento"
-          ],
-          "textButton": "Obtener",
-          "redirectTo": "",
-          "payType": [
-            "visa",
-            "amex",
-            "mastercard",
-            "bitcoin"
-          ],
-          "icon": [
-            "gem"
-          ]
-        },
-        {
-          "title": "Pack Privacidad Total Apple",
-          "price": 100,
-          "currency": "€",
-          "description": "Acceso a los cursos completos de Privacidad Apple que serían Privacidad MacOS y Privacidad iOS",
-          "points": [
-            "Incluye curso completo de Privacidad MacOS",
-            "Incluye curso de Bunkerización de iPhone (Privacidad iOS)",
-            "Domina ajustes avanzados en iOS para máxima privacidad",
-            "Protección frente a Pegasus y otros spyware móviles",
-            "Aprende a usar Lockdown Mode y DNS personalizados",
-            "Evita filtraciones de datos en iCloud y Siri",
-            "Bunkerización sin jailbreak: todo con herramientas nativas",
-            "Guía de privacidad integrada para todo el ecosistema Apple",
-            "Recomendaciones de apps privadas compatibles con iOS y MacOS",
-            "Actualizaciones futuras incluidas sin coste adicional"
-          ],
-          "textButton": "Obtener",
-          "redirectTo": "",
-          "payType": [
-            "visa",
-            "amex",
-            "mastercard",
-            "bitcoin"
-          ],
-          "icon": [
-            "apple",
-            "gem"
-          ]
-        }
-      ],
-      "faq": [
-        {
-          "question": "Cual es la diferencia entre la privacidad de la red y la privacidad de los datos?",
-          "answer": "La diferencia entre la privacidad de la red y la privacidad de los datos es que la privacidad de la red se refiere a la privacidad de la información que se transmite a través de la red, mientras que la privacidad de los datos se refiere a la privacidad de los datos que se almacenan en los dispositivos y sistemas de la red."
-        },
-        {
-          "question": "Cual es la diferencia entre la privacidad de la red y la privacidad de los datos?",
-          "answer": "La diferencia entre la privacidad de la red y la privacidad de los datos es que la privacidad de la red se refiere a la privacidad de la información que se transmite a través de la red, mientras que la privacidad de los datos se refiere a la privacidad de los datos que se almacenan en los dispositivos y sistemas de la red."
-        }
-      ],
-      "SuccessCasesSection": [
-        {
-          "title": "Albert Russo",
-          "img": "https://profile-images.xing.com/images/d546fff615daa5755b25a043a563e68c-4/christian-carnet.256x256.jpg",
-          "description": "Este curso ha sido un antes y un despues en mi vida y mi carrera, nunca antes habia sentido que algo valio tanto la pena por su precio "
-        },
-        {
-          "title": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "title": "Albert Russo",
-          "img": "https://profile-images.xing.com/images/d546fff615daa5755b25a043a563e68c-4/christian-carnet.256x256.jpg",
-          "description": "Este curso ha sido un antes y un despues en mi vida y mi carrera, nunca antes habia sentido que algo valio tanto la pena por su precio "
-        },
-        {
-          "title": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "title": "Albert Russo",
-          "img": "https://profile-images.xing.com/images/d546fff615daa5755b25a043a563e68c-4/christian-carnet.256x256.jpg",
-          "description": "Este curso ha sido un antes y un despues en mi vida y mi carrera, nunca antes habia sentido que algo valio tanto la pena por su precio "
-        },
-        {
-          "title": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "title": "Albert Russo",
-          "img": "https://profile-images.xing.com/images/d546fff615daa5755b25a043a563e68c-4/christian-carnet.256x256.jpg",
-          "description": "Este curso ha sido un antes y un despues en mi vida y mi carrera, nunca antes habia sentido que algo valio tanto la pena por su precio "
-        },
-        {
-          "title": "",
-          "img": "",
-          "description": ""
-        }
-      ],
-      "finalCTA": {
-        "title": "No te pierdas De esta Oferta unica",
-        "description": "Nuestros productos estan respaldados por entes profesionales",
-        "buttonText": "Obtener",
-        "startRate": "Mas de 128 alumnos activos"
-      }
-    },
-    {
       "id": 6,
-      "key": "Blinda-iphone",
-      "title": "Blinda tu iPhone",
-      "price": 97,
+      "icon": "SiApple",
+      "key": "Bunkeriza-iphone",
+      "title": "Bunkeriza tu iPhone",
+      "price": 127,
       "currency": "€",
       "Bg": "https://f.fcdn.app/imgs/77cd5e/www.mundomac.com/mmacuy/1225/original/wysiwyg/1/1280x0/iphone-16-pro.png",
       "description": "Aprende a configurar tu iPhone como nunca antes lo has experimentado. Máxima privacidad, máxima seguridad.",
@@ -173,14 +15,24 @@
       "order": 1,
       "Destacado": false,
       "cardPay": "",
-      "proximamente": true,
+      "proximamente": false,
+      "testimonios": [
+        {
+          "name": "",
+          "testimonio": ""
+        },
+        {
+          "name": "",
+          "testimonio": ""
+        }
+      ],
       "points": [
         "Explicaciones paso a paso",
         "Cifrado de datos, DNS y más...",
         "Recursos de privacidad únicos para iOS",
         "Videos paso a paso"
       ],
-      "details": false,
+      "details": true,
       "problem": {
         "title": "¿Sabías que tu Mac no es tan privado como crees?",
         "content": "Muchos usuarios de Mac confían en la seguridad de Apple sin saber que su privacidad sigue expuesta. Desde conexiones inseguras hasta servicios que rastrean tu comportamiento, tu Mac puede estar filtrando más información de la que imaginas."
@@ -321,9 +173,10 @@
     },
     {
       "id": 9,
+      "icon": "TbDeviceImac",
       "key": "Blinda-mac",
-      "title": "Curso Privacidad MacOS",
-      "price": 137,
+      "title": "Blinda tu Mac",
+      "price": 147,
       "currency": "€",
       "Bg": "https://www.apple.com/newsroom/images/2023/10/apple-unveils-new-macbook-pro-featuring-m3-chips/article/Apple-MacBook-Pro-2up-231030_Full-Bleed-Image.jpg.large_2x.jpg",
       "description": "Aprende a blindar tu Mac como nunca antes, protege tu vida digital como ningún otro usuario de Apple lo hará jamás...",
@@ -332,6 +185,12 @@
       "Destacado": false,
       "cardPay": "https://pay.hotmart.com/I97433852A",
       "proximamente": false,
+      "testimonios": [
+        {
+          "name": "Juan Carlos",
+          "testimonio": "Este cruso es un amarivilla"
+        }
+      ],
       "points": [
         "Configuración avanzada de privacidad",
         "Cifrado DNS, Firewall y ajustes avanzados",
@@ -492,9 +351,10 @@
     },
     {
       "id": 10,
+      "icon": "SiWindows10",
       "key": "Blinda-windows",
-      "title": "Curso Privacidad Windows",
-      "price": 137,
+      "title": "Blinda tu Windows",
+      "price": 147,
       "currency": "€",
       "Bg": "https://cdn.neowin.com/news/images/galleries/4698/1660655314_windows_12_-_2.jpg",
       "description": "Windows es el sistema más espía del mundo, pero eso se acaba con esta formación integral de privacidad dirigida...",
@@ -503,6 +363,15 @@
       "Destacado": true,
       "cardPay": "https://pay.hotmart.com/Y97437543N",
       "proximamente": false,
+      "testimonios": [
+        {
+          "name": "Carlos de Oro",
+          "testimonio": "Este cruso es un amarivilla"
+        },
+        {
+          "name": ""
+        }
+      ],
       "points": [
         "Desactivación total de telemetría espía",
         "Cifrado de disco y archivos avanzada",
@@ -651,9 +520,10 @@
     },
     {
       "id": 7,
-      "key": "Blinda-android",
-      "title": "Blinda tu Android",
-      "price": 97,
+      "icon": "SiAndroid",
+      "key": "Bunkeriza-android",
+      "title": "Bunkeriza tu Android",
+      "price": 127,
       "currency": "€",
       "Bg": "https://i.blogs.es/63c3f7/guia-para-comprar-mejores-telefono-samsung/1366_2000.jpg",
       "description": "Transforma tu android espía en un sistema seguro y privado como nunca antes has experimentado con esta formación",
@@ -663,174 +533,23 @@
       "poster": "https://www.gizmochina.com/wp-content/uploads/2023/07/Android-new-logo.png",
       "Destacado": false,
       "cardPay": "",
-      "proximamente": true,
+      "proximamente": false,
+      "testimonios": [
+        {
+          "name": "Carlos de Oro",
+          "testimonio": "Este cruso es un amarivilla"
+        },
+        {
+          "name": ""
+        }
+      ],
       "points": [
         "Videos paso a paso",
         "Ajustes de seguridad y privacidad total",
         "Di adiós al oculto espionaje de Google",
         "Sin necesidad de conocimiento previo"
       ],
-      "details": false,
-      "problem": {
-        "title": "¿Sabías que tu Mac no es tan privado como crees?",
-        "content": "Muchos usuarios de Mac confían en la seguridad de Apple sin saber que su privacidad sigue expuesta. Desde conexiones inseguras hasta servicios que rastrean tu comportamiento, tu Mac puede estar filtrando más información de la que imaginas."
-      },
-      "solution": {
-        "title": "Convierte tu Mac en una fortaleza digital",
-        "content": "Este curso te guía para convertir tu Mac en una fortaleza digital. Aprenderás a aplicar configuraciones avanzadas de privacidad, activar firewalls, bloquear rastreadores y navegar de forma segura, todo explicado paso a paso, incluso si no tienes experiencia técnica."
-      },
-      "features": [
-        {
-          "title": "",
-          "content": "",
-          "order": 1,
-          "button": ""
-        }
-      ],
-      "personalNote": {
-        "img": "",
-        "note": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea."
-      },
-      "pricing": [
-        {
-          "title": "Curso Privacidad MacOS",
-          "price": 100,
-          "currency": "€",
-          "description": "Acceso al curso completo de Privacidad MacOS",
-          "points": [
-            "Aprende a bloquear rastreadores a nivel de sistema",
-            "Configuración avanzada de cortafuegos y cifrado DNS",
-            "Paso a paso con capturas reales y explicaciones fáciles",
-            "Evita que aplicaciones compartan datos sin tu permiso",
-            "Guía para anonimizar Safari, iCloud y Spotlight",
-            "Domina herramientas como Little Snitch y Lulu",
-            "Incluye checklist de blindaje lista para aplicar",
-            "Optimización de privacidad sin afectar rendimiento"
-          ],
-          "textButton": "Obtener",
-          "redirectTo": "",
-          "payType": [
-            "visa",
-            "amex",
-            "mastercard",
-            "bitcoin"
-          ],
-          "icon": [
-            "gem"
-          ]
-        },
-        {
-          "title": "Pack Privacidad Total Apple",
-          "price": 100,
-          "currency": "€",
-          "description": "Acceso a los cursos completos de Privacidad Apple que serían Privacidad MacOS y Privacidad iOS",
-          "points": [
-            "Incluye curso completo de Privacidad MacOS",
-            "Incluye curso de Bunkerización de iPhone (Privacidad iOS)",
-            "Domina ajustes avanzados en iOS para máxima privacidad",
-            "Protección frente a Pegasus y otros spyware móviles",
-            "Aprende a usar Lockdown Mode y DNS personalizados",
-            "Evita filtraciones de datos en iCloud y Siri",
-            "Bunkerización sin jailbreak: todo con herramientas nativas",
-            "Guía de privacidad integrada para todo el ecosistema Apple",
-            "Recomendaciones de apps privadas compatibles con iOS y MacOS",
-            "Actualizaciones futuras incluidas sin coste adicional"
-          ],
-          "textButton": "Obtener",
-          "redirectTo": "",
-          "payType": [
-            "visa",
-            "amex",
-            "mastercard",
-            "bitcoin"
-          ],
-          "icon": [
-            "apple",
-            "gem"
-          ]
-        }
-      ],
-      "faq": [
-        {
-          "question": "Cual es la diferencia entre la privacidad de la red y la privacidad de los datos?",
-          "answer": "La diferencia entre la privacidad de la red y la privacidad de los datos es que la privacidad de la red se refiere a la privacidad de la información que se transmite a través de la red, mientras que la privacidad de los datos se refiere a la privacidad de los datos que se almacenan en los dispositivos y sistemas de la red."
-        },
-        {
-          "question": "Cual es la diferencia entre la privacidad de la red y la privacidad de los datos?",
-          "answer": "La diferencia entre la privacidad de la red y la privacidad de los datos es que la privacidad de la red se refiere a la privacidad de la información que se transmite a través de la red, mientras que la privacidad de los datos se refiere a la privacidad de los datos que se almacenan en los dispositivos y sistemas de la red."
-        }
-      ],
-      "SuccessCasesSection": [
-        {
-          "title": "Albert Russo",
-          "img": "https://profile-images.xing.com/images/d546fff615daa5755b25a043a563e68c-4/christian-carnet.256x256.jpg",
-          "description": "Este curso ha sido un antes y un despues en mi vida y mi carrera, nunca antes habia sentido que algo valio tanto la pena por su precio "
-        },
-        {
-          "title": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "title": "Albert Russo",
-          "img": "https://profile-images.xing.com/images/d546fff615daa5755b25a043a563e68c-4/christian-carnet.256x256.jpg",
-          "description": "Este curso ha sido un antes y un despues en mi vida y mi carrera, nunca antes habia sentido que algo valio tanto la pena por su precio "
-        },
-        {
-          "title": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "title": "Albert Russo",
-          "img": "https://profile-images.xing.com/images/d546fff615daa5755b25a043a563e68c-4/christian-carnet.256x256.jpg",
-          "description": "Este curso ha sido un antes y un despues en mi vida y mi carrera, nunca antes habia sentido que algo valio tanto la pena por su precio "
-        },
-        {
-          "title": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "title": "Albert Russo",
-          "img": "https://profile-images.xing.com/images/d546fff615daa5755b25a043a563e68c-4/christian-carnet.256x256.jpg",
-          "description": "Este curso ha sido un antes y un despues en mi vida y mi carrera, nunca antes habia sentido que algo valio tanto la pena por su precio "
-        },
-        {
-          "title": "",
-          "img": "",
-          "description": ""
-        }
-      ],
-      "finalCTA": {
-        "title": "No te pierdas De esta Oferta unica",
-        "description": "Nuestros productos estan respaldados por entes profesionales",
-        "buttonText": "Obtener",
-        "startRate": "Mas de 128 alumnos activos"
-      }
-    },
-    {
-      "id": 11,
-      "key": "bitcoin",
-      "title": "Iniciacion a Bitcoin",
-      "price": 290,
-      "currency": "€",
-      "Bg": "https://www.cripto247.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTk4MTc5NDAyNjQxNTgxMTI4/el-curioso-mtodo-por-el-que-pronostican-un-crecimiento-de-bitcoin-hacia-los-74000-dolares.jpg",
-      "description": "La formación que a todo novato le habría gustado tener. Desde comprarlo de forma anónima y privada hasta atesorarlo como un PRO",
-      "before": false,
-      "order": 1,
-      "Destacado": true,
-      "cardPay": "",
-      "proximamente": true,
-      "points": [
-        "Compra anónima y privada de Bitcoin",
-        "Uso soberano de la red principal y lightning network",
-        "Nodos y billeteras privadas",
-        "Videos paso a paso",
-        "Sin necesidad de conocimiento previo"
-      ],
-      "details": false,
-      "video": "",
+      "details": true,
       "problem": {
         "title": "¿Sabías que tu Mac no es tan privado como crees?",
         "content": "Muchos usuarios de Mac confían en la seguridad de Apple sin saber que su privacidad sigue expuesta. Desde conexiones inseguras hasta servicios que rastrean tu comportamiento, tu Mac puede estar filtrando más información de la que imaginas."
