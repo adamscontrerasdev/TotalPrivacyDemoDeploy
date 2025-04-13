@@ -106,7 +106,7 @@ const Plan: React.FC<PlanProps> = ({ plan }) => {
         <ul className="text-white text-xs md:text-sm lg:text-base font-light w-full">
           {plan.benefits.map((benefit, index) => (
             <li key={index} className="flex items-center gap-2">
-              <FaCheck className="text-green-400" />
+              <FaCheck className="text-green-400 fill-green-400" />
               {benefit}
             </li>
           ))}
