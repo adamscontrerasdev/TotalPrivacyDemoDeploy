@@ -137,7 +137,7 @@ export const NavBar = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-around w-60 font-medium h-20 z-20">
+      <div className="flex items-center justify-around font-medium h-20 z-20 gap-5">
         {isMobile ? (
           <>
             <div

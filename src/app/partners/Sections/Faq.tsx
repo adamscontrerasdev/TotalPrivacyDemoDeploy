@@ -7,30 +7,30 @@ const Questions = [
   {
     question: "¿Cómo funciona el programa de Partners?",
     answer: [
-      "Al adquirir la suscripción se te dará acceso a una formación de 10 módulos con varias lecciones por módulo, eas lecciones constan de videos paso a paso y guías estratégicas de crecimiento en redes y ventas.",
+      "Al adquirir la suscripción se te dará acceso a una formación de 10 módulos con varias lecciones por módulo. Las lecciones constan de vídeos paso a paso y guías estratégicas de crecimiento en redes y ventas.",
 
-      "Además accederás a la comunidad de Discord donde podrás hablar con otros afiliados, resolver dudas, acceder a más recursos y asistir a las clases de control en directo con el equipo comercial especializado.",
+      "Además, accederás a la comunidad de Discord donde podrás hablar con otros afiliados, resolver dudas, acceder a más recursos y asistir a las clases de control en directo con el equipo comercial especializado.",
     ],
   },
   {
     question: "¿Qué aprendo?",
     answer:
-      "Aprenderás a crear y gestionar un negocio digital basado en redes sociales, desde edición de video hasta embudos de ventas. Un conocimiento de valor incalculable, sin tener que grabar, aprender un habilidad ni crear ningún producto.",
+      "Aprenderás a crear y gestionar un negocio digital basado en redes sociales, desde edición de vídeo hasta embudos de ventas. Un conocimiento de valor incalculable, sin tener que grabar, aprender una habilidad, ni crear ningún producto.",
   },
   {
     question: "¿Cómo generaré ingresos?",
     answer:
-      "Recibirás comisiones de la venta de los productos de totalprivacy.io y tokinprivacy.io del 30%. Si demuestras compromiso y buenos resultados entrarás al club VIP Ingobernable donde obtendrás formación extra además de comisiones de hasta el 40%",
+      "Recibirás comisiones de la venta de los productos de totalprivacy.io y tokinprivacy.io del 30%. Si demuestras compromiso y buenos resultados, entrarás al club VIP Ingobernable donde obtendrás formación extra, además de comisiones de hasta el 40%.",
   },
   {
-    question: "¿Durante cuanto tiempo tengo acceso?",
+    question: "¿Durante cuánto tiempo tengo acceso?",
     answer:
-      "Tanto a los videos de formación como al canal de Discord tendrás acceso mientras sigas renovando la suscripción de afiliación, si dejas de renovar serás expulsado y tus cuentas en redes suspendidas.",
+      "Tanto a los vídeos de formación como al canal de Discord tendrás acceso mientras sigas renovando la suscripción de afiliación. Si dejas de renovar, serás expulsado y tus cuentas en redes suspendidas.",
   },
   {
     question: "¿Debo seguir unas normas?",
     answer:
-      "Si, si no cumples con los estándares de marca, valores y ética de trabajo de la marca de Rave Privacy serás expulsado y tus cuentas suspendidas",
+      "Sí, si no cumples con los estándares de marca, valores y ética de trabajo de la marca de Rave Privacy, serás expulsado y tus cuentas suspendidas.",
   },
 ];
 
@@ -97,7 +97,7 @@ const QuestionItem: React.FC<QuestionProps> = ({ qutionNdAnswer }) => {
               ))}
             </ul>
           ) : (
-            <p className="text-sm md:text-base lg:text-lg font-light text-white">
+            <p className="text-sm md:text-base lg:text-lg font-light ">
               {" "}
               {qutionNdAnswer.answer}
             </p>
