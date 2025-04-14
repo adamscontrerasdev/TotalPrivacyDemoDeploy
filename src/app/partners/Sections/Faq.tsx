@@ -1,6 +1,7 @@
 "use client";
 import PersonalH1 from "./../components/common/PersonalH1";
 import React, { useState } from "react";
+import Link from "next/link";
 
 // Array de preguntas y respuestas
 const Questions = [
@@ -26,6 +27,13 @@ const Questions = [
     question: "¿Durante cuánto tiempo tengo acceso?",
     answer:
       "Tanto a los vídeos de formación como al canal de Discord tendrás acceso mientras sigas renovando la suscripción de afiliación. Si dejas de renovar, serás expulsado y tus cuentas en redes suspendidas.",
+  },
+  {
+    question: "¿Es un curso de privacidad?",
+    answer: [
+      "No, Total Privacy Partners es una formación como creador de contenido de la marca Rave Privacy por la cual podrás recibir ingresos como afiliado especializado al vender productos de Rave o Tokin Privacy.",
+      "No es un curso de privacidad, para aprender privacidad deberás adquirir los productos de totalprivacy.io y tokinprivacy.io que serán los mismos productos que venderás como partner si decides acceder al programa.",
+    ],
   },
   {
     question: "¿Debo seguir unas normas?",
@@ -64,13 +72,35 @@ const ChevronIcon = ({ isOpen }: { isOpen: boolean }) => {
   );
 };
 
+const renderAnswerWithLinks = (text: string) => {
+  const domains = ["totalprivacy.io", "tokinprivacy.io"];
+  const parts = text.split(new RegExp(`(${domains.join("|")})`, "gi"));
+
+  return parts.map((part, i) => {
+    const domain = domains.find((d) => d.toLowerCase() === part.toLowerCase());
+    if (domain) {
+      return (
+        <Link
+          key={i}
+          href={`https://${domain}`}
+          target="_blank"
+          className="text-white underline"
+        >
+          {domain}
+        </Link>
+      );
+    }
+    return <React.Fragment key={i}>{part}</React.Fragment>;
+  });
+};
+
 // Componente para cada item de pregunta
 const QuestionItem: React.FC<QuestionProps> = ({ qutionNdAnswer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div
-      className={`w-full bg-neutral-700 rounded-2xl transition-all duration-300 flex flex-col items-start justify-center overflow-hidden cursor-pointer mb-4 hover:shadow-md`}
+      className="w-full bg-neutral-700 rounded-2xl transition-all duration-300 flex flex-col items-start justify-center overflow-hidden cursor-pointer mb-4 hover:shadow-md"
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="p-4 w-full">
@@ -78,28 +108,25 @@ const QuestionItem: React.FC<QuestionProps> = ({ qutionNdAnswer }) => {
           <h2 className="font-medium text-lg text-white">
             {qutionNdAnswer.question}
           </h2>
-          <div
-            className={`ml-2 transition-all duration-300 p-2 rounded-full text-white`}
-          >
+          <div className="ml-2 transition-all duration-300 p-2 rounded-full ">
             <ChevronIcon isOpen={isOpen} />
           </div>
         </div>
 
         <div
           className={`overflow-hidden transition-all duration-300 ${
-            isOpen ? "max-h-52 opacity-100 mt-3" : "max-h-0 opacity-0"
+            isOpen ? "max-h-72 opacity-100 mt-3" : "max-h-0 opacity-0"
           }`}
         >
           {Array.isArray(qutionNdAnswer.answer) ? (
-            <ul className="text-sm md:text-base lg:text-lg font-light text-white flex flex-col gap-2">
+            <ul className="text-sm md:text-base lg:text-lg font-light  flex flex-col gap-2">
               {qutionNdAnswer.answer.map((answer, index) => (
-                <li key={index}>{answer}</li>
+                <li key={index}>{renderAnswerWithLinks(answer)}</li>
               ))}
             </ul>
           ) : (
             <p className="text-sm md:text-base lg:text-lg font-light ">
-              {" "}
-              {qutionNdAnswer.answer}
+              {renderAnswerWithLinks(qutionNdAnswer.answer)}
             </p>
           )}
         </div>
