@@ -31,8 +31,8 @@ const Questions = [
   {
     question: "¿Es un curso de privacidad?",
     answer: [
-      "No, Total Privacy Partners es una formación como creador de contenido de la marca Rave Privacy por la cual podrás recibir ingresos como afiliado especializado al vender productos de Rave o Tokin Privacy.",
-      "No es un curso de privacidad, para aprender privacidad deberás adquirir los productos de totalprivacy.io y tokinprivacy.io que serán los mismos productos que venderás como partner si decides acceder al programa.",
+      "No, Total Privacy Partners es una formación como creador de contenido de la marca Rave Privacy, por la cual, podrás recibir ingresos como afiliado especializado, al vender productos de Rave o Tokin Privacy.",
+      "No es un curso de privacidad, para aprender privacidad deberás adquirir los productos de totalprivacy.io y tokinprivacy.io, que serán los mismos productos que venderás como partner si decides acceder al programa.",
     ],
   },
   {
