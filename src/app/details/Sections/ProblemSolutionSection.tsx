@@ -25,9 +25,14 @@ interface Props {
 }
 
 export const ProblemSolutionSection: React.FC<Props> = ({ product }) => {
-  const contentArray = product
-    ? [product.problem, product.solution].filter(Boolean)
-    : [];
+  const contentArray =
+    product &&
+    product.problem?.title !== "" &&
+    product.solution?.title !== "" &&
+    product.solution?.content !== "" &&
+    product.problem?.content !== ""
+      ? [product.problem, product.solution].filter(Boolean)
+      : [];
 
   if (!contentArray.length) return null;
 
