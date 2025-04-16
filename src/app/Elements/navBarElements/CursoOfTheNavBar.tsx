@@ -60,12 +60,12 @@ export const CursoOfTheNavBar: React.FC<CursoOfTheNavBarProps> = ({
     isRendered && (
       <div className="flex flex-col md:flex-row items-center justify-evenly w-3/4  text-text  absolute top-0 h-[95%] md:h-full ">
         {isMobile && (
-          <Link href={"/cursos"} onClick={closeMenu}>
+          <div onClick={closeMenu}>
             <div className="flex flex-col items-center justify-center">
               <LuMenu />
               <h3>Todos los cursos</h3>
             </div>
-          </Link>
+          </div>
         )}
 
         {iconCards.map(({ icon, title, key }, index) => {
@@ -89,7 +89,7 @@ export const CursoOfTheNavBar: React.FC<CursoOfTheNavBarProps> = ({
                 transitionDelay: `${delay}ms`,
               }}
             >
-              <Link href={`/cursos#${key}`} onClick={closeMenu}>
+              <Link href={`/details/${key}`} onClick={closeMenu}>
                 <GeneralCardOfNavbar ico={IconComponent} title={title} />
               </Link>
             </div>

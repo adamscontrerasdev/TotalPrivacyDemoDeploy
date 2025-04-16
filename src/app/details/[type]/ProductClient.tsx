@@ -24,7 +24,7 @@ export default function ProductClient({ product }: Props) {
   };
 
   const socialText =
-    socialProofTexts[product.key] || "Miles ya lo están usando";
+    socialProofTexts[product.key || ""] || "Miles ya lo están usando";
 
   return (
     <div className="mt-10">

@@ -144,8 +144,7 @@ export const NavBar = () => {
             ></div>
           </div>
         ) : (
-          <Link
-            href={"/cursos"}
+          <div
             onMouseEnter={() => handleDesktopMouseEnter("Cursos")}
             onMouseLeave={handleDesktopMouseLeave}
             className="text-md relative px-2"
@@ -156,7 +155,7 @@ export const NavBar = () => {
                 whoIsHover === "Cursos" ? "w-full" : "w-0"
               } h-[1px] bg-foreground bottom-0 left-0 absolute transition-all duration-200 shadow-[0_0_10px_theme(colors.foreground),0_0_20px_theme(colors.foreground)]`}
             ></div>
-          </Link>
+          </div>
         )}
       </div>
 
