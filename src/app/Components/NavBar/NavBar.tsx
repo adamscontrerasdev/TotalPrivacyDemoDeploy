@@ -103,12 +103,16 @@ export const NavBar = () => {
 
   return isNotDashboard ? (
     <div
-      className={`bg-black bg-opacity-60 backdrop-blur-3xl backdrop-brightness-75 ${
-        isHover ? (isMobile ? "h-[100%]" : "h-36") : "h-12"
-      } w-full text-text flex flex-col items-center justify-between overflow-hidden fixed top-0 left-0 z-[999999] transition-all duration-500`}
+      className={` bg-opacity-60 backdrop-blur-3xl backdrop-brightness-75 ${
+        isHover ? (isMobile ? "h-[100%]" : "h-36") : "h-20"
+      } w-full text-text flex flex-col items-center justify-between overflow-hidden fixed top-0 left-0 z-[999999] transition-all duration-500 `}
+      style={{
+        background: "linear-gradient(to bottom, #000, transparent )",
+        borderRadius: "0 0 20px 20px",
+      }}
     >
       <div
-        className={`w-full h-12 absolute top-0 left-0 flex items-center px-10 justify-between`}
+        className={`w-full h-20 md:h-12 absolute top-0 md:top-1/2 md:-translate-y-1/2 left-0 flex items-center px-10 justify-between`}
       >
         <Link
           href={"/"}
@@ -133,7 +137,7 @@ export const NavBar = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-around w-60 font-medium h-12 z-20">
+      <div className="flex items-center justify-around font-medium h-20 z-20 gap-5">
         {isMobile ? (
           <div onClick={() => handleMobileClick("Cursos")} className="relative">
             Cursos
