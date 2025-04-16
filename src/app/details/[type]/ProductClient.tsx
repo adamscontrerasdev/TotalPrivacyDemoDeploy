@@ -27,7 +27,7 @@ export default function ProductClient({ product }: Props) {
     socialProofTexts[product.key || ""] || "Miles ya lo están usando";
 
   return (
-    <div className="mt-10">
+    <div className="mt-20">
       <HeroSection product={product} socialText={socialText} />
       {product.testimonios && <SocialProofSection product={product} />}
       {product.problem && product.solution && (
