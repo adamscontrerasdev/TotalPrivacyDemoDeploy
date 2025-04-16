@@ -12,26 +12,35 @@ interface Feature {
 }
 
 const FeaturesCard: React.FC<Feature> = ({ productFeature }) => {
-  return (
-    <div
-      className={`w-full flex flex-col-reverse md:h-80 ${productFeature?.order === 1 ? "md:flex-row" : "md:flex-row-reverse"} gap-10`}
-    >
-      <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-4">
-        <h2 className="text-xl md:text-4xl text-white font-bold text-left">
-          {productFeature?.title}
-        </h2>
-        <p className="text-xs md:text-base text-neutral-300 text-left max-w-xl">
-          {productFeature?.content}
-        </p>
-        <ButtonVSL
-          value={
-            productFeature?.button !== "" ? productFeature?.button : "Ver mas"
-          }
-        />
+  if (
+    !productFeature ||
+    productFeature.title === "" ||
+    productFeature.content === "" ||
+    productFeature.order === undefined
+  ) {
+    return null;
+  } else {
+    return (
+      <div
+        className={`w-full flex flex-col-reverse md:h-80 ${productFeature?.order === 1 ? "md:flex-row" : "md:flex-row-reverse"} gap-10`}
+      >
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-4">
+          <h2 className="text-xl md:text-4xl text-white font-bold text-left">
+            {productFeature?.title}
+          </h2>
+          <p className="text-xs md:text-base text-neutral-300 text-left max-w-xl">
+            {productFeature?.content}
+          </p>
+          <ButtonVSL
+            value={
+              productFeature?.button !== "" ? productFeature?.button : "Ver mas"
+            }
+          />
+        </div>
+        <div className="w-full md:w-1/2 aspect-video bg-neutral-800 animate-pulse rounded-2xl"></div>
       </div>
-      <div className="w-full md:w-1/2 aspect-video bg-neutral-800 animate-pulse rounded-2xl"></div>
-    </div>
-  );
+    );
+  }
 };
 
 interface Props {
