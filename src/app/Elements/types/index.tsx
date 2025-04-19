@@ -1,6 +1,7 @@
 export interface Testimonio {
   name?: string;
   testimonio?: string;
+  img?: string;
 }
 
 export interface Problem {

@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Subtitle, ContainerSections, SuccessCases } from "../components";
 import { Product } from "@/app/Elements";
+import { CarruselProof } from "../components/common/CarruselProof";
 
 // Datos de ejemplo para los testimonios
 
@@ -44,45 +45,6 @@ export const SocialProofSection: React.FC<Testimonial> = ({ product }) => {
   ) {
     return null;
   } else {
-    return (
-      <ContainerSections>
-        <div
-          className="w-full max-w-5xl overflow-hidden relative "
-          ref={carouselRef}
-        >
-          <div className="w-full flex items-start pl-3 mb-3">
-            <Subtitle text="Nuestros alumnos dicen :" />
-          </div>
-          <motion.div
-            role="Button"
-            className="flex  gap-3 cursor-grab active:cursor-grabbing"
-            drag="x"
-            dragConstraints={{ left: -maxDrag, right: 0 }}
-            ref={innerRef}
-          >
-            {testimonialData.map((item, index) => (
-              <SuccessCases
-                description={item.testimonio}
-                img=""
-                title={item.name}
-                key={index}
-              />
-            ))}
-          </motion.div>
-          <div
-            className="w-full h-full absolute top-0 left-0  pointer-events-none"
-            style={{
-              background: "linear-gradient(to right, #000, transparent 3%)",
-            }}
-          ></div>
-          <div
-            className="w-full h-full absolute top-0 left-0  pointer-events-none"
-            style={{
-              background: "linear-gradient(to left, #000, transparent 3%)",
-            }}
-          ></div>
-        </div>
-      </ContainerSections>
-    );
+    return <CarruselProof testimonios={testimonialData} />;
   }
 };

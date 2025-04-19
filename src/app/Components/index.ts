@@ -6,6 +6,9 @@ export * from "./InicioComponents/finalComponent/CtaMasterPrivacy";
 export * from "./InicioComponents/Footer/Footer";
 //inicio2
 export * from "./Inicio2.0Components/InicioItem";
+export * from "./Inicio2.0Components/HeroComponent";
+export * from "./Inicio2.0Components/SocialProofMainComponent";
+export * from "./Inicio2.0Components/ProductRenderMain";
 //ProductComponents
 export * from "./CardOfProductComponent/CardOFProduct";
 // renderVideoComponent

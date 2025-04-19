@@ -208,21 +208,6 @@ export const NavBar = () => {
             />
           </div>
         )}
-        {isVisible && whoIsHover === "E-books" && (
-          <div
-            onMouseEnter={handleContentMouseEnter}
-            onMouseLeave={handleContentMouseLeave}
-            className={`w-full transition-all duration-500 ease-in-out absolute top-0 flex justify-center items-center bg-transparent ${
-              isHover ? "h-full opacity-100" : "h-0"
-            }`}
-          >
-            <EBooksOfTheNavBar
-              isVisible={isHover}
-              duration={500}
-              closeMenu={() => handleMobileClick("E-books")}
-            />
-          </div>
-        )}
       </div>
     </div>
   ) : null;

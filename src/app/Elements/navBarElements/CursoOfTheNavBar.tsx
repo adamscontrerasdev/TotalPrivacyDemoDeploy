@@ -59,14 +59,7 @@ export const CursoOfTheNavBar: React.FC<CursoOfTheNavBarProps> = ({
   return (
     isRendered && (
       <div className="flex flex-col md:flex-row items-center justify-evenly w-3/4  text-text  absolute top-0 h-[95%] md:h-full ">
-        {isMobile && (
-          <div onClick={closeMenu}>
-            <div className="flex flex-col items-center justify-center">
-              <LuMenu />
-              <h3>Todos los cursos</h3>
-            </div>
-          </div>
-        )}
+        {isMobile && <div onClick={closeMenu}></div>}
 
         {iconCards.map(({ icon, title, key }, index) => {
           const IconComponent = iconMap[icon];
