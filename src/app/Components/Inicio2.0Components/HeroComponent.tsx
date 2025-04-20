@@ -6,7 +6,7 @@ import { IoIosArrowDown } from "react-icons/io";
 export const HeroComponent = () => {
   const [scale, setScale] = useState(1);
   const [roundedPx, setRoundedPx] = useState(0);
-  const { eslogan, subtitle, parrafo } = data;
+  const { eslogan, parrafo } = data;
 
   useEffect(() => {
     const handleScroll = () => {

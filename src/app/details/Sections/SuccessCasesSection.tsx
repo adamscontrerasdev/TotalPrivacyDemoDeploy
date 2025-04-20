@@ -13,6 +13,9 @@ interface Props {
 
 export const SuccessCasesSection: React.FC<Props> = ({ product }) => {
   const SuccesCaseItems = product.SuccessCasesSection;
+
+  if (!SuccesCaseItems || SuccesCaseItems.length < 1) return null; // or some fallback UI
+
   return (
     <ContainerSections>
       <div className="w-full  max-w-7xl flex flex-col items-center justify-center gap-5">
@@ -35,10 +38,10 @@ export const SuccessCasesSection: React.FC<Props> = ({ product }) => {
         <div className=" max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-4 rounded-3xl ">
           {SuccesCaseItems.map((item, i) => (
             <SuccessCases
-              description={item.description}
-              img={item.img}
+              description={item.description || ""}
+              img={item.img || ""}
               key={i}
-              title={item.title}
+              title={item.title || ""}
             />
           ))}
         </div>

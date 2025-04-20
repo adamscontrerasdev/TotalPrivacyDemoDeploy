@@ -1,4 +1,3 @@
-import { ContainerSections, Subtitle, Title } from "@/app/details/components";
 import { CarruselProof } from "@/app/details/components/common/CarruselProof";
 import { Testimonio } from "@/app/Elements";
 import React from "react";

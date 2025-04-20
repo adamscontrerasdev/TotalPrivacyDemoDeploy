@@ -1,8 +1,7 @@
-import { Product } from "@/app/Elements";
+import { Pricing, Product } from "@/app/Elements";
 import React from "react";
 import { ButtonVSL, ContainerSections, Title } from "../components";
 import { iconsMap } from "@/app/Elements/types/MapIcons";
-import { Line } from "../components/common/Line";
 
 interface Props {
   product?: Product;
@@ -21,8 +20,10 @@ const GradientDefs = () => (
 );
 
 const UniquePlanCard: React.FC<{ product: Product }> = ({ product }) => {
-  const plan = product.pricing[0];
+  const plan: Pricing | undefined = product?.pricing?.[0];
   const primaryColor = "#0083ff";
+
+  if (!plan || !plan.points || !plan.payType) return null;
 
   return (
     <div
@@ -49,7 +50,7 @@ const UniquePlanCard: React.FC<{ product: Product }> = ({ product }) => {
 
       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 text-sm text-neutral-300">
         {plan.points.map((point, i) => (
-          <li key={i} className="flex items-center gap-2">
+          <li key={i} className="flex items-center gap-2 text-left">
             <span style={{ color: primaryColor }}>✔</span>
             {point}
           </li>
@@ -86,7 +87,7 @@ const UniquePlanCard: React.FC<{ product: Product }> = ({ product }) => {
 };
 
 const MultiplePlanCard: React.FC<{
-  plan: Product["pricing"][0];
+  plan: Pricing;
   index: number;
 }> = ({ plan, index }) => {
   const primaryColor = "#0083ff";
@@ -94,6 +95,8 @@ const MultiplePlanCard: React.FC<{
   const icons = Array.isArray(plan.icon)
     ? plan.icon.map((key) => iconsMap[key]).filter(Boolean)
     : [];
+
+  if (!plan || !plan.points || !plan.payType) return null;
 
   return (
     <div className="relative w-full max-w-sm">
@@ -162,7 +165,11 @@ const MultiplePlanCard: React.FC<{
 };
 
 export const PricingSection: React.FC<Props> = ({ product }) => {
-  const hasMultiplePlans = product && product?.pricing.length > 1;
+  const hasMultiplePlans = product?.pricing
+    ? product.pricing.length > 1
+    : false;
+
+  if (!product || !product.pricing) return null;
 
   return (
     <ContainerSections>

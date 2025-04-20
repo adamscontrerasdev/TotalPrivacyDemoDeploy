@@ -12,7 +12,6 @@ import styles from "./ElementsNavBar.module.css";
 import { GeneralCardOfNavbar } from "./../../Elements/index";
 import dataOfCurso from "./../../../../public/data/products.json";
 import { useIsMobile } from "../hooks";
-import { LuMenu } from "react-icons/lu";
 import Link from "next/link";
 
 // Mapping icon names to react-icons components
@@ -50,7 +49,7 @@ export const CursoOfTheNavBar: React.FC<CursoOfTheNavBarProps> = ({
       setIsAnimated(false);
       const timeout = setTimeout(
         () => setIsRendered(false),
-        iconCards.length * 50 + duration // tiempo reducido para fade-out completo
+        iconCards.length * 50 + duration, // tiempo reducido para fade-out completo
       );
       return () => clearTimeout(timeout);
     }

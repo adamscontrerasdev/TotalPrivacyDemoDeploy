@@ -1,60 +1,55 @@
 import React from "react";
 import { ButtonVSL, ContainerSections } from "../components";
-import { Product } from "@/app/Elements";
-
-interface Feature {
-  productFeature?: {
-    title: string;
-    content: string;
-    order: number;
-    button: string;
-  };
-}
-
-const FeaturesCard: React.FC<Feature> = ({ productFeature }) => {
-  if (
-    !productFeature ||
-    productFeature.title === "" ||
-    productFeature.content === "" ||
-    productFeature.order === undefined
-  ) {
-    return null;
-  } else {
-    return (
-      <div
-        className={`w-full flex flex-col-reverse md:h-80 ${productFeature?.order === 1 ? "md:flex-row" : "md:flex-row-reverse"} gap-10`}
-      >
-        <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-4">
-          <h2 className="text-xl md:text-4xl text-white font-bold text-left">
-            {productFeature?.title}
-          </h2>
-          <p className="text-xs md:text-base text-neutral-300 text-left max-w-xl">
-            {productFeature?.content}
-          </p>
-          <ButtonVSL
-            value={
-              productFeature?.button !== "" ? productFeature?.button : "Ver mas"
-            }
-          />
-        </div>
-        <div className="w-full md:w-1/2 aspect-video bg-neutral-800 animate-pulse rounded-2xl"></div>
-      </div>
-    );
-  }
-};
+import { Product, Features } from "@/app/Elements";
+import { Line } from "../components/common/Line";
 
 interface Props {
   product?: Product;
 }
 
+const FeaturesCard: React.FC<{ feature: Features }> = ({ feature }) => {
+  const { title, content, button, order } = feature;
+
+  if (!title || !content || order === undefined) return null;
+
+  return (
+    <div
+      className={`w-full flex flex-col-reverse md:h-80 ${
+        order === 1 ? "md:flex-row" : "md:flex-row-reverse"
+      } gap-10`}
+    >
+      <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-4">
+        <h2 className="text-xl md:text-4xl text-white font-bold text-left">
+          {title}
+        </h2>
+        <p className="text-xs md:text-base text-neutral-300 text-left max-w-xl">
+          {content}
+        </p>
+        <ButtonVSL value={button || "Ver más"} />
+      </div>
+      <div className="w-full md:w-1/2 aspect-video bg-neutral-800 animate-pulse rounded-2xl"></div>
+    </div>
+  );
+};
+
 export const FeaturesSection: React.FC<Props> = ({ product }) => {
+  const features = product?.features ?? [];
+
+  if (
+    features.length === 0 ||
+    features[0].title === "" ||
+    features[0].content === ""
+  )
+    return null;
+
   return (
     <ContainerSections>
-      <div className="w-full max-w-7xl flex flex-col md:gap-10 gap-5 lg:gap-20 ">
-        {product?.features.map((feature, index) => (
-          <FeaturesCard productFeature={feature} key={index} />
+      <div className="w-full max-w-7xl flex flex-col gap-5 md:gap-10 lg:gap-20 ">
+        {features.map((feature, index) => (
+          <FeaturesCard key={index} feature={feature} />
         ))}
       </div>
+      {features.length > 0 && <Line color="#0083ff" />}
     </ContainerSections>
   );
 };

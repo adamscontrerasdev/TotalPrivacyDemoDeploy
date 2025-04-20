@@ -1,8 +1,4 @@
-import {
-  HeroComponent,
-  ProductRenderMain,
-  SocialProofMainComponent,
-} from "@/app/Components";
+import { HeroComponent, ProductRenderMain } from "@/app/Components";
 import React from "react";
 export const InicioScreen2 = () => {
   return (

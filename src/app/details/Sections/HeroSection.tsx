@@ -15,6 +15,9 @@ interface Props {
 }
 
 export const HeroSection: React.FC<Props> = ({ product, socialText }) => {
+  if (!product || !product.title || !product.description || !product.video)
+    return null;
+
   return (
     <ContainerSections>
       <div className="w-full max-w-80 sm:max-w-2xl lg:max-w-4xl flex flex-col items-center gap-3">
@@ -31,7 +34,7 @@ export const HeroSection: React.FC<Props> = ({ product, socialText }) => {
         </div>
       </div>
 
-      <RenderVideoProduct video={product.video} />
+      <RenderVideoProduct video={product.video} poster={product.poster} />
     </ContainerSections>
   );
 };

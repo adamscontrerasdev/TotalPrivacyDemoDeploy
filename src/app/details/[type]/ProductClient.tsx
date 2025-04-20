@@ -31,9 +31,9 @@ export default function ProductClient({ product }: Props) {
     <div className="mt-20">
       <HeroSection product={product} socialText={socialText} />
       {product.testimonios && <SocialProofSection product={product} />}
-      {/* {product.problem && product.solution && (
+      {product.problem && product.solution && (
         <ProblemSolutionSection product={product} />
-      )} */}
+      )}
       {product.points && <BulletsPointsSection product={product} />}
       {product.features && <FeaturesSection product={product} />}
       {product.personalNote && <PersonalNote product={product} />}

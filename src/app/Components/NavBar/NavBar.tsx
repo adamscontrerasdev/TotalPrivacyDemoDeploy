@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import styles from "./NavBar.module.css";
-import { CursoOfTheNavBar, EBooksOfTheNavBar } from "./../../Elements/index";
+import { CursoOfTheNavBar } from "./../../Elements/index";
 import { useIsMobile } from "@/app/Elements/hooks";
 import { GoHomeFill } from "react-icons/go";
 import { usePathname } from "next/navigation";

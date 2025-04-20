@@ -8,21 +8,22 @@ interface Props {
 }
 
 export const PersonalNote: React.FC<Props> = ({ product }) => {
-  if (!product || product.personalNote.note === "") {
+  if (!product?.personalNote || product.personalNote.note === "") {
     return null;
   } else {
     return (
       <ContainerSections>
-        <Line color="#0083ff" />
         <div className="w-full max-w-7xl  flex justify-center items-center">
           <div className="w-full max-w-2xl  flex flex-col gap-5  rounded-2xl">
             <div className="w-full h-[30%] ">
-              <div className="h-40 aspect-video rounded-2xl">
+              <div className="">
                 {product?.personalNote?.img !== "" ? (
-                  <img src={product?.personalNote?.img} alt="img" />
-                ) : (
-                  <div className="bg-neutral-800 animate-pulse rounded-2xl w-full h-full"></div>
-                )}
+                  <img
+                    src={product?.personalNote?.img}
+                    alt="img"
+                    className="h-40 aspect-video rounded-2xl"
+                  />
+                ) : null}
               </div>
             </div>
             <div className="w-full h-[70%] ">

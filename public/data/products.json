@@ -11,7 +11,7 @@
       "Bg": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121031-iphone-16-pro.png",
       "description": "Aprende a configurar tu iPhone como nunca antes lo has experimentado. Máxima privacidad, máxima seguridad.",
       "before": false,
-      "video": "/Videos/Finales/Cursos/Prueba.mp4",
+      "video": "https://cgom8p4d6wbs6axv.public.blob.vercel-storage.com/Anuncio%20Partners%20Editado%20%281%29-wy3eXsP0OrTfqNHDIZ33FxYIXEDC9Z.mp4",
       "poster": "https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large.jpg",
       "order": 1,
       "Destacado": false,
@@ -19,41 +19,61 @@
       "proximamente": false,
       "testimonios": [
         {
-          "name": "",
-          "testimonio": ""
-        },
-        {
-          "name": "",
-          "testimonio": ""
+          "name": "Raul",
+          "testimonio": "Este cruso es un maravilla"
         }
       ],
       "points": [
-        "Explicaciones paso a paso",
-        "Cifrado de datos, DNS y más...",
-        "Recursos de privacidad únicos para iOS",
-        "Videos paso a paso",
-        "Videos paso a paso",
-        "Videos paso a paso"
+        {
+          "icon": "/img/Finales/BulletsPoint/Iphone/OnlyIcons/1.png",
+          "point": "*Cifrado* de cualquier *conexión* del *iPhone*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Iphone/OnlyIcons/2.png",
+          "point": "Aprende a *crear* un *Apple ID anónimo*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Iphone/OnlyIcons/3.png",
+          "point": "*Protección* contra *ataques avanzadaos*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Iphone/OnlyIcons/4.png",
+          "point": "*Configuración* de *máxima* seguridad y *privacidad*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Iphone/OnlyIcons/5.png",
+          "point": "*Máxima protección* de tu cuenta de *iCloud*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Iphone/OnlyIcons/6.png",
+          "point": "*Elimina* toda la *telemetría espía*"
+        }
       ],
       "details": true,
       "problem": {
-        "title": "¿Sabías que tu Mac no es tan privado como crees?",
-        "content": "Muchos usuarios de Mac confían en la seguridad de Apple sin saber que su privacidad sigue expuesta. Desde conexiones inseguras hasta servicios que rastrean tu comportamiento, tu Mac puede estar filtrando más información de la que imaginas."
+        "title": "",
+        "content": ""
       },
       "solution": {
-        "title": "Convierte tu Mac en una fortaleza digital",
-        "content": "Este curso te guía para convertir tu Mac en una fortaleza digital. Aprenderás a aplicar configuraciones avanzadas de privacidad, activar firewalls, bloquear rastreadores y navegar de forma segura, todo explicado paso a paso, incluso si no tienes experiencia técnica."
+        "title": "",
+        "content": ""
       },
       "features": [
         {
-          "title": "",
-          "content": "",
+          "title": "No hace falta conocimiento previo",
+          "content": "Muchos usuarios de Mac confían en la seguridad de Apple sin saber que su privacidad sigue expuesta. Desde conexiones inseguras hasta servicios que rastrean tu comportamiento, tu Mac puede estar filtrando más información de la que imaginas.",
           "order": 1,
+          "button": ""
+        },
+        {
+          "title": "No hace falta conocimiento previo",
+          "content": "Muchos usuarios de Mac confían en la seguridad de Apple sin saber que su privacidad sigue expuesta. Desde conexiones inseguras hasta servicios que rastrean tu comportamiento, tu Mac puede estar filtrando más información de la que imaginas.",
+          "order": 0,
           "button": ""
         }
       ],
       "personalNote": {
-        "img": "",
+        "img": "https://i.ytimg.com/vi/ECyy48okyEU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBh4PPVOVTsupyQPQ3W0bOtvhRwcQ",
         "note": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea."
       },
       "pricing": [
@@ -74,15 +94,8 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": [
-            "visa",
-            "amex",
-            "mastercard",
-            "bitcoin"
-          ],
-          "icon": [
-            "gem"
-          ]
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["gem"]
         },
         {
           "title": "Pack Privacidad Total Apple",
@@ -103,23 +116,11 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": [
-            "visa",
-            "amex",
-            "mastercard",
-            "bitcoin"
-          ],
-          "icon": [
-            "apple",
-            "gem"
-          ]
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["apple", "gem"]
         }
       ],
       "faq": [
-        {
-          "question": "Cual es la diferencia entre la privacidad de la red y la privacidad de los datos?",
-          "answer": "La diferencia entre la privacidad de la red y la privacidad de los datos es que la privacidad de la red se refiere a la privacidad de la información que se transmite a través de la red, mientras que la privacidad de los datos se refiere a la privacidad de los datos que se almacenan en los dispositivos y sistemas de la red."
-        },
         {
           "question": "Cual es la diferencia entre la privacidad de la red y la privacidad de los datos?",
           "answer": "La diferencia entre la privacidad de la red y la privacidad de los datos es que la privacidad de la red se refiere a la privacidad de la información que se transmite a través de la red, mientras que la privacidad de los datos se refiere a la privacidad de los datos que se almacenan en los dispositivos y sistemas de la red."
@@ -185,6 +186,8 @@
       "Bg": "https://maximstore.com/_next/image?url=https%3A%2F%2Fback.maximstore.com%2Fstatic%2Fimages%2F71000ee2-6d1d-4ee0-a684-126447237546.png&w=3840&q=75",
       "description": "Aprende a blindar tu Mac como nunca antes, protege tu vida digital como ningún otro usuario de Apple lo hará jamás...",
       "before": false,
+      "video": "https://cgom8p4d6wbs6axv.public.blob.vercel-storage.com/Anuncio%20Partners%20Editado%20%281%29-wy3eXsP0OrTfqNHDIZ33FxYIXEDC9Z.mp4",
+      "poster": "https://maximstore.com/_next/image?url=https%3A%2F%2Fback.maximstore.com%2Fstatic%2Fimages%2F71000ee2-6d1d-4ee0-a684-126447237546.png&w=3840&q=75",
       "order": 0,
       "Destacado": false,
       "cardPay": "https://pay.hotmart.com/I97433852A",
@@ -192,19 +195,36 @@
       "testimonios": [
         {
           "name": "Juan Carlos",
-          "testimonio": "Este cruso es un amarivilla"
+          "testimonio": "Este cruso es un maravilla"
         }
       ],
       "points": [
-        "Configuración avanzada de privacidad",
-        "Cifrado DNS, Firewall y ajustes avanzados",
-        "No necesitas conocimiento técnico",
-        "Explicaciones guiadas paso a paso para novatos",
-        "Explicaciones guiadas paso a paso para novatos",
-        "Explicaciones guiadas paso a paso para novatos"
+        {
+          "icon": "/img/Finales/BulletsPoint/Mac/OnlyIcons/1.png",
+          "point": "*Blindate* contra *cualquier amenaza digital*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Mac/OnlyIcons/2.png",
+          "point": "*Protege* tu *ordenador* de todo *espionaje*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Mac/OnlyIcons/3.png",
+          "point": "*Elimina* cualquier *virus* o *amenaza* de *seguridad*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Mac/OnlyIcons/4.png",
+          "point": "*Protégete* contra ataques de *fuerza bruta*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Mac/OnlyIcons/5.png",
+          "point": "*Configuración* para *máxima* seguridad y *privacidad*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Mac/OnlyIcons/6.png",
+          "point": "*Elimina* archivos *basura*, *aumenta* el *rendimiento*"
+        }
       ],
       "details": true,
-      "video": "",
       "problem": {
         "title": "¿Sabías que tu Mac no es tan privado como crees?",
         "content": "Muchos usuarios de Mac confían en la seguridad de Apple sin saber que su privacidad sigue expuesta. Desde conexiones inseguras hasta servicios que rastrean tu comportamiento, tu Mac puede estar filtrando más información de la que imaginas."
@@ -255,15 +275,8 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": [
-            "visa",
-            "amex",
-            "mastercard",
-            "bitcoin"
-          ],
-          "icon": [
-            "gem"
-          ]
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["gem"]
         },
         {
           "title": "Pack Privacidad Total Apple",
@@ -284,16 +297,8 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": [
-            "visa",
-            "amex",
-            "mastercard",
-            "bitcoin"
-          ],
-          "icon": [
-            "apple",
-            "gem"
-          ]
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["apple", "gem"]
         }
       ],
       "faq": [
@@ -366,6 +371,8 @@
       "Bg": "https://www.uc3m.es/sdic/media/sdic/img/mediana/original/im_microsoft-ssoo-cliente---icono/im_microsoft-ssoo-cliente---icono.png",
       "description": "Windows es el sistema más espía del mundo, pero eso se acaba con esta formación integral de privacidad dirigida...",
       "before": false,
+      "video": "https://cgom8p4d6wbs6axv.public.blob.vercel-storage.com/Anuncio%20Partners%20Editado%20%281%29-wy3eXsP0OrTfqNHDIZ33FxYIXEDC9Z.mp4",
+      "poster": "https://www.uc3m.es/sdic/media/sdic/img/mediana/original/im_microsoft-ssoo-cliente---icono/im_microsoft-ssoo-cliente---icono.png",
       "order": 1,
       "Destacado": true,
       "cardPay": "https://pay.hotmart.com/Y97437543N",
@@ -380,13 +387,32 @@
         }
       ],
       "points": [
-        "Desactivación total de telemetría espía",
-        "Cifrado de disco y archivos avanzada",
-        "Optimización de sistema y apps únicas",
-        "No necesitas conocimientos técnicos"
+        {
+          "icon": "/img/Finales/BulletsPoint/Windows/OnlyIcons/1.png",
+          "point": "*Blindate* contra *cualquier amenaza digital*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Windows/OnlyIcons/2.png",
+          "point": "*Protege* tu *PC* con *máxima privacidad*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Windows/OnlyIcons/3.png",
+          "point": "*Blinda* cualquier *conexión* de tu *ordenador*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Windows/OnlyIcons/4.png",
+          "point": "*Configuración* de *máxima* seguridad y *privacidad*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Windows/OnlyIcons/5.png",
+          "point": "Elimina *programas espía* ocultos y *elimina* cualquier *rastro*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Windows/OnlyIcons/6.png",
+          "point": "*Protegete* contra *ataques* de *fuerza bruta*"
+        }
       ],
       "details": false,
-      "video": "",
       "problem": {
         "title": "¿Sabías que tu Mac no es tan privado como crees?",
         "content": "Muchos usuarios de Mac confían en la seguridad de Apple sin saber que su privacidad sigue expuesta. Desde conexiones inseguras hasta servicios que rastrean tu comportamiento, tu Mac puede estar filtrando más información de la que imaginas."
@@ -425,15 +451,8 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": [
-            "visa",
-            "amex",
-            "mastercard",
-            "bitcoin"
-          ],
-          "icon": [
-            "gem"
-          ]
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["gem"]
         },
         {
           "title": "Pack Privacidad Total Apple",
@@ -454,16 +473,8 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": [
-            "visa",
-            "amex",
-            "mastercard",
-            "bitcoin"
-          ],
-          "icon": [
-            "apple",
-            "gem"
-          ]
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["apple", "gem"]
         }
       ],
       "faq": [
@@ -536,7 +547,7 @@
       "Bg": "https://cdn.billowshop.com/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/4122442e-3f4c-40d9-8e8c-2a29c7ed85bd/Diseno-sin-titulo-21-67ddac19c7318-O.png",
       "description": "Transforma tu android espía en un sistema seguro y privado como nunca antes has experimentado con esta formación",
       "before": false,
-      "video": "https://firebasestorage.googleapis.com/v0/b/tokin-privacy-storage.appspot.com/o/anuncioTokinPrivacy-2.0.mp4?alt=media&token=b1e9b436-7687-41d0-acbf-884a12389319",
+      "video": "https://cgom8p4d6wbs6axv.public.blob.vercel-storage.com/Anuncio%20Partners%20Editado%20%281%29-wy3eXsP0OrTfqNHDIZ33FxYIXEDC9Z.mp4",
       "order": 0,
       "poster": "https://www.gizmochina.com/wp-content/uploads/2023/07/Android-new-logo.png",
       "Destacado": false,
@@ -552,10 +563,30 @@
         }
       ],
       "points": [
-        "Videos paso a paso",
-        "Ajustes de seguridad y privacidad total",
-        "Di adiós al oculto espionaje de Google",
-        "Sin necesidad de conocimiento previo"
+        {
+          "icon": "/img/Finales/BulletsPoint/Android/OnlyIcons/1.png",
+          "point": "*Cifrado* de cualquier *conexión* de tu *Android*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Android/OnlyIcons/2.png",
+          "point": "*Crea* una *cuenta* de *Google anónima*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Android/OnlyIcons/3.png",
+          "point": "*Protección total* de tu móvil *Android*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Android/OnlyIcons/4.png",
+          "point": "*Configuración* de *máxima* seguridad y *privacidad*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Android/OnlyIcons/5.png",
+          "point": "*Instalación* y configuración de *GrapheneOS*"
+        },
+        {
+          "icon": "/img/Finales/BulletsPoint/Android/OnlyIcons/6.png",
+          "point": "*Elimina* toda la *telemetría espía*"
+        }
       ],
       "details": true,
       "problem": {
@@ -596,15 +627,8 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": [
-            "visa",
-            "amex",
-            "mastercard",
-            "bitcoin"
-          ],
-          "icon": [
-            "gem"
-          ]
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["gem"]
         },
         {
           "title": "Pack Privacidad Total Apple",
@@ -625,16 +649,8 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": [
-            "visa",
-            "amex",
-            "mastercard",
-            "bitcoin"
-          ],
-          "icon": [
-            "apple",
-            "gem"
-          ]
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["apple", "gem"]
         }
       ],
       "faq": [

@@ -158,15 +158,8 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": [
-            "visa",
-            "amex",
-            "mastercard",
-            "bitcoin"
-          ],
-          "icon": [
-            "gem"
-          ]
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["gem"]
         },
         {
           "title": "Pack Privacidad Total Apple",
@@ -187,16 +180,8 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": [
-            "visa",
-            "amex",
-            "mastercard",
-            "bitcoin"
-          ],
-          "icon": [
-            "apple",
-            "gem"
-          ]
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["apple", "gem"]
         }
       ],
       "faq": [
@@ -318,15 +303,8 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": [
-            "visa",
-            "amex",
-            "mastercard",
-            "bitcoin"
-          ],
-          "icon": [
-            "gem"
-          ]
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["gem"]
         },
         {
           "title": "Pack Privacidad Total Apple",
@@ -347,16 +325,8 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": [
-            "visa",
-            "amex",
-            "mastercard",
-            "bitcoin"
-          ],
-          "icon": [
-            "apple",
-            "gem"
-          ]
+          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "icon": ["apple", "gem"]
         }
       ],
       "faq": [

@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { useIsMobile } from "@/app/Elements/hooks";
 import { useBuyMode } from "@/app/Elements/hooks/globalHooks/BuyModeContext";
 import { GoAlert, GoCheckCircleFill } from "react-icons/go";
 import { Product } from "./../../Elements/types/index";
@@ -11,7 +10,7 @@ interface Props {
 
 export const CardOFProduct: React.FC<Props> = ({ product }) => {
   const { setActive, setUrlCard } = useBuyMode();
-  const isMobile = useIsMobile();
+
   const normalizeText =
     " text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl";
   const normalizeTitles =
@@ -74,15 +73,15 @@ export const CardOFProduct: React.FC<Props> = ({ product }) => {
                 key={index}
                 className={`flex justify-start items-center gap-2 text-white ${normalizeText}`}
               >
-                {point.includes("SE NECESITA DE MÓVIL GOOGLE PIXEL") ? (
+                {point.point?.includes("SE NECESITA DE MÓVIL GOOGLE PIXEL") ? (
                   <>
                     <GoAlert className="fill-yellow-400 w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
-                    <p className="text-yellow-400 font-bold">{point}</p>
+                    <p className="text-yellow-400 font-bold">{point.point}</p>
                   </>
                 ) : (
                   <>
                     <GoCheckCircleFill className="fill-primary w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7" />
-                    <p className="text-white">{point}</p>
+                    <p className="text-white">{point.point}</p>
                   </>
                 )}
               </li>

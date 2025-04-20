@@ -4,6 +4,7 @@ import { ContainerSections, Subtitle, Title } from "../components";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { Product } from "@/app/Elements";
 import { Line } from "../components/common/Line";
+
 const FAQItem: React.FC<{ question: string; answer: string }> = ({
   question,
   answer,
@@ -27,7 +28,7 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({
       </button>
       <div
         className={`overflow-hidden transition-all duration-500 ease-in-out ${
-          isOpen ? "max-h-96 opacity-100 " : "max-h-0 opacity-0"
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <p className="text-sm text-neutral-300 text-left">{answer}</p>
@@ -35,13 +36,22 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({
     </div>
   );
 };
+
 interface Props {
   product: Product;
 }
 
 export const FAQSection: React.FC<Props> = ({ product }) => {
   const primaryColor = "#0083ff";
-  const FAQ: Product["faq"] = product.faq;
+
+  // Filtrar FAQs válidas
+  const validFAQ = (product.faq || []).filter(
+    (faq) => faq.question?.trim() && faq.answer?.trim(),
+  );
+
+  // Si no hay FAQs válidas, no renderizar nada
+  if (validFAQ.length === 0) return null;
+
   return (
     <ContainerSections>
       <div className="w-full max-w-7xl flex items-center justify-center flex-col gap-5">
@@ -51,18 +61,18 @@ export const FAQSection: React.FC<Props> = ({ product }) => {
         </div>
 
         <div
-          className="w-full  bg-black rounded-3xl flex flex-col p-4 justify-center items-center max-w-sm md:max-w-2xl"
+          className="w-full bg-black rounded-3xl flex flex-col p-4 justify-center items-center max-w-sm md:max-w-2xl"
           style={{
             border: `1px solid ${primaryColor}`,
             boxShadow: `0 0 30px ${primaryColor}33`,
           }}
         >
-          {FAQ.map((faq, i) => (
-            <FAQItem key={i} question={faq.question} answer={faq.answer} />
+          {validFAQ.map((faq, i) => (
+            <FAQItem key={i} question={faq.question!} answer={faq.answer!} />
           ))}
         </div>
       </div>
-      <Line color="#0083ff" />
+      <Line color={primaryColor} />
     </ContainerSections>
   );
 };

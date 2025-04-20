@@ -4,37 +4,36 @@ import { Product } from "@/app/Elements";
 import { Line } from "../components/common/Line";
 
 interface ProblemOrSolutionProps {
-  content?: { title: string; content: string };
+  content: { title: string; content: string };
 }
 
-const ProblemOrSolution: React.FC<ProblemOrSolutionProps> = ({ content }) => {
-  return (
-    <div className="w-full h-full flex flex-col justify-start items-start p-6 text-white gap-3">
-      <h2 className="text-xl font-bold text-left">
-        {content && content.title}
-      </h2>
-      <p className="text-left text-xs md:text-base text-neutral-300">
-        {content && content.content}
-      </p>
-    </div>
-  );
-};
+const ProblemOrSolution: React.FC<ProblemOrSolutionProps> = ({ content }) => (
+  <div className="w-full h-full flex flex-col justify-start items-start p-6 text-white gap-3">
+    <h2 className="text-xl font-bold text-left">{content.title}</h2>
+    <p className="text-left text-xs md:text-base text-neutral-300">
+      {content.content}
+    </p>
+  </div>
+);
 
 interface Props {
   product?: Product;
 }
 
 export const ProblemSolutionSection: React.FC<Props> = ({ product }) => {
-  const contentArray =
-    product &&
-    product.problem?.title !== "" &&
-    product.solution?.title !== "" &&
-    product.solution?.content !== "" &&
-    product.problem?.content !== ""
-      ? [product.problem, product.solution].filter(Boolean)
-      : [];
+  const problem = product?.problem;
+  const solution = product?.solution;
 
-  if (!contentArray.length) return null;
+  const isComplete = (item?: { title?: string; content?: string }) =>
+    !!item?.title?.trim() && !!item?.content?.trim();
+
+  // Si cualquiera de los dos está incompleto, no renderizamos
+  if (!isComplete(problem) || !isComplete(solution)) return null;
+
+  const contentArray = [problem, solution] as {
+    title: string;
+    content: string;
+  }[];
 
   return (
     <ContainerSections>

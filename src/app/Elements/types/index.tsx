@@ -4,6 +4,11 @@ export interface Testimonio {
   img?: string;
 }
 
+export interface Points {
+  icon?: string;
+  point?: string;
+}
+
 export interface Problem {
   title?: string;
   content?: string;
@@ -72,9 +77,10 @@ export interface Product {
   cardPay?: string;
   proximamente?: boolean;
   testimonios?: Testimonio[];
-  points?: string[];
+  points?: Points[];
   details?: boolean;
   video?: string;
+  poster?: string;
   problem?: Problem;
   solution?: Solution;
   features?: Features[];

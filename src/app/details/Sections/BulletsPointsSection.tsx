@@ -1,34 +1,72 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import React from "react";
 import { ContainerSections } from "../components";
-import { Product } from "@/app/Elements";
+import { Points, Product } from "@/app/Elements";
+import { Line } from "../components/common/Line";
 
 interface Props {
   product: Product;
 }
 
-const PointItem: React.FC<{ point: string }> = ({ point }) => {
+const parseBoldText = (text: string) => {
+  const regex = /\*(.*?)\*/g;
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+
+    parts.push(
+      <strong key={`bold-${match.index}`} className="font-bold text-white">
+        {match[1]}
+      </strong>,
+    );
+
+    lastIndex = regex.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+
+  return parts;
+};
+
+const PointItem: React.FC<{ point: Points }> = ({ point }) => {
+  const parsedText = parseBoldText(point.point || "");
+
   return (
-    <div className="w-60 aspect-square bg-black rounded-3xl flex items-center justify-center transition-all duration-300 ease-in-out">
-      <div className="w-full h-2 bg-red-500 rounded-full"></div>
-      <div className="w-full h-2 bg-red-500 rounded-full"></div>
-      <p className="text-sm text-white">{point}</p>
+    <div className="md:w-52  aspect-square rounded-3xl flex flex-col items-center justify-center transition-all duration-300 ease-in-out gap-2">
+      <img
+        src={point.icon}
+        alt="icon"
+        className="w-full h-full rounded-2xl"
+        style={{
+          boxShadow: "0px 0px 50px #0083ff33",
+        }}
+      />
+      <p className="text-[10px] md:text-base text-white text-center">
+        {parsedText}
+      </p>
     </div>
   );
 };
 
 const BulletsPointsSection: React.FC<Props> = ({ product }) => {
-  const points: string[] = product.points ?? [];
+  const points: Points[] = product.points ?? [];
 
   return (
     <ContainerSections>
-      <div className=" w-full max-w-7xl grid grid-cols-3 gap-2 items-center justify-center origin-center bg-red-600 content-center place-items-center">
+      <div className="grid grid-cols-3 gap-4 place-items-start md:place-items-center  p-4 w-full max-w-7xl">
         {points.map((point, index) => (
           <PointItem key={index} point={point} />
         ))}
       </div>
+      <Line color="#0083ff" />
     </ContainerSections>
   );
 };

@@ -191,7 +191,7 @@ const ContentListInner = ({
             key={item.id}
             className="section w-screen h-screen flex flex-col items-center justify-center relative"
             id={item.key}
-            ref={setRef(item.key)}
+            ref={setRef(item.key || "")}
           >
             <CardOFProduct product={item} key={item.id} />
           </div>
