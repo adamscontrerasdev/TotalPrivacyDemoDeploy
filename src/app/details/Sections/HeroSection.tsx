@@ -26,7 +26,7 @@ export const HeroSection: React.FC<Props> = ({ product, socialText }) => {
 
   return (
     <ContainerSections>
-      <div className="w-full max-w-80 sm:max-w-2xl lg:max-w-4xl flex flex-col items-center gap-3">
+      <div className="w-full max-w-80 sm:max-w-2xl lg:max-w-4xl flex flex-col items-center gap-3 ">
         <Title text={product.title}></Title>
         <Subtitle text={product.description}></Subtitle>
       </div>

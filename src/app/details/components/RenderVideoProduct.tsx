@@ -10,7 +10,7 @@ export const RenderVideoProduct: React.FC<Props> = ({ video }) => {
       {video && video !== "" ? (
         <div style={{ position: "relative", paddingTop: "56.25%" }}>
           <iframe
-            src={`https://iframe.mediadelivery.net/embed/411945/${video}?autoplay=true&loop=false&muted=false&preload=true&responsive=true`}
+            src={`https://iframe.mediadelivery.net/embed/411945/${video}?autoplay=false&loop=false&muted=false&preload=true&responsive=true`}
             loading="lazy"
             style={{
               border: "0",

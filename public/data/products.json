@@ -8,11 +8,11 @@
       "price": 127,
       "bgColor": "#F9DBBFa0",
       "currency": "€",
-      "Bg": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121031-iphone-16-pro.png",
+      "Bg": "https://vz-0b00e04e-39c.b-cdn.net/71afb805-0b47-43df-89c2-727a2bb30e3e/thumbnail_bfc540c6.jpg",
       "description": "Aprende a configurar tu iPhone como nunca antes lo has experimentado. Máxima privacidad, máxima seguridad.",
       "before": false,
-      "video": "https://cgom8p4d6wbs6axv.public.blob.vercel-storage.com/Anuncio%20Partners%20Editado%20%281%29-wy3eXsP0OrTfqNHDIZ33FxYIXEDC9Z.mp4",
-      "poster": "https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large.jpg",
+      "video": "71afb805-0b47-43df-89c2-727a2bb30e3e",
+      "poster": "https://vz-0b00e04e-39c.b-cdn.net/71afb805-0b47-43df-89c2-727a2bb30e3e/thumbnail_bfc540c6.jpg",
       "order": 1,
       "Destacado": false,
       "cardPay": "",
@@ -25,27 +25,27 @@
       ],
       "points": [
         {
-          "icon": "/img/Finales/BulletsPoint/Iphone/OnlyIcons/1.png",
+          "icon": "/img/Finales/BulletsPoint/IPhone/OnlyIcons/1.png",
           "point": "*Cifrado* de cualquier *conexión* del *iPhone*"
         },
         {
-          "icon": "/img/Finales/BulletsPoint/Iphone/OnlyIcons/2.png",
+          "icon": "/img/Finales/BulletsPoint/IPhone/OnlyIcons/2.png",
           "point": "Aprende a *crear* un *Apple ID anónimo*"
         },
         {
-          "icon": "/img/Finales/BulletsPoint/Iphone/OnlyIcons/3.png",
+          "icon": "/img/Finales/BulletsPoint/IPhone/OnlyIcons/3.png",
           "point": "*Protección* contra *ataques avanzadaos*"
         },
         {
-          "icon": "/img/Finales/BulletsPoint/Iphone/OnlyIcons/4.png",
+          "icon": "/img/Finales/BulletsPoint/IPhone/OnlyIcons/4.png",
           "point": "*Configuración* de *máxima* seguridad y *privacidad*"
         },
         {
-          "icon": "/img/Finales/BulletsPoint/Iphone/OnlyIcons/5.png",
+          "icon": "/img/Finales/BulletsPoint/IPhone/OnlyIcons/5.png",
           "point": "*Máxima protección* de tu cuenta de *iCloud*"
         },
         {
-          "icon": "/img/Finales/BulletsPoint/Iphone/OnlyIcons/6.png",
+          "icon": "/img/Finales/BulletsPoint/IPhone/OnlyIcons/6.png",
           "point": "*Elimina* toda la *telemetría espía*"
         }
       ],
@@ -183,7 +183,7 @@
       "price": 147,
       "bgColor": "#fffa",
       "currency": "€",
-      "Bg": "https://maximstore.com/_next/image?url=https%3A%2F%2Fback.maximstore.com%2Fstatic%2Fimages%2F71000ee2-6d1d-4ee0-a684-126447237546.png&w=3840&q=75",
+      "Bg": "https://vz-0b00e04e-39c.b-cdn.net/69ea4df1-6ae6-44a1-be80-8ebb410286a3/thumbnail_9c1a939b.jpg",
       "description": "Protege tu Mac como nadie, maximiza tu seguridad y privacidad. Sin necesidad de conocimiento previo",
       "before": false,
       "video": "69ea4df1-6ae6-44a1-be80-8ebb410286a3",
@@ -336,8 +336,8 @@
       "price": 147,
       "bgColor": "#00ABE8",
       "currency": "€",
-      "Bg": "https://www.uc3m.es/sdic/media/sdic/img/mediana/original/im_microsoft-ssoo-cliente---icono/im_microsoft-ssoo-cliente---icono.png",
-      "description": "Windows es el sistema más espía del mundo, pero eso se acaba con esta formación integral de privacidad dirigida...",
+      "Bg": "https://vz-0b00e04e-39c.b-cdn.net/ccd5829d-ec1a-4e28-a9df-854012554358/thumbnail_ceba61d8.jpg",
+      "description": "Protege tu Windows como nadie, maximiza tu seguridad y privacidad. Sin necesidad de conocimiento previo",
       "before": false,
       "video": "ccd5829d-ec1a-4e28-a9df-854012554358",
       "poster": "https://vz-0b00e04e-39c.b-cdn.net/ccd5829d-ec1a-4e28-a9df-854012554358/thumbnail_ceba61d8.jpg",
@@ -347,11 +347,8 @@
       "proximamente": false,
       "testimonios": [
         {
-          "name": "Carlos de Oro",
-          "testimonio": "Este cruso es un amarivilla"
-        },
-        {
-          "name": ""
+          "name": "",
+          "testimonio": ""
         }
       ],
       "points": [
@@ -382,24 +379,31 @@
       ],
       "details": false,
       "problem": {
-        "title": "¿Sabías que tu Mac no es tan privado como crees?",
-        "content": "Muchos usuarios de Mac confían en la seguridad de Apple sin saber que su privacidad sigue expuesta. Desde conexiones inseguras hasta servicios que rastrean tu comportamiento, tu Mac puede estar filtrando más información de la que imaginas."
+        "title": "",
+        "content": ""
       },
       "solution": {
-        "title": "Convierte tu Mac en una fortaleza digital",
-        "content": "Este curso te guía para convertir tu Mac en una fortaleza digital. Aprenderás a aplicar configuraciones avanzadas de privacidad, activar firewalls, bloquear rastreadores y navegar de forma segura, todo explicado paso a paso, incluso si no tienes experiencia técnica."
+        "title": "",
+        "content": ""
       },
       "features": [
         {
-          "title": "",
-          "content": "",
+          "title": "Privacidad Total para tu Windows",
+          "content": "La gran ventaja de Windows es su potencial oculto, pero la mayoría lo desconoce. Desde cifrado DNS hasta máquinas virtuales, tendrás tu Windows protegido como un profesional en privacidad digital, sin necesidad de conocimiento previo.",
           "order": 1,
+          "button": "Obtener"
+        },
+        {
+          "title": "Formación paso a paso, sin complicaciones",
+          "content": "En Blinda tu Windows la dificulta técnica es nula, nos hemos asegurado de ellos para que aprendas a cifrar archivos, proteger tu información contra ataques de fuerza bruta u otras amenazas así como un largo etcétera. Accederás a videos y lecciones guiadas, configuraciones de nuestro equipo especializado y aplicaciones hasta ahora desconocidas para ti…",
+          "order": 0,
           "button": ""
         }
       ],
       "personalNote": {
         "img": "",
-        "note": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, maiores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores accusamus deserunt obcaecati ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit debitis accusantium voluptas cupiditate harum ipsam tenetur, quo ducimus eaque architecto numquam pariatur animi iusto, mayores acusamus deserunt obcaecati ea."
+        "title": "¿Sabias que?",
+        "note": "La mayoría de usuarios de Windows desconocen el potencial de privacidad y seguridad que tienen sus equipos. Hemos diseñado este curso para que cualquier persona elimine los programas y la telemetría espía de su Windows, a la vez que se protege de ciber-ataques avanzados de forma sencilla. Hasta hemos preparado los perfiles de configuración del cortafuegos para que solo tengas que copiar y pegar, sin complicaciones."
       },
       "pricing": [
         {
@@ -447,50 +451,23 @@
       ],
       "faq": [
         {
-          "question": "Cual es la diferencia entre la privacidad de la red y la privacidad de los datos?",
-          "answer": "La diferencia entre la privacidad de la red y la privacidad de los datos es que la privacidad de la red se refiere a la privacidad de la información que se transmite a través de la red, mientras que la privacidad de los datos se refiere a la privacidad de los datos que se almacenan en los dispositivos y sistemas de la red."
+          "question": "¿Cuanto dura el curso?",
+          "answer": "Los más de 10 módulos y sus respectivas lecciones se liberan de forma paulatina a lo largo de 2 semanas para asegurar que vayas aplicando todo sin agobios. Tendrás acceso sin restricciones a todo el contenido durante 3 meses."
         },
         {
-          "question": "Cual es la diferencia entre la privacidad de la red y la privacidad de los datos?",
-          "answer": "La diferencia entre la privacidad de la red y la privacidad de los datos es que la privacidad de la red se refiere a la privacidad de la información que se transmite a través de la red, mientras que la privacidad de los datos se refiere a la privacidad de los datos que se almacenan en los dispositivos y sistemas de la red."
+          "question": "¿Necesito conocimientos previos?",
+          "answer": "No, da igual tu edad o conocimiento, no harás nada complicado que requiera de especialización técnica. Los videos te guían paso a paso usando programas sencillos de utilizar, y en los casos de programas algo más completos te damos las configuraciones pre-hechas por nosotros para que solo tengas que copiar y pegar."
+        },
+        {
+          "question": "¿Necesito saber programar?",
+          "answer": "No, no vas a tocar una sola línea de código. Aprenderás a usar programas que lo harán todo increíblemente fácil para ti, por eso este curso es para cualquier persona independientemente de su punto de partida en tecnología."
+        },
+        {
+          "question": "¿Qué voy a aprender?",
+          "answer": "Desde bloquear cualquier espionaje sobre tu conexión a internet o lo que haces en tu ordenador, hasta bloquear intentos de robos de datos avanzados con poderosos cortafuegos o sistemas de aislamiento de aplicaciones, para que, en caso de ser infectado, no se venga abajo tu vida por filtraciones de datos indeseadas. Máxima privacidad y seguridad para tu Mac."
         }
       ],
       "SuccessCasesSection": [
-        {
-          "title": "Albert Russo",
-          "img": "https://profile-images.xing.com/images/d546fff615daa5755b25a043a563e68c-4/christian-carnet.256x256.jpg",
-          "description": "Este curso ha sido un antes y un despues en mi vida y mi carrera, nunca antes habia sentido que algo valio tanto la pena por su precio "
-        },
-        {
-          "title": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "title": "Albert Russo",
-          "img": "https://profile-images.xing.com/images/d546fff615daa5755b25a043a563e68c-4/christian-carnet.256x256.jpg",
-          "description": "Este curso ha sido un antes y un despues en mi vida y mi carrera, nunca antes habia sentido que algo valio tanto la pena por su precio "
-        },
-        {
-          "title": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "title": "Albert Russo",
-          "img": "https://profile-images.xing.com/images/d546fff615daa5755b25a043a563e68c-4/christian-carnet.256x256.jpg",
-          "description": "Este curso ha sido un antes y un despues en mi vida y mi carrera, nunca antes habia sentido que algo valio tanto la pena por su precio "
-        },
-        {
-          "title": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "title": "Albert Russo",
-          "img": "https://profile-images.xing.com/images/d546fff615daa5755b25a043a563e68c-4/christian-carnet.256x256.jpg",
-          "description": "Este curso ha sido un antes y un despues en mi vida y mi carrera, nunca antes habia sentido que algo valio tanto la pena por su precio "
-        },
         {
           "title": "",
           "img": "",
@@ -512,12 +489,12 @@
       "price": 127,
       "bgColor": "#666",
       "currency": "€",
-      "Bg": "https://cdn.billowshop.com/9ef84dda-32dd-4016-7da3-1c0a824fffb4/img/Producto/4122442e-3f4c-40d9-8e8c-2a29c7ed85bd/Diseno-sin-titulo-21-67ddac19c7318-O.png",
+      "Bg": "https://vz-0b00e04e-39c.b-cdn.net/6ab241a3-e9d6-46d5-971d-39f528afdbc7/thumbnail_64a8bbaa.jpg",
       "description": "Transforma tu android espía en un sistema seguro y privado como nunca antes has experimentado con esta formación",
       "before": false,
-      "video": "https://cgom8p4d6wbs6axv.public.blob.vercel-storage.com/Anuncio%20Partners%20Editado%20%281%29-wy3eXsP0OrTfqNHDIZ33FxYIXEDC9Z.mp4",
+      "video": "6ab241a3-e9d6-46d5-971d-39f528afdbc7",
       "order": 0,
-      "poster": "https://www.gizmochina.com/wp-content/uploads/2023/07/Android-new-logo.png",
+      "poster": "https://vz-0b00e04e-39c.b-cdn.net/6ab241a3-e9d6-46d5-971d-39f528afdbc7/thumbnail_64a8bbaa.jpg",
       "Destacado": false,
       "cardPay": "",
       "proximamente": false,
