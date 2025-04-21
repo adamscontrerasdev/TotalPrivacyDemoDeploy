@@ -8,15 +8,19 @@ interface Props {
 }
 
 export const PersonalNote: React.FC<Props> = ({ product }) => {
-  if (!product?.personalNote || product.personalNote.note === "") {
+  if (
+    !product?.personalNote ||
+    product.personalNote.note === "" ||
+    product.personalNote.title === ""
+  ) {
     return null;
   } else {
     return (
       <ContainerSections>
-        <div className="w-full max-w-7xl  flex justify-center items-center">
-          <div className="w-full max-w-2xl  flex flex-col gap-5  rounded-2xl">
-            <div className="w-full h-[30%] ">
-              <div className="">
+        <div className="w-full max-w-7xl flex justify-center items-center">
+          <div className="w-full max-w-2xl flex flex-col gap-5 rounded-2xl">
+            <div className="w-full h-[30%]">
+              <div>
                 {product?.personalNote?.img !== "" ? (
                   <img
                     src={product?.personalNote?.img}
@@ -26,8 +30,11 @@ export const PersonalNote: React.FC<Props> = ({ product }) => {
                 ) : null}
               </div>
             </div>
-            <div className="w-full h-[70%] ">
-              <p className="text-xs md:text-base text-neutral-300 text-left ">
+            <div className="w-full h-[70%] flex flex-col items-start justify-start gap-2">
+              <h1 className="text-2xl font-bold text-white">
+                {product?.personalNote?.title}
+              </h1>
+              <p className="text-xs md:text-base text-neutral-300 text-left">
                 {product?.personalNote?.note}
               </p>
             </div>

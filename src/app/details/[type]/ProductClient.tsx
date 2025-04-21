@@ -19,17 +19,9 @@ interface Props {
 }
 
 export default function ProductClient({ product }: Props) {
-  const socialProofTexts: Record<string, string> = {
-    grapheneos: "+124 profesionales ya lo están usando",
-    "Blinda-mac": "Más de 230 personas aprendieron con este curso",
-  };
-
-  const socialText =
-    socialProofTexts[product.key || ""] || "Miles ya lo están usando";
-
   return (
     <div className="mt-20">
-      <HeroSection product={product} socialText={socialText} />
+      <HeroSection product={product} socialText={product.socialText || ""} />
       {product.testimonios && <SocialProofSection product={product} />}
       {product.problem && product.solution && (
         <ProblemSolutionSection product={product} />

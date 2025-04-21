@@ -15,7 +15,13 @@ interface Props {
 }
 
 export const HeroSection: React.FC<Props> = ({ product, socialText }) => {
-  if (!product || !product.title || !product.description || !product.video)
+  if (
+    !product ||
+    !product.title ||
+    !product.description ||
+    !product.video ||
+    socialText
+  )
     return null;
 
   return (
@@ -26,15 +32,18 @@ export const HeroSection: React.FC<Props> = ({ product, socialText }) => {
       </div>
       <div className="w-full max-w-80 sm:max-w-2xl flex flex-col items-center gap-3 text-white">
         <ButtonVSL value="Adquirir" />
-        <div className="md:hidden">
-          <SocialProof text={socialText} avatarsView={2} />
-        </div>
-        <div className="hidden md:block">
-          <SocialProof text={socialText} avatarsView={4} />
-        </div>
+        {socialText && socialText !== "" && (
+          <div className="">
+            <div className="md:hidden">
+              <SocialProof text={socialText} avatarsView={2} />
+            </div>
+            <div className="hidden md:block">
+              <SocialProof text={socialText} avatarsView={4} />
+            </div>
+          </div>
+        )}
       </div>
-
-      <RenderVideoProduct video={product.video} poster={product.poster} />
+      <RenderVideoProduct video={product.video} />
     </ContainerSections>
   );
 };

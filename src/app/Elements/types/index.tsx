@@ -28,6 +28,7 @@ export interface Features {
 
 export interface PersonalNote {
   img?: string;
+  title?: string;
   note?: string;
 }
 
@@ -80,6 +81,7 @@ export interface Product {
   points?: Points[];
   details?: boolean;
   video?: string;
+  socialText?: string;
   poster?: string;
   problem?: Problem;
   solution?: Solution;
