@@ -94,8 +94,15 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "gem"
+          ]
         },
         {
           "title": "Pack Privacidad Total Apple",
@@ -116,8 +123,16 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["apple", "gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "apple",
+            "gem"
+          ]
         }
       ],
       "faq": [
@@ -270,8 +285,15 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "gem"
+          ]
         },
         {
           "title": "Pack Privacidad Total Apple",
@@ -292,8 +314,16 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["apple", "gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "apple",
+            "gem"
+          ]
         }
       ],
       "faq": [
@@ -354,27 +384,27 @@
       "points": [
         {
           "icon": "/img/Finales/BulletsPoint/Windows/OnlyIcons/1.png",
-          "point": "*Blindate* contra *cualquier amenaza digital*"
+          "point": "*Protección* contra *malware*"
         },
         {
           "icon": "/img/Finales/BulletsPoint/Windows/OnlyIcons/2.png",
-          "point": "*Protege* tu *PC* con *máxima privacidad*"
+          "point": "*Elimina espionaje* del PC"
         },
         {
           "icon": "/img/Finales/BulletsPoint/Windows/OnlyIcons/3.png",
-          "point": "*Blinda* cualquier *conexión* de tu *ordenador*"
+          "point": "  *Protege* toda *conexión* a internet"
         },
         {
           "icon": "/img/Finales/BulletsPoint/Windows/OnlyIcons/4.png",
-          "point": "*Configuración* de *máxima* seguridad y *privacidad*"
+          "point": "*Elimina rastros* del sistema"
         },
         {
           "icon": "/img/Finales/BulletsPoint/Windows/OnlyIcons/5.png",
-          "point": "Elimina *programas espía* ocultos y *elimina* cualquier *rastro*"
+          "point": "*Cifrado* de disco y *archivos*"
         },
         {
           "icon": "/img/Finales/BulletsPoint/Windows/OnlyIcons/6.png",
-          "point": "*Protegete* contra *ataques* de *fuerza bruta*"
+          "point": "Configuración de *máxima privacidad*"
         }
       ],
       "details": false,
@@ -423,8 +453,15 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "gem"
+          ]
         },
         {
           "title": "Pack Privacidad Total Apple",
@@ -445,8 +482,16 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["apple", "gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "apple",
+            "gem"
+          ]
         }
       ],
       "faq": [
@@ -572,8 +617,15 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "gem"
+          ]
         },
         {
           "title": "Pack Privacidad Total Apple",
@@ -594,8 +646,16 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
-          "icon": ["apple", "gem"]
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
+          "icon": [
+            "apple",
+            "gem"
+          ]
         }
       ],
       "faq": [
