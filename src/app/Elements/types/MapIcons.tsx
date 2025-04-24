@@ -1,11 +1,14 @@
 // iconsMap.ts
-import { FaApple, FaAndroid, FaRocket, FaGem } from "react-icons/fa";
+import { SiApple, SiWindows10, SiAndroid } from "react-icons/si";
+
+import { MdOutlineDesktopMac } from "react-icons/md";
+
 import { IconType } from "react-icons";
 
 export const iconsMap: Record<string, IconType> = {
-  apple: FaApple,
-  android: FaAndroid,
-  rocket: FaRocket,
-  gem: FaGem,
+  apple: SiApple,
+  android: SiAndroid,
+  mac: MdOutlineDesktopMac,
+  win: SiWindows10,
   // Agrega más según lo necesites
 };

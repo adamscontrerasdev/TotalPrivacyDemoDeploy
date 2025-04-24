@@ -24,6 +24,7 @@ export interface Features {
   content?: string;
   order?: number;
   button?: string;
+  img?: string;
 }
 
 export interface PersonalNote {
@@ -41,7 +42,7 @@ export interface Pricing {
   textButton?: string;
   redirectTo?: string;
   payType?: string[];
-  icon?: string[];
+  icon?: { icon: string; color?: string }[];
 }
 
 export interface FAQ {

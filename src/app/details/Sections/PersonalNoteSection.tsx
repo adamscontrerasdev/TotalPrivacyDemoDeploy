@@ -17,20 +17,21 @@ export const PersonalNote: React.FC<Props> = ({ product }) => {
   } else {
     return (
       <ContainerSections>
+        <Line color="#0083ff" />
         <div className="w-full max-w-7xl flex justify-center items-center">
-          <div className="w-full max-w-2xl flex flex-col gap-5 rounded-2xl">
-            <div className="w-full h-[30%]">
-              <div>
-                {product?.personalNote?.img !== "" ? (
+          <div className="w-full max-w-5xl flex flex-col md:flex-row gap-5 rounded-2xl justify-center items-center ">
+            {product?.personalNote?.img !== "" ? (
+              <div className="h-full">
+                <div>
                   <img
                     src={product?.personalNote?.img}
                     alt="img"
-                    className="h-40 aspect-video rounded-2xl"
+                    className=" rounded-2xl aspect-square "
                   />
-                ) : null}
+                </div>
               </div>
-            </div>
-            <div className="w-full h-[70%] flex flex-col items-start justify-start gap-2">
+            ) : null}
+            <div className="w-full h-[70%] flex flex-col items-start justify-center bg-grwo-400">
               <h1 className="text-2xl font-bold text-white">
                 {product?.personalNote?.title}
               </h1>

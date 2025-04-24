@@ -7,7 +7,8 @@ import {
   SiBitcoinsv,
   SiGrapheneos,
 } from "react-icons/si";
-import { TbDeviceImac } from "react-icons/tb";
+import { MdOutlineDesktopMac } from "react-icons/md";
+
 import styles from "./ElementsNavBar.module.css";
 import { GeneralCardOfNavbar } from "./../../Elements/index";
 import dataOfCurso from "./../../../../public/data/products.json";
@@ -17,7 +18,7 @@ import Link from "next/link";
 // Mapping icon names to react-icons components
 const iconMap: Record<string, React.ElementType> = {
   SiApple,
-  TbDeviceImac,
+  MdOutlineDesktopMac,
   SiWindows10,
   SiAndroid,
   SiBitcoinsv,

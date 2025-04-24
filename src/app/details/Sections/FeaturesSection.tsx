@@ -1,7 +1,6 @@
 import React from "react";
 import { ButtonVSL, ContainerSections } from "../components";
 import { Product, Features } from "@/app/Elements";
-import { Line } from "../components/common/Line";
 
 interface Props {
   product?: Product;
@@ -27,7 +26,17 @@ const FeaturesCard: React.FC<{ feature: Features }> = ({ feature }) => {
         </p>
         <ButtonVSL value={button || "Ver más"} />
       </div>
-      <div className="w-full md:w-1/2 aspect-video bg-neutral-800 animate-pulse rounded-2xl"></div>
+      <div
+        className={`w-full md:w-1/2 aspect-video rounded-2xl ${feature.img ? "overflow-hidden" : "bg-neutral-800 animate-pulse"}`}
+      >
+        {feature.img && feature.img !== "" && (
+          <img
+            src={feature.img}
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        )}
+      </div>
     </div>
   );
 };
@@ -49,7 +58,6 @@ export const FeaturesSection: React.FC<Props> = ({ product }) => {
           <FeaturesCard key={index} feature={feature} />
         ))}
       </div>
-      {features.length > 0 && <Line color="#0083ff" />}
     </ContainerSections>
   );
 };

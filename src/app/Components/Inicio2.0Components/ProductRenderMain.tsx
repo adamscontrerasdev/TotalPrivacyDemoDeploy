@@ -8,15 +8,9 @@ import {
 import React from "react";
 import data from "@/../../public/data/products.json";
 import { Product } from "@/app/Elements";
-import {
-  SiApple,
-  SiWindows10,
-  SiAndroid,
-  SiBitcoinsv,
-  SiGrapheneos,
-} from "react-icons/si";
-import { TbDeviceImac } from "react-icons/tb";
+import { SiApple, SiWindows10, SiAndroid } from "react-icons/si";
 import { Line } from "@/app/details/components/common/Line";
+import { MdOutlineDesktopMac } from "react-icons/md";
 
 interface ProductCardProps {
   product?: Product;
@@ -25,24 +19,27 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const iconMap: Record<string, React.ElementType> = {
     SiApple,
-    TbDeviceImac,
+    MdOutlineDesktopMac,
     SiWindows10,
     SiAndroid,
-    SiBitcoinsv,
-    SiGrapheneos,
   };
   const IconComponent = iconMap[product?.icon || ""];
 
   return (
     <div className="w-full max-w-1/2 h-[22rem] bg-neutral-950 max-w-7xl rounded-2xl overflow-hidden flex flex-col items-center justify-between relative hover:scale-105 transition-transform duration-200">
-      <div className="w-full h-20  flex flex-col items-start justify-center p-5">
+      {/* <div className="w-full h-20  flex flex-col items-start justify-center p-5">
         <h2 className="font-bold text-white text-2xl">{product?.title}</h2>
         <p className="text-xs text-left max-w-96">{product?.description}</p>
-      </div>
+      </div> */}
 
-      <div className="w-full h-20  flex items-center justify-between p-5 bg-black/50 backdrop-blur-xl gap-2 relative z-20">
-        <div className=" flex gap-4  h-full justify-center items-center">
-          <IconComponent className="text-white text-3xl" />
+      <div className="w-full h-20  flex items-center justify-between md:p-5 p-2 bg-black/50 backdrop-blur-xl gap-2 absolute z-20 bottom-0">
+        <div className=" flex md:gap-4 h-full justify-around items-center ">
+          <IconComponent className="text-white text-3xl  w-1/4" />
+          <div className="flex flex-col items-start justify-center w-3/4">
+            <p className="text-[10px] md:text-sm text-left md:max-w-96 ">
+              {product?.description}
+            </p>
+          </div>
         </div>
         <div
           onClick={() => (location.href = `details/${product?.key}`)}
@@ -51,8 +48,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <ButtonVSL value="Ver Curso" sm />
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-[80%] flex items-center justify-center">
-        <img src={product?.Bg || ""} alt="" className="h-full" />
+      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+        <img src={product?.Bg || ""} alt="" className="w-full" />
       </div>
     </div>
   );

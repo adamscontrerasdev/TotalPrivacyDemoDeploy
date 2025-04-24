@@ -7,18 +7,6 @@ interface Props {
   product?: Product;
 }
 
-// Define el gradiente dentro del DOM una sola vez
-const GradientDefs = () => (
-  <svg width="0" height="0">
-    <defs>
-      <linearGradient id="gradient-fill" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="50%" stopColor="#ffffff" />
-        <stop offset="100%" stopColor="transparent" />
-      </linearGradient>
-    </defs>
-  </svg>
-);
-
 const UniquePlanCard: React.FC<{ product: Product }> = ({ product }) => {
   const plan: Pricing | undefined = product?.pricing?.[0];
   const primaryColor = "#0083ff";
@@ -93,35 +81,54 @@ const MultiplePlanCard: React.FC<{
   const primaryColor = "#0083ff";
   const isFeatured = index === 1;
   const icons = Array.isArray(plan.icon)
-    ? plan.icon.map((key) => iconsMap[key]).filter(Boolean)
+    ? plan.icon.map((key) => iconsMap[key.icon]).filter(Boolean)
     : [];
 
   if (!plan || !plan.points || !plan.payType) return null;
 
   return (
     <div className="relative w-full max-w-sm">
-      {/* GradientDefs se renderiza una sola vez por tarjeta */}
-      <GradientDefs />
-
       {/* Íconos grandes con degradado */}
       {icons.length > 0 && (
         <div
-          className="absolute flex gap-3 left-1/2 -top-5 md:-top-7 
-        -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none"
+          className="absolute flex gap-3 left-1/2 -top-7 md:-top-12
+          -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none"
         >
+          {/* Definimos los gradientes SVG una vez */}
+          <svg width="0" height="0" className="absolute">
+            <defs>
+              {plan.icon?.map((iconData, i) => (
+                <linearGradient
+                  key={`gradient-${i}`}
+                  id={`gradient-fill-${index}-${i}`}
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="50%" stopColor={iconData.color || "#f0f"} />
+                  <stop offset="100%" stopColor="transparent" />
+                </linearGradient>
+              ))}
+            </defs>
+          </svg>
+
           {icons.map((IconComponent, i) => (
-            <IconComponent
-              key={i}
-              className="text-8xl md:text-9xl "
-              style={{ fill: "url(#gradient-fill)" }}
-            />
+            <div key={i} className="">
+              <IconComponent
+                className="text-8xl md:text-9xl"
+                style={{
+                  fill: `url(#gradient-fill-${index}-${i})`,
+                }}
+              />
+            </div>
           ))}
         </div>
       )}
 
       {/* Card principal */}
       <div
-        className={`relative z-10 flex flex-col justify-between p-6 rounded-3xl border text-white transition-all transform hover:scale-105 duration-300 bg-black/50 backdrop-blur-xl  ${
+        className={`relative z-10 flex flex-col justify-between p-6 rounded-3xl border text-white transition-all transform hover:scale-105 duration-300 bg-black/50 backdrop-blur-xl ${
           isFeatured ? "shadow-xl scale-[1.02] border-2" : "shadow-md"
         }`}
         style={{
@@ -133,7 +140,9 @@ const MultiplePlanCard: React.FC<{
       >
         <div className="flex flex-col gap-4 flex-grow">
           <h3 className="text-2xl font-bold">{plan.title}</h3>
-          <p className="text-sm text-neutral-400">{plan.description}</p>
+          <p className="text-sm text-neutral-400 text-left">
+            {plan.description}
+          </p>
           <ul className="flex flex-col gap-2 text-sm text-neutral-300">
             {plan.points.map((point, i) => (
               <li key={i} className="flex items-center gap-2 text-left">
