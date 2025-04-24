@@ -3,7 +3,7 @@
     {
       "id": 6,
       "icon": "SiApple",
-      "key": "Bunkeriza-iphone",
+      "key": "iPhone",
       "title": "Bunkeriza tu iPhone",
       "price": 127,
       "bgColor": "#F9DBBFa0",
@@ -157,8 +157,8 @@
         }
       ],
       "finalCTA": {
-        "title": "No te pierdas De esta Oferta unica",
-        "description": "Nuestros productos estan respaldados por entes profesionales",
+        "title": "Protege tu privacidad ahora",
+        "description": "La privacidad es la única defensa al control digital moderno",
         "buttonText": "Obtener",
         "startRate": "Mas de 128 alumnos activos"
       }
@@ -166,7 +166,7 @@
     {
       "id": 9,
       "icon": "MdOutlineDesktopMac",
-      "key": "Blinda-mac",
+      "key": "Mac",
       "title": "Blinda tu Mac",
       "price": 147,
       "bgColor": "#fffa",
@@ -311,8 +311,8 @@
         }
       ],
       "finalCTA": {
-        "title": "No te pierdas De esta Oferta unica",
-        "description": "Nuestros productos estan respaldados por entes profesionales",
+        "title": "Protege tu privacidad ahora",
+        "description": "La privacidad es la única defensa al control digital moderno",
         "buttonText": "Obtener",
         "startRate": "Mas de 128 alumnos activos"
       }
@@ -320,7 +320,7 @@
     {
       "id": 10,
       "icon": "SiWindows10",
-      "key": "Blinda-windows",
+      "key": "Windows",
       "title": "Blinda tu Windows",
       "price": 147,
       "bgColor": "#00ABE8",
@@ -472,8 +472,8 @@
         }
       ],
       "finalCTA": {
-        "title": "No te pierdas De esta Oferta unica",
-        "description": "Nuestros productos estan respaldados por entes profesionales",
+        "title": "Protege tu privacidad ahora",
+        "description": "La privacidad es la única defensa al control digital moderno",
         "buttonText": "Obtener",
         "startRate": "Mas de 128 alumnos activos"
       }
@@ -481,7 +481,7 @@
     {
       "id": 7,
       "icon": "SiAndroid",
-      "key": "Bunkeriza-android",
+      "key": "Android",
       "title": "Bunkeriza tu Android",
       "price": 127,
       "bgColor": "#666",
@@ -552,7 +552,7 @@
           "img": ""
         },
         {
-          "title": "Cuenta anónimas: Google",
+          "title": "Cuentas anónimas: Google",
           "content": "Puedes incluso usar un Android con cuentas de Google anónimas usando proxy-stores como Aurora (te cuento más dentro), lo que si tengo que decirte es que te voy a enseñar a crear cuentas online totalmente privadas, usando de ejemplo al propio Google, gmail y todo su ecosistema..",
           "order": 1,
           "button": "",
@@ -568,7 +568,7 @@
       ],
       "personalNote": {
         "img": "https://pbs.twimg.com/profile_images/1738914330823798784/YzTyYwez_400x400.jpg",
-        "title": "Y es que",
+        "title": "Nota Personal",
         "note": "Todos saben que tu móvil te escucha, pero nadie te ha explicado como evitarlo. Google es la compañía más espía del mundo y la llevas en tu bolsillo. Lo bueno y tremendamente desconocido, es que Android es muy versátil, y puedes transformarlo de ser un espía de tu intimidad a ser un bastión digital increíblemente privado si sabes como hacerlo. Entonces, puedes permitir que siga espiándote, o tomar acción y bunkerizar tu Android, proteger tu privacidad y por ende tu libertad..."
       },
       "pricing": [
@@ -642,8 +642,8 @@
         }
       ],
       "finalCTA": {
-        "title": "No te pierdas De esta Oferta unica",
-        "description": "Nuestros productos estan respaldados por entes profesionales",
+        "title": "Protege tu privacidad ahora",
+        "description": "La privacidad es la única defensa al control digital moderno",
         "buttonText": "Obtener",
         "startRate": "Mas de 128 alumnos activos"
       }
