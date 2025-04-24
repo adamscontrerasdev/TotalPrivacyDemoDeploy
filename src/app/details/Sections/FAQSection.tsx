@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { ContainerSections, Subtitle, Title } from "../components";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { Product } from "@/app/Elements";
-import { Line } from "../components/common/Line";
 
 const FAQItem: React.FC<{ question: string; answer: string }> = ({
   question,
@@ -55,7 +54,7 @@ export const FAQSection: React.FC<Props> = ({ product }) => {
   return (
     <ContainerSections>
       <div className="w-full max-w-7xl flex items-center justify-center flex-col gap-5">
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-2 pt-10">
           <Title text="Preguntas Frecuentes" />
           <Subtitle text="No te quedes con dudas, consulta las preguntas más recurrentes" />
         </div>
@@ -72,7 +71,6 @@ export const FAQSection: React.FC<Props> = ({ product }) => {
           ))}
         </div>
       </div>
-      <Line color={primaryColor} />
     </ContainerSections>
   );
 };

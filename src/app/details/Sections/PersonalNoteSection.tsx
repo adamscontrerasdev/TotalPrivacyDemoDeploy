@@ -31,7 +31,7 @@ export const PersonalNote: React.FC<Props> = ({ product }) => {
                 </div>
               </div>
             ) : null}
-            <div className="w-full h-[70%] flex flex-col items-start justify-center bg-grwo-400">
+            <div className="w-full h-[70%] flex flex-col items-start justify-center bg-grwo-400 gap-2">
               <h1 className="text-2xl font-bold text-white">
                 {product?.personalNote?.title}
               </h1>

@@ -53,7 +53,7 @@ export const FeaturesSection: React.FC<Props> = ({ product }) => {
 
   return (
     <ContainerSections>
-      <div className="w-full max-w-7xl flex flex-col gap-5 md:gap-10 lg:gap-20 ">
+      <div className="w-full max-w-6xl 2xl:max-w-7xl flex flex-col gap-5 md:gap-10 lg:gap-20 ">
         {features.map((feature, index) => (
           <FeaturesCard key={index} feature={feature} />
         ))}
