@@ -63,25 +63,29 @@
           "title": "Privacidad Total en tu iPhone",
           "content": "Apple no es tan privada como te lo han vendido. Si no lo configuras bien tu iPhone sigue siendo un coladero de datos, básicamente porque tu Apple ID lo recoge todo de ti. Lo bueno es que blindarlo mejor que el móvil del presidente es posible, con ajustes sencillos..",
           "order": 1,
-          "button": ""
+          "button": "",
+          "img": "/img/Finales/Modulos/iPhone/Privacidad Total en tu iPhone.png"
         },
         {
           "title": "Formación paso a paso, sin complicaciones",
           "content": "No necesitas conocimiento técnico. Solo seguir los vídeos paso a paso del curso donde te enseño a limpiar tu iPhone de telemetría espía, configurar perfiles para cifrado DNS y proteger cualquier conexión de tu teléfono móvil.",
           "order": 0,
-          "button": ""
+          "button": "",
+          "img": "/img/Finales/Modulos/iPhone/Formación paso a paso.png"
         },
         {
-          "title": "Cuenta anónimas: Apple ID",
+          "title": "Cuentas anónimas: Apple ID",
           "content": "Al final del curso recibirás un eBook con todos los ajustes que debes tener configurados en tu iPhone, para que puedas descargarlo para poder consultarlo de por vida.",
           "order": 1,
-          "button": ""
+          "button": "",
+          "img": "/img/Finales/Modulos/iPhone/Cuentas anónimas.png"
         },
         {
           "title": "Ebook de privacidad para siempre",
           "content": "No necesitas conocimiento técnico. Solo seguir los vídeos paso a paso del curso donde te enseño a limpiar tu iPhone de telemetría espía, configurar perfiles para cifrado DNS y proteger cualquier conexión de tu teléfono móvil.",
           "order": 0,
-          "button": ""
+          "button": "",
+          "img": "/img/Finales/Modulos/iPhone/Ebook de privacidad.png"
         }
       ],
       "personalNote": {
@@ -95,10 +99,18 @@
           "price": 127,
           "currency": "€",
           "description": "Incluye:",
-          "points": ["Curso Bunkeriza tu iPhone", "eBook de Privacidad iPhone"],
+          "points": [
+            "Curso Bunkeriza tu iPhone",
+            "eBook de Privacidad iPhone"
+          ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
           "icon": [
             {
               "icon": "apple",
@@ -118,7 +130,12 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
           "icon": [
             {
               "icon": "apple",
@@ -248,10 +265,17 @@
           "price": 157,
           "currency": "€",
           "description": "Incluye:",
-          "points": ["Curso Blinda tu Mac"],
+          "points": [
+            "Curso Blinda tu Mac"
+          ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
           "icon": [
             {
               "icon": "mac",
@@ -272,7 +296,12 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
           "icon": [
             {
               "icon": "mac",
@@ -409,10 +438,17 @@
           "price": 157,
           "currency": "€",
           "description": "Incluye:",
-          "points": ["Curso Blinda tu Windows"],
+          "points": [
+            "Curso Blinda tu Windows"
+          ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
           "icon": [
             {
               "icon": "win",
@@ -433,7 +469,12 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
           "icon": [
             {
               "icon": "android",
@@ -583,7 +624,12 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
           "icon": [
             {
               "icon": "android",
@@ -603,7 +649,12 @@
           ],
           "textButton": "Obtener",
           "redirectTo": "",
-          "payType": ["visa", "amex", "mastercard", "bitcoin"],
+          "payType": [
+            "visa",
+            "amex",
+            "mastercard",
+            "bitcoin"
+          ],
           "icon": [
             {
               "icon": "android",
