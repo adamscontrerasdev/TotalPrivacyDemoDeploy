@@ -82,7 +82,7 @@ export const CursoOfTheNavBar: React.FC<CursoOfTheNavBarProps> = ({
                 transitionDelay: `${delay}ms`,
               }}
             >
-              <Link href={`/details/${key}`} onClick={closeMenu}>
+              <Link href={`/curso/${key}`} onClick={closeMenu}>
                 <GeneralCardOfNavbar ico={IconComponent} title={title} />
               </Link>
             </div>
