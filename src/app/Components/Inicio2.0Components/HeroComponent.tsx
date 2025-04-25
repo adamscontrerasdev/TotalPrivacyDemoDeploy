@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import data from "./dataInicio.json";
-import { Subtitle } from "@/app/details/components";
+import { Subtitle } from "@/app/curso/components";
 import { IoIosArrowDown } from "react-icons/io";
 export const HeroComponent = () => {
   const [scale, setScale] = useState(1);

@@ -4,12 +4,12 @@ import {
   ContainerSections,
   Subtitle,
   Title,
-} from "@/app/details/components";
+} from "@/app/curso/components";
 import React from "react";
 import data from "@/../../public/data/products.json";
 import { Product } from "@/app/Elements";
 import { SiApple, SiWindows10, SiAndroid } from "react-icons/si";
-import { Line } from "@/app/details/components/common/Line";
+import { Line } from "@/app/curso/components/common/Line";
 import { MdOutlineDesktopMac } from "react-icons/md";
 
 interface ProductCardProps {
@@ -42,7 +42,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </div>
         </div>
         <div
-          onClick={() => (location.href = `details/${product?.key}`)}
+          onClick={() => (location.href = `curso/${product?.key}`)}
           className="w-full max-w-32"
         >
           <ButtonVSL value="Ver Curso" sm />

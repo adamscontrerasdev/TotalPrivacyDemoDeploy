@@ -1,4 +1,4 @@
-import { ButtonVSL, Subtitle, Title } from "@/app/details/components";
+import { ButtonVSL, Subtitle, Title } from "@/app/curso/components";
 import { Product } from "@/app/Elements";
 import React from "react";
 
