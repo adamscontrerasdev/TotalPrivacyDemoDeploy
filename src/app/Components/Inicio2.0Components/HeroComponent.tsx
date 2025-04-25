@@ -43,7 +43,7 @@ export const HeroComponent = () => {
           textShadow: "var(--textShadow-glow)",
         }}
       >
-        Total PrivacyDA
+        Total Privacy
       </h1>
       <div className="text-center  flex flex-col items-center justify-center">
         <Subtitle text={parrafo} />
